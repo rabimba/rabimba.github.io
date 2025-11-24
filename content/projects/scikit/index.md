@@ -1,15 +1,15 @@
 ---
-title: scikit-learn
-date: 2023-10-26
+title: Edge Computing Systems
+date: 2023-01-15
 links:
   - type: site
-    url: https://github.com/scikit-learn/scikit-learn
+    url: https://github.com/rabimba
 tags:
-  - Hugo
-  - HugoBlox
-  - Markdown
+  - Edge Computing
+  - IoT
+  - Systems Research
 ---
 
-scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
+Research on edge computing architectures and Internet of Things systems.
 
 <!--more-->

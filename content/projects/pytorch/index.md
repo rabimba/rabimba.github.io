@@ -1,15 +1,15 @@
 ---
-title: PyTorch
-date: 2023-10-26
+title: Mobile Computing Platform
+date: 2023-10-24
 links:
   - type: site
-    url: https://github.com/pytorch/pytorch
+    url: https://github.com/rabimba
 tags:
-  - Hugo
-  - HugoBlox
-  - Markdown
+  - Mobile Computing
+  - Systems Research
+  - IoT
 ---
 
-PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.
+Research project on mobile computing platforms and edge computing systems.
 
 <!--more-->

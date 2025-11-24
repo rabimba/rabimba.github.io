@@ -34,11 +34,11 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        I am a Computer Science Researcher specializing in distributed systems, mobile computing, and edge computing. My research focuses on building scalable and efficient systems for modern computing environments.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        My work spans across Internet of Things (IoT) systems, mobile computing platforms, and edge computing architectures. I investigate how to design and implement systems that can efficiently handle the challenges of distributed, resource-constrained environments.
 
-        Please reach out to collaborate 😃
+        Feel free to reach out for research collaborations or discussions!
     design:
       columns: '1'
   - block: collection
@@ -101,7 +101,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
   - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
+    demo: false # Only display this section in the Hugo Blox Builder demo site
     content:
       title: 👉 Build your own academic website like this
       text: |-

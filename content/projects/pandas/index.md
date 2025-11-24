@@ -1,15 +1,15 @@
 ---
-title: Pandas
+title: Distributed Systems Research
 date: 2023-10-26
 links:
   - type: site
-    url: https://github.com/pandas-dev/pandas
+    url: https://github.com/rabimba
 tags:
-  - Hugo
-  - HugoBlox
-  - Markdown
+  - Distributed Systems
+  - Systems Research
+  - IoT
 ---
 
-Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.
+Research project focusing on distributed systems architecture and implementation for modern computing environments.
 
 <!--more-->
