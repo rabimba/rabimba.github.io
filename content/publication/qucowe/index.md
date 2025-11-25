@@ -29,7 +29,7 @@ tags:
 featured: true
 
 links:
-url_pdf: ''
+url_pdf: 'https://arxiv.org/pdf/2511.10179.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

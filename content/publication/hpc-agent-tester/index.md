@@ -30,7 +30,7 @@ tags:
 featured: false
 
 links:
-url_pdf: ''
+url_pdf: 'https://arxiv.org/pdf/2511.10860.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
