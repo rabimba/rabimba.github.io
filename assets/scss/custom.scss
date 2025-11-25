@@ -1,28 +1,22 @@
-/* Custom CSS for Hugo Blox */
+/* Custom SCSS for Ultra-Wide Responsiveness */
 
-/* Optimize for Ultra-Wide Screens */
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1400px;
+        max-width: 95vw !important;
     }
 }
 
-@media (min-width: 1600px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 90vw; /* Use 90% of viewport width */
-    }
+.home-section .container {
+    max-width: 95vw !important;
 }
 
-/* Ensure images and content scale properly in wider containers */
-img {
-    max-width: 100%;
-    height: auto;
+/* Override centered narrow columns */
+.home-section .col-lg-8, 
+.home-section .col-xl-8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
 }
 
-/* Adjust card grid for wider screens */
-@media (min-width: 1600px) {
-    .card-simple {
-        /* Optional: You might want to adjust font sizes or spacing for ultra-wide */
-    }
+.article-container {
+    max-width: 100% !important;
 }
-
