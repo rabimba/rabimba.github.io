@@ -1,0 +1,37 @@
+---
+title: "Evaluating Quality of Randomness and Entropy in Tasks Supported by Large Language Models"
+authors:
+- Rabimba Karanjai
+- Ranjith Sarapu
+- Weidong Shi
+date: "2025-01-01T00:00:00Z"
+doi: ""
+
+# Schedule page publish date (NOT publication's date).
+publishDate: "2025-01-01T00:00:00Z"
+
+# Publication type.
+publication_types: ["1"]
+
+# Publication name and optional abbreviated publication name.
+publication: "Agentic GenAI Evaluation 2025"
+publication_short: "Agentic GenAI Evaluation 2025"
+
+abstract: "Presented at Agentic GenAI Evaluation 2025."
+
+tags:
+- Research
+- Agentic GenAI Evaluation 2025
+
+featured: false
+
+links:
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+---
