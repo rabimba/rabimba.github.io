@@ -3,7 +3,8 @@ title: Publications
 cms_exclude: true
 
 # View.
-view: citation
+# Options: citation, list, compact, card, masonry
+view: card
 
 # Optional header image (relative to `static/media/` folder).
 banner:
