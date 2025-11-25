@@ -1,5 +1,5 @@
 ---
-title: "Securing Multi-Chain Ecosystem: Unified Agent-Based Framework for Vulnerability Detection in Solidity and Move"
+title: "HPCAgentTester: Multi-Agent Approach for Enhancing Unit Test Generation"
 authors:
 - Rabimba Karanjai
 - Weidong Shi
@@ -16,15 +16,15 @@ publication_types: ["1"]
 publication: "AIWar 2025"
 publication_short: "AIWar 2025"
 
-abstract: "Winner of SIGSOFT Distinguished Paper Award. Presented at AIWar 2025."
+abstract: "Presented at AIWar 2025."
 
 tags:
-- Blockchain
-- Security
+- HPC
+- Unit Testing
 - Multi-Agent Systems
-- Vulnerability Detection
+- LLMs
 
-featured: true
+featured: false
 
 links:
 url_pdf: ''
@@ -36,3 +36,4 @@ url_slides: ''
 url_source: ''
 url_video: ''
 ---
+
