@@ -70,13 +70,7 @@ education:
     date_end: 2018-12-31
     summary: |
       Specialized in Computer Science.
-  - area: BE Computer Science
-    institution: Jadavpur University
-    icon: ""
-    date_start: 2006-08-01
-    date_end: 2010-05-31
-    summary: |
-      Foundation in computer science.
+
 
 work:
   - position: Staff Agent Researcher
