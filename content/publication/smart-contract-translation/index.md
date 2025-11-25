@@ -19,8 +19,10 @@ publication_short: "Foundations of Software Engineering (FSE) 2024"
 abstract: "Presented at Foundations of Software Engineering (FSE) 2024."
 
 tags:
-- Research
+- Blockchain
+- First Author
 - Foundations of Software Engineering (FSE) 2024
+- Software Engineering
 
 featured: false
 

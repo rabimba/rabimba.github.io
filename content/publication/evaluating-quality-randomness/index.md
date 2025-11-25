@@ -20,8 +20,11 @@ publication_short: "Agentic GenAI Evaluation 2025"
 abstract: "Presented at Agentic GenAI Evaluation 2025."
 
 tags:
-- Research
+- AI
 - Agentic GenAI Evaluation 2025
+- Agents
+- First Author
+- LLM
 
 featured: false
 

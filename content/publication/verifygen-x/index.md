@@ -19,7 +19,9 @@ publication_short: "SANER 2026 (Under Review)"
 abstract: "Presented at SANER 2026 (Under Review)."
 
 tags:
-- Research
+- AI
+- Blockchain
+- First Author
 - SANER 2026 (Under Review)
 
 featured: false

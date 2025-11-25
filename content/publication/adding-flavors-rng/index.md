@@ -21,8 +21,9 @@ publication_short: "International Symposium on Stabilization, Safety, and Securi
 abstract: "Presented at International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024."
 
 tags:
-- Research
+- Distributed Systems
 - International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024
+- Security
 
 featured: false
 

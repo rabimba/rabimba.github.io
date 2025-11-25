@@ -18,10 +18,11 @@ publication_short: "IEEE ICBC 2023"
 abstract: "This paper provides a comprehensive overview of the opportunities and challenges in governing decentralized machine learning systems."
 
 tags:
+- AI
 - AI Governance
+- Blockchain
 - Decentralized AI
 - Machine Learning
-- Blockchain
 
 featured: false
 ---

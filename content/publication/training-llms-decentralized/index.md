@@ -19,8 +19,11 @@ publication_short: "2026 (Under Review)"
 abstract: "Presented at 2026 (Under Review)."
 
 tags:
-- Research
 - 2026 (Under Review)
+- AI
+- Distributed Systems
+- First Author
+- LLM
 
 featured: false
 

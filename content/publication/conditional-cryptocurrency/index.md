@@ -22,8 +22,10 @@ publication_short: "IEEE ICBC 2021"
 abstract: "Presented at IEEE ICBC 2021."
 
 tags:
-- Research
+- Blockchain
+- First Author
 - IEEE ICBC 2021
+- Security
 
 featured: false
 

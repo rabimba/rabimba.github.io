@@ -28,9 +28,12 @@ abstract: "This paper proposes a novel approach to decentralized application inf
 
 tags:
 - Blockchain
-- Smart Contracts
 - Decentralized Applications
 - Distributed Systems
+- First Author
+- Security
+- Smart Contracts
+- Software Engineering
 
 featured: true
 

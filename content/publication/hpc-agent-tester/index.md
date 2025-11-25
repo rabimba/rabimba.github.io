@@ -19,10 +19,13 @@ publication_short: "AIWar 2025"
 abstract: "Presented at AIWar 2025."
 
 tags:
+- AI
+- Agents
+- First Author
 - HPC
-- Unit Testing
-- Multi-Agent Systems
 - LLMs
+- Multi-Agent Systems
+- Unit Testing
 
 featured: false
 

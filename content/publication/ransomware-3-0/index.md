@@ -20,8 +20,9 @@ publication_short: "IEEE ICBC 2025"
 abstract: "Presented at IEEE ICBC 2025."
 
 tags:
-- Research
+- Blockchain
 - IEEE ICBC 2025
+- Security
 
 featured: false
 

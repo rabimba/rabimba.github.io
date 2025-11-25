@@ -20,8 +20,10 @@ publication_short: "2025"
 abstract: "Presented at 2025."
 
 tags:
-- Research
 - 2025
+- First Author
+- LLM
+- Software Engineering
 
 featured: false
 

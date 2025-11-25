@@ -20,7 +20,9 @@ publication_short: "SynBio 2025"
 abstract: "Presented at SynBio 2025."
 
 tags:
-- Research
+- AI
+- First Author
+- IoT
 - SynBio 2025
 
 featured: false

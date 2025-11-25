@@ -20,9 +20,11 @@ publication_short: "AAAI 2026"
 abstract: "Presented at QC+AI, AAAI 2026."
 
 tags:
-- Quantum Computing
-- Contrastive Learning
 - AI
+- Contrastive Learning
+- First Author
+- Quantum
+- Quantum Computing
 
 featured: true
 

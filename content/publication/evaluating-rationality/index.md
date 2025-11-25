@@ -23,7 +23,7 @@ publication_short: "HEAL 2024"
 abstract: "Presented at HEAL 2024."
 
 tags:
-- Research
+- AI
 - HEAL 2024
 
 featured: false

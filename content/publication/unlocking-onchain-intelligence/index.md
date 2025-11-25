@@ -19,8 +19,11 @@ publication_short: "BRAINS 2025"
 abstract: "Presented at BRAINS 2025."
 
 tags:
-- Research
+- AI
 - BRAINS 2025
+- Blockchain
+- First Author
+- LLM
 
 featured: false
 

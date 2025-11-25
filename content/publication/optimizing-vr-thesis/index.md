@@ -18,7 +18,7 @@ publication_short: "Masters Thesis, Rice University"
 abstract: "Presented at Masters Thesis, Rice University."
 
 tags:
-- Research
+- First Author
 - Masters Thesis, Rice University
 
 featured: false

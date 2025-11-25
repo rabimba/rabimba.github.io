@@ -19,8 +19,9 @@ publication_short: "Annual Health Conference Rice University 2024"
 abstract: "Presented at Annual Health Conference Rice University 2024."
 
 tags:
-- Research
+- AI
 - Annual Health Conference Rice University 2024
+- First Author
 
 featured: false
 

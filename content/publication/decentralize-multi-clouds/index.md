@@ -22,8 +22,9 @@ publication_short: "2024"
 abstract: "Presented at 2024."
 
 tags:
-- Research
 - 2024
+- Distributed Systems
+- First Author
 
 featured: false
 

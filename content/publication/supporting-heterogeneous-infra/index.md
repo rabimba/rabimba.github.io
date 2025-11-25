@@ -23,8 +23,9 @@ publication_short: "AsiaCCS 2023"
 abstract: "Presented at AsiaCCS 2023."
 
 tags:
-- Research
 - AsiaCCS 2023
+- Distributed Systems
+- First Author
 
 featured: false
 

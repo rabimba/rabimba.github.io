@@ -22,7 +22,6 @@ publication_short: "IEEE ICEDEG 2024"
 abstract: "Presented at IEEE ICEDEG 2024."
 
 tags:
-- Research
 - IEEE ICEDEG 2024
 
 featured: false

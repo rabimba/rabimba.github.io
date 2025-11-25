@@ -19,9 +19,12 @@ publication_short: "AIWar 2025"
 abstract: "Winner of SIGSOFT Distinguished Paper Award. Presented at AIWar 2025."
 
 tags:
+- AI
+- Agents
 - Blockchain
-- Security
+- First Author
 - Multi-Agent Systems
+- Security
 - Vulnerability Detection
 
 featured: true

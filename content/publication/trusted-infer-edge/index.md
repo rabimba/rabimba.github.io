@@ -19,8 +19,11 @@ publication_short: "IEEE ICBC 2024"
 abstract: "Presented at IEEE ICBC 2024."
 
 tags:
-- Research
+- Blockchain
+- First Author
 - IEEE ICBC 2024
+- IoT
+- Security
 
 featured: false
 

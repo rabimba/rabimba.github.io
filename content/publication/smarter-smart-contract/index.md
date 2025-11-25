@@ -19,8 +19,10 @@ publication_short: "BRAINS 2023"
 abstract: "Presented at BRAINS 2023."
 
 tags:
-- Research
+- AI
 - BRAINS 2023
+- Blockchain
+- First Author
 
 featured: false
 

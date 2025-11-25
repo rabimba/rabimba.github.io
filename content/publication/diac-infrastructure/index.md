@@ -23,7 +23,10 @@ publication_short: "IEEE TNSM 2023"
 abstract: "Presented at IEEE TNSM 2023."
 
 tags:
-- Research
+- AI
+- Blockchain
+- Distributed Systems
+- First Author
 - IEEE TNSM 2023
 
 featured: false

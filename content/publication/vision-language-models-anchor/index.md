@@ -20,8 +20,9 @@ publication_short: "CVPR 2026 (Under Review)"
 abstract: "Presented at CVPR 2026 (Under Review)."
 
 tags:
-- Research
+- AI
 - CVPR 2026 (Under Review)
+- First Author
 
 featured: false
 

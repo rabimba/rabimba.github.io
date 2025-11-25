@@ -26,10 +26,12 @@ publication_short: "HASP '21"
 abstract: "This paper explores the lessons learned from applying Trusted Execution Environments (TEEs) to blockchain applications and discusses implications for future research in this area."
 
 tags:
+- AI
 - Blockchain
-- TEE
-- Security
 - Distributed Systems
+- First Author
+- Security
+- TEE
 
 featured: false
 

@@ -44,10 +44,10 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Distinguished Publications
       filters:
         folders:
-          - publications
+          - publication
         featured_only: true
     design:
       view: article-grid
@@ -58,7 +58,7 @@ sections:
       text: ''
       filters:
         folders:
-          - publications
+          - publication
         exclude_featured: false
     design:
       view: citation

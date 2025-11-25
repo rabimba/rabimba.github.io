@@ -22,8 +22,9 @@ publication_short: "IEEE ICEDEG 2025"
 abstract: "Presented at IEEE ICEDEG 2025."
 
 tags:
-- Research
+- First Author
 - IEEE ICEDEG 2025
+- LLM
 
 featured: false
 

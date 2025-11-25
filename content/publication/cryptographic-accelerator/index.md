@@ -26,7 +26,8 @@ publication_short: "MICR 2024"
 abstract: "Presented at MICR 2024."
 
 tags:
-- Research
+- Blockchain
+- First Author
 - MICR 2024
 
 featured: false

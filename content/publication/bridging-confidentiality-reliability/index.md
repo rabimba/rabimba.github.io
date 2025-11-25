@@ -20,7 +20,8 @@ publication_short: "Symp Computer Science 2026 (Under Review)"
 abstract: "Presented at Symp Computer Science 2026 (Under Review)."
 
 tags:
-- Research
+- Agents
+- Security
 - Symp Computer Science 2026 (Under Review)
 
 featured: false

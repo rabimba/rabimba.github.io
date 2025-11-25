@@ -22,7 +22,8 @@ publication_short: "IEEE ICBC 2023"
 abstract: "Presented at IEEE ICBC 2023."
 
 tags:
-- Research
+- Distributed Systems
+- First Author
 - IEEE ICBC 2023
 
 featured: false

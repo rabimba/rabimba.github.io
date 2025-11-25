@@ -24,7 +24,7 @@ publication_short: "DEBS 2021"
 abstract: "Presented at DEBS 2021."
 
 tags:
-- Research
+- Blockchain
 - DEBS 2021
 
 featured: false

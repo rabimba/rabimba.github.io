@@ -18,9 +18,10 @@ publication_short: "2025"
 abstract: "LogBabylon introduces a unified framework for integrating and analyzing log files across different systems and formats."
 
 tags:
+- Distributed Systems
+- First Author
 - Log Analysis
 - System Observability
-- Distributed Systems
 
 featured: false
 ---

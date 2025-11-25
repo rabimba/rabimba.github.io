@@ -20,8 +20,9 @@ publication_short: "AAAI 2026 (Under Review)"
 abstract: "Presented at AAAI 2026 (Under Review)."
 
 tags:
-- Research
 - AAAI 2026 (Under Review)
+- AI
+- First Author
 
 featured: false
 

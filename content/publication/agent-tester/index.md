@@ -16,9 +16,12 @@ publication_short: "AIWare 2025"
 abstract: "AgentTester utilizes a multi-agent approach to significantly enhance the automated generation of unit tests, improving software reliability."
 
 tags:
-- Software Testing
-- Multi-Agent Systems
+- Agents
+- First Author
 - LLMs
+- Multi-Agent Systems
+- Software Engineering
+- Software Testing
 
 featured: false
 ---
