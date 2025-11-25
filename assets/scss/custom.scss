@@ -1,0 +1,10 @@
+/* Reduce spacing for the first section (About Me) */
+.home-section:first-of-type {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Adjust heading spacing */
+.biography .section-heading {
+  margin-bottom: 1rem !important;
+}

@@ -12,6 +12,6 @@ sections:
           - publication
         exclude_featured: false
     design:
-      view: compact
-      columns: 1
+      view: masonry
+      columns: 3
 ---
