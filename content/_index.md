@@ -34,7 +34,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am a Computer Science Researcher specializing in Artificial Intelligence, Distributed Systems, and Web Technologies. My research focuses on building scalable, secure, and efficient systems for modern computing environments.
+        I am a Staff Agent Researcher at Paypal and a PhD graduate from the University of Houston. My research focuses on Artificial Intelligence, specifically Large Language Models (LLMs), reasoning, and secure generation.
 
         My work spans across AI reasoning, decentralized systems, blockchain applications, and mobile computing. I investigate how to design and implement systems that can efficiently handle the challenges of distributed, resource-constrained environments while ensuring security and privacy.
 

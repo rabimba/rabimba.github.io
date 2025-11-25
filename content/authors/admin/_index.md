@@ -31,6 +31,8 @@ organizations:
     url: https://www.paypal.com/
   - name: University of Houston
     url: https://www.uh.edu/
+  - name: Google
+    url: https://developers.google.com/community/experts
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -46,12 +48,12 @@ profiles:
     url: https://scholar.google.com/citations?user=rabimba
 
 interests:
-  - Distributed Systems
-  - Artificial Intelligence
-  - Mobile Computing
-  - Edge Computing
+  - Artificial Intelligence (LLMs, Reasoning)
+  - Blockchain & Decentralized Systems
+  - Software Engineering & Formal Verification
   - Web Technologies
   - Quantum Computing
+  - Mobile & Edge Computing
 
 education:
   - area: PhD Computer Science
@@ -109,14 +111,6 @@ work:
     date_end: 2020-12-31
     summary: |
       Developed on-premise Automatic Speech Recognition (ASR) engine.
-  - position: Programmer Analyst
-    company_name: Cognizant Technology Solutions
-    company_url: ''
-    icon: ''
-    date_start: 2010-12-01
-    date_end: 2013-08-31
-    summary: |
-      Contributed to Innovation team spearheading automated testing solutions.
   - position: Google Developer Expert
     company_name: Google
     company_url: 'https://developers.google.com/community/experts'
@@ -125,7 +119,46 @@ work:
     date_end: ''
     summary: |
       Recognized Expert in Web Technologies and Machine Learning.
-
+  - position: Research Associate
+    company_name: Mozilla Research
+    company_url: 'https://www.mozilla.org/'
+    icon: ''
+    date_start: 2017-09-01
+    date_end: 2018-01-31
+    summary: |
+      Conducted in-depth research to optimize parallelism and performance of Virtual Reality on WebGL.
+  - position: Summer Research Intern
+    company_name: IBM Almaden Research Center
+    company_url: 'https://www.research.ibm.com/labs/almaden/'
+    icon: ''
+    date_start: 2017-05-01
+    date_end: 2017-08-31
+    summary: |
+      Developed awarded patent on multi-factor authentication system integrating biometric features and blockchain technology.
+  - position: Summer Research Intern
+    company_name: Samsung Research
+    company_url: 'https://research.samsung.com/'
+    icon: ''
+    date_start: 2015-05-01
+    date_end: 2015-08-31
+    summary: |
+      Developed tamper-evident mobile application solution capable of reliably verifying application integrity.
+  - position: Researcher
+    company_name: IBM Watson Research Lab
+    company_url: 'https://www.research.ibm.com/'
+    icon: ''
+    date_start: 2014-01-01
+    date_end: 2014-12-31
+    summary: |
+      Embedded cognitive computing in real-world Watson solutions.
+  - position: Programmer Analyst
+    company_name: Cognizant Technology Solutions
+    company_url: ''
+    icon: ''
+    date_start: 2010-12-01
+    date_end: 2013-08-31
+    summary: |
+      Contributed to Innovation team spearheading automated testing solutions.
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
