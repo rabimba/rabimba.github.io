@@ -1,0 +1,266 @@
+{{ define "main" }}
+{{ $publications := .Pages.ByDate.Reverse }}
+{{ $typeMap := dict "0" "Uncategorized" "1" "Conference" "2" "Journal" "3" "Preprint" "4" "Report" "5" "Book" "6" "Book Section" "7" "Thesis" "8" "Patent" }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "years" (slice) }}
+{{ $scratch.Set "tags" (slice) }}
+
+{{ range $publications }}
+  {{ $year := time.Format "2006" .Date }}
+  {{ $years := $scratch.Get "years" }}
+  {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
+
+  {{ range .Params.tags }}
+    {{ $tags := $scratch.Get "tags" }}
+    {{ if and . (not (in $tags .)) }}{{ $scratch.Set "tags" (append $tags .) }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $years := sort ($scratch.Get "years") "value" "desc" }}
+{{ $tags := sort ($scratch.Get "tags") }}
+{{ $topTags := first 12 $tags }}
+{{ $pageDesc := .Params.description | default (.Summary | default "Search, filter, and skim through my work.") }}
+{{ $total := len $publications }}
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+  <header class="space-y-4 text-center md:text-left">
+    <p class="text-sm font-semibold uppercase tracking-wide text-indigo-600">Publication Library</p>
+    <div class="space-y-3">
+      <h1 class="text-3xl sm:text-4xl font-semibold text-slate-900 dark:text-white">{{ .Title }}</h1>
+      <p class="text-lg text-slate-600 dark:text-slate-300">{{ $pageDesc }}</p>
+      {{ with .Content }}
+        <div class="prose prose-slate max-w-none dark:prose-invert">{{ . }}</div>
+      {{ end }}
+      <div class="flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-400">
+        <span data-visible-count>{{ printf "%d papers" $total }}</span>
+        <span class="hidden sm:inline">•</span>
+        <span>Updated {{ time.Format "Jan 2006" now }}</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-4 sm:p-6 space-y-4">
+    <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <div class="w-full md:max-w-xl">
+        <label class="text-sm font-medium text-slate-600 dark:text-slate-300 flex items-center gap-2" for="pub-search">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200">⌕</span>
+          Quick search
+        </label>
+        <input
+          id="pub-search"
+          data-pub-search
+          class="mt-2 w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-base text-slate-900 shadow-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 dark:border-slate-800 dark:bg-slate-900 dark:text-white dark:focus:border-indigo-400 dark:focus:ring-indigo-900/60"
+          type="search"
+          placeholder="Search by title, author, venue, or tag" />
+      </div>
+      <div class="flex gap-3">
+        <button
+          type="button"
+          data-clear-filters
+          class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800/80">
+          Reset filters
+        </button>
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      <div class="space-y-2">
+        <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Filter by type</p>
+        <div class="flex flex-wrap gap-2">
+          {{ $typeFilters := slice
+            (dict "label" "All types" "value" "all")
+            (dict "label" "Conference" "value" "conference")
+            (dict "label" "Journal" "value" "journal")
+            (dict "label" "Preprint" "value" "preprint")
+            (dict "label" "Report" "value" "report")
+            (dict "label" "Book / Section" "value" "book")
+            (dict "label" "Thesis" "value" "thesis")
+            (dict "label" "Patent" "value" "patent")
+          }}
+          {{ range $typeFilters }}
+            <button type="button" class="filter-pill" data-filter-type="{{ .value }}" aria-pressed="false">{{ .label }}</button>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Year</p>
+        <div class="flex flex-wrap gap-2 overflow-x-auto pb-1">
+          <button type="button" class="filter-pill" data-filter-year="all" aria-pressed="false">Any year</button>
+          {{ range $years }}
+            <button type="button" class="filter-pill" data-filter-year="{{ . }}" aria-pressed="false">{{ . }}</button>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ if gt (len $topTags) 0 }}
+      <div class="space-y-2">
+        <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Topics</p>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="filter-pill" data-filter-tag="all" aria-pressed="false">All topics</button>
+          {{ range $topTags }}
+            <button type="button" class="filter-pill" data-filter-tag="{{ lower (urlize .) }}" aria-pressed="false">#{{ . }}</button>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3" id="pub-grid">
+    {{ range $publications }}
+      {{ $typeCode := index .Params.publication_types 0 | default "0" }}
+      {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
+      {{ $typeSlug := lower (replaceRE "[^a-z0-9]+" "-" $typeLabel) }}
+      {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
+      {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
+      {{ $year := time.Format "2006" .Date }}
+      {{ $tags := .Params.tags | default (slice) }}
+      {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
+      {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") (.Params.abstract | plainify) }}
+      {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
+
+      <article class="pub-card" data-pub-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}">
+        <div class="flex items-start justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2 text-sm font-semibold text-indigo-700 dark:text-indigo-300">
+            <span class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-800">{{ $typeLabel }}</span>
+            <span class="text-slate-500 dark:text-slate-500">•</span>
+            <span class="text-slate-700 dark:text-slate-200">{{ $year }}</span>
+          </div>
+          {{ if .Params.featured }}
+            <span class="badge-featured">Featured</span>
+          {{ end }}
+        </div>
+
+        <h2 class="mt-3 text-xl font-semibold leading-tight text-slate-900 dark:text-white">
+          <a href="{{ .RelPermalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-300">{{ .Title }}</a>
+        </h2>
+
+        {{ with .Params.authors }}
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ delimit . ", " }}</p>
+        {{ end }}
+
+        {{ with .Params.publication }}
+          <p class="mt-1 text-sm font-semibold text-slate-700 dark:text-slate-200">{{ . }}</p>
+        {{ end }}
+
+        {{ with .Params.abstract }}
+          <p class="pub-abstract">{{ . }}</p>
+        {{ end }}
+
+        {{ if gt (len $tags) 0 }}
+          <div class="mt-4 flex flex-wrap gap-2">
+            {{ range first 4 $tags }}
+              <span class="tag-pill">#{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a class="btn-primary" href="{{ .RelPermalink }}">View details</a>
+          {{ with .Params.links.url_pdf }}
+            {{ if . }}
+              <a class="btn-ghost" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+
+  <div class="pub-empty hidden" data-empty>
+    <p class="text-lg font-semibold text-slate-900 dark:text-white">No publications match those filters.</p>
+    <p class="text-slate-600 dark:text-slate-300">Try resetting the filters or searching for a broader term.</p>
+  </div>
+</section>
+
+<script>
+(() => {
+  const searchInput = document.querySelector('[data-pub-search]');
+  const typeButtons = Array.from(document.querySelectorAll('[data-filter-type]'));
+  const yearButtons = Array.from(document.querySelectorAll('[data-filter-year]'));
+  const tagButtons = Array.from(document.querySelectorAll('[data-filter-tag]'));
+  const cards = Array.from(document.querySelectorAll('[data-pub-card]'));
+  const emptyState = document.querySelector('[data-empty]');
+  const clearButton = document.querySelector('[data-clear-filters]');
+  const count = document.querySelector('[data-visible-count]');
+  const total = cards.length;
+
+  const state = { search: '', type: 'all', year: 'all', tag: 'all' };
+
+  const setActive = (buttons, attr, value) => {
+    buttons.forEach(btn => {
+      const key = btn.dataset[attr];
+      const isActive = key === value;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', isActive);
+    });
+  };
+
+  const normalize = (value) => value?.toLowerCase().trim() ?? '';
+
+  const applyFilters = () => {
+    let visible = 0;
+
+    cards.forEach(card => {
+      const data = card.dataset;
+      const matchesSearch = !state.search || data.search.includes(state.search);
+      const matchesType = state.type === 'all' || data.type === state.type;
+      const matchesYear = state.year === 'all' || data.year === state.year;
+      const matchesTag = state.tag === 'all' || data.tags.includes(`|${state.tag}|`);
+      const shouldShow = matchesSearch && matchesType && matchesYear && matchesTag;
+
+      card.classList.toggle('hidden', !shouldShow);
+      if (shouldShow) visible++;
+    });
+
+    if (emptyState) emptyState.classList.toggle('hidden', visible !== 0);
+    if (count) count.textContent = visible === total ? `${total} papers` : `${visible} of ${total} papers`;
+  };
+
+  typeButtons.forEach(btn => btn.addEventListener('click', () => {
+    state.type = btn.dataset.filterType;
+    setActive(typeButtons, 'filterType', state.type);
+    applyFilters();
+  }));
+
+  yearButtons.forEach(btn => btn.addEventListener('click', () => {
+    state.year = btn.dataset.filterYear;
+    setActive(yearButtons, 'filterYear', state.year);
+    applyFilters();
+  }));
+
+  tagButtons.forEach(btn => btn.addEventListener('click', () => {
+    state.tag = btn.dataset.filterTag;
+    setActive(tagButtons, 'filterTag', state.tag);
+    applyFilters();
+  }));
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (event) => {
+      state.search = normalize(event.target.value);
+      applyFilters();
+    });
+  }
+
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      state.search = '';
+      state.type = 'all';
+      state.year = 'all';
+      state.tag = 'all';
+      if (searchInput) searchInput.value = '';
+      setActive(typeButtons, 'filterType', state.type);
+      setActive(yearButtons, 'filterYear', state.year);
+      setActive(tagButtons, 'filterTag', state.tag);
+      applyFilters();
+    });
+  }
+
+  setActive(typeButtons, 'filterType', state.type);
+  setActive(yearButtons, 'filterYear', state.year);
+  setActive(tagButtons, 'filterTag', state.tag);
+  applyFilters();
+})();
+</script>
+{{ end }}
