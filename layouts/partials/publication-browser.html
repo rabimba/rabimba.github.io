@@ -21,9 +21,72 @@
 {{ $pageDesc := .Params.description | default (.Summary | default "Search, filter, and skim through my work.") }}
 {{ $total := len $publications }}
 
+<style>
+  .filter-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .dark .filter-pill {
+    border-color: #334155;
+    background-color: #1e293b;
+    color: #cbd5e1;
+  }
+  .filter-pill:hover {
+    border-color: #a5b4fc;
+    color: #4f46e5;
+  }
+  .dark .filter-pill:hover {
+    border-color: #4338ca;
+    color: #818cf8;
+  }
+  .filter-pill.is-active {
+    border-color: #4f46e5;
+    background-color: #4f46e5;
+    color: white;
+  }
+  .dark .filter-pill.is-active {
+    border-color: #6366f1;
+    background-color: #6366f1;
+    color: white;
+  }
+  
+  .pub-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: all 0.2s;
+  }
+  .dark .pub-card {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-color: #1e293b;
+  }
+  .pub-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transform: translateY(-1px);
+  }
+  .pub-card.distinguished {
+    border-left: 4px solid #f59e0b;
+    background-color: #fffbeb;
+  }
+  .dark .pub-card.distinguished {
+    border-left: 4px solid #d97706;
+    background-color: rgba(120, 53, 15, 0.1);
+  }
+</style>
 
-<link rel="stylesheet" href="/css/custom.css">
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-8">
   <header class="space-y-4 text-center md:text-left">
     <p class="text-sm font-semibold uppercase tracking-wide text-indigo-600">Publication Library</p>
     <div class="space-y-3">
@@ -60,7 +123,7 @@
             type="button"
             data-clear-filters
             class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800/80">
-            Reset filters
+            Reset
           </button>
         </div>
       </div>
@@ -80,12 +143,12 @@
         <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Filter by type</p>
         <div class="flex flex-wrap gap-2">
           {{ $typeFilters := slice
-            (dict "label" "All types" "value" "all")
+            (dict "label" "All" "value" "all")
             (dict "label" "Conference" "value" "conference")
             (dict "label" "Journal" "value" "journal")
             (dict "label" "Preprint" "value" "preprint")
             (dict "label" "Report" "value" "report")
-            (dict "label" "Book / Section" "value" "book")
+            (dict "label" "Book" "value" "book")
             (dict "label" "Thesis" "value" "thesis")
             (dict "label" "Patent" "value" "patent")
           }}
@@ -98,7 +161,7 @@
       <div class="space-y-2">
         <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Year</p>
         <div class="flex flex-wrap gap-2 overflow-x-auto pb-1">
-          <button type="button" class="filter-pill" data-filter-year="all" aria-pressed="false">Any year</button>
+          <button type="button" class="filter-pill" data-filter-year="all" aria-pressed="false">All</button>
           {{ range $years }}
             <button type="button" class="filter-pill" data-filter-year="{{ . }}" aria-pressed="false">{{ . }}</button>
           {{ end }}
@@ -119,7 +182,7 @@
     {{ end }}
   </div>
 
-  <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3" id="pub-grid">
+  <div class="grid gap-4" id="pub-grid">
     {{ range $publications }}
       {{ $typeCode := index .Params.publication_types 0 | default "0" }}
       {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
@@ -133,62 +196,53 @@
       {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
       {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
-      <article class="pub-card{{ if .Params.featured }} distinguished{{ end }}" data-pub-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
-        <div class="flex items-start justify-between gap-3">
-          <div class="flex flex-wrap items-center gap-2 text-sm font-semibold text-indigo-700 dark:text-indigo-300">
-            <span class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-800">{{ $typeLabel }}</span>
-            <span class="text-slate-500 dark:text-slate-500">•</span>
-            <span class="text-slate-700 dark:text-slate-200">{{ $year }}</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            {{ if .Params.featured }}
-              <span class="badge-distinguished">Distinguished</span>
-            {{ end }}
-            {{ if $isFirstAuthor }}
-              <span class="badge-first-author">First Author</span>
-            {{ end }}
-          </div>
-        </div>
+      <article class="pub-card flex flex-col gap-2 {{ if .Params.featured }} distinguished{{ end }}" data-pub-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+        <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex-1 min-w-0">
+                 <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-800 uppercase tracking-wider">{{ $typeLabel }}</span>
+                    <span class="text-slate-300 dark:text-slate-600">•</span>
+                    <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">{{ $year }}</span>
+                    {{ if .Params.featured }}
+                      <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200 border border-amber-200 dark:border-amber-800">Distinguished</span>
+                    {{ end }}
+                 </div>
+                 
+                 <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-1 leading-tight">
+                    <a href="{{ .RelPermalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">{{ .Title }}</a>
+                 </h2>
 
-        <h2 class="mt-3 text-xl font-semibold leading-tight text-slate-900 dark:text-white">
-          <a href="{{ .RelPermalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-300">{{ .Title }}</a>
-        </h2>
+                 <div class="text-slate-600 dark:text-slate-400 text-sm mb-2">
+                    {{ delimit .Params.authors ", " }}
+                 </div>
 
-        {{ with .Params.authors }}
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ delimit . ", " }}</p>
-        {{ end }}
+                 {{ with .Params.publication }}
+                    <div class="text-sm font-medium text-slate-700 dark:text-slate-300 italic mb-2">{{ . }}</div>
+                 {{ end }}
+                 
+                 {{ if gt (len $tags) 0 }}
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                        {{ range first 5 $tags }}
+                           <span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">#{{ . }}</span>
+                        {{ end }}
+                    </div>
+                 {{ end }}
+            </div>
 
-        {{ with .Params.publication }}
-          <p class="mt-1 text-sm font-semibold text-slate-700 dark:text-slate-200">{{ . }}</p>
-        {{ end }}
-
-        {{ with .Params.abstract }}
-          <p class="pub-abstract">{{ . }}</p>
-        {{ end }}
-
-        {{ if gt (len $tags) 0 }}
-          <div class="mt-4 flex flex-wrap gap-2">
-            {{ range first 4 $tags }}
-              <span class="tag-pill">#{{ . }}</span>
-            {{ end }}
-          </div>
-        {{ end }}
-
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a class="btn-primary" href="{{ .RelPermalink }}">View details</a>
-          {{ with .Params.links.url_pdf }}
-            {{ if . }}
-              <a class="btn-ghost" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
-            {{ end }}
-          {{ end }}
+            <div class="flex sm:flex-col gap-2 shrink-0 sm:items-end sm:justify-start mt-2 sm:mt-0">
+                 <a class="inline-flex items-center justify-center px-3 py-1.5 border border-slate-200 dark:border-slate-700 shadow-sm text-xs font-medium rounded-md text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition w-full sm:w-auto" href="{{ .RelPermalink }}">Details</a>
+                 {{ with .Params.links.url_pdf }}
+                    <a class="inline-flex items-center justify-center px-3 py-1.5 border border-indigo-200 dark:border-indigo-800 text-xs font-medium rounded-md text-indigo-700 dark:text-indigo-200 bg-indigo-50 dark:bg-indigo-900/20 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition w-full sm:w-auto" href="{{ . }}" target="_blank">PDF</a>
+                 {{ end }}
+            </div>
         </div>
       </article>
     {{ end }}
   </div>
 
-  <div class="pub-empty hidden" data-empty>
+  <div class="pub-empty hidden text-center py-12" data-empty>
     <p class="text-lg font-semibold text-slate-900 dark:text-white">No publications match those filters.</p>
-    <p class="text-slate-600 dark:text-slate-300">Try resetting the filters or searching for a broader term.</p>
+    <p class="text-slate-600 dark:text-slate-300 mt-2">Try resetting the filters or searching for a broader term.</p>
   </div>
 </section>
 
