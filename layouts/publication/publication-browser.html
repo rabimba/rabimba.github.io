@@ -1,3 +1,315 @@
-{{ define "main" }}
-  {{ partial "publication-browser.html" . }}
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | {{ site.Title }}</title>
+  <meta name="description" content="{{ .Params.description | default "Browse research publications" }}">
+  <link rel="icon" type="image/png" href="{{ "media/icon.png" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+    body { min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+    
+    /* Layout */
+    .navbar { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .navbar-brand { font-weight: 700; font-size: 1.125rem; color: white; }
+    .navbar-nav { display: flex; gap: 2rem; }
+    .navbar-nav a { font-size: 0.875rem; font-weight: 500; color: #94a3b8; transition: color 0.2s; }
+    .navbar-nav a:hover, .navbar-nav a.active { color: white; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    
+    /* Header */
+    .page-header { margin-bottom: 2rem; }
+    .page-header h1 { font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .page-header p { color: #94a3b8; font-size: 1.125rem; }
+    .page-stats { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: #64748b; }
+    
+    /* Filters */
+    .filters-panel { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-label { font-size: 0.8125rem; font-weight: 600; color: #94a3b8; min-width: 60px; }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    
+    .filter-btn {
+      display: inline-flex; align-items: center; padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem; font-weight: 500; border-radius: 9999px;
+      background: rgba(51, 65, 85, 0.5); color: #94a3b8; border: 1px solid transparent;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .filter-btn:hover { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.3); }
+    .filter-btn.active { background: #6366f1; color: white; border-color: #6366f1; }
+    
+    .search-box {
+      flex: 1; min-width: 200px; padding: 0.625rem 1rem; font-size: 0.9375rem;
+      background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; border-radius: 0.5rem;
+      color: white; outline: none; transition: all 0.2s;
+    }
+    .search-box:focus { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); }
+    .search-box::placeholder { color: #64748b; }
+    
+    /* Publications List */
+    .pub-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    
+    .pub-item {
+      background: rgba(30, 41, 59, 0.4); border: 1px solid #334155; border-radius: 0.75rem;
+      padding: 1rem 1.25rem; transition: all 0.2s;
+    }
+    .pub-item:hover { border-color: rgba(99, 102, 241, 0.4); background: rgba(30, 41, 59, 0.6); }
+    .pub-item.distinguished { border-left: 3px solid #f59e0b; background: rgba(120, 53, 15, 0.15); }
+    .pub-item.hidden { display: none !important; }
+    
+    .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .pub-badge {
+      display: inline-flex; padding: 0.125rem 0.5rem; border-radius: 0.25rem;
+      font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .pub-badge-type { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; }
+    .pub-badge-year { background: transparent; color: #94a3b8; font-weight: 600; font-size: 0.8125rem; }
+    .pub-badge-distinguished { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .pub-badge-first { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    
+    .pub-title { font-size: 1.0625rem; font-weight: 600; color: white; line-height: 1.4; margin-bottom: 0.25rem; }
+    .pub-title a:hover { color: #a5b4fc; }
+    .pub-authors { font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.25rem; }
+    .pub-venue { font-size: 0.8125rem; color: #64748b; font-style: italic; }
+    
+    .pub-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.5rem; }
+    .pub-tag { font-size: 0.6875rem; padding: 0.125rem 0.375rem; background: rgba(51, 65, 85, 0.6); color: #94a3b8; border-radius: 0.25rem; }
+    
+    .pub-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+    .pub-link {
+      display: inline-flex; align-items: center; padding: 0.375rem 0.75rem;
+      font-size: 0.75rem; font-weight: 500; border-radius: 0.375rem; transition: all 0.15s;
+    }
+    .pub-link-primary { background: #6366f1; color: white; }
+    .pub-link-primary:hover { background: #4f46e5; }
+    .pub-link-secondary { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .pub-link-secondary:hover { background: rgba(99, 102, 241, 0.25); }
+    
+    .empty-state { text-align: center; padding: 3rem 1rem; color: #64748b; }
+    .empty-state.hidden { display: none; }
+    
+    .footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; border-top: 1px solid #1e293b; margin-top: 2rem; }
+    
+    @media (max-width: 640px) {
+      .navbar-nav { gap: 1rem; }
+      .page-header h1 { font-size: 1.75rem; }
+      .filter-row { flex-direction: column; align-items: flex-start; }
+      .filter-label { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="{{ "/" | relURL }}" class="navbar-brand">{{ site.Title }}</a>
+      <div class="navbar-nav">
+        <a href="{{ "/" | relURL }}">Bio</a>
+        <a href="{{ "/publication/" | relURL }}" class="active">Publications</a>
+        <a href="{{ "/events/" | relURL }}">Talks</a>
+        <a href="{{ "/experience/" | relURL }}">Experience</a>
+      </div>
+    </div>
+  </nav>
+
+  {{ $publications := .RegularPages.ByDate.Reverse }}
+  {{ $typeMap := dict "0" "Uncategorized" "1" "Conference" "2" "Journal" "3" "Preprint" "4" "Report" "5" "Book" "6" "Book Section" "7" "Thesis" "8" "Patent" }}
+  {{ $scratch := newScratch }}
+  {{ $scratch.Set "years" (slice) }}
+  {{ $scratch.Set "tags" (slice) }}
+
+  {{ range $publications }}
+    {{ $year := time.Format "2006" .Date }}
+    {{ $years := $scratch.Get "years" }}
+    {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
+    {{ range .Params.tags }}
+      {{ $tags := $scratch.Get "tags" }}
+      {{ if and . (not (in $tags .)) }}{{ $scratch.Set "tags" (append $tags .) }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $years := sort ($scratch.Get "years") "value" "desc" }}
+  {{ $tags := sort ($scratch.Get "tags") }}
+  {{ $topTags := first 12 $tags }}
+  {{ $total := len $publications }}
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Publications</h1>
+      <p>{{ .Params.description | default "Browse my research papers by topic, venue, and year." }}</p>
+      <div class="page-stats">
+        <span data-count>{{ $total }} papers</span>
+        <span>•</span>
+        <span>Updated {{ time.Format "Jan 2006" now }}</span>
+      </div>
+    </header>
+
+    <div class="filters-panel">
+      <div class="filter-row">
+        <span class="filter-label">Search</span>
+        <input type="search" class="search-box" data-search placeholder="Search by title, author, venue...">
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Sort</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-sort="newest">Newest</button>
+          <button class="filter-btn" data-sort="oldest">Oldest</button>
+          <button class="filter-btn" data-sort="az">A → Z</button>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-type="all">All</button>
+          <button class="filter-btn" data-type="conference">Conference</button>
+          <button class="filter-btn" data-type="journal">Journal</button>
+          <button class="filter-btn" data-type="preprint">Preprint</button>
+          <button class="filter-btn" data-type="thesis">Thesis</button>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Year</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-year="all">All</button>
+          {{ range $years }}
+          <button class="filter-btn" data-year="{{ . }}">{{ . }}</button>
+          {{ end }}
+        </div>
+      </div>
+      {{ if gt (len $topTags) 0 }}
+      <div class="filter-row">
+        <span class="filter-label">Topic</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-tag="all">All</button>
+          {{ range $topTags }}
+          <button class="filter-btn" data-tag="{{ lower (urlize .) }}">#{{ . }}</button>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="pub-list" id="pub-list">
+      {{ range $publications }}
+        {{ $typeCode := index .Params.publication_types 0 | default "0" }}
+        {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
+        {{ $typeSlug := lower (replaceRE "[^a-z0-9]+" "-" $typeLabel) }}
+        {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
+        {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
+        {{ $year := time.Format "2006" .Date }}
+        {{ $tags := .Params.tags | default (slice) }}
+        {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
+        {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") }}
+        {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
+        {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
+
+        <article class="pub-item{{ if .Params.featured }} distinguished{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+          <div class="pub-meta">
+            <span class="pub-badge pub-badge-type">{{ $typeLabel }}</span>
+            <span class="pub-badge pub-badge-year">{{ $year }}</span>
+            {{ if .Params.featured }}<span class="pub-badge pub-badge-distinguished">Distinguished</span>{{ end }}
+            {{ if $isFirstAuthor }}<span class="pub-badge pub-badge-first">1st Author</span>{{ end }}
+          </div>
+          <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.authors }}<p class="pub-authors">{{ delimit . ", " }}</p>{{ end }}
+          {{ with .Params.publication }}<p class="pub-venue">{{ . }}</p>{{ end }}
+          {{ if gt (len $tags) 0 }}
+          <div class="pub-tags">
+            {{ range first 4 $tags }}<span class="pub-tag">#{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <div class="pub-actions">
+            <a class="pub-link pub-link-primary" href="{{ .RelPermalink }}">View</a>
+            {{ with .Params.url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}
+            {{ with .Params.links }}{{ with .url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+    <div class="empty-state hidden" data-empty>
+      <p>No publications match your filters.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © {{ now.Year }} {{ site.Title }}. All rights reserved.
+  </footer>
+
+  <script>
+  (function() {
+    var searchInput = document.querySelector('[data-search]');
+    var sortButtons = document.querySelectorAll('[data-sort]');
+    var typeButtons = document.querySelectorAll('[data-type]');
+    var yearButtons = document.querySelectorAll('[data-year]');
+    var tagButtons = document.querySelectorAll('[data-tag]');
+    var cards = Array.from(document.querySelectorAll('[data-card]'));
+    var list = document.getElementById('pub-list');
+    var empty = document.querySelector('[data-empty]');
+    var countEl = document.querySelector('[data-count]');
+    var total = cards.length;
+
+    var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all' };
+
+    function setActive(buttons, value, attr) {
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset[attr] === value);
+      });
+    }
+
+    function sortCards() {
+      var sorted = cards.slice().sort(function(a, b) {
+        var yA = parseInt(a.dataset.year) || 0, yB = parseInt(b.dataset.year) || 0;
+        var tA = a.dataset.title || '', tB = b.dataset.title || '';
+        if (state.sort === 'oldest') return yA - yB || tA.localeCompare(tB);
+        if (state.sort === 'az') return tA.localeCompare(tB);
+        return yB - yA || tA.localeCompare(tB);
+      });
+      sorted.forEach(function(c) { list.appendChild(c); });
+    }
+
+    function filter() {
+      var visible = 0;
+      var q = state.search.toLowerCase().trim();
+      cards.forEach(function(c) {
+        var d = c.dataset;
+        var ok = (!q || d.search.indexOf(q) !== -1)
+              && (state.type === 'all' || d.type === state.type)
+              && (state.year === 'all' || d.year === state.year)
+              && (state.tag === 'all' || d.tags.indexOf('|' + state.tag + '|') !== -1);
+        c.classList.toggle('hidden', !ok);
+        if (ok) visible++;
+      });
+      empty.classList.toggle('hidden', visible > 0);
+      countEl.textContent = visible === total ? total + ' papers' : visible + ' of ' + total + ' papers';
+      sortCards();
+    }
+
+    searchInput.addEventListener('input', function(e) { state.search = e.target.value; filter(); });
+
+    sortButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.sort = btn.dataset.sort; setActive(sortButtons, state.sort, 'sort'); filter(); });
+    });
+    typeButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.type = btn.dataset.type; setActive(typeButtons, state.type, 'type'); filter(); });
+    });
+    yearButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.year = btn.dataset.year; setActive(yearButtons, state.year, 'year'); filter(); });
+    });
+    tagButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.tag = btn.dataset.tag; setActive(tagButtons, state.tag, 'tag'); filter(); });
+    });
+
+    filter();
+  })();
+  </script>
+</body>
+</html>
