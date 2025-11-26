@@ -21,6 +21,8 @@
 {{ $pageDesc := .Params.description | default (.Summary | default "Search, filter, and skim through my work.") }}
 {{ $total := len $publications }}
 
+
+<link rel="stylesheet" href="/css/custom.css">
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
   <header class="space-y-4 text-center md:text-left">
     <p class="text-sm font-semibold uppercase tracking-wide text-indigo-600">Publication Library</p>
@@ -129,17 +131,23 @@
       {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
       {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") (.Params.abstract | plainify) }}
       {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
+      {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
-      <article class="pub-card" data-pub-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+      <article class="pub-card{{ if .Params.featured }} distinguished{{ end }}" data-pub-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
         <div class="flex items-start justify-between gap-3">
           <div class="flex flex-wrap items-center gap-2 text-sm font-semibold text-indigo-700 dark:text-indigo-300">
             <span class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200 border border-indigo-100 dark:border-indigo-800">{{ $typeLabel }}</span>
             <span class="text-slate-500 dark:text-slate-500">•</span>
             <span class="text-slate-700 dark:text-slate-200">{{ $year }}</span>
           </div>
-          {{ if .Params.featured }}
-            <span class="badge-featured">Featured</span>
-          {{ end }}
+          <div class="flex flex-wrap gap-2">
+            {{ if .Params.featured }}
+              <span class="badge-distinguished">Distinguished</span>
+            {{ end }}
+            {{ if $isFirstAuthor }}
+              <span class="badge-first-author">First Author</span>
+            {{ end }}
+          </div>
         </div>
 
         <h2 class="mt-3 text-xl font-semibold leading-tight text-slate-900 dark:text-white">
