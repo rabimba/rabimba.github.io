@@ -1,437 +1,315 @@
-{{ define "main" }}
-{{ $publications := .RegularPages.ByDate.Reverse }}
-{{ $typeMap := dict "0" "Uncategorized" "1" "Conference" "2" "Journal" "3" "Preprint" "4" "Report" "5" "Book" "6" "Book Section" "7" "Thesis" "8" "Patent" }}
-{{ $scratch := newScratch }}
-{{ $scratch.Set "years" (slice) }}
-{{ $scratch.Set "tags" (slice) }}
-
-{{ range $publications }}
-  {{ $year := time.Format "2006" .Date }}
-  {{ $years := $scratch.Get "years" }}
-  {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
-
-  {{ range .Params.tags }}
-    {{ $tags := $scratch.Get "tags" }}
-    {{ if and . (not (in $tags .)) }}{{ $scratch.Set "tags" (append $tags .) }}{{ end }}
-  {{ end }}
-{{ end }}
-
-{{ $years := sort ($scratch.Get "years") "value" "desc" }}
-{{ $tags := sort ($scratch.Get "tags") }}
-{{ $topTags := first 12 $tags }}
-{{ $pageDesc := .Params.description | default "Search, filter, and skim through my work." }}
-{{ $total := len $publications }}
-
-<style>
-  .pub-filter-pill {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 9999px;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-    background-color: rgba(30, 41, 59, 0.6);
-    padding: 0.375rem 0.875rem;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: #94a3b8;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-  .pub-filter-pill:hover {
-    border-color: rgba(99, 102, 241, 0.5);
-    color: #a5b4fc;
-    background-color: rgba(99, 102, 241, 0.1);
-  }
-  .pub-filter-pill.is-active {
-    border-color: #6366f1;
-    background-color: #6366f1;
-    color: white;
-  }
-  
-  .pub-item {
-    background-color: rgba(30, 41, 59, 0.4);
-    border: 1px solid rgba(51, 65, 85, 0.5);
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    transition: all 0.2s;
-  }
-  .pub-item:hover {
-    border-color: rgba(99, 102, 241, 0.4);
-    background-color: rgba(30, 41, 59, 0.6);
-  }
-  .pub-item.distinguished {
-    border-left: 3px solid #f59e0b;
-    background-color: rgba(120, 53, 15, 0.15);
-  }
-  .pub-item.hidden {
-    display: none !important;
-  }
-  
-  .pub-search-input {
-    width: 100%;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(51, 65, 85, 0.5);
-    background-color: rgba(15, 23, 42, 0.6);
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    color: white;
-    outline: none;
-    transition: all 0.2s;
-  }
-  .pub-search-input:focus {
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-  }
-  .pub-search-input::placeholder {
-    color: #64748b;
-  }
-  
-  .pub-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.125rem 0.5rem;
-    border-radius: 0.25rem;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-  }
-  .pub-badge-type {
-    background-color: rgba(99, 102, 241, 0.2);
-    color: #a5b4fc;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-  }
-  .pub-badge-distinguished {
-    background-color: rgba(245, 158, 11, 0.2);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-  }
-  .pub-badge-first {
-    background-color: rgba(16, 185, 129, 0.2);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-  }
-  .pub-tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.125rem 0.375rem;
-    border-radius: 0.25rem;
-    font-size: 0.6875rem;
-    background-color: rgba(51, 65, 85, 0.5);
-    color: #94a3b8;
-  }
-  
-  .pub-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    transition: all 0.15s;
-  }
-  .pub-link-primary {
-    background-color: #6366f1;
-    color: white;
-  }
-  .pub-link-primary:hover {
-    background-color: #4f46e5;
-  }
-  .pub-link-secondary {
-    background-color: rgba(99, 102, 241, 0.15);
-    color: #a5b4fc;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-  }
-  .pub-link-secondary:hover {
-    background-color: rgba(99, 102, 241, 0.25);
-  }
-  
-  .pub-empty {
-    text-align: center;
-    padding: 3rem 1rem;
-    color: #94a3b8;
-  }
-  .pub-empty.hidden {
-    display: none;
-  }
-</style>
-
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <header class="mb-8">
-    <p class="text-sm font-semibold uppercase tracking-wider text-indigo-400 mb-2">Publication Library</p>
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">{{ .Title }}</h1>
-    <p class="text-lg text-slate-400">{{ $pageDesc }}</p>
-    <div class="flex items-center gap-3 mt-4 text-sm text-slate-500">
-      <span data-visible-count>{{ $total }} papers</span>
-      <span>•</span>
-      <span>Updated {{ time.Format "Jan 2006" now }}</span>
-    </div>
-  </header>
-
-  <!-- Filters Panel -->
-  <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-4 sm:p-6 mb-8 space-y-4">
-    <!-- Search -->
-    <div>
-      <label class="block text-sm font-medium text-slate-300 mb-2">Search</label>
-      <input
-        type="search"
-        data-pub-search
-        class="pub-search-input"
-        placeholder="Search by title, author, venue, or keyword..." />
-    </div>
-
-    <!-- Sort + Reset Row -->
-    <div class="flex flex-wrap items-center justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-2">
-        <span class="text-sm font-medium text-slate-300">Sort:</span>
-        <button type="button" class="pub-filter-pill is-active" data-sort="newest">Newest</button>
-        <button type="button" class="pub-filter-pill" data-sort="oldest">Oldest</button>
-        <button type="button" class="pub-filter-pill" data-sort="az">A → Z</button>
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | {{ site.Title }}</title>
+  <meta name="description" content="{{ .Params.description | default "Browse research publications" }}">
+  <link rel="icon" type="image/png" href="{{ "media/icon.png" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+    body { min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+    
+    /* Layout */
+    .navbar { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .navbar-brand { font-weight: 700; font-size: 1.125rem; color: white; }
+    .navbar-nav { display: flex; gap: 2rem; }
+    .navbar-nav a { font-size: 0.875rem; font-weight: 500; color: #94a3b8; transition: color 0.2s; }
+    .navbar-nav a:hover, .navbar-nav a.active { color: white; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    
+    /* Header */
+    .page-header { margin-bottom: 2rem; }
+    .page-header h1 { font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .page-header p { color: #94a3b8; font-size: 1.125rem; }
+    .page-stats { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: #64748b; }
+    
+    /* Filters */
+    .filters-panel { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-label { font-size: 0.8125rem; font-weight: 600; color: #94a3b8; min-width: 60px; }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    
+    .filter-btn {
+      display: inline-flex; align-items: center; padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem; font-weight: 500; border-radius: 9999px;
+      background: rgba(51, 65, 85, 0.5); color: #94a3b8; border: 1px solid transparent;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .filter-btn:hover { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.3); }
+    .filter-btn.active { background: #6366f1; color: white; border-color: #6366f1; }
+    
+    .search-box {
+      flex: 1; min-width: 200px; padding: 0.625rem 1rem; font-size: 0.9375rem;
+      background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; border-radius: 0.5rem;
+      color: white; outline: none; transition: all 0.2s;
+    }
+    .search-box:focus { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); }
+    .search-box::placeholder { color: #64748b; }
+    
+    /* Publications List */
+    .pub-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    
+    .pub-item {
+      background: rgba(30, 41, 59, 0.4); border: 1px solid #334155; border-radius: 0.75rem;
+      padding: 1rem 1.25rem; transition: all 0.2s;
+    }
+    .pub-item:hover { border-color: rgba(99, 102, 241, 0.4); background: rgba(30, 41, 59, 0.6); }
+    .pub-item.distinguished { border-left: 3px solid #f59e0b; background: rgba(120, 53, 15, 0.15); }
+    .pub-item.hidden { display: none !important; }
+    
+    .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .pub-badge {
+      display: inline-flex; padding: 0.125rem 0.5rem; border-radius: 0.25rem;
+      font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .pub-badge-type { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; }
+    .pub-badge-year { background: transparent; color: #94a3b8; font-weight: 600; font-size: 0.8125rem; }
+    .pub-badge-distinguished { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .pub-badge-first { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    
+    .pub-title { font-size: 1.0625rem; font-weight: 600; color: white; line-height: 1.4; margin-bottom: 0.25rem; }
+    .pub-title a:hover { color: #a5b4fc; }
+    .pub-authors { font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.25rem; }
+    .pub-venue { font-size: 0.8125rem; color: #64748b; font-style: italic; }
+    
+    .pub-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.5rem; }
+    .pub-tag { font-size: 0.6875rem; padding: 0.125rem 0.375rem; background: rgba(51, 65, 85, 0.6); color: #94a3b8; border-radius: 0.25rem; }
+    
+    .pub-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+    .pub-link {
+      display: inline-flex; align-items: center; padding: 0.375rem 0.75rem;
+      font-size: 0.75rem; font-weight: 500; border-radius: 0.375rem; transition: all 0.15s;
+    }
+    .pub-link-primary { background: #6366f1; color: white; }
+    .pub-link-primary:hover { background: #4f46e5; }
+    .pub-link-secondary { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .pub-link-secondary:hover { background: rgba(99, 102, 241, 0.25); }
+    
+    .empty-state { text-align: center; padding: 3rem 1rem; color: #64748b; }
+    .empty-state.hidden { display: none; }
+    
+    .footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; border-top: 1px solid #1e293b; margin-top: 2rem; }
+    
+    @media (max-width: 640px) {
+      .navbar-nav { gap: 1rem; }
+      .page-header h1 { font-size: 1.75rem; }
+      .filter-row { flex-direction: column; align-items: flex-start; }
+      .filter-label { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="{{ "/" | relURL }}" class="navbar-brand">{{ site.Title }}</a>
+      <div class="navbar-nav">
+        <a href="{{ "/" | relURL }}">Bio</a>
+        <a href="{{ "/publication/" | relURL }}" class="active">Publications</a>
+        <a href="{{ "/events/" | relURL }}">Talks</a>
+        <a href="{{ "/experience/" | relURL }}">Experience</a>
       </div>
-      <button type="button" data-clear-filters class="pub-filter-pill">Reset All</button>
     </div>
+  </nav>
 
-    <!-- Type + Year Filters -->
-    <div class="grid gap-4 sm:grid-cols-2">
-      <div>
-        <p class="text-sm font-medium text-slate-300 mb-2">Type</p>
-        <div class="flex flex-wrap gap-2">
-          <button type="button" class="pub-filter-pill is-active" data-filter-type="all">All</button>
-          <button type="button" class="pub-filter-pill" data-filter-type="conference">Conference</button>
-          <button type="button" class="pub-filter-pill" data-filter-type="journal">Journal</button>
-          <button type="button" class="pub-filter-pill" data-filter-type="preprint">Preprint</button>
-          <button type="button" class="pub-filter-pill" data-filter-type="thesis">Thesis</button>
+  {{ $publications := .RegularPages.ByDate.Reverse }}
+  {{ $typeMap := dict "0" "Uncategorized" "1" "Conference" "2" "Journal" "3" "Preprint" "4" "Report" "5" "Book" "6" "Book Section" "7" "Thesis" "8" "Patent" }}
+  {{ $scratch := newScratch }}
+  {{ $scratch.Set "years" (slice) }}
+  {{ $scratch.Set "tags" (slice) }}
+
+  {{ range $publications }}
+    {{ $year := time.Format "2006" .Date }}
+    {{ $years := $scratch.Get "years" }}
+    {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
+    {{ range .Params.tags }}
+      {{ $tags := $scratch.Get "tags" }}
+      {{ if and . (not (in $tags .)) }}{{ $scratch.Set "tags" (append $tags .) }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $years := sort ($scratch.Get "years") "value" "desc" }}
+  {{ $tags := sort ($scratch.Get "tags") }}
+  {{ $topTags := first 12 $tags }}
+  {{ $total := len $publications }}
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Publications</h1>
+      <p>{{ .Params.description | default "Browse my research papers by topic, venue, and year." }}</p>
+      <div class="page-stats">
+        <span data-count>{{ $total }} papers</span>
+        <span>•</span>
+        <span>Updated {{ time.Format "Jan 2006" now }}</span>
+      </div>
+    </header>
+
+    <div class="filters-panel">
+      <div class="filter-row">
+        <span class="filter-label">Search</span>
+        <input type="search" class="search-box" data-search placeholder="Search by title, author, venue...">
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Sort</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-sort="newest">Newest</button>
+          <button class="filter-btn" data-sort="oldest">Oldest</button>
+          <button class="filter-btn" data-sort="az">A → Z</button>
         </div>
       </div>
-      <div>
-        <p class="text-sm font-medium text-slate-300 mb-2">Year</p>
-        <div class="flex flex-wrap gap-2">
-          <button type="button" class="pub-filter-pill is-active" data-filter-year="all">All</button>
+      <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-type="all">All</button>
+          <button class="filter-btn" data-type="conference">Conference</button>
+          <button class="filter-btn" data-type="journal">Journal</button>
+          <button class="filter-btn" data-type="preprint">Preprint</button>
+          <button class="filter-btn" data-type="thesis">Thesis</button>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Year</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-year="all">All</button>
           {{ range $years }}
-            <button type="button" class="pub-filter-pill" data-filter-year="{{ . }}">{{ . }}</button>
+          <button class="filter-btn" data-year="{{ . }}">{{ . }}</button>
           {{ end }}
         </div>
       </div>
-    </div>
-
-    <!-- Topic Filters -->
-    {{ if gt (len $topTags) 0 }}
-    <div>
-      <p class="text-sm font-medium text-slate-300 mb-2">Topics</p>
-      <div class="flex flex-wrap gap-2">
-        <button type="button" class="pub-filter-pill is-active" data-filter-tag="all">All</button>
-        {{ range $topTags }}
-          <button type="button" class="pub-filter-pill" data-filter-tag="{{ lower (urlize .) }}">#{{ . }}</button>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-
-  <!-- Publications List -->
-  <div class="space-y-3" id="pub-list">
-    {{ range $publications }}
-      {{ $typeCode := index .Params.publication_types 0 | default "0" }}
-      {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
-      {{ $typeSlug := lower (replaceRE "[^a-z0-9]+" "-" $typeLabel) }}
-      {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
-      {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
-      {{ $year := time.Format "2006" .Date }}
-      {{ $tags := .Params.tags | default (slice) }}
-      {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
-      {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") }}
-      {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
-      {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
-
-      <article 
-        class="pub-item{{ if .Params.featured }} distinguished{{ end }}" 
-        data-pub-card 
-        data-year="{{ $year }}" 
-        data-type="{{ $typeSlug }}" 
-        data-tags="{{ $tagAttr }}" 
-        data-search="{{ $searchAttr }}" 
-        data-title="{{ .Title | plainify | lower }}">
-        
-        <div class="flex flex-col sm:flex-row sm:items-start gap-3">
-          <div class="flex-1 min-w-0">
-            <!-- Badges Row -->
-            <div class="flex flex-wrap items-center gap-2 mb-2">
-              <span class="pub-badge pub-badge-type">{{ $typeLabel }}</span>
-              <span class="text-slate-600">•</span>
-              <span class="text-sm font-semibold text-slate-300">{{ $year }}</span>
-              {{ if .Params.featured }}
-                <span class="pub-badge pub-badge-distinguished">Distinguished</span>
-              {{ end }}
-              {{ if $isFirstAuthor }}
-                <span class="pub-badge pub-badge-first">1st Author</span>
-              {{ end }}
-            </div>
-            
-            <!-- Title -->
-            <h2 class="text-lg font-semibold text-white leading-tight mb-1">
-              <a href="{{ .RelPermalink }}" class="hover:text-indigo-400 transition">{{ .Title }}</a>
-            </h2>
-            
-            <!-- Authors -->
-            {{ with .Params.authors }}
-              <p class="text-sm text-slate-400 mb-1">{{ delimit . ", " }}</p>
-            {{ end }}
-            
-            <!-- Venue -->
-            {{ with .Params.publication }}
-              <p class="text-sm font-medium text-slate-500 italic">{{ . }}</p>
-            {{ end }}
-            
-            <!-- Tags -->
-            {{ if gt (len $tags) 0 }}
-              <div class="flex flex-wrap gap-1 mt-2">
-                {{ range first 4 $tags }}
-                  <span class="pub-tag">#{{ . }}</span>
-                {{ end }}
-              </div>
-            {{ end }}
-          </div>
-          
-          <!-- Action Buttons -->
-          <div class="flex sm:flex-col gap-2 shrink-0">
-            <a class="pub-link pub-link-primary" href="{{ .RelPermalink }}">View</a>
-            {{ with .Params.url_pdf }}
-              <a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
-            {{ end }}
-            {{ with .Params.links }}
-              {{ with .url_pdf }}
-                <a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank" rel="noopener">PDF</a>
-              {{ end }}
-            {{ end }}
-          </div>
+      {{ if gt (len $topTags) 0 }}
+      <div class="filter-row">
+        <span class="filter-label">Topic</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-tag="all">All</button>
+          {{ range $topTags }}
+          <button class="filter-btn" data-tag="{{ lower (urlize .) }}">#{{ . }}</button>
+          {{ end }}
         </div>
-      </article>
-    {{ end }}
-  </div>
+      </div>
+      {{ end }}
+    </div>
 
-  <!-- Empty State -->
-  <div class="pub-empty hidden" data-empty>
-    <p class="text-lg font-semibold text-white mb-2">No publications match your filters.</p>
-    <p>Try adjusting your search or resetting the filters.</p>
-  </div>
-</div>
+    <div class="pub-list" id="pub-list">
+      {{ range $publications }}
+        {{ $typeCode := index .Params.publication_types 0 | default "0" }}
+        {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
+        {{ $typeSlug := lower (replaceRE "[^a-z0-9]+" "-" $typeLabel) }}
+        {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
+        {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
+        {{ $year := time.Format "2006" .Date }}
+        {{ $tags := .Params.tags | default (slice) }}
+        {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
+        {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") }}
+        {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
+        {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
-<script>
-(function() {
-  const searchInput = document.querySelector('[data-pub-search]');
-  const typeButtons = Array.from(document.querySelectorAll('[data-filter-type]'));
-  const yearButtons = Array.from(document.querySelectorAll('[data-filter-year]'));
-  const tagButtons = Array.from(document.querySelectorAll('[data-filter-tag]'));
-  const sortButtons = Array.from(document.querySelectorAll('[data-sort]'));
-  const cards = Array.from(document.querySelectorAll('[data-pub-card]'));
-  const list = document.querySelector('#pub-list');
-  const emptyState = document.querySelector('[data-empty]');
-  const clearButton = document.querySelector('[data-clear-filters]');
-  const countEl = document.querySelector('[data-visible-count]');
-  const total = cards.length;
+        <article class="pub-item{{ if .Params.featured }} distinguished{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+          <div class="pub-meta">
+            <span class="pub-badge pub-badge-type">{{ $typeLabel }}</span>
+            <span class="pub-badge pub-badge-year">{{ $year }}</span>
+            {{ if .Params.featured }}<span class="pub-badge pub-badge-distinguished">Distinguished</span>{{ end }}
+            {{ if $isFirstAuthor }}<span class="pub-badge pub-badge-first">1st Author</span>{{ end }}
+          </div>
+          <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.authors }}<p class="pub-authors">{{ delimit . ", " }}</p>{{ end }}
+          {{ with .Params.publication }}<p class="pub-venue">{{ . }}</p>{{ end }}
+          {{ if gt (len $tags) 0 }}
+          <div class="pub-tags">
+            {{ range first 4 $tags }}<span class="pub-tag">#{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <div class="pub-actions">
+            <a class="pub-link pub-link-primary" href="{{ .RelPermalink }}">View</a>
+            {{ with .Params.url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}
+            {{ with .Params.links }}{{ with .url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
 
-  const state = { search: '', type: 'all', year: 'all', tag: 'all', sort: 'newest' };
+    <div class="empty-state hidden" data-empty>
+      <p>No publications match your filters.</p>
+    </div>
+  </main>
 
-  function setActive(buttons, attr, value) {
-    buttons.forEach(function(btn) {
-      var key = btn.dataset[attr];
-      var isActive = key === value;
-      btn.classList.toggle('is-active', isActive);
+  <footer class="footer">
+    © {{ now.Year }} {{ site.Title }}. All rights reserved.
+  </footer>
+
+  <script>
+  (function() {
+    var searchInput = document.querySelector('[data-search]');
+    var sortButtons = document.querySelectorAll('[data-sort]');
+    var typeButtons = document.querySelectorAll('[data-type]');
+    var yearButtons = document.querySelectorAll('[data-year]');
+    var tagButtons = document.querySelectorAll('[data-tag]');
+    var cards = Array.from(document.querySelectorAll('[data-card]'));
+    var list = document.getElementById('pub-list');
+    var empty = document.querySelector('[data-empty]');
+    var countEl = document.querySelector('[data-count]');
+    var total = cards.length;
+
+    var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all' };
+
+    function setActive(buttons, value, attr) {
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset[attr] === value);
+      });
+    }
+
+    function sortCards() {
+      var sorted = cards.slice().sort(function(a, b) {
+        var yA = parseInt(a.dataset.year) || 0, yB = parseInt(b.dataset.year) || 0;
+        var tA = a.dataset.title || '', tB = b.dataset.title || '';
+        if (state.sort === 'oldest') return yA - yB || tA.localeCompare(tB);
+        if (state.sort === 'az') return tA.localeCompare(tB);
+        return yB - yA || tA.localeCompare(tB);
+      });
+      sorted.forEach(function(c) { list.appendChild(c); });
+    }
+
+    function filter() {
+      var visible = 0;
+      var q = state.search.toLowerCase().trim();
+      cards.forEach(function(c) {
+        var d = c.dataset;
+        var ok = (!q || d.search.indexOf(q) !== -1)
+              && (state.type === 'all' || d.type === state.type)
+              && (state.year === 'all' || d.year === state.year)
+              && (state.tag === 'all' || d.tags.indexOf('|' + state.tag + '|') !== -1);
+        c.classList.toggle('hidden', !ok);
+        if (ok) visible++;
+      });
+      empty.classList.toggle('hidden', visible > 0);
+      countEl.textContent = visible === total ? total + ' papers' : visible + ' of ' + total + ' papers';
+      sortCards();
+    }
+
+    searchInput.addEventListener('input', function(e) { state.search = e.target.value; filter(); });
+
+    sortButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.sort = btn.dataset.sort; setActive(sortButtons, state.sort, 'sort'); filter(); });
     });
-  }
-
-  function sortCards() {
-    if (!list) return;
-    var sorted = cards.slice().sort(function(a, b) {
-      var yearA = parseInt(a.dataset.year, 10) || 0;
-      var yearB = parseInt(b.dataset.year, 10) || 0;
-      var titleA = a.dataset.title || '';
-      var titleB = b.dataset.title || '';
-
-      if (state.sort === 'oldest') return yearA - yearB || titleA.localeCompare(titleB);
-      if (state.sort === 'az') return titleA.localeCompare(titleB) || yearB - yearA;
-      return yearB - yearA || titleA.localeCompare(titleB);
+    typeButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.type = btn.dataset.type; setActive(typeButtons, state.type, 'type'); filter(); });
     });
-    sorted.forEach(function(card) { list.appendChild(card); });
-  }
-
-  function applyFilters() {
-    var visible = 0;
-    var searchTerm = state.search.toLowerCase().trim();
-
-    cards.forEach(function(card) {
-      var data = card.dataset;
-      var matchesSearch = !searchTerm || data.search.indexOf(searchTerm) !== -1;
-      var matchesType = state.type === 'all' || data.type === state.type;
-      var matchesYear = state.year === 'all' || data.year === state.year;
-      var matchesTag = state.tag === 'all' || data.tags.indexOf('|' + state.tag + '|') !== -1;
-      var shouldShow = matchesSearch && matchesType && matchesYear && matchesTag;
-
-      card.classList.toggle('hidden', !shouldShow);
-      if (shouldShow) visible++;
+    yearButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.year = btn.dataset.year; setActive(yearButtons, state.year, 'year'); filter(); });
+    });
+    tagButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.tag = btn.dataset.tag; setActive(tagButtons, state.tag, 'tag'); filter(); });
     });
 
-    if (emptyState) emptyState.classList.toggle('hidden', visible !== 0);
-    if (countEl) countEl.textContent = visible === total ? total + ' papers' : visible + ' of ' + total + ' papers';
-
-    sortCards();
-  }
-
-  typeButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      state.type = btn.dataset.filterType;
-      setActive(typeButtons, 'filterType', state.type);
-      applyFilters();
-    });
-  });
-
-  yearButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      state.year = btn.dataset.filterYear;
-      setActive(yearButtons, 'filterYear', state.year);
-      applyFilters();
-    });
-  });
-
-  tagButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      state.tag = btn.dataset.filterTag;
-      setActive(tagButtons, 'filterTag', state.tag);
-      applyFilters();
-    });
-  });
-
-  if (searchInput) {
-    searchInput.addEventListener('input', function(e) {
-      state.search = e.target.value;
-      applyFilters();
-    });
-  }
-
-  sortButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      state.sort = btn.dataset.sort;
-      setActive(sortButtons, 'sort', state.sort);
-      applyFilters();
-    });
-  });
-
-  if (clearButton) {
-    clearButton.addEventListener('click', function() {
-      state.search = '';
-      state.type = 'all';
-      state.year = 'all';
-      state.tag = 'all';
-      state.sort = 'newest';
-      if (searchInput) searchInput.value = '';
-      setActive(typeButtons, 'filterType', state.type);
-      setActive(yearButtons, 'filterYear', state.year);
-      setActive(tagButtons, 'filterTag', state.tag);
-      setActive(sortButtons, 'sort', state.sort);
-      applyFilters();
-    });
-  }
-
-  applyFilters();
-})();
-</script>
-{{ end }}
+    filter();
+  })();
+  </script>
+</body>
+</html>
