@@ -38,7 +38,7 @@ tags:
 featured: true
 
 links:
-url_pdf: 'paper.pdf'
+url_pdf: 'https://ieeexplore.ieee.org/document/9789334'
 url_code: ''
 url_dataset: ''
 url_poster: ''

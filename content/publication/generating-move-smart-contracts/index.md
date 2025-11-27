@@ -19,7 +19,7 @@ tags:
 - First Author
 featured: false
 links:
-url_pdf: 'paper.pdf'
+url_pdf: 'https://arxiv.org/pdf/2412.12513.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

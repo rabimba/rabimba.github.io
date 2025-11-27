@@ -30,7 +30,7 @@ tags:
 featured: false
 
 links:
-url_pdf: 'paper.pdf'
+url_pdf: 'https://ieeexplore.ieee.org/document/9464298'
 url_code: ''
 url_dataset: ''
 url_poster: ''

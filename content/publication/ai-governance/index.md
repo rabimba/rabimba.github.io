@@ -25,7 +25,7 @@ tags:
 - Machine Learning
 
 featured: false
-url_pdf: 'paper.pdf'
+url_pdf: 'https://arxiv.org/pdf/2308.02955.pdf'
 ---
 
 
