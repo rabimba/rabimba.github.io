@@ -11,10 +11,8 @@ design:
 sections:
   - block: resume-biography-3
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
-      # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
         url: uploads/resume.pdf?v=2
@@ -23,22 +21,39 @@ sections:
         education: ''
         interests: ''
     design:
-      # Apply a gradient background
       css_class: hbx-bg-gradient
-      # Avatar customization
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        size: medium
+        shape: circle
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: 'Research Overview'
       subtitle: ''
       text: |-
-        I am a Staff Agent Researcher at Paypal and a PhD graduate from the University of Houston. My research focuses on Artificial Intelligence, specifically Large Language Models (LLMs), reasoning, and secure generation.
+        I am a Staff Agent Researcher at PayPal and a PhD graduate from the University of Houston, advised by Prof. Weidong (Larry) Shi. My research sits at the intersection of **AI reasoning**, **decentralized systems**, and **software security**.
 
-        My work spans across AI reasoning, decentralized systems, blockchain applications, and mobile computing. I investigate how to design and implement systems that can efficiently handle the challenges of distributed, resource-constrained environments while ensuring security and privacy.
+        **Core research areas:**
+        - **LLM Reasoning & Code Generation** &mdash; Multi-agent architectures for reliable code/test generation (AgentTester, LogBabylon) and hallucination mitigation
+        - **Blockchain & Smart Contract Security** &mdash; Cross-chain vulnerability detection, decentralized infrastructure, and formal verification of smart contracts
+        - **Quantum-Enhanced ML** &mdash; Quantum contrastive embeddings for near-term devices (QuCoWE, AAAI 2026)
 
-        Feel free to reach out for research collaborations or discussions!
+        I am a [Google Developer Expert](https://developers.google.com/community/experts) in Web Technologies & ML, a 3x Sui Foundation Research Award recipient, and serve as Associate Chair for CSCW 2026.
+    design:
+      columns: '1'
+  - block: markdown
+    id: highlights
+    content:
+      title: 'Research at a Glance'
+      subtitle: ''
+      text: |-
+        | | | | |
+        |:---:|:---:|:---:|:---:|
+        | **41+** | **3x** | **8+** | **1** |
+        | Peer-Reviewed Papers | Sui Foundation Grants | Conference Venues | US Patent |
+
+        | | | |
+        |:---:|:---:|:---:|
+        | **Google Developer Expert** | **Associate Chair, CSCW 2026** | **TX Quantum Initiative SAC** |
     design:
       columns: '1'
   - block: collection
@@ -52,6 +67,26 @@ sections:
     design:
       view: article-grid
       columns: 2
+  - block: markdown
+    id: grants
+    content:
+      title: 'Grants & Funding'
+      subtitle: ''
+      text: |-
+        - **Sui Foundation Academic Research Award** (2023, 2024, 2025) &mdash; Primary Investigator, $25,000/year for research on decentralized infrastructure and smart contract security
+        - **Google Cloud Research Innovator** (2023, 2024) &mdash; Cloud credits and research support for AI/ML projects
+    design:
+      columns: '1'
+  - block: collection
+    id: projects
+    content:
+      title: Research Projects
+      filters:
+        folders:
+          - projects
+    design:
+      view: article-grid
+      columns: 3
   - block: collection
     content:
       title: Recent Publications
@@ -71,4 +106,16 @@ sections:
           - events
     design:
       view: card
+  - block: markdown
+    id: service
+    content:
+      title: 'Professional Service'
+      subtitle: ''
+      text: |-
+        - **Associate Chair**, ACM CSCW 2026
+        - **Scientific Advisory Committee**, Texas Quantum Initiative (2025)
+        - **Google Developer Expert**, Web Technologies (2018-present) & Google Cloud (2024-present)
+        - **Reviewer**: IEEE ICBC, ACM CSCW, BRAINS
+    design:
+      columns: '1'
 ---
