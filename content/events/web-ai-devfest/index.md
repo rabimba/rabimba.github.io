@@ -13,6 +13,7 @@ all_day: false
 publishDate: "2023-01-01T00:00:00Z"
 
 authors: [admin]
+event_type: talk
 tags: [Web AI, Machine Learning, Google Chrome, TensorFlow.js]
 
 featured: false

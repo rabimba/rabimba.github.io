@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talks & Events | {{ site.Title }}</title>
+  <meta name="description" content="Speaking engagements, conference presentations, and professional activities.">
+  <link rel="icon" type="image/png" href="{{ "media/icon.png" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+    body { min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+
+    .navbar { background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .navbar-brand { font-weight: 700; font-size: 1.125rem; color: white; }
+    .navbar-nav { display: flex; gap: 2rem; }
+    .navbar-nav a { font-size: 0.875rem; font-weight: 500; color: #94a3b8; transition: color 0.2s; }
+    .navbar-nav a:hover, .navbar-nav a.active { color: white; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    .page-header { margin-bottom: 2rem; }
+    .page-header h1 { font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .page-header p { color: #94a3b8; font-size: 1.125rem; }
+    .page-stats { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: #64748b; }
+
+    .filters-panel { background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-label { font-size: 0.8125rem; font-weight: 600; color: #94a3b8; min-width: 60px; }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .filter-btn {
+      display: inline-flex; align-items: center; padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem; font-weight: 500; border-radius: 9999px;
+      background: rgba(51, 65, 85, 0.5); color: #94a3b8; border: 1px solid transparent;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .filter-btn:hover { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.3); }
+    .filter-btn.active { background: #6366f1; color: white; border-color: #6366f1; }
+    .filter-btn-clear { background: transparent; border-color: rgba(148, 163, 184, 0.4); color: #94a3b8; }
+    .filter-btn-clear:hover { background: rgba(148, 163, 184, 0.12); color: #e2e8f0; }
+
+    .search-box {
+      flex: 1; min-width: 200px; padding: 0.625rem 1rem; font-size: 0.9375rem;
+      background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; border-radius: 0.5rem;
+      color: white; outline: none; transition: all 0.2s;
+    }
+    .search-box:focus { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); }
+    .search-box::placeholder { color: #64748b; }
+
+    /* Timeline */
+    .year-group { margin-bottom: 2.5rem; }
+    .year-label { font-size: 1.25rem; font-weight: 700; color: #6366f1; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+
+    .event-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .event-item {
+      background: rgba(30, 41, 59, 0.4); border: 1px solid #334155; border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem; transition: all 0.2s; display: flex; gap: 1.25rem;
+    }
+    .event-item:hover { border-color: rgba(99, 102, 241, 0.4); background: rgba(30, 41, 59, 0.7); }
+    .event-item.hidden { display: none !important; }
+    .event-item.featured { border-left: 3px solid #6366f1; }
+
+    .event-date-col { flex-shrink: 0; min-width: 80px; text-align: right; }
+    .event-month { font-size: 0.75rem; font-weight: 600; color: #6366f1; text-transform: uppercase; }
+    .event-day { font-size: 1.5rem; font-weight: 700; color: white; line-height: 1.1; }
+
+    .event-body { flex: 1; min-width: 0; }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center; }
+
+    .event-badge {
+      display: inline-flex; padding: 0.125rem 0.5rem; border-radius: 0.25rem;
+      font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .badge-talk    { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; }
+    .badge-keynote { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .badge-panel   { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .badge-service { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+    .badge-workshop{ background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+    .badge-research{ background: rgba(236, 72, 153, 0.2); color: #f9a8d4; }
+
+    .event-location { font-size: 0.75rem; color: #64748b; }
+
+    .event-title { font-size: 1.0625rem; font-weight: 600; color: white; line-height: 1.4; margin-bottom: 0.25rem; }
+    .event-title a:hover { color: #a5b4fc; }
+    .event-conf { font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.375rem; font-style: italic; }
+    .event-summary { font-size: 0.875rem; color: #64748b; }
+
+    .event-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .event-link {
+      display: inline-flex; align-items: center; padding: 0.3rem 0.75rem;
+      font-size: 0.75rem; font-weight: 500; border-radius: 0.375rem; transition: all 0.15s;
+    }
+    .link-primary { background: #6366f1; color: white; }
+    .link-primary:hover { background: #4f46e5; }
+    .link-secondary { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .link-secondary:hover { background: rgba(99, 102, 241, 0.25); }
+
+    .empty-state { text-align: center; padding: 3rem 1rem; color: #64748b; }
+    .empty-state.hidden { display: none; }
+
+    .footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.875rem; border-top: 1px solid #1e293b; margin-top: 2rem; }
+
+    @media (max-width: 640px) {
+      .navbar-nav { gap: 1rem; }
+      .page-header h1 { font-size: 1.75rem; }
+      .event-item { flex-direction: column; gap: 0.75rem; }
+      .event-date-col { text-align: left; display: flex; align-items: center; gap: 0.75rem; }
+      .event-day { font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="{{ "/" | relURL }}" class="navbar-brand">{{ site.Title }}</a>
+      <div class="navbar-nav">
+        <a href="{{ "/" | relURL }}">About</a>
+        <a href="{{ "/publication/" | relURL }}">Publications</a>
+        <a href="{{ "/projects/" | relURL }}">Projects</a>
+        <a href="{{ "/events/" | relURL }}" class="active">Talks</a>
+        <a href="{{ "/experience/" | relURL }}">Experience</a>
+        <a href="{{ "/cv/" | relURL }}">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  {{ $events := .RegularPages.ByDate.Reverse }}
+  {{ $total := len $events }}
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Talks &amp; Events</h1>
+      <p>Conference presentations, invited talks, and professional activities.</p>
+      <div class="page-stats">
+        <span data-count>{{ $total }} events</span>
+        <span>•</span>
+        <span>Updated {{ time.Format "Jan 2006" now }}</span>
+      </div>
+    </header>
+
+    <div class="filters-panel">
+      <div class="filter-row">
+        <span class="filter-label">Search</span>
+        <input type="search" class="search-box" data-search placeholder="Search by title, event, location, or topic">
+        <button class="filter-btn filter-btn-clear" type="button" data-clear>Reset</button>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-type="all">All</button>
+          <button class="filter-btn" data-type="talk">Talk</button>
+          <button class="filter-btn" data-type="keynote">Keynote</button>
+          <button class="filter-btn" data-type="panel">Panel</button>
+          <button class="filter-btn" data-type="workshop">Workshop</button>
+          <button class="filter-btn" data-type="service">Service</button>
+          <button class="filter-btn" data-type="research">Research</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-list" id="event-list">
+      {{ range $events }}
+        {{ $type := .Params.event_type | default "talk" | lower }}
+        {{ $year := time.Format "2006" .Date }}
+        {{ $searchText := printf "%s %s %s %s" (.Title | plainify) (.Params.event | default "") (.Params.location | default "") (.Params.summary | default "") | lower | htmlEscape }}
+        <article class="event-item{{ if .Params.featured }} featured{{ end }}" data-card data-type="{{ $type }}" data-year="{{ $year }}" data-search="{{ $searchText }}">
+          <div class="event-date-col">
+            <div class="event-month">{{ time.Format "Jan" .Date }}</div>
+            <div class="event-day">{{ $year }}</div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              {{ if eq $type "keynote" }}<span class="event-badge badge-keynote">Keynote</span>
+              {{ else if eq $type "panel" }}<span class="event-badge badge-panel">Panel</span>
+              {{ else if eq $type "workshop" }}<span class="event-badge badge-workshop">Workshop</span>
+              {{ else if eq $type "service" }}<span class="event-badge badge-service">Service</span>
+              {{ else if eq $type "research" }}<span class="event-badge badge-research">Research</span>
+              {{ else }}<span class="event-badge badge-talk">Talk</span>{{ end }}
+              {{ with .Params.location }}<span class="event-location">📍 {{ . }}</span>{{ end }}
+            </div>
+            <h2 class="event-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Params.event }}<p class="event-conf">{{ . }}</p>{{ end }}
+            {{ with .Params.summary }}<p class="event-summary">{{ . }}</p>{{ end }}
+            {{ $hasLinks := or .Params.url_slides .Params.url_video .Params.url_pdf .Params.event_url }}
+            {{ if $hasLinks }}
+            <div class="event-actions">
+              {{ with .Params.event_url }}<a class="event-link link-primary" href="{{ . }}" target="_blank" rel="noopener">Event ↗</a>{{ end }}
+              {{ with .Params.url_slides }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">Slides</a>{{ end }}
+              {{ with .Params.url_video }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">Video</a>{{ end }}
+              {{ with .Params.url_pdf }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+    <div class="empty-state hidden" data-empty>
+      <p>No events match your search.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © {{ now.Year }} {{ site.Title }}. All rights reserved.
+  </footer>
+
+  <script>
+  (function() {
+    var searchInput = document.querySelector('[data-search]');
+    var typeButtons = document.querySelectorAll('[data-type]');
+    var cards = Array.from(document.querySelectorAll('[data-card]'));
+    var empty = document.querySelector('[data-empty]');
+    var countEl = document.querySelector('[data-count]');
+    var clearButton = document.querySelector('[data-clear]');
+    var total = cards.length;
+    var state = { search: '', type: 'all' };
+
+    function setActive(buttons, value, attr) {
+      buttons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset[attr] === value); });
+    }
+
+    function filter() {
+      var visible = 0;
+      var q = state.search.toLowerCase().trim();
+      cards.forEach(function(c) {
+        var ok = (!q || c.dataset.search.indexOf(q) !== -1)
+              && (state.type === 'all' || c.dataset.type === state.type);
+        c.classList.toggle('hidden', !ok);
+        if (ok) visible++;
+      });
+      empty.classList.toggle('hidden', visible > 0);
+      countEl.textContent = visible === total ? total + ' events' : visible + ' of ' + total + ' events';
+    }
+
+    searchInput.addEventListener('input', function(e) { state.search = e.target.value; filter(); });
+    typeButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.type = btn.dataset.type; setActive(typeButtons, state.type, 'type'); filter(); });
+    });
+    if (clearButton) {
+      clearButton.addEventListener('click', function() {
+        state = { search: '', type: 'all' };
+        if (searchInput) searchInput.value = '';
+        setActive(typeButtons, 'all', 'type');
+        filter();
+      });
+    }
+    filter();
+  })();
+  </script>
+</body>
+</html>

@@ -77,6 +77,30 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-hugo-resources-
 
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Cache Python dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install Python dependencies
+      run: pip install -r scripts/requirements.txt
+
+    - name: Fetch publications from Google Scholar
+      run: |
+        python scripts/fetch_scholar.py || {
+          echo "Scholar fetch failed — continuing with existing publications"
+          python scripts/fetch_scholar.py --export-only
+        }
+      timeout-minutes: 10
+
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5

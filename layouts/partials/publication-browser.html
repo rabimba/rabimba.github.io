@@ -7,7 +7,7 @@
 {{ range $publications }}
   {{ $year := time.Format "2006" .Date }}
   {{ $years := $scratch.Get "years" }}
-  {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
+  {{ if not (in $years $year) }}{{ $scratch.Set "years" ($years | append $year) }}{{ end }}
 
   {{ range .Params.tags }}
     {{ $tags := $scratch.Get "tags" }}

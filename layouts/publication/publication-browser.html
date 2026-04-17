@@ -46,6 +46,12 @@
     }
     .filter-btn:hover { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.3); }
     .filter-btn.active { background: #6366f1; color: white; border-color: #6366f1; }
+    .filter-btn-clear {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.4);
+      color: #94a3b8;
+    }
+    .filter-btn-clear:hover { background: rgba(148, 163, 184, 0.12); color: #e2e8f0; }
     
     .search-box {
       flex: 1; min-width: 200px; padding: 0.625rem 1rem; font-size: 0.9375rem;
@@ -82,7 +88,18 @@
     .pub-venue { font-size: 0.8125rem; color: #64748b; font-style: italic; }
     
     .pub-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.5rem; }
-    .pub-tag { font-size: 0.6875rem; padding: 0.125rem 0.375rem; background: rgba(51, 65, 85, 0.6); color: #94a3b8; border-radius: 0.25rem; }
+    .pub-tag {
+      font-size: 0.6875rem;
+      padding: 0.125rem 0.375rem;
+      background: rgba(51, 65, 85, 0.6);
+      color: #94a3b8;
+      border-radius: 0.25rem;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .pub-tag:hover { background: rgba(99, 102, 241, 0.2); color: #c7d2fe; }
+    .pub-tag:focus-visible { outline: 2px solid rgba(99, 102, 241, 0.6); outline-offset: 2px; }
     
     .pub-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
     .pub-link {
@@ -112,33 +129,22 @@
     <div class="navbar-inner">
       <a href="{{ "/" | relURL }}" class="navbar-brand">{{ site.Title }}</a>
       <div class="navbar-nav">
-        <a href="{{ "/" | relURL }}">Bio</a>
+        <a href="{{ "/" | relURL }}">About</a>
         <a href="{{ "/publication/" | relURL }}" class="active">Publications</a>
+        <a href="{{ "/projects/" | relURL }}">Projects</a>
         <a href="{{ "/events/" | relURL }}">Talks</a>
         <a href="{{ "/experience/" | relURL }}">Experience</a>
+        <a href="{{ "/cv/" | relURL }}">CV</a>
       </div>
     </div>
   </nav>
 
   {{ $publications := .RegularPages.ByDate.Reverse }}
   {{ $typeMap := dict "0" "Uncategorized" "1" "Conference" "2" "Journal" "3" "Preprint" "4" "Report" "5" "Book" "6" "Book Section" "7" "Thesis" "8" "Patent" }}
-  {{ $scratch := newScratch }}
-  {{ $scratch.Set "years" (slice) }}
-  {{ $scratch.Set "tags" (slice) }}
+  {{ $topicExclusions := slice "first author" "distinguished" "masters thesis, rice university" }}
 
-  {{ range $publications }}
-    {{ $year := time.Format "2006" .Date }}
-    {{ $years := $scratch.Get "years" }}
-    {{ if not (in $years $year) }}{{ $scratch.Set "years" (append $years $year) }}{{ end }}
-    {{ range .Params.tags }}
-      {{ $tags := $scratch.Get "tags" }}
-      {{ if and . (not (in $tags .)) }}{{ $scratch.Set "tags" (append $tags .) }}{{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{ $years := sort ($scratch.Get "years") "value" "desc" }}
-  {{ $tags := sort ($scratch.Get "tags") }}
-  {{ $topTags := first 12 $tags }}
+  {{ $byYear := $publications.GroupByDate "2006" }}
+  {{ $byTopic := $publications.GroupByParam "tags" }}
   {{ $total := len $publications }}
 
   <main class="container">
@@ -155,7 +161,8 @@
     <div class="filters-panel">
       <div class="filter-row">
         <span class="filter-label">Search</span>
-        <input type="search" class="search-box" data-search placeholder="Search by title, author, venue...">
+        <input type="search" class="search-box" data-search placeholder="Search by title, author, venue, abstract, or topic">
+        <button class="filter-btn filter-btn-clear" type="button" data-clear>Reset</button>
       </div>
       <div class="filter-row">
         <span class="filter-label">Sort</span>
@@ -163,6 +170,7 @@
           <button class="filter-btn active" data-sort="newest">Newest</button>
           <button class="filter-btn" data-sort="oldest">Oldest</button>
           <button class="filter-btn" data-sort="az">A → Z</button>
+          <button class="filter-btn" data-sort="citations">Most Cited</button>
         </div>
       </div>
       <div class="filter-row">
@@ -172,6 +180,7 @@
           <button class="filter-btn" data-type="conference">Conference</button>
           <button class="filter-btn" data-type="journal">Journal</button>
           <button class="filter-btn" data-type="preprint">Preprint</button>
+          <button class="filter-btn" data-type="patent">Patent</button>
           <button class="filter-btn" data-type="thesis">Thesis</button>
         </div>
       </div>
@@ -179,18 +188,23 @@
         <span class="filter-label">Year</span>
         <div class="filter-buttons">
           <button class="filter-btn active" data-year="all">All</button>
-          {{ range $years }}
-          <button class="filter-btn" data-year="{{ . }}">{{ . }}</button>
+          {{ range $byYear }}
+          <button class="filter-btn" data-year="{{ .Key }}">{{ .Key }}</button>
           {{ end }}
         </div>
       </div>
-      {{ if gt (len $topTags) 0 }}
+      {{ if gt (len $byTopic) 0 }}
       <div class="filter-row">
-        <span class="filter-label">Topic</span>
+        <span class="filter-label">Topics</span>
         <div class="filter-buttons">
           <button class="filter-btn active" data-tag="all">All</button>
-          {{ range $topTags }}
-          <button class="filter-btn" data-tag="{{ lower (urlize .) }}">#{{ . }}</button>
+          {{ range $byTopic }}
+            {{ $tagKey := lower .Key }}
+            {{ $hasDigits := gt (len (findRE "[0-9]" .Key)) 0 }}
+            {{ $isExcluded := in $topicExclusions $tagKey }}
+            {{ if and .Key (not $hasDigits) (not $isExcluded) }}
+            <button class="filter-btn" data-tag="{{ lower (urlize .Key) }}">#{{ .Key }}</button>
+            {{ end }}
           {{ end }}
         </div>
       </div>
@@ -205,9 +219,19 @@
         {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
         {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
         {{ $year := time.Format "2006" .Date }}
-        {{ $tags := .Params.tags | default (slice) }}
-        {{ $tagAttr := printf "|%s|" (delimit (apply $tags "urlize" ".") "|") }}
-        {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $tags " ") }}
+        {{ $rawTopics := .Params.topics | default .Params.tags | default (slice) }}
+        {{ $topicTags := slice }}
+        {{ range $rawTopics }}
+          {{ $tag := . | plainify }}
+          {{ $tagKey := lower $tag }}
+          {{ $hasDigits := gt (len (findRE "[0-9]" $tag)) 0 }}
+          {{ $isExcluded := in $topicExclusions $tagKey }}
+          {{ if and $tag (not $hasDigits) (not $isExcluded) }}
+            {{ if not (in $topicTags $tag) }}{{ $topicTags = $topicTags | append $tag }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ $tagAttr := printf "|%s|" (delimit (apply $topicTags "urlize" ".") "|") }}
+        {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $topicTags " ") (.Params.abstract | plainify) }}
         {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
         {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
@@ -221,9 +245,9 @@
           <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Params.authors }}<p class="pub-authors">{{ delimit . ", " }}</p>{{ end }}
           {{ with .Params.publication }}<p class="pub-venue">{{ . }}</p>{{ end }}
-          {{ if gt (len $tags) 0 }}
+          {{ if gt (len $topicTags) 0 }}
           <div class="pub-tags">
-            {{ range first 4 $tags }}<span class="pub-tag">#{{ . }}</span>{{ end }}
+            {{ range first 4 $topicTags }}<button type="button" class="pub-tag" data-card-tag="{{ lower (urlize .) }}">#{{ . }}</button>{{ end }}
           </div>
           {{ end }}
           <div class="pub-actions">
@@ -251,10 +275,12 @@
     var typeButtons = document.querySelectorAll('[data-type]');
     var yearButtons = document.querySelectorAll('[data-year]');
     var tagButtons = document.querySelectorAll('[data-tag]');
+    var chipButtons = document.querySelectorAll('[data-card-tag]');
     var cards = Array.from(document.querySelectorAll('[data-card]'));
     var list = document.getElementById('pub-list');
     var empty = document.querySelector('[data-empty]');
     var countEl = document.querySelector('[data-count]');
+    var clearButton = document.querySelector('[data-clear]');
     var total = cards.length;
 
     var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all' };
@@ -307,6 +333,25 @@
     tagButtons.forEach(function(btn) {
       btn.addEventListener('click', function() { state.tag = btn.dataset.tag; setActive(tagButtons, state.tag, 'tag'); filter(); });
     });
+    chipButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.tag = btn.dataset.cardTag; setActive(tagButtons, state.tag, 'tag'); filter(); });
+    });
+
+    if (clearButton) {
+      clearButton.addEventListener('click', function() {
+        state.search = '';
+        state.sort = 'newest';
+        state.type = 'all';
+        state.year = 'all';
+        state.tag = 'all';
+        if (searchInput) searchInput.value = '';
+        setActive(sortButtons, state.sort, 'sort');
+        setActive(typeButtons, state.type, 'type');
+        setActive(yearButtons, state.year, 'year');
+        setActive(tagButtons, state.tag, 'tag');
+        filter();
+      });
+    }
 
     filter();
   })();
