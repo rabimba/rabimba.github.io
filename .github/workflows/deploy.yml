@@ -94,13 +94,9 @@ jobs:
     - name: Install Python dependencies
       run: pip install -r scripts/requirements.txt
 
-    - name: Fetch publications from Google Scholar
+    - name: Fetch publications from Google Scholar (Export local database)
       run: |
-        python scripts/fetch_scholar.py || {
-          echo "Scholar fetch failed — continuing with existing publications"
-          python scripts/fetch_scholar.py --export-only
-        }
-      timeout-minutes: 10
+        python scripts/fetch_scholar.py --export-only
 
     - name: Setup Pages
       id: pages
