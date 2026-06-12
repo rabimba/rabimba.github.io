@@ -1,5 +1,5 @@
 ---
-title: "Event Driven Framework Smart Contract Execution"
+title: "An event driven framework for smart contract execution"
 authors:
 - Mudabbir Kaleem
 - Keshav Kasichainula
@@ -8,29 +8,20 @@ authors:
 - Zhimin Gao
 - Lin Chen
 - Weidong Shi
-date: "2021-01-01T00:00:00Z"
+date: "2021-06-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2021-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2021-06-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "DEBS 2021"
-publication_short: "DEBS 2021"
-
-abstract: "Presented at DEBS 2021."
-
+publication: "ACM DEBS 2021"
+publication_short: "ACM DEBS 2021"
+abstract: "We build an asynchronous event-driven system to schedule and execute smart contract actions, increasing ledger throughput."
 tags:
 - Blockchain
-- DEBS 2021
-
+- Event Driven
+- Smart Contracts
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/event-driven-framework.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

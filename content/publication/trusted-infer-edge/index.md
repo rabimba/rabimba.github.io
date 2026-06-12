@@ -1,34 +1,23 @@
 ---
-title: "Trusted Infer Edge with Smart Contracts"
+title: "Trusted LLM Inference on the Edge with Smart Contracts"
 authors:
 - Rabimba Karanjai
 - Weidong Shi
-date: "2024-01-01T00:00:00Z"
+date: "2024-05-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-05-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "IEEE ICBC 2024"
 publication_short: "IEEE ICBC 2024"
-
-abstract: "Presented at IEEE ICBC 2024."
-
+abstract: "We propose a trust framework using smart contracts to audit and verify edge-computed LLM inference outputs."
 tags:
-- Blockchain
+- LLMs
+- Smart Contracts
+- Edge Computing
 - First Author
-- IEEE ICBC 2024
-- IoT
-- Security
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/trusted-infer-edge.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

@@ -1,37 +1,30 @@
 ---
-title: "Cryptographic Accelerator"
+title: "TPU as Cryptographic Accelerator"
 authors:
 - Rabimba Karanjai
-- Sangw Shin
-- Yujie Xiong
-- Xinxin Chen
-- Tian Zhang
-- Suh
+- Sangwon Shin
+- Wujie Xiong
+- Xinxin Fan
+- Lin Chen
+- Tianwei Zhang
+- Taeweon Suh
 - Weidong Shi
-- Veronika
+- Veronika Kuchta
 - Francesco Sica
-date: "2024-01-01T00:00:00Z"
+- Lei Xu
+date: "2024-10-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-10-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "MICR 2024"
-publication_short: "MICR 2024"
-
-abstract: "Presented at MICR 2024."
-
+publication: "MICRO 2024"
+publication_short: "MICRO 2024"
+abstract: "We investigate leveraging Tensor Processing Units (TPUs) to accelerate intensive cryptographic primitives in blockchain and zero-knowledge systems."
 tags:
-- Blockchain
+- TPU
+- Cryptography
+- Hardware Accelerator
 - First Author
-- MICR 2024
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

@@ -1,36 +1,24 @@
 ---
-title: "HPCAgentTester: Multi-Agent Approach for Enhancing Unit Test Generation"
+title: "HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation"
 authors:
 - Rabimba Karanjai
+- Lei Xu
 - Weidong Shi
-date: "2025-01-01T00:00:00Z"
+date: "2025-11-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-11-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "AIWar 2025"
-publication_short: "AIWar 2025"
-
-abstract: "Presented at AIWar 2025."
-
+publication: "ACM AIWare 2025"
+publication_short: "ACM AIWare 2025"
+abstract: "We explore multi-agent LLM systems to improve unit test generation for High-Performance Computing (HPC) software environments."
 tags:
-- AI
+- HPC
+- Testing
 - Agents
 - First Author
-- HPC
-- LLMs
-- Multi-Agent Systems
-- Unit Testing
-
 featured: false
-
 links:
-url_pdf: 'https://arxiv.org/pdf/2511.10860.pdf'
+url_pdf: '/uploads/publications/hpc-agent-tester.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -39,4 +27,3 @@ url_slides: ''
 url_source: ''
 url_video: ''
 ---
-

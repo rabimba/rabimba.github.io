@@ -1,33 +1,27 @@
 ---
-title: "Voter"
+title: "All We Need is Voter Feedback"
 authors:
 - Nour Diallo
 - Dana Alsagheer
+- Lei Xu
+- Yang Lu
 - Rabimba Karanjai
 - Weidong Shi
 - Mohammad Kamal
-date: "2024-01-01T00:00:00Z"
+date: "2024-04-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-04-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "IEEE ICEDEG 2024"
 publication_short: "IEEE ICEDEG 2024"
-
-abstract: "Presented at IEEE ICEDEG 2024."
-
+abstract: "We study decentralized governance architectures that incorporate continuous feedback loops via blockchain votes."
 tags:
-- IEEE ICEDEG 2024
-
+- Blockchain
+- Governance
+- Decentralized Voting
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/voter-blockchain.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

@@ -1,31 +1,23 @@
 ---
-title: "Vision Language Models Anchor"
+title: "Aligning Vision Language Models via anchor"
 authors:
+- Yilin Yang
+- Yuke Wang
 - Rabimba Karanjai
 - Weidong Shi
 - Chengming Zhang
 date: "2026-01-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
 publishDate: "2026-01-01T00:00:00Z"
-
-# Publication type.
 publication_types: ["3"]
-
-# Publication name and optional abbreviated publication name.
-publication: "CVPR 2026 (Under Review)"
-publication_short: "CVPR 2026 (Under Review)"
-
-abstract: "Presented at CVPR 2026 (Under Review)."
-
+publication: "NeurIPS 2026 (Under Review)"
+publication_short: "NeurIPS 2026 (Under Review)"
+abstract: "Preprint: Aligning visual tokens with semantic text anchors to enhance multi-modal reasoning capabilities."
 tags:
-- AI
-- CVPR 2026 (Under Review)
-- First Author
-
+- Computer Vision
+- Multi-Modal
+- AI Alignment
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

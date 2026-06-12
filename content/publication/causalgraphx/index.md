@@ -1,31 +1,23 @@
 ---
-title: "CausalGraphX: Counter-factual Neural Network Framework Explainable Systemic Assessment"
+title: "CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable Systemic Risk Assessment"
 authors:
 - Rabimba Karanjai
-- Heman Hegadehalli Madhavarao
+- Hemanth Hegadehalli Madhavarao
+- Lei Xu
 - Weidong Shi
-date: "2026-01-01T00:00:00Z"
+date: "2026-02-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2026-01-01T00:00:00Z"
-
-# Publication type.
-publication_types: ["3"]
-
-# Publication name and optional abbreviated publication name.
-publication: "AAAI 2026 (Under Review)"
-publication_short: "AAAI 2026 (Under Review)"
-
-abstract: "Presented at AAAI 2026 (Under Review)."
-
+publishDate: "2026-02-01T00:00:00Z"
+publication_types: ["1"]
+publication: "AAAI 2026 (AI4Finance)"
+publication_short: "AAAI 2026 (AI4Finance)"
+abstract: "CausalGraphX utilizes counterfactual graph neural networks to provide explainable risk assessments in complex financial and systemic environments."
 tags:
-- AAAI 2026 (Under Review)
 - AI
+- Neural Networks
+- Explainable AI
 - First Author
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

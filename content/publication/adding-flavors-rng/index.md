@@ -1,34 +1,26 @@
 ---
-title: "Adding Flavors: Hybrid Random Number Generator for dApps in Web3"
+title: "Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3"
 authors:
-- Ranjith Sarapu
+- Ranjith Chodavarapu
 - Rabimba Karanjai
-- Xinxin
+- Xinxin Fan
 - Larry Shi
-date: "2024-01-01T00:00:00Z"
+- Lei Xu
+date: "2024-09-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-09-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024"
 publication_short: "International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024"
-
-abstract: "Presented at International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024."
-
+abstract: "We propose a hybrid on-chain and off-chain random number generator suitable for decentralized applications (dApps) requiring high entropy."
 tags:
-- Distributed Systems
-- International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024
+- Web3
+- Randomness
+- dApps
 - Security
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/adding-flavors-rng.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

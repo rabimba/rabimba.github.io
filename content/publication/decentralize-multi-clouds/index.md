@@ -1,35 +1,26 @@
 ---
-title: "Decentralize over Multi-Clouds"
+title: "Decentralized FaaS over Multi-Clouds"
 authors:
 - Rabimba Karanjai
 - Lei Xu
 - Lin Chen
 - Nour Diallo
 - Weidong Shi
-date: "2024-01-01T00:00:00Z"
+date: "2024-03-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-03-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "2024"
-publication_short: "2024"
-
-abstract: "Presented at 2024."
-
+publication: "ACM SAC 2024"
+publication_short: "ACM SAC 2024"
+abstract: "We introduce a decentralized Function-as-a-Service (FaaS) model that coordinates execution tasks across multiple cloud networks."
 tags:
-- 2024
-- Distributed Systems
+- Decentralized Systems
+- FaaS
+- Cloud Computing
 - First Author
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/decentralize-multi-clouds.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

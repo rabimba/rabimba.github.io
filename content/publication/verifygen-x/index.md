@@ -1,31 +1,23 @@
 ---
-title: "VerifyGen-X: Cross-Chain Smart Contract Generation"
+title: "VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement Learning from Formal Verification Feedback"
 authors:
 - Rabimba Karanjai
+- Lei Xu
+- Yang Lu
 - Weidong Shi
 date: "2026-01-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
 publishDate: "2026-01-01T00:00:00Z"
-
-# Publication type.
 publication_types: ["3"]
-
-# Publication name and optional abbreviated publication name.
-publication: "SANER 2026 (Under Review)"
-publication_short: "SANER 2026 (Under Review)"
-
-abstract: "Presented at SANER 2026 (Under Review)."
-
+publication: "NeurIPS 2026 (Under Review)"
+publication_short: "NeurIPS 2026 (Under Review)"
+abstract: "Preprint: We use formal verification proofs in RL loops to ensure generated cross-chain contracts are bug-free."
 tags:
-- AI
 - Blockchain
+- Generative AI
+- Formal Verification
 - First Author
-- SANER 2026 (Under Review)
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

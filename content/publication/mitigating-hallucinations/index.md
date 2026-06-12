@@ -1,31 +1,21 @@
 ---
-title: "Mitigating Hallucinations AI-Driven Diagnosis"
+title: "Mitigating Hallucinations in AI-Driven Medical Diagnosis"
 authors:
 - Rabimba Karanjai
-- Surajumder
-date: "2024-01-01T00:00:00Z"
+- Suravi Majumder
+date: "2024-05-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2024-05-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "Annual Health Conference Rice University 2024"
-publication_short: "Annual Health Conference Rice University 2024"
-
-abstract: "Presented at Annual Health Conference Rice University 2024."
-
+publication: "3rd Annual AI in Health Conference, Rice University"
+publication_short: "3rd Annual AI in Health Conference, Rice University"
+abstract: "Workshop Paper: We address medical hallucination mitigation in conversational diagnostic models through structured knowledge reinforcement."
 tags:
 - AI
-- Annual Health Conference Rice University 2024
+- Health
+- LLM Hallucinations
 - First Author
-- LLM
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

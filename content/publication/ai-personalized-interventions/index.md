@@ -1,34 +1,23 @@
 ---
-title: "AI-Based Personalized Interventions for Atherosclerosis using Microbiota Signatures"
+title: "AI-Based Target for Personalized Interventions of Atherosclerosis from Gut Microbiota Signature"
 authors:
-- Rabimba Karanjai
-- Surajumder
+- Suravi Majumder
 - Koushik Sen
-date: "2025-01-01T00:00:00Z"
+- Rabimba Karanjai
+date: "2025-02-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-02-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "SynBio 2025"
 publication_short: "SynBio 2025"
-
-abstract: "Presented at SynBio 2025."
-
+abstract: "We detail an AI framework that parses gut microbiota signatures to design personalized dietary or medical interventions for atherosclerosis."
 tags:
 - AI
-- First Author
-- IoT
-- SynBio 2025
-
+- Bioinformatics
+- Microbiota
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/ai-personalized-interventions.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

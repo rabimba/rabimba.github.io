@@ -1,31 +1,23 @@
 ---
-title: "Bridging Confidentiality Reliability: Ten-Weight Agents Reasoning"
+title: "Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning"
 authors:
 - Dana Alsagheer
+- Yang Lu
+- Lei Xu
 - Weidong Shi
 - Rabimba Karanjai
 date: "2026-01-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
 publishDate: "2026-01-01T00:00:00Z"
-
-# Publication type.
 publication_types: ["3"]
-
-# Publication name and optional abbreviated publication name.
-publication: "Symp Computer Science 2026 (Under Review)"
-publication_short: "Symp Computer Science 2026 (Under Review)"
-
-abstract: "Presented at Symp Computer Science 2026 (Under Review)."
-
+publication: "ACM Symposium on Computer Science and Law 2026 (Under Review)"
+publication_short: "ACM Symposium on Computer Science and Law 2026 (Under Review)"
+abstract: "Preprint: Deploying open-weight local model instances to perform legal brief review without leakage."
 tags:
-- Agents
+- AI Governance
 - Security
-- Symp Computer Science 2026 (Under Review)
-
+- Law
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

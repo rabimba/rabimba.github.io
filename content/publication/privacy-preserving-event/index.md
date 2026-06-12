@@ -1,5 +1,5 @@
 ---
-title: "Privacy Preserving Event Transaction System in Decentralized Environment"
+title: "Privacy preserving event based transaction system in a decentralized environment"
 authors:
 - Rabimba Karanjai
 - Lei Xu
@@ -7,30 +7,20 @@ authors:
 - Lin Chen
 - Mudabbir Kaleem
 - Weidong Shi
-date: "2021-01-01T00:00:00Z"
+date: "2021-12-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2021-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2021-12-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "Middleware 2021"
-publication_short: "Middleware 2021"
-
-abstract: "Presented at Middleware 2021."
-
+publication: "ACM Middleware 2021"
+publication_short: "ACM Middleware 2021"
+abstract: "We detail a middleware layer that guarantees transactional privacy in distributed event-driven architectures."
 tags:
+- Privacy
+- Distributed Transactions
 - First Author
-- Middleware 2021
-- Security
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/privacy-preserving-event.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

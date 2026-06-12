@@ -1,36 +1,25 @@
 ---
-title: "Securing Multi-Chain Ecosystem: Unified Agent-Based Framework for Vulnerability Detection in Solidity and Move"
+title: "Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for Vulnerability Repair in Solidity and Move"
 authors:
 - Rabimba Karanjai
+- Lei Xu
 - Weidong Shi
-date: "2025-01-01T00:00:00Z"
+date: "2025-11-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-11-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "AIWar 2025"
-publication_short: "AIWar 2025"
-
-abstract: "Winner of SIGSOFT Distinguished Paper Award. Presented at AIWar 2025."
-
+publication: "ACM AIWare 2025"
+publication_short: "ACM AIWare 2025"
+abstract: "This work presents an agent-based framework designed to automatically detect and repair security vulnerabilities in Solidity and Move smart contracts."
 tags:
-- AI
-- Agents
 - Blockchain
-- First Author
-- Multi-Agent Systems
 - Security
-- Vulnerability Detection
-
+- Smart Contracts
+- First Author
+- Agents
 featured: true
-
 links:
-url_pdf: 'https://arxiv.org/pdf/2502.18515.pdf'
+url_pdf: '/uploads/publications/securing-multi-chain.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

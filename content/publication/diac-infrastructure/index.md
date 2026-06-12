@@ -1,5 +1,5 @@
 ---
-title: "DIaC: Re-imagining Decentralize Infrastructure using Blockchain"
+title: "DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain"
 authors:
 - Rabimba Karanjai
 - Keshav Kasichainula
@@ -7,32 +7,20 @@ authors:
 - Nour Diallo
 - Lin Chen
 - Weidong Shi
-date: "2023-01-01T00:00:00Z"
+date: "2023-11-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2023-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2023-11-01T00:00:00Z"
 publication_types: ["2"]
-
-# Publication name and optional abbreviated publication name.
 publication: "IEEE TNSM 2023"
 publication_short: "IEEE TNSM 2023"
-
-abstract: "Presented at IEEE TNSM 2023."
-
+abstract: "We propose DlaC, a system that uses smart contracts to securely manage and audit cloud infrastructure deployment configurations."
 tags:
-- AI
 - Blockchain
-- Distributed Systems
+- Infrastructure as Code
 - First Author
-- IEEE TNSM 2023
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/diac-infrastructure.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

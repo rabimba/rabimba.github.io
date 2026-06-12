@@ -1,33 +1,25 @@
 ---
-title: "Evaluating Quality of Randomness and Entropy in Tasks Supported by Large Language Models"
+title: "Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large Language Models"
 authors:
 - Rabimba Karanjai
-- Ranjith Sarapu
+- Yang Lu
+- Ranjith Chodavarapu
+- Lei Xu
 - Weidong Shi
-date: "2025-01-01T00:00:00Z"
+date: "2025-08-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-08-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "Agentic GenAI Evaluation 2025"
-publication_short: "Agentic GenAI Evaluation 2025"
-
-abstract: "Presented at Agentic GenAI Evaluation 2025."
-
+publication: "KDD - Agentic & GenAI Evaluation 2025"
+publication_short: "KDD - Agentic & GenAI Evaluation 2025"
+abstract: "We evaluate how LLMs generate entropy and pseudorandom outputs in critical computational tasks, identifying key vulnerabilities and patterns."
 tags:
-- AI
-- Agentic GenAI Evaluation 2025
-- Agents
+- LLMs
+- Randomness
+- Entropy
+- Security
 - First Author
-- LLM
-
 featured: false
-
 links:
 url_pdf: 'https://arxiv.org/pdf/2510.12080.pdf'
 url_code: ''

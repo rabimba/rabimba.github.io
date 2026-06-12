@@ -1,32 +1,22 @@
 ---
-title: "Unlocking On-Chain Intelligence: Tactic Framework GenAI-Power Smart Contracts"
+title: "Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart Contracts"
 authors:
 - Rabimba Karanjai
-- Weidong Shi
-date: "2025-01-01T00:00:00Z"
+- Yang Lu
+- Lei Xu
+- Weidong (Larry) Shi
+date: "2025-11-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-11-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "BRAINS 2025"
 publication_short: "BRAINS 2025"
-
-abstract: "Presented at BRAINS 2025."
-
+abstract: "Short Paper: Introducing a framework to interface Large Language Models with blockchain states safely."
 tags:
-- AI
-- BRAINS 2025
-- Blockchain
+- Smart Contracts
+- Generative AI
 - First Author
-- LLM
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

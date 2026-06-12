@@ -1,35 +1,27 @@
 ---
-title: "Decentralize Infrastructure Heterogeneous"
+title: "DHTee: Decentralized Infrastructure for Heterogeneous TEE"
 authors:
 - Rabimba Karanjai
 - Zhimin Gao
-- Chen
-- Xinxin Suh
+- Lin Chen
+- Xinxin Fan
+- Taeweon Suh
 - Weidong Shi
-date: "2023-01-01T00:00:00Z"
+- Lei Xu
+date: "2023-05-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2023-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2023-05-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "IEEE ICBC 2023"
 publication_short: "IEEE ICBC 2023"
-
-abstract: "Presented at IEEE ICBC 2023."
-
+abstract: "Short Paper: Building structured overlays for auditing and routing data across multi-vendor secure enclaves."
 tags:
-- Distributed Systems
+- TEE
+- Security
 - First Author
-- IEEE ICBC 2023
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/decentralize-infra-heterogeneous.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

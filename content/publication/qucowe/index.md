@@ -1,33 +1,23 @@
 ---
-title: "QuCoWE: Quantum Contrastive Embeddings with Variational Circuits for Near-Term Quantum Devices"
+title: "QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for Near-Term Quantum Devices"
 authors:
 - Rabimba Karanjai
-- Heman Madhavarao
+- Hemanth Madhavarao
+- Lei Xu
 - Weidong Shi
 date: "2026-02-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-11-25T00:00:00Z"
-
-# Publication type.
+publishDate: "2026-02-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "AAAI 2026"
-publication_short: "AAAI 2026"
-
-abstract: "Presented at QC+AI, AAAI 2026."
-
+publication: "AAAI 2026 (QC+AI)"
+publication_short: "AAAI 2026 (QC+AI)"
+abstract: "We introduce QuCoWE, a framework for contrastive word embeddings designed to run on near-term quantum processors using variational circuits."
 tags:
-- AI
-- Contrastive Learning
-- First Author
-- Quantum
 - Quantum Computing
-
-featured: true
-
+- NLP
+- Word Embeddings
+- First Author
+featured: false
 links:
 url_pdf: 'https://arxiv.org/pdf/2511.10179.pdf'
 url_code: ''

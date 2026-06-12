@@ -1,32 +1,22 @@
 ---
-title: "Training LLMs Decentralized Clouds"
+title: "Hype or Hope? Training LLMs on Decentralized GPU Clouds"
 authors:
 - Rabimba Karanjai
+- Yang Lu
+- Lei Xu
 - Weidong Shi
 date: "2026-01-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
 publishDate: "2026-01-01T00:00:00Z"
-
-# Publication type.
 publication_types: ["3"]
-
-# Publication name and optional abbreviated publication name.
-publication: "2026 (Under Review)"
-publication_short: "2026 (Under Review)"
-
-abstract: "Presented at 2026 (Under Review)."
-
+publication: "Middleware 2026 (Under Review)"
+publication_short: "Middleware 2026 (Under Review)"
+abstract: "Preprint: Benchmarking distributed deep learning pipelines across heterogeneous networks, auditing latency and security overhead."
 tags:
-- 2026 (Under Review)
-- AI
-- Distributed Systems
+- Decentralized Systems
+- GPU Clouds
 - First Author
-- LLM
-
 featured: false
-
 links:
 url_pdf: ''
 url_code: ''

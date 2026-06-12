@@ -1,33 +1,25 @@
 ---
-title: "Ransomware 3.0: Enhancing Management Mitigation Options with Proof-of-Decryptability Smart Contracts"
+title: "Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability and Smart Contracts"
 authors:
-- Hou
+- Xinyu Hou
+- Yang Lu
 - Rabimba Karanjai
+- Lei Xu
 - Weidong Shi
-date: "2025-01-01T00:00:00Z"
+date: "2025-05-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2025-05-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
 publication: "IEEE ICBC 2025"
 publication_short: "IEEE ICBC 2025"
-
-abstract: "Presented at IEEE ICBC 2025."
-
+abstract: "Short Paper: We design smart contracts verifying decryption keys in escrow to manage ransomware extortion threats."
 tags:
 - Blockchain
-- IEEE ICBC 2025
 - Security
-
+- Ransomware
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/ransomware-3-0.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''

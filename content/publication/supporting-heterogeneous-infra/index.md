@@ -1,36 +1,29 @@
 ---
-title: "Supporting Heterogeneous Critical Infrastructure Protection"
+title: "Supporting Heterogeneous TEE for Critical Infrastructure Protection"
 authors:
 - Rabimba Karanjai
-- Collier
+- Rowan Collier
 - Zhimin Gao
-- Chen
-- Xinxin
+- Lin Chen
+- Xinxin Fan
+- Taeweon Suh
 - Weidong Shi
-date: "2023-01-01T00:00:00Z"
+- Lei Xu
+date: "2023-05-01T00:00:00Z"
 doi: ""
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2023-01-01T00:00:00Z"
-
-# Publication type.
+publishDate: "2023-05-01T00:00:00Z"
 publication_types: ["1"]
-
-# Publication name and optional abbreviated publication name.
-publication: "AsiaCCS 2023"
-publication_short: "AsiaCCS 2023"
-
-abstract: "Presented at AsiaCCS 2023."
-
+publication: "ACM AsiaCCS 2023"
+publication_short: "ACM AsiaCCS 2023"
+abstract: "We design a middleware framework to secure critical systems using multiple diverse Trusted Execution Environments (TEEs)."
 tags:
-- AsiaCCS 2023
-- Distributed Systems
+- Security
+- TEE
+- Hardware Security
 - First Author
-
 featured: false
-
 links:
-url_pdf: ''
+url_pdf: '/uploads/publications/supporting-heterogeneous-infra.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
