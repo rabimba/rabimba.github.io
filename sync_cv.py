@@ -565,10 +565,12 @@ os.makedirs(pub_base_dir, exist_ok=True)
 with open(os.path.join(pub_base_dir, "_index.md"), "w") as f:
     f.write("""---
 title: Publications
-type: landing
-sections:
-  - block: publication-browser
+layout: publication-browser
+summary: "Browse my research papers by topic, venue, and year."
+description: "Use the search and filters to jump to work that matches your interests—whether you're looking for AI reasoning, decentralized systems, or security."
 ---
+
+Curious about what I have been building recently? Explore the papers below and filter by venue, year, or topic to find the work that matters most to you.
 """)
 
 # Match and generate publications
@@ -829,7 +831,7 @@ work:
     company_url: ''
     icon: ''
     date_start: 2014-05-01
-    date_end: 2014-11-31
+    date_end: 2014-11-30
     summary: |
       Embedded NLP and cognitive computing into Watson solutions.
   - position: Programmer Analyst

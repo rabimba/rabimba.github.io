@@ -126,7 +126,7 @@ work:
     company_url: ''
     icon: ''
     date_start: 2014-05-01
-    date_end: 2014-11-31
+    date_end: 2014-11-30
     summary: |
       Embedded NLP and cognitive computing into Watson solutions.
   - position: Programmer Analyst
