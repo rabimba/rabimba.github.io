@@ -1,37 +1,146 @@
-- slug: qucowe
-  title: 'QuCoWE: Quantum Contrastive Embeddings with Variational Circuits for Near-Term
-    Quantum Devices'
+- slug: context-contamination-logs
+  title: 'Context Contamination in LLM Analysis of Network Security Logs: Poison with
+    Passive Prompt Injection and Mitigation Evaluation'
   authors:
   - Rabimba Karanjai
-  - Heman Madhavarao
+  - Yang Lu
+  - Hemanth Hegadehalli Madhavarao
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-08-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-08-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: USENIX Security 2026 (To Appear)
+  publication_short: USENIX Security 2026 (To Appear)
+  abstract: We analyze prompt injection risks in security log analysis systems powered
+    by LLMs, demonstrating passive injections and proposing mitigation methods.
+  tags:
+  - Security
+  - LLMs
+  - Network Security
+  - First Author
+  featured: false
+- slug: empowering-smart-contracts-ai
+  title: Empowering Smart Contracts with Real-time On-Chain AI Inferences
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong (Larry) Shi
+  date: '2026-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: IEEE ICBC 2026
+  publication_short: IEEE ICBC 2026
+  abstract: 'Short Paper: We detail low-latency inference pipelines that check and
+    execute simple models on-chain.'
+  tags:
+  - Smart Contracts
+  - AI Inference
+  - First Author
+  featured: false
+- slug: qucowe
+  title: 'QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for
+    Near-Term Quantum Devices'
+  authors:
+  - Rabimba Karanjai
+  - Hemanth Madhavarao
+  - Lei Xu
   - Weidong Shi
   date: '2026-02-01T00:00:00Z'
   doi: ''
-  publishDate: '2025-11-25T00:00:00Z'
+  publishDate: '2026-02-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: AAAI 2026
-  publication_short: AAAI 2026
-  abstract: Presented at QC+AI, AAAI 2026.
+  publication: AAAI 2026 (QC+AI)
+  publication_short: AAAI 2026 (QC+AI)
+  abstract: We introduce QuCoWE, a framework for contrastive word embeddings designed
+    to run on near-term quantum processors using variational circuits.
+  tags:
+  - Quantum Computing
+  - NLP
+  - Word Embeddings
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: https://arxiv.org/pdf/2511.10179.pdf
+- slug: causalgraphx
+  title: 'CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable
+    Systemic Risk Assessment'
+  authors:
+  - Rabimba Karanjai
+  - Hemanth Hegadehalli Madhavarao
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-02-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-02-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: AAAI 2026 (AI4Finance)
+  publication_short: AAAI 2026 (AI4Finance)
+  abstract: CausalGraphX utilizes counterfactual graph neural networks to provide
+    explainable risk assessments in complex financial and systemic environments.
   tags:
   - AI
-  - Contrastive Learning
+  - Neural Networks
+  - Explainable AI
   - First Author
-  - Quantum
-  - Quantum Computing
-  featured: true
-  links: null
-  url_pdf: https://arxiv.org/pdf/2511.10179.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: vision-language-models-anchor
-  title: Vision Language Models Anchor
+  featured: false
+- slug: closing-cost-gap-rl
+  title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
   authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: Reinforcement learning structures utilizing formal verification
+    constraints as runtime guides to secure code compilation.'
+  tags:
+  - LLMs
+  - Reinforcement Learning
+  - Formal Verification
+  - First Author
+  featured: false
+- slug: rules-that-govern
+  title: 'Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation'
+  authors:
+  - Yang Lu
+  - Rabimba Karanjai
+  - Dana Alsagheer
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: EMNLP 2026 (Under Review)
+  publication_short: EMNLP 2026 (Under Review)
+  abstract: 'Preprint: Detailed modeling of rules and policy properties that constrain
+    multi-agent discussion spaces.'
+  tags:
+  - Agents
+  - Multi-Agent Systems
+  - Policy
+  featured: false
+- slug: vision-language-models-anchor
+  title: Aligning Vision Language Models via anchor
+  authors:
+  - Yilin Yang
+  - Yuke Wang
   - Rabimba Karanjai
   - Weidong Shi
   - Chengming Zhang
@@ -40,113 +149,166 @@
   publishDate: '2026-01-01T00:00:00Z'
   publication_types:
   - '3'
-  publication: CVPR 2026 (Under Review)
-  publication_short: CVPR 2026 (Under Review)
-  abstract: Presented at CVPR 2026 (Under Review).
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: Aligning visual tokens with semantic text anchors to enhance
+    multi-modal reasoning capabilities.'
   tags:
-  - AI
-  - CVPR 2026 (Under Review)
-  - First Author
+  - Computer Vision
+  - Multi-Modal
+  - AI Alignment
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
 - slug: verifygen-x
-  title: 'VerifyGen-X: Cross-Chain Smart Contract Generation'
+  title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement
+    Learning from Formal Verification Feedback'
   authors:
   - Rabimba Karanjai
+  - Lei Xu
+  - Yang Lu
   - Weidong Shi
   date: '2026-01-01T00:00:00Z'
   doi: ''
   publishDate: '2026-01-01T00:00:00Z'
   publication_types:
   - '3'
-  publication: SANER 2026 (Under Review)
-  publication_short: SANER 2026 (Under Review)
-  abstract: Presented at SANER 2026 (Under Review).
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: We use formal verification proofs in RL loops to ensure generated
+    cross-chain contracts are bug-free.'
   tags:
-  - AI
   - Blockchain
+  - Generative AI
+  - Formal Verification
   - First Author
-  - SANER 2026 (Under Review)
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+- slug: specialists-hold-routing
+  title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
+    Auctions'
+  authors:
+  - Xinyu Hou
+  - Yang Lu
+  - Rabimba Karanjai
+  - Pei-Chi Pan
+  - Sen Lin
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: Game-theoretic modeling of agent routing auctions to optimize
+    multi-llm coordination structures.'
+  tags:
+  - LLMs
+  - Game Theory
+  - Routing
+  featured: false
+- slug: cm-dpo-planning
+  title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning'
+  authors:
+  - Rabimba Karanjai
+  - Qun Gu
+  - Hemanth Hegadehalii Madhavarao
+  - Wenhuan Sun
+  - Xiaojiao Yu
+  - Suryabhan Singh Hada
+  - Libin N. George
+  - Uma Kona
+  - Richard Williamson
+  - Linsey Pang
+  - Prakhar Mehrotra
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: A preference optimization framework that forces planning paths
+    to obey hard system limits.'
+  tags:
+  - LLMs
+  - Preference Optimization
+  - Planning
+  - First Author
+  featured: false
+- slug: profiler-persona
+  title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
+    and Fusion of Synthesized Profiles'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: EMNLP 2026 (Under Review)
+  publication_short: EMNLP 2026 (Under Review)
+  abstract: 'Preprint: A retrieval-augmented persona generation architecture that
+    conditions frozen models dynamically.'
+  tags:
+  - LLMs
+  - Persona Tuning
+  - First Author
+  featured: false
 - slug: training-llms-decentralized
-  title: Training LLMs Decentralized Clouds
+  title: Hype or Hope? Training LLMs on Decentralized GPU Clouds
   authors:
   - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
   - Weidong Shi
   date: '2026-01-01T00:00:00Z'
   doi: ''
   publishDate: '2026-01-01T00:00:00Z'
   publication_types:
   - '3'
-  publication: 2026 (Under Review)
-  publication_short: 2026 (Under Review)
-  abstract: Presented at 2026 (Under Review).
+  publication: Middleware 2026 (Under Review)
+  publication_short: Middleware 2026 (Under Review)
+  abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous
+    networks, auditing latency and security overhead.'
   tags:
-  - 2026 (Under Review)
-  - AI
-  - Distributed Systems
+  - Decentralized Systems
+  - GPU Clouds
   - First Author
-  - LLM
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: causalgraphx
-  title: 'CausalGraphX: Counter-factual Neural Network Framework Explainable Systemic
-    Assessment'
+- slug: allocation-before-ranking
+  title: 'Allocation Before Ranking: Decoupled Token Compression for OmniLLMs'
   authors:
-  - Rabimba Karanjai
-  - Heman Hegadehalli Madhavarao
+  - Zhenghui Guo
+  - Yilin Yang
+  - Yuanbin Man
+  - Miao Yin
   - Weidong Shi
+  - Rabimba Karanjai
+  - Omprakash Gnawali
+  - Chengming Zhang
   date: '2026-01-01T00:00:00Z'
   doi: ''
   publishDate: '2026-01-01T00:00:00Z'
   publication_types:
   - '3'
-  publication: AAAI 2026 (Under Review)
-  publication_short: AAAI 2026 (Under Review)
-  abstract: Presented at AAAI 2026 (Under Review).
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: We decouple token compression from routing in multi-modal systems,
+    improving processing speeds by up to 30%.'
   tags:
-  - AAAI 2026 (Under Review)
-  - AI
-  - First Author
+  - LLMs
+  - Token Compression
+  - Efficiency
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
 - slug: bridging-confidentiality-reliability
-  title: 'Bridging Confidentiality Reliability: Ten-Weight Agents Reasoning'
+  title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
   authors:
   - Dana Alsagheer
+  - Yang Lu
+  - Lei Xu
   - Weidong Shi
   - Rabimba Karanjai
   date: '2026-01-01T00:00:00Z'
@@ -154,704 +316,589 @@
   publishDate: '2026-01-01T00:00:00Z'
   publication_types:
   - '3'
-  publication: Symp Computer Science 2026 (Under Review)
-  publication_short: Symp Computer Science 2026 (Under Review)
-  abstract: Presented at Symp Computer Science 2026 (Under Review).
+  publication: ACM Symposium on Computer Science and Law 2026 (Under Review)
+  publication_short: ACM Symposium on Computer Science and Law 2026 (Under Review)
+  abstract: 'Preprint: Deploying open-weight local model instances to perform legal
+    brief review without leakage.'
   tags:
-  - Agents
+  - AI Governance
   - Security
-  - Symp Computer Science 2026 (Under Review)
+  - Law
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+- slug: unlock-onchain-intel-mw
+  title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
+    Smart Contracts'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: Middleware 2026 (Under Review)
+  publication_short: Middleware 2026 (Under Review)
+  abstract: 'Preprint: Expanding on-chain capabilities by linking secure oracle execution
+    paths with frozen LLM instances.'
+  tags:
+  - Blockchain
+  - AI Inference
+  - First Author
+  featured: false
+- slug: unlocking-onchain-intelligence
+  title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
+    Smart Contracts'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong (Larry) Shi
+  date: '2025-11-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-11-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: BRAINS 2025
+  publication_short: BRAINS 2025
+  abstract: 'Short Paper: Introducing a framework to interface Large Language Models
+    with blockchain states safely.'
+  tags:
+  - Smart Contracts
+  - Generative AI
+  - First Author
+  featured: false
+- slug: securing-multi-chain
+  title: 'Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for
+    Vulnerability Repair in Solidity and Move'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-11-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-11-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM AIWare 2025
+  publication_short: ACM AIWare 2025
+  abstract: This work presents an agent-based framework designed to automatically
+    detect and repair security vulnerabilities in Solidity and Move smart contracts.
+  tags:
+  - Blockchain
+  - Security
+  - Smart Contracts
+  - First Author
+  - Agents
+  featured: true
+  links:
+  - name: PDF
+    url: /uploads/publications/securing-multi-chain.pdf
+- slug: hpc-agent-tester
+  title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-11-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-11-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM AIWare 2025
+  publication_short: ACM AIWare 2025
+  abstract: We explore multi-agent LLM systems to improve unit test generation for
+    High-Performance Computing (HPC) software environments.
+  tags:
+  - HPC
+  - Testing
+  - Agents
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/hpc-agent-tester.pdf
+- slug: evaluating-quality-randomness
+  title: Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large
+    Language Models
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Ranjith Chodavarapu
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-08-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-08-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: KDD - Agentic & GenAI Evaluation 2025
+  publication_short: KDD - Agentic & GenAI Evaluation 2025
+  abstract: We evaluate how LLMs generate entropy and pseudorandom outputs in critical
+    computational tasks, identifying key vulnerabilities and patterns.
+  tags:
+  - LLMs
+  - Randomness
+  - Entropy
+  - Security
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: https://arxiv.org/pdf/2510.12080.pdf
+- slug: teaching-ais-reason-confidentially
+  title: Teaching AIs to Reason and Code, Confidentially
+  authors:
+  - Rabimba Karanjai
+  date: '2025-07-25T00:00:00Z'
+  doi: ''
+  publishDate: '2025-07-25T00:00:00Z'
+  publication_types:
+  - '7'
+  publication: PhD Thesis, University of Houston
+  publication_short: PhD Thesis, University of Houston
+  abstract: My doctoral dissertation addresses methods and frameworks for secure and
+    private code generation and reasoning in LLMs.
+  tags:
+  - PhD Thesis
+  - AI Reasoning
+  - First Author
+  - Security
+  - Confidentiality
+  featured: true
+- slug: collaboration-safe-code-translation
+  title: 'Collaboration is all you need: LLM Assisted Safe Code Translation'
+  authors:
+  - Rabimba Karanjai
+  - Sam Blackshear
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-06-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-06-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM Foundations of Software Engineering (FSE) 2025
+  publication_short: ACM Foundations of Software Engineering (FSE) 2025
+  abstract: We present collaborative LLM strategies to safely translate source code
+    between low-resource or domain-specific languages with formal checks.
+  tags:
+  - LLMs
+  - Software Engineering
+  - Code Translation
+  - First Author
+  featured: false
+- slug: ransomware-3-0
+  title: 'Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability
+    and Smart Contracts'
+  authors:
+  - Xinyu Hou
+  - Yang Lu
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: IEEE ICBC 2025
+  publication_short: IEEE ICBC 2025
+  abstract: 'Short Paper: We design smart contracts verifying decryption keys in escrow
+    to manage ransomware extortion threats.'
+  tags:
+  - Blockchain
+  - Security
+  - Ransomware
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/ransomware-3-0.pdf
 - slug: synthesizing-public-opinions
-  title: 'Synthesizing Public Opinions with LLMs: Creation, Impacts, and the Future
-    to eDemocracy'
+  title: 'Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the
+    Future to eDemocracy'
   authors:
   - Rabimba Karanjai
   - Boris Shor
   - Amanda Austin
-  - Kennedy
+  - Ryan Kennedy
+  - Yang Lu
+  - Lei Xu
   - Weidong Shi
   date: '2025-04-01T00:00:00Z'
   doi: ''
   publishDate: '2025-04-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: IEEE ICEDEG 2025
-  publication_short: IEEE ICEDEG 2025
-  abstract: Presented at IEEE ICEDEG 2025.
+  publication: ICEDEG 2025
+  publication_short: ICEDEG 2025
+  abstract: We investigate the potential of LLMs to model and synthesize diverse public
+    opinions, exploring ethical dimensions and technical accuracy.
   tags:
-  - First Author
-  - IEEE ICEDEG 2025
-  - LLM
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: weaving-the-cosmos
-  title: 'Weaving the Cosmos: WASM-Powered Interchain Communication for AI Enabled
-    Smart Contracts'
-  authors:
-  - Rabimba Karanjai
-  - Lei Xu
-  - Weidong Shi
-  date: '2025-02-01T00:00:00Z'
-  publishDate: '2025-02-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: arXiv 2025
-  publication_short: arXiv 2025
-  abstract: arXiv Preprint.
-  tags:
-  - Blockchain
-  - AI
-  - WASM
-  - Interchain
-  - First Author
-  featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2502.17604.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: logbabylon
-  title: 'LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis'
-  authors:
-  - Rabimba Karanjai
-  - Dana Alsagheer
-  - Keshav Kasichainula
-  - Weidong Shi
-  - Stephen Huang
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: '2025'
-  publication_short: '2025'
-  abstract: Presented at 2025.
-  tags:
-  - 2025
-  - First Author
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: unlocking-onchain-intelligence
-  title: 'Unlocking On-Chain Intelligence: Tactic Framework GenAI-Power Smart Contracts'
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: BRAINS 2025
-  publication_short: BRAINS 2025
-  abstract: Presented at BRAINS 2025.
-  tags:
-  - AI
-  - BRAINS 2025
-  - Blockchain
-  - First Author
-  - LLM
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: securing-multi-chain
-  title: 'Securing Multi-Chain Ecosystem: Unified Agent-Based Framework for Vulnerability
-    Detection in Solidity and Move'
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: AIWar 2025
-  publication_short: AIWar 2025
-  abstract: Winner of SIGSOFT Distinguished Paper Award. Presented at AIWar 2025.
-  tags:
-  - AI
-  - Agents
-  - Blockchain
-  - First Author
-  - Multi-Agent Systems
-  - Security
-  - Vulnerability Detection
-  featured: true
-  links: null
-  url_pdf: https://arxiv.org/pdf/2502.18515.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: agent-tester
-  title: 'AgentTester: A Multi-Agent Approach for Enhancing Unit Test Generation'
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: AIWare 2025
-  publication_short: AIWare 2025
-  abstract: AgentTester utilizes a multi-agent approach to significantly enhance the
-    automated generation of unit tests, improving software reliability.
-  tags:
-  - Agents
-  - First Author
   - LLMs
-  - Multi-Agent Systems
-  - Software Engineering
-  - Software Testing
-  featured: false
-- slug: ransomware-3-0
-  title: 'Ransomware 3.0: Enhancing Management Mitigation Options with Proof-of-Decryptability
-    Smart Contracts'
-  authors:
-  - Hou
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: IEEE ICBC 2025
-  publication_short: IEEE ICBC 2025
-  abstract: Presented at IEEE ICBC 2025.
-  tags:
-  - Blockchain
-  - IEEE ICBC 2025
-  - Security
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: collaboration-safe-code-translation
-  title: 'Collaboration is all you need: LLM Assisted Safe Code Translation'
-  authors:
-  - Rabimba Karanjai
-  - Blackshear
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: '2025'
-  publication_short: '2025'
-  abstract: Presented at 2025.
-  tags:
-  - 2025
+  - eDemocracy
+  - AI Society
   - First Author
-  - LLM
-  - Software Engineering
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: ai-personalized-interventions
-  title: AI-Based Personalized Interventions for Atherosclerosis using Microbiota
-    Signatures
-  authors:
-  - Rabimba Karanjai
-  - Surajumder
-  - Koushik Sen
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: SynBio 2025
-  publication_short: SynBio 2025
-  abstract: Presented at SynBio 2025.
-  tags:
-  - AI
-  - First Author
-  - IoT
-  - SynBio 2025
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
 - slug: log-babylon
   title: 'LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis'
   authors:
   - Rabimba Karanjai
+  - Yang Lu
   - Dana Alsagheer
   - Keshav Kasichainula
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: '2025'
-  publication_short: '2025'
-  abstract: LogBabylon introduces a unified framework for integrating and analyzing
-    log files across different systems and formats.
-  tags:
-  - Distributed Systems
-  - First Author
-  - Log Analysis
-  - System Observability
-  featured: false
-- slug: evaluating-quality-randomness
-  title: Evaluating Quality of Randomness and Entropy in Tasks Supported by Large
-    Language Models
-  authors:
-  - Rabimba Karanjai
-  - Ranjith Sarapu
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: Agentic GenAI Evaluation 2025
-  publication_short: Agentic GenAI Evaluation 2025
-  abstract: Presented at Agentic GenAI Evaluation 2025.
-  tags:
-  - AI
-  - Agentic GenAI Evaluation 2025
-  - Agents
-  - First Author
-  - LLM
-  featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2510.12080.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: hpc-agent-tester
-  title: 'HPCAgentTester: Multi-Agent Approach for Enhancing Unit Test Generation'
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2025-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2025-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: AIWar 2025
-  publication_short: AIWar 2025
-  abstract: Presented at AIWar 2025.
-  tags:
-  - AI
-  - Agents
-  - First Author
-  - HPC
-  - LLMs
-  - Multi-Agent Systems
-  - Unit Testing
-  featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2511.10860.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: generating-move-smart-contracts
-  title: Generating Move Smart Contracts based on Concepts
-  authors:
-  - Rabimba Karanjai
-  - Blackshear
   - Lei Xu
   - Weidong Shi
-  date: '2024-12-01T00:00:00Z'
-  publishDate: '2024-12-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: arXiv 2024
-  publication_short: arXiv 2024
-  abstract: arXiv Preprint.
-  tags:
-  - Blockchain
-  - Smart Contracts
-  - Move
-  - Generative AI
-  - First Author
-  featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2412.12513.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: harnessing-power-llms
-  title: 'Harnessing the power of llms: Automating unit test generation for high-performance
-    computing'
-  authors:
-  - Rabimba Karanjai
-  - A Hussain
-  - MRI Rabin
-  - L Xu
-  - W Shi
-  - MA Alipour
-  date: '2024-07-01T00:00:00Z'
-  publishDate: '2024-07-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: arXiv 2024
-  publication_short: arXiv 2024
-  abstract: arXiv Preprint.
-  tags:
-  - LLM
-  - HPC
-  - Testing
-  - First Author
-  featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2407.05202.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: evaluating-rationality
-  title: Evaluating Rationality Language Models Questions
-  authors:
-  - Dana Alsagheer
-  - Rabimba Karanjai
-  - Weidong Shi
-  - Nour Diallo
-  - Suha Beydoun
-  - Qiaoning Zhang
-  date: '2024-01-01T00:00:00Z'
+  - Stephen Huang
+  date: '2025-03-01T00:00:00Z'
   doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
+  publishDate: '2025-03-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: HEAL 2024
-  publication_short: HEAL 2024
-  abstract: Presented at HEAL 2024.
+  publication: ACM SAC 2025
+  publication_short: ACM SAC 2025
+  abstract: LogBabylon provides a unified framework for matching and integrating log
+    files across different systems to improve security audits and diagnostics.
   tags:
-  - AI
-  - HEAL 2024
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: enhancing-vascular-diagnosis
-  title: Enhancing Vascular Disease Diagnosis through AI-Driven Analysis of Histopathology
-    Images
-  authors:
-  - Rabimba Karanjai
-  - Surajumder
-  date: '2024-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: Annual Health Conference Rice University 2024
-  publication_short: Annual Health Conference Rice University 2024
-  abstract: Presented at Annual Health Conference Rice University 2024.
-  tags:
-  - AI
-  - Annual Health Conference Rice University 2024
-  - First Author
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: trusted-infer-edge
-  title: Trusted Infer Edge with Smart Contracts
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2024-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: IEEE ICBC 2024
-  publication_short: IEEE ICBC 2024
-  abstract: Presented at IEEE ICBC 2024.
-  tags:
-  - Blockchain
-  - First Author
-  - IEEE ICBC 2024
-  - IoT
   - Security
+  - Log Analysis
+  - First Author
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: decentralize-multi-clouds
-  title: Decentralize over Multi-Clouds
+- slug: ai-personalized-interventions
+  title: AI-Based Target for Personalized Interventions of Atherosclerosis from Gut
+    Microbiota Signature
+  authors:
+  - Suravi Majumder
+  - Koushik Sen
+  - Rabimba Karanjai
+  date: '2025-02-01T00:00:00Z'
+  doi: ''
+  publishDate: '2025-02-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: SynBio 2025
+  publication_short: SynBio 2025
+  abstract: We detail an AI framework that parses gut microbiota signatures to design
+    personalized dietary or medical interventions for atherosclerosis.
+  tags:
+  - AI
+  - Bioinformatics
+  - Microbiota
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/ai-personalized-interventions.pdf
+- slug: smart-contract-translation
+  title: Smart Contract Code Translation based on Concepts
   authors:
   - Rabimba Karanjai
   - Lei Xu
-  - Lin Chen
-  - Nour Diallo
   - Weidong Shi
-  date: '2024-01-01T00:00:00Z'
+  date: '2024-11-01T00:00:00Z'
   doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
+  publishDate: '2024-11-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: '2024'
-  publication_short: '2024'
-  abstract: Presented at 2024.
+  publication: ACM Foundations of Software Engineering (FSE) 2024
+  publication_short: ACM Foundations of Software Engineering (FSE) 2024
+  abstract: We explore using conceptual mappings to translate smart contracts safely
+    between high-level smart contract languages.
   tags:
-  - 2024
-  - Distributed Systems
-  - First Author
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: smart-contract-translation
-  title: Smart Contract Translation Concepts
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2024-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: Foundations of Software Engineering (FSE) 2024
-  publication_short: Foundations of Software Engineering (FSE) 2024
-  abstract: Presented at Foundations of Software Engineering (FSE) 2024.
-  tags:
+  - Smart Contracts
   - Blockchain
+  - Code Translation
   - First Author
-  - Foundations of Software Engineering (FSE) 2024
-  - Software Engineering
   featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2412.12513.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: mitigating-hallucinations
-  title: Mitigating Hallucinations AI-Driven Diagnosis
-  authors:
-  - Rabimba Karanjai
-  - Surajumder
-  date: '2024-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: Annual Health Conference Rice University 2024
-  publication_short: Annual Health Conference Rice University 2024
-  abstract: Presented at Annual Health Conference Rice University 2024.
-  tags:
-  - AI
-  - Annual Health Conference Rice University 2024
-  - First Author
-  - LLM
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: voter-blockchain
-  title: Voter
-  authors:
-  - Nour Diallo
-  - Dana Alsagheer
-  - Rabimba Karanjai
-  - Weidong Shi
-  - Mohammad Kamal
-  date: '2024-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: IEEE ICEDEG 2024
-  publication_short: IEEE ICEDEG 2024
-  abstract: Presented at IEEE ICEDEG 2024.
-  tags:
-  - IEEE ICEDEG 2024
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/smart-contract-translation.pdf
 - slug: cryptographic-accelerator
-  title: Cryptographic Accelerator
+  title: TPU as Cryptographic Accelerator
   authors:
   - Rabimba Karanjai
-  - Sangw Shin
-  - Yujie Xiong
-  - Xinxin Chen
-  - Tian Zhang
-  - Suh
+  - Sangwon Shin
+  - Wujie Xiong
+  - Xinxin Fan
+  - Lin Chen
+  - Tianwei Zhang
+  - Taeweon Suh
   - Weidong Shi
-  - Veronika
+  - Veronika Kuchta
   - Francesco Sica
-  date: '2024-01-01T00:00:00Z'
+  - Lei Xu
+  date: '2024-10-01T00:00:00Z'
   doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
+  publishDate: '2024-10-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: MICR 2024
-  publication_short: MICR 2024
-  abstract: Presented at MICR 2024.
+  publication: MICRO 2024
+  publication_short: MICRO 2024
+  abstract: We investigate leveraging Tensor Processing Units (TPUs) to accelerate
+    intensive cryptographic primitives in blockchain and zero-knowledge systems.
   tags:
-  - Blockchain
+  - TPU
+  - Cryptography
+  - Hardware Accelerator
   - First Author
-  - MICR 2024
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
 - slug: adding-flavors-rng
-  title: 'Adding Flavors: Hybrid Random Number Generator for dApps in Web3'
+  title: 'Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3'
   authors:
-  - Ranjith Sarapu
+  - Ranjith Chodavarapu
   - Rabimba Karanjai
-  - Xinxin
+  - Xinxin Fan
   - Larry Shi
-  date: '2024-01-01T00:00:00Z'
+  - Lei Xu
+  date: '2024-09-01T00:00:00Z'
   doi: ''
-  publishDate: '2024-01-01T00:00:00Z'
+  publishDate: '2024-09-01T00:00:00Z'
   publication_types:
   - '1'
   publication: International Symposium on Stabilization, Safety, and Security of Distributed
     Systems (SSS) 2024
   publication_short: International Symposium on Stabilization, Safety, and Security
     of Distributed Systems (SSS) 2024
-  abstract: Presented at International Symposium on Stabilization, Safety, and Security
-    of Distributed Systems (SSS) 2024.
+  abstract: We propose a hybrid on-chain and off-chain random number generator suitable
+    for decentralized applications (dApps) requiring high entropy.
   tags:
-  - Distributed Systems
-  - International Symposium on Stabilization, Safety, and Security of Distributed
-    Systems (SSS) 2024
+  - Web3
+  - Randomness
+  - dApps
   - Security
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/adding-flavors-rng.pdf
+- slug: evaluating-rationality
+  title: Evaluating Irrationality in Large Language Models and Open Research Questions
+  authors:
+  - Dana R Alsagheer
+  - Rabimba Karanjai
+  - Weidong Shi
+  - Nour Diallo
+  - Yang Lu
+  - Suha Beydoun
+  - Qiaoning Zhang
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM CHI HEAL 2024
+  publication_short: ACM CHI HEAL 2024
+  abstract: 'Workshop Paper: We examine cognitive cognitive anomalies and systematic
+    biases in LLM choices when given human reasoning dilemmas.'
+  tags:
+  - LLMs
+  - Cognitive Bias
+  - AI Safety
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/evaluating-rationality.pdf
+- slug: enhancing-vascular-diagnosis
+  title: Enhancing Vascular Disease Diagnosis through AI-Driven Analysis of Histopathology
+    Images
+  authors:
+  - Rabimba Karanjai
+  - Suravi Majumder
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: 3rd Annual AI in Health Conference, Rice University
+  publication_short: 3rd Annual AI in Health Conference, Rice University
+  abstract: 'Workshop Paper: Deep learning classifier pipelines designed to analyze
+    histopathological tissue slides for diagnosing vascular disease.'
+  tags:
+  - AI
+  - Health
+  - Computer Vision
+  - First Author
+  featured: false
+- slug: trusted-infer-edge
+  title: Trusted LLM Inference on the Edge with Smart Contracts
+  authors:
+  - Rabimba Karanjai
+  - Weidong Shi
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: IEEE ICBC 2024
+  publication_short: IEEE ICBC 2024
+  abstract: We propose a trust framework using smart contracts to audit and verify
+    edge-computed LLM inference outputs.
+  tags:
+  - LLMs
+  - Smart Contracts
+  - Edge Computing
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/trusted-infer-edge.pdf
+- slug: mitigating-hallucinations
+  title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
+  authors:
+  - Rabimba Karanjai
+  - Suravi Majumder
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: 3rd Annual AI in Health Conference, Rice University
+  publication_short: 3rd Annual AI in Health Conference, Rice University
+  abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational
+    diagnostic models through structured knowledge reinforcement.'
+  tags:
+  - AI
+  - Health
+  - LLM Hallucinations
+  - First Author
+  featured: false
+- slug: voter-blockchain
+  title: All We Need is Voter Feedback
+  authors:
+  - Nour Diallo
+  - Dana Alsagheer
+  - Lei Xu
+  - Yang Lu
+  - Rabimba Karanjai
+  - Weidong Shi
+  - Mohammad Kamal
+  date: '2024-04-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-04-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: IEEE ICEDEG 2024
+  publication_short: IEEE ICEDEG 2024
+  abstract: We study decentralized governance architectures that incorporate continuous
+    feedback loops via blockchain votes.
+  tags:
+  - Blockchain
+  - Governance
+  - Decentralized Voting
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/voter-blockchain.pdf
+- slug: decentralize-multi-clouds
+  title: Decentralized FaaS over Multi-Clouds
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Lin Chen
+  - Nour Diallo
+  - Weidong Shi
+  date: '2024-03-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-03-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM SAC 2024
+  publication_short: ACM SAC 2024
+  abstract: We introduce a decentralized Function-as-a-Service (FaaS) model that coordinates
+    execution tasks across multiple cloud networks.
+  tags:
+  - Decentralized Systems
+  - FaaS
+  - Cloud Computing
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/decentralize-multi-clouds.pdf
+- slug: diac-infrastructure
+  title: 'DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain'
+  authors:
+  - Rabimba Karanjai
+  - Keshav Kasichainula
+  - Lei Xu
+  - Nour Diallo
+  - Lin Chen
+  - Weidong Shi
+  date: '2023-11-01T00:00:00Z'
+  doi: ''
+  publishDate: '2023-11-01T00:00:00Z'
+  publication_types:
+  - '2'
+  publication: IEEE TNSM 2023
+  publication_short: IEEE TNSM 2023
+  abstract: We propose DlaC, a system that uses smart contracts to securely manage
+    and audit cloud infrastructure deployment configurations.
+  tags:
+  - Blockchain
+  - Infrastructure as Code
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/diac-infrastructure.pdf
+- slug: smarter-smart-contract
+  title: Who is Smarter? An Empirical Study of AI-based Smart Contract Creation
+  authors:
+  - Rabimba Karanjai
+  - E Li
+  - L Xu
+  - W Shi
+  date: '2023-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2023-10-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: BRAINS 2023
+  publication_short: BRAINS 2023
+  abstract: We conduct a comparative study evaluating the quality, safety, and functionality
+    of smart contracts generated by LLMs vs human engineers.
+  tags:
+  - LLMs
+  - Smart Contracts
+  - Empirical Study
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/smarter-smart-contract.pdf
+- slug: decentralize-infra-heterogeneous
+  title: 'DHTee: Decentralized Infrastructure for Heterogeneous TEE'
+  authors:
+  - Rabimba Karanjai
+  - Zhimin Gao
+  - Lin Chen
+  - Xinxin Fan
+  - Taeweon Suh
+  - Weidong Shi
+  - Lei Xu
+  date: '2023-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2023-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: IEEE ICBC 2023
+  publication_short: IEEE ICBC 2023
+  abstract: 'Short Paper: Building structured overlays for auditing and routing data
+    across multi-vendor secure enclaves.'
+  tags:
+  - TEE
+  - Security
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/decentralize-infra-heterogeneous.pdf
 - slug: ai-governance
   title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and
-    Challenges'
+    Research Challenges'
   authors:
-  - Dana Alsagheer
+  - Dana R Alsagheer
   - Nour Diallo
+  - Lei Xu
   - Rabimba Karanjai
   - Weidong Shi
   date: '2023-05-01T00:00:00Z'
@@ -859,169 +906,73 @@
   publishDate: '2023-05-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: IEEE International Conference on Blockchain and Cryptocurrency (ICBC
-    2023)
-  publication_short: IEEE ICBC 2023
-  abstract: This paper provides a comprehensive overview of the opportunities and
-    challenges in governing decentralized machine learning systems.
-  tags:
-  - AI
-  - AI Governance
-  - Blockchain
-  - Decentralized AI
-  - Machine Learning
-  featured: false
-  url_pdf: https://arxiv.org/pdf/2308.02955.pdf
-- slug: smarter-smart-contract
-  title: Smarter? Empirical Study AI-based Smart Contract Creation
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2023-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2023-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: BRAINS 2023
-  publication_short: BRAINS 2023
-  abstract: Presented at BRAINS 2023.
-  tags:
-  - AI
-  - BRAINS 2023
-  - Blockchain
-  - First Author
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: decentralize-infra-heterogeneous
-  title: Decentralize Infrastructure Heterogeneous
-  authors:
-  - Rabimba Karanjai
-  - Zhimin Gao
-  - Chen
-  - Xinxin Suh
-  - Weidong Shi
-  date: '2023-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2023-01-01T00:00:00Z'
-  publication_types:
-  - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: Presented at IEEE ICBC 2023.
+  abstract: 'Short Paper: We map the open questions and technical roadblocks in establishing
+    decentralized protocols for auditing ML model weights.'
   tags:
-  - Distributed Systems
-  - First Author
-  - IEEE ICBC 2023
+  - AI Governance
+  - Security
+  - Decentralized Systems
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/ai-governance.pdf
 - slug: supporting-heterogeneous-infra
-  title: Supporting Heterogeneous Critical Infrastructure Protection
+  title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
   authors:
   - Rabimba Karanjai
-  - Collier
+  - Rowan Collier
   - Zhimin Gao
-  - Chen
-  - Xinxin
+  - Lin Chen
+  - Xinxin Fan
+  - Taeweon Suh
   - Weidong Shi
-  date: '2023-01-01T00:00:00Z'
+  - Lei Xu
+  date: '2023-05-01T00:00:00Z'
   doi: ''
-  publishDate: '2023-01-01T00:00:00Z'
+  publishDate: '2023-05-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: AsiaCCS 2023
-  publication_short: AsiaCCS 2023
-  abstract: Presented at AsiaCCS 2023.
+  publication: ACM AsiaCCS 2023
+  publication_short: ACM AsiaCCS 2023
+  abstract: We design a middleware framework to secure critical systems using multiple
+    diverse Trusted Execution Environments (TEEs).
   tags:
-  - AsiaCCS 2023
-  - Distributed Systems
+  - Security
+  - TEE
+  - Hardware Security
   - First Author
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: diac-infrastructure
-  title: 'DIaC: Re-imagining Decentralize Infrastructure using Blockchain'
+  links:
+  - name: PDF
+    url: /uploads/publications/supporting-heterogeneous-infra.pdf
+- slug: faas-decentralized
+  title: 'DeFaaS: Decentralized Function-as-a-Service for Emerging dApps and Web'
   authors:
   - Rabimba Karanjai
-  - Keshav Kasichainula
   - Lei Xu
   - Nour Diallo
   - Lin Chen
   - Weidong Shi
-  date: '2023-01-01T00:00:00Z'
+  date: '2023-05-01T00:00:00Z'
   doi: ''
-  publishDate: '2023-01-01T00:00:00Z'
-  publication_types:
-  - '2'
-  publication: IEEE TNSM 2023
-  publication_short: IEEE TNSM 2023
-  abstract: Presented at IEEE TNSM 2023.
-  tags:
-  - AI
-  - Blockchain
-  - Distributed Systems
-  - First Author
-  - IEEE TNSM 2023
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: faas-decentralized
-  title: 'FaaS: Decentralized Function-as-a-Service for Emerging dApps'
-  authors:
-  - Rabimba Karanjai
-  - Nour Diallo
-  - Chen
-  - Weidong Shi
-  date: '2023-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2023-01-01T00:00:00Z'
+  publishDate: '2023-05-01T00:00:00Z'
   publication_types:
   - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: Presented at IEEE ICBC 2023.
+  abstract: 'Short Paper: We design lightweight container orchestrators over public
+    blockchains for serverless edge compute.'
   tags:
+  - FaaS
+  - Blockchain
+  - Edge Computing
   - First Author
-  - IEEE ICBC 2023
   featured: false
-  links: null
-  url_pdf: https://arxiv.org/pdf/2203.12724.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/faas-decentralized.pdf
 - slug: decentralized-apps
   title: Decentralized Application Infrastructures as Smart Contract Codes
   authors:
@@ -1037,69 +988,74 @@
   publishDate: '2022-05-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: IEEE International Conference on Blockchain and Cryptocurrency (ICBC
-    2022)
+  publication: IEEE ICBC 2022
   publication_short: IEEE ICBC 2022
-  abstract: This paper proposes a novel approach to decentralized application infrastructures
-    by treating them as smart contract codes, enabling more secure and scalable dApps.
+  abstract: We introduce secure frameworks for modeling decentralized application
+    deployment using smart contracts, earning the Distinguished Paper Award.
   tags:
   - Blockchain
-  - Decentralized Applications
-  - Distributed Systems
-  - First Author
-  - Security
   - Smart Contracts
-  - Software Engineering
+  - First Author
   featured: true
-  links: null
-  url_pdf: https://ieeexplore.ieee.org/document/9789334
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: blockchain-tee
-  title: Lessons Learned from Blockchain Applications of Trusted Execution Environments
-    and Implications for Future Research
+  links:
+  - name: PDF
+    url: /uploads/publications/decentralized-apps.pdf
+- slug: privacy-preserving-event
+  title: Privacy preserving event based transaction system in a decentralized environment
   authors:
   - Rabimba Karanjai
   - Lei Xu
-  - Lin Chen
   - Zhimin Gao
+  - Lin Chen
+  - Mudabbir Kaleem
   - Weidong Shi
-  - Fengwei Zhang
-  date: '2021-10-18T00:00:00Z'
+  date: '2021-12-01T00:00:00Z'
   doi: ''
-  publishDate: '2021-10-18T00:00:00Z'
+  publishDate: '2021-12-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: Workshop on Hardware and Architectural Support for Security and Privacy
-    (HASP '21)
-  publication_short: HASP '21
-  abstract: This paper explores the lessons learned from applying Trusted Execution
-    Environments (TEEs) to blockchain applications and discusses implications for
-    future research in this area.
+  publication: ACM Middleware 2021
+  publication_short: ACM Middleware 2021
+  abstract: We detail a middleware layer that guarantees transactional privacy in
+    distributed event-driven architectures.
   tags:
-  - AI
-  - Blockchain
-  - Distributed Systems
+  - Privacy
+  - Distributed Transactions
   - First Author
-  - Security
-  - TEE
   featured: false
-  links: null
-  url_pdf: https://fengweiz.github.io/paper/positionpaper-hasp21.pdf
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/privacy-preserving-event.pdf
+- slug: blockchain-tee
+  title: Lessons Learned from Blockchain Applications of Trusted Execution Environments
+    and Implications
+  authors:
+  - Rabimba Karanjai
+  - L Xu
+  - L Chen
+  - F Zhang
+  - Z Gao
+  - W Shi
+  date: '2021-11-01T00:00:00Z'
+  doi: ''
+  publishDate: '2021-11-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ACM HASP 2021
+  publication_short: ACM HASP 2021
+  abstract: We survey the integration of TEEs in smart contract execution environments,
+    identifying practical security pitfalls and performance trade-offs.
+  tags:
+  - TEE
+  - Blockchain
+  - Hardware Security
+  - First Author
+  featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/blockchain-tee.pdf
 - slug: event-driven-framework
-  title: Event Driven Framework Smart Contract Execution
+  title: An event driven framework for smart contract execution
   authors:
   - Mudabbir Kaleem
   - Keshav Kasichainula
@@ -1108,60 +1064,25 @@
   - Zhimin Gao
   - Lin Chen
   - Weidong Shi
-  date: '2021-01-01T00:00:00Z'
+  date: '2021-06-01T00:00:00Z'
   doi: ''
-  publishDate: '2021-01-01T00:00:00Z'
+  publishDate: '2021-06-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: DEBS 2021
-  publication_short: DEBS 2021
-  abstract: Presented at DEBS 2021.
+  publication: ACM DEBS 2021
+  publication_short: ACM DEBS 2021
+  abstract: We build an asynchronous event-driven system to schedule and execute smart
+    contract actions, increasing ledger throughput.
   tags:
   - Blockchain
-  - DEBS 2021
+  - Event Driven
+  - Smart Contracts
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/event-driven-framework.pdf
 - slug: conditional-cryptocurrency
-  title: Conditional Crypto-currency With Privacy
-  authors:
-  - Rabimba Karanjai
-  - Zhimin Gao
-  - Chen
-  - Mudabbir Kaleem
-  - Weidong Shi
-  date: '2021-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2021-01-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: IEEE ICBC 2021
-  publication_short: IEEE ICBC 2021
-  abstract: Presented at IEEE ICBC 2021.
-  tags:
-  - Blockchain
-  - First Author
-  - IEEE ICBC 2021
-  - Security
-  featured: false
-  links: null
-  url_pdf: https://ieeexplore.ieee.org/document/9464298
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: privacy-preserving-event
-  title: Privacy Preserving Event Transaction System in Decentralized Environment
+  title: On Conditional Cryptocurrency With Privacy
   authors:
   - Rabimba Karanjai
   - Lei Xu
@@ -1169,71 +1090,42 @@
   - Lin Chen
   - Mudabbir Kaleem
   - Weidong Shi
-  date: '2021-01-01T00:00:00Z'
+  date: '2021-05-01T00:00:00Z'
   doi: ''
-  publishDate: '2021-01-01T00:00:00Z'
+  publishDate: '2021-05-01T00:00:00Z'
   publication_types:
   - '1'
-  publication: Middleware 2021
-  publication_short: Middleware 2021
-  abstract: Presented at Middleware 2021.
+  publication: IEEE ICBC 2021
+  publication_short: IEEE ICBC 2021
+  abstract: We design a cryptosystem that enables conditional transfers on public
+    ledgers without revealing user balances or identity links.
   tags:
+  - Blockchain
+  - Cryptocurrency
+  - Privacy
   - First Author
-  - Middleware 2021
-  - Security
   featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
+  links:
+  - name: PDF
+    url: /uploads/publications/conditional-cryptocurrency.pdf
 - slug: optimizing-vr-thesis
-  title: Optimizing Virtual Reality
+  title: Optimizing Web Virtual Reality
   authors:
   - Rabimba Karanjai
-  date: '2018-01-01T00:00:00Z'
+  date: '2018-05-01T00:00:00Z'
   doi: ''
-  publishDate: '2018-01-01T00:00:00Z'
+  publishDate: '2018-05-01T00:00:00Z'
   publication_types:
   - '7'
   publication: Masters Thesis, Rice University
   publication_short: Masters Thesis, Rice University
-  abstract: Presented at Masters Thesis, Rice University.
+  abstract: My masters thesis explores optimizing resource rendering and memory models
+    for Web VR systems built on WebGL and Three.js.
   tags:
-  - First Author
-  - Masters Thesis, Rice University
-  featured: false
-  links: null
-  url_pdf: ''
-  url_code: ''
-  url_dataset: ''
-  url_poster: ''
-  url_project: ''
-  url_slides: ''
-  url_source: ''
-  url_video: ''
-- slug: ibm-blockchain-auth-patent
-  title: Multi-Factor Authentication System Integrating Biometric Features and Blockchain
-    Technology
-  authors:
-  - Rabimba Karanjai
-  date: '2017-08-01T00:00:00Z'
-  doi: ''
-  publishDate: '2017-08-01T00:00:00Z'
-  publication_types:
-  - '8'
-  publication: US Patent (IBM Almaden Research Center)
-  publication_short: US Patent
-  abstract: A multi-factor authentication system that integrates biometric features
-    with blockchain technology to provide secure, tamper-evident identity verification.
-  tags:
-  - Blockchain
-  - Security
-  - Authentication
-  - Biometrics
+  - Virtual Reality
+  - Web Technologies
   - First Author
   featured: false
+  links:
+  - name: PDF
+    url: /uploads/publications/optimizing-vr-thesis.pdf
