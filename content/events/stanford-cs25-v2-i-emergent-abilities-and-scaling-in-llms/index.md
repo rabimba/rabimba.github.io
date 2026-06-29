@@ -1,7 +1,6 @@
 ---
 title: "Stanford CS25: V2 I Emergent Abilities and Scaling in LLMs"
 event: "Stanford CS25 2024"
-event_url: ""
 location: "Online"
 summary: "Talk at Stanford CS25 2024 (2024)."
 abstract: "Presented 'Stanford CS25: V2 I Emergent Abilities and Scaling in LLMs' at Stanford CS25 2024."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=tVtOevLrt5U'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "LLM, Reasoning and Agentic Gemma"
 event: "Google Korea Talk"
-event_url: ""
 location: "Seoul, South Korea"
 summary: "Talk at Google Korea Talk (2024)."
 abstract: "Presented 'LLM, Reasoning and Agentic Gemma' at Google Korea Talk in Seoul, South Korea."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2024"]
 featured: false
-links: []
 ---

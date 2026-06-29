@@ -1,7 +1,6 @@
 ---
 title: "LLM Applications components and design patterns Hands on Workshop"
 event: "University Of Washington Workshop"
-event_url: ""
 location: "Seattle, WA"
 summary: "Talk at University Of Washington Workshop (2024)."
 abstract: "Presented 'LLM Applications components and design patterns Hands on Workshop' at University Of Washington Workshop in Seattle, WA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [University, "Talk", "2024"]
 featured: false
-links: []
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Give your web apps superpower with Generative AI and Mediapipe"
 event: "University of Missouri - Kansas City"
-event_url: ""
 location: "Kansas City, MO"
 summary: "Talk at University of Missouri - Kansas City (2024)."
 abstract: "Presented 'Give your web apps superpower with Generative AI and Mediapipe' at University of Missouri - Kansas City in Kansas City, MO."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [University, "Talk", "2024"]
 featured: false
-links: []
 ---

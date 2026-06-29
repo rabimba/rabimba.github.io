@@ -1,7 +1,6 @@
 ---
 title: "Build with AI   Intro to Function Calling with Gemini by Rabimba Karanjai GDE 2024 03 20 18 07 GMT 5"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'Build with AI   Intro to Function Calling with Gemini by Rabimba Karanjai GDE 2024 03 20 18 07 GMT 5' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=ukMyCFb2WP8'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "LangChain Deep Dive with Rabimba Karanjai (Google Developer Expert)"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'LangChain Deep Dive with Rabimba Karanjai (Google Developer Expert)' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=cqrFeyFufKA'
 ---

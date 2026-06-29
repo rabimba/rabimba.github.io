@@ -1,7 +1,6 @@
 ---
 title: "OSB 2015 - Building a self learning word prediction and auto-correct module for FirefoxOS"
 event: "Open Source Bridge 2015"
-event_url: ""
 location: "Online"
 summary: "Talk at Open Source Bridge 2015 (2015)."
 abstract: "Presented 'OSB 2015 - Building a self learning word prediction and auto-correct module for FirefoxOS' at Open Source Bridge 2015."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2015"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=3rhF5iFcmiY'
 ---

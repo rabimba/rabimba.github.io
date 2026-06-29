@@ -1,7 +1,6 @@
 ---
 title: "Hardening Your IoT Endpoints: A Preventive Toolkit"
 event: "LinuxCon ContainerCon"
-event_url: ""
 location: "Los Angeles, CA"
 summary: "Talk at LinuxCon ContainerCon (2017)."
 abstract: "Presented 'Hardening Your IoT Endpoints: A Preventive Toolkit' at LinuxCon ContainerCon in Los Angeles, CA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [LinuxCon, "Talk", "2017"]
 featured: false
-links: []
 ---

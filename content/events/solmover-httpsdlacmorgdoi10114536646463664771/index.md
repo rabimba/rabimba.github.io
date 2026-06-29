@@ -1,7 +1,6 @@
 ---
 title: "SolMover: https://dl.acm.org/doi/10.1145/3664646.3664771"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'SolMover: https://dl.acm.org/doi/10.1145/3664646.3664771' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=V7kSbGkIaJA'
 ---

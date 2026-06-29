@@ -1,7 +1,6 @@
 ---
 title: "Talk to your Desktop, Code, PDF or anything, in any language, using your own LLM or Gemini"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'Talk to your Desktop, Code, PDF or anything, in any language, using your own LLM or Gemini' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=sdVY9qalvmo'
 ---

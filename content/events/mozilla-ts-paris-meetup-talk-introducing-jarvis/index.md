@@ -1,7 +1,6 @@
 ---
 title: "Mozilla TS Paris Meetup Talk : Introducing jARvis"
 event: "Mozilla Meetup"
-event_url: ""
 location: "Paris, France"
 summary: "Talk at Mozilla Meetup (2024)."
 abstract: "Presented 'Mozilla TS Paris Meetup Talk : Introducing jARvis' at Mozilla Meetup."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=TPeFFIY32Jo'
 ---

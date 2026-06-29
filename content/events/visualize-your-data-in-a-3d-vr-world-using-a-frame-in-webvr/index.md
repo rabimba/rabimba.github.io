@@ -1,7 +1,6 @@
 ---
 title: "Visualize your Data in a 3D VR world using A-Frame in WebVR"
 event: "OpenVis Conf"
-event_url: ""
 location: "Boston, MA"
 summary: "Talk at OpenVis Conf (2018)."
 abstract: "Presented 'Visualize your Data in a 3D VR world using A-Frame in WebVR' at OpenVis Conf in Boston, MA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [OpenVis, "Talk", "2018"]
 featured: false
-links: []
 ---

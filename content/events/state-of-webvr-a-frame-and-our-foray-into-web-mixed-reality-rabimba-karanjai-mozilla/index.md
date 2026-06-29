@@ -1,7 +1,6 @@
 ---
 title: "State of WebVR, A-Frame and Our Foray Into Web Mixed Reality : Rabimba Karanjai - Mozilla"
 event: "Mozilla Meetup"
-event_url: ""
 location: "Online"
 summary: "Talk at Mozilla Meetup (2024)."
 abstract: "Presented 'State of WebVR, A-Frame and Our Foray Into Web Mixed Reality : Rabimba Karanjai - Mozilla' at Mozilla Meetup."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=N72ZNa84y54'
 ---

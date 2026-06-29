@@ -1,7 +1,6 @@
 ---
 title: "SolMover: Smart Contract Code Translation Based on Concepts"
 event: "Berkeley RDI Research Meeting"
-event_url: ""
 location: "Berkeley, CA"
 summary: "Talk at Berkeley RDI Research Meeting (2024)."
 abstract: "Presented 'SolMover: Smart Contract Code Translation Based on Concepts' at Berkeley RDI Research Meeting in Berkeley, CA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Berkeley, "Talk", "2024"]
 featured: false
-links: []
 ---

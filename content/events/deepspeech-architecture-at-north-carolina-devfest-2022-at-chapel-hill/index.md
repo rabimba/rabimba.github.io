@@ -1,7 +1,6 @@
 ---
 title: "DeepSpeech Architecture at North Carolina DevFest 2022 at Chapel Hill"
 event: "GDG DevFest 2022 2022"
-event_url: ""
 location: "Chapel Hill, NC"
 summary: "Talk at GDG DevFest 2022 2022 (2022)."
 abstract: "Presented 'DeepSpeech Architecture at North Carolina DevFest 2022 at Chapel Hill' at GDG DevFest 2022 2022."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2022"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=1VScYsN4z9U'
 ---

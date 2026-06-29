@@ -1,7 +1,6 @@
 ---
 title: "This is what we mean when we say Google Developer Experts (GDE)"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'This is what we mean when we say Google Developer Experts (GDE)' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=Srm4WJLl6KQ'
 ---

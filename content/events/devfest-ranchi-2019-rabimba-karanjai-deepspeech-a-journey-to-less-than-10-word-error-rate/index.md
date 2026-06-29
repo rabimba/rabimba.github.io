@@ -1,7 +1,6 @@
 ---
 title: "DevFest Ranchi 2019 – Rabimba Karanjai - DeepSpeech: A Journey to less than 10% Word Error Rate"
 event: "GDG DevFest Ranchi 2019"
-event_url: ""
 location: "Ranchi, India"
 summary: "Talk at GDG DevFest Ranchi 2019 (2019)."
 abstract: "Presented 'DevFest Ranchi 2019 – Rabimba Karanjai - DeepSpeech: A Journey to less than 10% Word Error Rate' at GDG DevFest Ranchi 2019."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2019"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=taIchuKg8hs'
 ---

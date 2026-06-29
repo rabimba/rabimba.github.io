@@ -1,7 +1,6 @@
 ---
 title: "Rabimba Karanjai - A self learning word prediction module for handling multilingual input"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'Rabimba Karanjai - A self learning word prediction module for handling multilingual input' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=UDiLJjNLb10'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "On Device Generative AI: Building your own Dall-E in the browser, welcome WebGPU"
 event: "Google San Jose Meetup"
-event_url: ""
 location: "San Jose, CA"
 summary: "Talk at Google San Jose Meetup (2023)."
 abstract: "Presented 'On Device Generative AI: Building your own Dall-E in the browser, welcome WebGPU' at Google San Jose Meetup in San Jose, CA."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2023"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=OW2e0AoxnH0'
 ---

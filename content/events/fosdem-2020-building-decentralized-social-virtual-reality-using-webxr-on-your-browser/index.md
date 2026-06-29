@@ -1,7 +1,6 @@
 ---
 title: "FOSDEM 2020 - Building Decentralized Social Virtual Reality using WebXR on your browser"
 event: "FOSDEM 2020"
-event_url: ""
 location: "Online"
 summary: "Talk at FOSDEM 2020 (2020)."
 abstract: "Presented 'FOSDEM 2020 - Building Decentralized Social Virtual Reality using WebXR on your browser' at FOSDEM 2020."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2020"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=7in7aALVV6I'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "North America Connect 2022 ｜ Day 2 GDE Stage Rabimba"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2022)."
 abstract: "Presented 'North America Connect 2022 ｜ Day 2 GDE Stage Rabimba' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2022"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=NxbGM1d8LiI'
 ---

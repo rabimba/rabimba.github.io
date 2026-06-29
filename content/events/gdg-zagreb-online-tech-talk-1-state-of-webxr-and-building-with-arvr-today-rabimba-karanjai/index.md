@@ -1,7 +1,6 @@
 ---
 title: "GDG Zagreb - Online Tech Talk #1 - State of WebXR and building with AR/VR today - Rabimba Karanjai"
 event: "GDG Zagreb"
-event_url: ""
 location: "Zagreb, Croatia"
 summary: "Talk at GDG Zagreb (2024)."
 abstract: "Presented 'GDG Zagreb - Online Tech Talk #1 - State of WebXR and building with AR/VR today - Rabimba Karanjai' at GDG Zagreb."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=h5xhnPKrrYk'
 ---

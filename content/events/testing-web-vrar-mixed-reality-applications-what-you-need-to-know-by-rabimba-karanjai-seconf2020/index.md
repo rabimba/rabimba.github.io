@@ -1,7 +1,6 @@
 ---
 title: "Testing Web VR/AR Mixed Reality Applications: What you need to know by Rabimba Karanjai #SeConf2020"
 event: "Invited Presentation"
-event_url: ""
 location: "Online"
 summary: "Talk at Invited Presentation (2024)."
 abstract: "Presented 'Testing Web VR/AR Mixed Reality Applications: What you need to know by Rabimba Karanjai #SeConf2020' at Invited Presentation."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=-AKeaHh3urs'
 ---

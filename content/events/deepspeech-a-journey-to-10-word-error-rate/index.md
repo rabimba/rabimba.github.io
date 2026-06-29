@@ -1,7 +1,6 @@
 ---
 title: "DeepSpeech: A Journey to <10% Word Error Rate"
 event: "Google Mt. View & NC Chapel Hill"
-event_url: ""
 location: "Chapel Hill, NC"
 summary: "Talk at Google Mt. View & NC Chapel Hill (2023)."
 abstract: "Presented 'DeepSpeech: A Journey to <10% Word Error Rate' at Google Mt. View & NC Chapel Hill in Chapel Hill, NC."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2023"]
 featured: false
-links: []
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Beyond the Chatbot: A Blueprint for Trustable AI"
 event: "Google Deepmind"
-event_url: ""
 location: "Google Deepmind, CA"
 summary: "Talk at Google Deepmind (2026)."
 abstract: "Presented 'Beyond the Chatbot: A Blueprint for Trustable AI' at Google Deepmind in Google Deepmind, CA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2026"]
 featured: false
-links: []
 ---

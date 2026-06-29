@@ -1,7 +1,6 @@
 ---
 title: "Berkley RDI: Code Translation"
 event: "Berkeley RDI 2024"
-event_url: ""
 location: "Online"
 summary: "Talk at Berkeley RDI 2024 (2024)."
 abstract: "Presented 'Berkley RDI: Code Translation' at Berkeley RDI 2024."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=Y2PlHoporYY'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "SecurityPI: IronClad your Raspberry PI"
 event: "Linux Foundation Open IoT & ELC"
-event_url: ""
 location: "Portland, OR"
 summary: "Talk at Linux Foundation Open IoT & ELC (2017)."
 abstract: "Presented 'SecurityPI: IronClad your Raspberry PI' at Linux Foundation Open IoT & ELC in Portland, OR."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Linux, "Talk", "2017"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=nls9t66ecq8'
 ---

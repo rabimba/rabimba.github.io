@@ -1,7 +1,6 @@
 ---
 title: "AI, LLMs, and the Future of the Web: A Conversation with Rabimba and Hemanth (PayPal) at Google I/O"
 event: "Google I/O 2024"
-event_url: ""
 location: "Online"
 summary: "Talk at Google I/O 2024 (2024)."
 abstract: "Presented 'AI, LLMs, and the Future of the Web: A Conversation with Rabimba and Hemanth (PayPal) at Google I/O' at Google I/O 2024."
@@ -12,6 +11,8 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2024"]
 featured: false
+
+links:
   - name: Video
     url: 'https://www.youtube.com/watch?v=tErgHp_qtOk'
 ---

@@ -1,7 +1,6 @@
 ---
 title: "State of WebVR & aframe: Yesterday, Today, and Tomorrow Beyond Horizon"
 event: "Open Networking Summit"
-event_url: ""
 location: "Santa Clara, CA"
 summary: "Talk at Open Networking Summit (2017)."
 abstract: "Presented 'State of WebVR & aframe: Yesterday, Today, and Tomorrow Beyond Horizon' at Open Networking Summit in Santa Clara, CA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Open, "Talk", "2017"]
 featured: false
-links: []
 ---

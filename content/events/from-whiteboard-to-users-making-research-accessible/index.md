@@ -1,7 +1,6 @@
 ---
 title: "From Whiteboard to Users: Making Research Accessible"
 event: "Google I/O GDE Summit"
-event_url: ""
 location: "Mountain View, CA"
 summary: "Talk at Google I/O GDE Summit (2025)."
 abstract: "Presented 'From Whiteboard to Users: Making Research Accessible' at Google I/O GDE Summit in Mountain View, CA."
@@ -12,5 +11,4 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2025"]
 featured: false
-links: []
 ---
