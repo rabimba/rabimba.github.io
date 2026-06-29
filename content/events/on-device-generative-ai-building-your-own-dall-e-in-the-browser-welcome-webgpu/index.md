@@ -12,9 +12,6 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: [Google, "Talk", "2023"]
 featured: false
-links: []
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: "https://www.youtube.com/watch?v=OW2e0AoxnH0"
+  - name: Video
+    url: 'https://www.youtube.com/watch?v=OW2e0AoxnH0'
 ---

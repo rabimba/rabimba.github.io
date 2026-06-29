@@ -53,6 +53,19 @@ node_modules/
 pagefind/
 static/pagefind/
 
+# Python
+__pycache__/
+*.py[cod]
+
+# Temporary extraction artifacts
+cv_content.txt
+cv_extracted_python.txt
+cv_strings.txt
+grep_university.txt
+
+# AI assistants
+.claude/
+
 # ============================================================================
 # Operating System
 # ============================================================================

@@ -12,9 +12,6 @@ publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
 tags: ["Talk", "2017"]
 featured: false
-links: []
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: "https://www.youtube.com/watch?v=piGEm4Tl17Q"
+  - name: Video
+    url: 'https://www.youtube.com/watch?v=piGEm4Tl17Q'
 ---

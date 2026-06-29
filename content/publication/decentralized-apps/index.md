@@ -21,12 +21,6 @@ tags:
 - First Author
 featured: true
 links:
-url_pdf: '/uploads/publications/decentralized-apps.pdf'
-url_code: ''
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
+  - name: PDF
+    url: '/uploads/publications/decentralized-apps.pdf'
 ---

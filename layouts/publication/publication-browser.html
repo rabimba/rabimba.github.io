@@ -252,8 +252,11 @@
           {{ end }}
           <div class="pub-actions">
             <a class="pub-link pub-link-primary" href="{{ .RelPermalink }}">View</a>
-            {{ with .Params.url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}
-            {{ with .Params.links }}{{ with .url_pdf }}<a class="pub-link pub-link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}{{ end }}
+            {{ range .Params.links }}
+              {{ if eq .name "PDF" }}
+                <a class="pub-link pub-link-secondary" href="{{ .url }}" target="_blank">PDF</a>
+              {{ end }}
+            {{ end }}
           </div>
         </article>
       {{ end }}

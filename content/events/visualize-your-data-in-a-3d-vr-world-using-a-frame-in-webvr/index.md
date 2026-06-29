@@ -13,8 +13,4 @@ authors: [admin]
 tags: [OpenVis, "Talk", "2018"]
 featured: false
 links: []
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
 ---

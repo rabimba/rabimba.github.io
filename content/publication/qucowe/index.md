@@ -19,12 +19,6 @@ tags:
 - First Author
 featured: false
 links:
-url_pdf: 'https://arxiv.org/pdf/2511.10179.pdf'
-url_code: ''
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
+  - name: PDF
+    url: 'https://arxiv.org/pdf/2511.10179.pdf'
 ---
