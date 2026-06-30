@@ -48,8 +48,8 @@ sections:
       text: |-
         | | | | |
         |:---:|:---:|:---:|:---:|
-        | **41+** | **3x** | **8+** | **1** |
-        | Peer-Reviewed Papers | Sui Foundation Grants | Conference Venues | US Patent |
+        | **35+** | **4x** | **31+** | **4** |
+        | Peer-Reviewed Papers | Research Grants | Conference Venues | US Patents |
 
         | | | |
         |:---:|:---:|:---:|
@@ -74,6 +74,7 @@ sections:
       subtitle: ''
       text: |-
         - **Sui Foundation Academic Research Award** (2023, 2024, 2025) &mdash; Primary Investigator, $25,000/year for research on decentralized infrastructure and smart contract security
+        - **Grant for Web** &mdash; Primary Investigator, $15,000 for advancing privacy-preserving and decentralized web technologies
         - **Google Cloud Research Innovator** (2023, 2024) &mdash; Cloud credits and research support for AI/ML projects
     design:
       columns: '1'
