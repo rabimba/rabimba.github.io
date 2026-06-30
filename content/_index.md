@@ -40,22 +40,6 @@ sections:
         I am a [Google Developer Expert](https://developers.google.com/community/experts) in Web Technologies & ML, a 3x Sui Foundation Research Award recipient, and serve as Associate Chair for CSCW 2026.
     design:
       columns: '1'
-  - block: markdown
-    id: highlights
-    content:
-      title: 'Research at a Glance'
-      subtitle: ''
-      text: |-
-        | | | | |
-        |:---:|:---:|:---:|:---:|
-        | **35+** | **4x** | **31+** | **4** |
-        | Peer-Reviewed Papers | Research Grants | Conference Venues | US Patents |
-
-        | | | |
-        |:---:|:---:|:---:|
-        | **Google Developer Expert** | **Associate Chair, CSCW 2026** | **TX Quantum Initiative SAC** |
-    design:
-      columns: '1'
   - block: collection
     id: papers
     content:
