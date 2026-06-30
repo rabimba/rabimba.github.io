@@ -1,0 +1,168 @@
+{{- define "main" -}}
+
+<!-- Custom publication single page with BibTeX citation and PDF reader -->
+
+<div class="pub">
+
+  <!-- Page Header (manual, avoids partial namespace issues with blox-tailwind) -->
+  <div class="article-container pt-3">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.subtitle }}
+    <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+    {{ end }}
+
+    <!-- Authors and date -->
+    {{ if .Params.authors }}
+    <div class="article-metadata" style="margin-top: 0.5rem; margin-bottom: 0.75rem;">
+      <span style="color: #475569; font-size: 0.9375rem;">
+        {{ range $i, $a := .Params.authors }}
+          {{- if $i }}, {{ end -}}
+          {{ $a }}
+        {{- end }}
+      </span>
+      {{ if .Date }}
+      <span style="color: #64748b; font-size: 0.8125rem; margin-left: 0.75rem;">{{ time.Format "Jan 2, 2006" .Date }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Share and links row -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+      {{ range .Params.links }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.45rem 0.85rem; font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid #c7d2fe; background: #eef2ff; color: #4338ca; text-decoration: none; transition: all 0.15s;">
+          {{ .name }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Generate BibTeX -->
+  {{ $pubType := index .Params.publication_types 0 | default "1" }}
+  {{ $year := time.Format "2006" .Date }}
+  {{ $key := printf "karanjai_%s" $year }}
+  {{ $authors := delimit .Params.authors " and " }}
+  {{ $titleSafe := .Title | safeJS }}
+  {{ $venueSafe := (.Params.publication | default "") | safeJS }}
+  {{ $abstractSafe := (.Params.abstract | default "" | truncate 200) | safeJS }}
+
+  {{ $bibtex := "" }}
+  {{ if eq $pubType "7" }}
+    {{ $bibtex = printf "@phdthesis{%s,\n  author = {%s},\n  title = {%s},\n  school = {University of Houston},\n  year = {%s},\n  note = {%s}\n}" $key $authors $titleSafe $year $venueSafe }}
+  {{ else if eq $pubType "2" }}
+    {{ $bibtex = printf "@article{%s,\n  author = {%s},\n  title = {%s},\n  journal = {%s},\n  year = {%s}\n}" $key $authors $titleSafe $venueSafe $year }}
+  {{ else if eq $pubType "3" }}
+    {{ $bibtex = printf "@misc{%s,\n  author = {%s},\n  title = {%s},\n  howpublished = {arXiv preprint},\n  year = {%s},\n  note = {%s}\n}" $key $authors $titleSafe $year $venueSafe }}
+  {{ else }}
+    {{ $bibtex = printf "@inproceedings{%s,\n  author = {%s},\n  title = {%s},\n  booktitle = {%s},\n  year = {%s}\n}" $key $authors $titleSafe $venueSafe $year }}
+  {{ end }}
+
+  <!-- BibTeX Citation Block -->
+  <div class="article-container">
+    <div class="bibtex-section" style="margin-bottom: 2rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.25rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+        <h3 style="margin: 0; font-size: 1rem; font-weight: 700; color: #1e293b;">Cite</h3>
+        <button id="copy-bibtex" onclick="copyBibtex()" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.85rem; font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid #c7d2fe; background: #eef2ff; color: #4338ca; cursor: pointer; transition: all 0.15s;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy BibTeX
+        </button>
+      </div>
+      <pre id="bibtex-text" style="margin: 0; padding: 0.85rem; background: #1e293b; color: #e2e8f0; border-radius: 0.5rem; font-size: 0.8125rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; max-height: 200px; overflow-y: auto;">{{ $bibtex }}</pre>
+      <span id="copy-feedback" style="display: none; font-size: 0.75rem; color: #16a34a; margin-top: 0.35rem;">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- PDF Reader -->
+  {{ $pdfUrl := "" }}
+  {{ range .Params.links }}
+    {{ if eq .name "PDF" }}
+      {{ $pdfUrl = .url }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $pdfUrl }}
+  <div class="article-container" style="margin-bottom: 2rem;">
+    <div class="pdf-viewer" style="border: 1px solid #e2e8f0; border-radius: 0.75rem; overflow: hidden; background: #fff;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; background: #f1f5f9; border-bottom: 1px solid #e2e8f0;">
+        <span style="font-size: 0.875rem; font-weight: 600; color: #1e293b;">Read Paper</span>
+        <a href="{{ $pdfUrl }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; font-size: 0.75rem; font-weight: 600; border-radius: 0.375rem; background: #6366f1; color: #fff; border: none; text-decoration: none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download
+        </a>
+      </div>
+      <iframe src="{{ $pdfUrl }}#view=FitH" width="100%" height="700" style="border: none; display: block;" title="PDF Reader"></iframe>
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Abstract and Details -->
+  <div class="article-container">
+    {{ if .Params.abstract }}
+    <h3>Abstract</h3>
+    <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
+    {{ end }}
+
+    {{ if and .Params.publication_types (ne (index .Params.publication_types 0) "0") }}
+    <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.75rem;">
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+        {{ $typeCode := index .Params.publication_types 0 }}
+        {{ $pubTypeLabel := "Publication" }}
+        {{ if eq $typeCode "1" }}{{ $pubTypeLabel = "Conference Paper" }}{{ else if eq $typeCode "2" }}{{ $pubTypeLabel = "Journal Article" }}{{ else if eq $typeCode "3" }}{{ $pubTypeLabel = "Preprint" }}{{ else if eq $typeCode "7" }}{{ $pubTypeLabel = "Thesis" }}{{ end }}
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase;">Type</span>
+          <p style="margin: 0.15rem 0 0 0; font-size: 0.9375rem;">{{ $pubTypeLabel }}</p>
+        </div>
+        {{ if .Params.publication }}
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase;">Venue</span>
+          <p style="margin: 0.15rem 0 0 0; font-size: 0.9375rem;">{{ .Params.publication }}</p>
+        </div>
+        {{ end }}
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase;">Date</span>
+          <p style="margin: 0.15rem 0 0 0; font-size: 0.9375rem;">{{ time.Format "Jan 2006" .Date }}</p>
+        </div>
+      </div>
+      {{ if .Params.tags }}
+      <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.35rem;">
+        {{ range .Params.tags }}
+        <span style="display: inline-block; padding: 0.15rem 0.5rem; background: #e2e8f0; color: #334155; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 500;">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="space-below"></div>
+
+    <div class="article-style">{{ .Content }}</div>
+
+    {{ partial "page_footer" . }}
+  </div>
+</div>
+
+<script>
+function copyBibtex() {
+  var text = document.getElementById('bibtex-text').innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('copy-bibtex');
+    var fb = document.getElementById('copy-feedback');
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+    fb.style.display = 'block';
+    setTimeout(function() {
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy BibTeX';
+      fb.style.display = 'none';
+    }, 2000);
+  });
+}
+</script>
+
+<style>
+.pub-abstract {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+</style>
+
+{{- end -}}
