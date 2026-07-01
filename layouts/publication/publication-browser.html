@@ -253,7 +253,7 @@
           <div class="pub-actions">
             <a class="pub-link pub-link-primary" href="{{ .RelPermalink }}">View</a>
             {{ range .Params.links }}
-              {{ if eq .name "PDF" }}
+              {{ if or (eq .name "PDF") (eq .name "arXiv") }}
                 <a class="pub-link pub-link-secondary" href="{{ .url }}" target="_blank">PDF</a>
               {{ end }}
             {{ end }}

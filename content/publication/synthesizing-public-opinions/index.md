@@ -25,7 +25,8 @@ tags:
 - First Author
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=Synthesizing%20Public%20Opinions%20with%20LLMs%3A%20Role%20Creation%2C%20Impacts%2C%20and%20the%20Future%20to%20eDemocracy
+- name: arXiv
+  url: https://arxiv.org/pdf/2504.00241
 ---
+
 

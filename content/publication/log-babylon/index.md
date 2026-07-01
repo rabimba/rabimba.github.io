@@ -23,7 +23,10 @@ tags:
 - First Author
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=LogBabylon%3A%20A%20Unified%20Framework%20for%20Cross-Log%20File%20Integration%20and%20Analysis
+- name: DOI
+  url: https://doi.org/10.1145/3672608.3707883
+- name: arXiv
+  url: https://arxiv.org/pdf/2412.12364
 ---
+
 

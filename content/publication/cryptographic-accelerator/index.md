@@ -28,7 +28,10 @@ tags:
 - First Author
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=TPU%20as%20Cryptographic%20Accelerator
+- name: DOI
+  url: https://doi.org/10.1145/3696843.3696844
+- name: arXiv
+  url: https://arxiv.org/pdf/2307.06554
 ---
+
 

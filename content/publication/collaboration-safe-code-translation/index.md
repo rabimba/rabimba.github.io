@@ -21,7 +21,10 @@ tags:
 - First Author
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=Collaboration%20is%20all%20you%20need%3A%20LLM%20Assisted%20Safe%20Code%20Translation
+- name: DOI
+  url: https://doi.org/10.1145/3696630.3728521
+- name: arXiv
+  url: https://arxiv.org/pdf/2503.11237
 ---
+
 
