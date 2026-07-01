@@ -1,5 +1,5 @@
 ---
-title: "TPU as Cryptographic Accelerator"
+title: TPU as Cryptographic Accelerator
 authors:
 - Rabimba Karanjai
 - Sangwon Shin
@@ -12,17 +12,23 @@ authors:
 - Veronika Kuchta
 - Francesco Sica
 - Lei Xu
-date: "2024-10-01T00:00:00Z"
-doi: ""
-publishDate: "2024-10-01T00:00:00Z"
-publication_types: ["1"]
-publication: "MICRO 2024"
-publication_short: "MICRO 2024"
-abstract: "We investigate leveraging Tensor Processing Units (TPUs) to accelerate intensive cryptographic primitives in blockchain and zero-knowledge systems."
+date: '2024-10-01T00:00:00Z'
+doi: ''
+publishDate: '2024-10-01T00:00:00Z'
+publication_types:
+- '1'
+publication: MICRO 2024
+publication_short: MICRO 2024
+abstract: We investigate leveraging Tensor Processing Units (TPUs) to accelerate intensive
+  cryptographic primitives in blockchain and zero-knowledge systems.
 tags:
 - TPU
 - Cryptography
 - Hardware Accelerator
 - First Author
 featured: false
+links:
+- name: Scholar
+  url: https://scholar.google.com/scholar?q=TPU%20as%20Cryptographic%20Accelerator
 ---
+
