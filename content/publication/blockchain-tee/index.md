@@ -24,11 +24,10 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1145/3505253.3505259
-bibtex: "@inproceedings{DBLP:conf/micro/ShiXCZG21,\n  author       = {Rabimba Karanjai and\n                  Weidong Shi and\n                  Lei Xu and\n                  Lin Chen and\n            \
-  \      Fengwei Zhang and\n                  Zhimin Gao},\n  title        = {Lessons Learned from Blockchain Applications of Trusted Execution\n                  Environments and Implications for Future\
-  \ Research},\n  booktitle    = {{HASP} '21: Workshop on Hardware and Architectural Support for Security\n                  and Privacy, Virtual Event, 18 October 2021},\n  pages        = {5:1--5:8},\n\
-  \  publisher    = {{ACM}},\n  year         = {2021},\n  url          = {https://doi.org/10.1145/3505253.3505259},\n  doi          = {10.1145/3505253.3505259},\n  timestamp    = {Thu, 19 Mar 2026 10:01:50\
-  \ +0100},\n  biburl       = {https://dblp.org/rec/conf/micro/ShiXCZG21.bib},\n  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}"
+bibtex: "@inproceedings{rabimba2021lessons,\n  title={Lessons learned from blockchain applications of trusted execution environments and implications for future research},\n  author={Rabimba, Karanjai and\
+  \ Xu, Lei and Chen, Lin and Zhang, Fengwei and Gao, Zhimin and Shi, Weidong},\n  booktitle={Proceedings of the 10th International Workshop on Hardware and Architectural Support for Security and Privacy},\n\
+  \  pages={1--8},\n  year={2021}\n}"
 ---
+
 
 

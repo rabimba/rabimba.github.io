@@ -24,6 +24,10 @@ featured: true
 links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC54727.2022.9805524
+bibtex: "@inproceedings{karanjai2022decentralized,\n  title={Decentralized application infrastructures as smart contract codes},\n  author={Karanjai, Rabimba and Kasichainula, Keshav and Diallo, Nour and\
+  \ Kaleem, Mudabbir and Xu, Lei and Chen, Lin and Shi, Weidong},\n  booktitle={2022 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--9},\n  year={2022},\n  organization={IEEE}\n\
+  }"
 ---
+
 
 

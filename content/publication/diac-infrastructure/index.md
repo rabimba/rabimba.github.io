@@ -23,6 +23,9 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1109/TNSM.2023.3323992
+bibtex: "@article{karanjai2023diac,\n  title={DIaC: Re-imagining decentralized infrastructure as code using blockchain},\n  author={Karanjai, Rabimba and Kasichainula, Keshav and Xu, Lei and Diallo, Nour\
+  \ and Chen, Lin and Shi, Weidong},\n  journal={IEEE Transactions on Network and Service Management},\n  volume={21},\n  number={2},\n  pages={1319--1332},\n  year={2023},\n  publisher={IEEE}\n}"
 ---
+
 
 

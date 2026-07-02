@@ -24,11 +24,9 @@ links:
   url: https://doi.org/10.1109/BRAINS59668.2023.10316812
 - name: arXiv
   url: https://arxiv.org/pdf/2308.02955
-bibtex: "@inproceedings{DBLP:conf/brains/KaranjaiLXS23,\n  author       = {Rabimba Karanjai and\n                  Edward Li and\n                  Lei Xu and\n                  Weidong Shi},\n  title \
-  \       = {Who is Smarter? An Empirical Study of AI-Based Smart Contract Creation},\n  booktitle    = {5th Conference on Blockchain Research {\\&} Applications for Innovative\n                  Networks\
-  \ and Services, {BRAINS} 2023, Paris, France, October 11-13,\n                  2023},\n  pages        = {1--8},\n  publisher    = {{IEEE}},\n  year         = {2023},\n  url          = {https://doi.org/10.1109/BRAINS59668.2023.10316829},\n\
-  \  doi          = {10.1109/BRAINS59668.2023.10316829},\n  timestamp    = {Thu, 19 Mar 2026 10:01:50 +0100},\n  biburl       = {https://dblp.org/rec/conf/brains/KaranjaiLXS23.bib},\n  bibsource    = {dblp\
-  \ computer science bibliography, https://dblp.org}\n}"
+bibtex: "@inproceedings{karanjai2023smarter,\n  title={Who is Smarter? An Empirical Study of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and Li, Edward and Xu, Lei and Shi, Weidong},\n\
+  \  booktitle={Blockchain, Robotics and AI for Networking Security Conference (BRAINS)},\n  year={2023}\n}"
 ---
+
 
 

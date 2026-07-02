@@ -24,11 +24,9 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2403.09798
-bibtex: "@article{DBLP:journals/corr/abs-2403-09798,\n  author       = {Dana Alsagheer and\n                  Rabimba Karanjai and\n                  Nour Diallo and\n                  Weidong Shi and\n\
-  \                  Yang Lu and\n                  Suha Beydoun and\n                  Qiaoning Zhang},\n  title        = {Comparing Rationality Between Large Language Models and Humans: Insights\n   \
-  \               and Open Questions},\n  journal      = {CoRR},\n  volume       = {abs/2403.09798},\n  year         = {2024},\n  url          = {https://doi.org/10.48550/arXiv.2403.09798},\n  doi     \
-  \     = {10.48550/ARXIV.2403.09798},\n  eprinttype   = {arXiv},\n  eprint       = {2403.09798},\n  timestamp    = {Fri, 20 Mar 2026 07:50:40 +0100},\n  biburl       = {https://dblp.org/rec/journals/corr/abs-2403-09798.bib},\n\
-  \  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}"
+bibtex: "@article{alsagheer2024comparing,\n  title={Comparing rationality between large language models and humans: Insights and open questions},\n  author={Alsagheer, Dana and Karanjai, Rabimba and Diallo,\
+  \ Nour and Shi, Weidong and Lu, Yang and Beydoun, Suha and Zhang, Qiaoning},\n  journal={arXiv preprint arXiv:2403.09798},\n  year={2024}\n}"
 ---
+
 
 

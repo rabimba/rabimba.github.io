@@ -24,11 +24,9 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC51069.2021.9461103
-bibtex: "@inproceedings{DBLP:conf/icbc2/KaranjaiXGCKS21,\n  author       = {Rabimba Karanjai and\n                  Lei Xu and\n                  Zhimin Gao and\n                  Lin Chen and\n       \
-  \           Mudabbir Kaleem and\n                  Weidong Shi},\n  title        = {On Conditional Cryptocurrency With Privacy},\n  booktitle    = {{IEEE} International Conference on Blockchain and Cryptocurrency,\n\
-  \                  {ICBC} 2021, Sydney, Australia, May 3-6, 2021},\n  pages        = {1--3},\n  publisher    = {{IEEE}},\n  year         = {2021},\n  url          = {https://doi.org/10.1109/ICBC51069.2021.9461133},\n\
-  \  doi          = {10.1109/ICBC51069.2021.9461133},\n  timestamp    = {Thu, 19 Mar 2026 10:01:50 +0100},\n  biburl       = {https://dblp.org/rec/conf/icbc2/KaranjaiXGCKS21.bib},\n  bibsource    = {dblp\
-  \ computer science bibliography, https://dblp.org}\n}"
+bibtex: "@inproceedings{karanjai2021conditional,\n  title={On conditional cryptocurrency with privacy},\n  author={Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Kaleem, Mudabbir and Shi,\
+  \ Weidong},\n  booktitle={2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2021},\n  organization={IEEE}\n}"
 ---
+
 
 

@@ -23,12 +23,9 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1145/3464298.3493401
-bibtex: "@inproceedings{DBLP:conf/middleware/KaranjaiXGCKS21,\n  author       = {Rabimba Karanjai and\n                  Lei Xu and\n                  Zhimin Gao and\n                  Lin Chen and\n  \
-  \                Mudabbir Kaleem and\n                  Weidong Shi},\n  editor       = {Kaiwen Zhang and\n                  Abdelouahed Gherbi and\n                  Nalini Venkatasubramanian and\n \
-  \                 Lu{\\'{\\i}}s Veiga},\n  title        = {Privacy preserving event based transaction system in a decentralized\n                  environment},\n  booktitle    = {Middleware '21: 22nd\
-  \ International Middleware Conference, Qu{\\'{e}}bec\n                  City, Canada, December 6 - 10, 2021},\n  pages        = {286--297},\n  publisher    = {{ACM}},\n  year         = {2021},\n  url\
-  \          = {https://doi.org/10.1145/3464298.3493401},\n  doi          = {10.1145/3464298.3493401},\n  timestamp    = {Thu, 19 Mar 2026 10:01:50 +0100},\n  biburl       = {https://dblp.org/rec/conf/middleware/KaranjaiXGCKS21.bib},\n\
-  \  bibsource    = {dblp computer science bibliography, https://dblp.org}\n}"
+bibtex: "@inproceedings{karanjai2021privacy,\n  title={Privacy preserving event based transaction system in a decentralized environment},\n  author={Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen,\
+  \ Lin and Kaleem, Mudabbir and Shi, Weidong},\n  booktitle={Proceedings of the 22nd International Middleware Conference},\n  pages={286--297},\n  year={2021}\n}"
 ---
+
 
 

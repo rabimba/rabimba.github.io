@@ -20,6 +20,9 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC59979.2024.10634373
+bibtex: "@inproceedings{karanjai2024trusted,\n  title={Trusted llm inference on the edge with smart contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n  booktitle={2024 IEEE International Conference\
+  \ on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--7},\n  year={2024},\n  organization={IEEE}\n}"
 ---
+
 
 
