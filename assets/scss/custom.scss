@@ -210,6 +210,35 @@ body.dark .pub-abstract,
   color: #cbd5e1;
 }
 
+/* Publication page link buttons */
+.pub-link-btn {
+  border: 1px solid transparent;
+}
+.pub-link-arxiv {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+.pub-link-arxiv:hover {
+  background: rgba(245, 158, 11, 0.25);
+}
+.pub-link-doi {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+.pub-link-doi:hover {
+  background: rgba(99, 102, 241, 0.25);
+}
+.pub-link-scholar {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+.pub-link-scholar:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
 /* PDF Reader Modal Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
