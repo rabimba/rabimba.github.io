@@ -13,8 +13,7 @@ publication_types:
 - '3'
 publication: ACM Symposium on Computer Science and Law 2026 (Under Review)
 publication_short: ACM Symposium on Computer Science and Law 2026 (Under Review)
-abstract: 'Preprint: Deploying open-weight local model instances to perform legal
-  brief review without leakage.'
+abstract: 'Preprint: Deploying open-weight local model instances to perform legal brief review without leakage.'
 tags:
 - AI Governance
 - Security
@@ -24,4 +23,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
 ---
+
 

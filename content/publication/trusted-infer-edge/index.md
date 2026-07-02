@@ -10,8 +10,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2024
 publication_short: IEEE ICBC 2024
-abstract: We propose a trust framework using smart contracts to audit and verify edge-computed
-  LLM inference outputs.
+abstract: We propose a trust framework using smart contracts to audit and verify edge-computed LLM inference outputs.
 tags:
 - LLMs
 - Smart Contracts
@@ -22,4 +21,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC59979.2024.10634373
 ---
+
 

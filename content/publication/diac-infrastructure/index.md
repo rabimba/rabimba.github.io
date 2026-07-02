@@ -14,8 +14,7 @@ publication_types:
 - '2'
 publication: IEEE TNSM 2023
 publication_short: IEEE TNSM 2023
-abstract: We propose DlaC, a system that uses smart contracts to securely manage and
-  audit cloud infrastructure deployment configurations.
+abstract: We propose DlaC, a system that uses smart contracts to securely manage and audit cloud infrastructure deployment configurations.
 tags:
 - Blockchain
 - Infrastructure as Code
@@ -25,4 +24,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/TNSM.2023.3323992
 ---
+
 

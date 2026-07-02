@@ -19,8 +19,7 @@ publication_types:
 - '3'
 publication: NeurIPS 2026 (Under Review)
 publication_short: NeurIPS 2026 (Under Review)
-abstract: 'Preprint: A preference optimization framework that forces planning paths
-  to obey hard system limits.'
+abstract: 'Preprint: A preference optimization framework that forces planning paths to obey hard system limits.'
 tags:
 - LLMs
 - Preference Optimization
@@ -31,4 +30,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
 ---
+
 

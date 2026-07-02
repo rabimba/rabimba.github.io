@@ -1,6 +1,5 @@
 ---
-title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart
-  Contracts'
+title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart Contracts'
 authors:
 - Rabimba Karanjai
 - Yang Lu
@@ -13,8 +12,7 @@ publication_types:
 - '3'
 publication: Middleware 2026 (Under Review)
 publication_short: Middleware 2026 (Under Review)
-abstract: 'Preprint: Expanding on-chain capabilities by linking secure oracle execution
-  paths with frozen LLM instances.'
+abstract: 'Preprint: Expanding on-chain capabilities by linking secure oracle execution paths with frozen LLM instances.'
 tags:
 - Blockchain
 - AI Inference
@@ -24,5 +22,6 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/BRAINS64422.2025.10920153
 ---
+
 
 

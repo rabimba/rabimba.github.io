@@ -12,8 +12,7 @@ publication_types:
 - '3'
 publication: Middleware 2026 (Under Review)
 publication_short: Middleware 2026 (Under Review)
-abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous
-  networks, auditing latency and security overhead.'
+abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous networks, auditing latency and security overhead.'
 tags:
 - Decentralized Systems
 - GPU Clouds
@@ -23,4 +22,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
 ---
+
 

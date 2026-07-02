@@ -15,8 +15,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2022
 publication_short: IEEE ICBC 2022
-abstract: We introduce secure frameworks for modeling decentralized application deployment
-  using smart contracts, earning the Distinguished Paper Award.
+abstract: We introduce secure frameworks for modeling decentralized application deployment using smart contracts, earning the Distinguished Paper Award.
 tags:
 - Blockchain
 - Smart Contracts
@@ -26,4 +25,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC54727.2022.9805524
 ---
+
 

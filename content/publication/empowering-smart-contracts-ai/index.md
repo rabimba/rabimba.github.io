@@ -12,8 +12,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2026
 publication_short: IEEE ICBC 2026
-abstract: 'Short Paper: We detail low-latency inference pipelines that check and execute
-  simple models on-chain.'
+abstract: 'Short Paper: We detail low-latency inference pipelines that check and execute simple models on-chain.'
 tags:
 - Smart Contracts
 - AI Inference
@@ -23,4 +22,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Empowering%20Smart%20Contracts%20with%20Real-time%20On-Chain%20AI%20Inferences
 ---
+
 

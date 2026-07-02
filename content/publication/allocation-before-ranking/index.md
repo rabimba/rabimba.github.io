@@ -16,8 +16,7 @@ publication_types:
 - '3'
 publication: NeurIPS 2026 (Under Review)
 publication_short: NeurIPS 2026 (Under Review)
-abstract: 'Preprint: We decouple token compression from routing in multi-modal systems,
-  improving processing speeds by up to 30%.'
+abstract: 'Preprint: We decouple token compression from routing in multi-modal systems, improving processing speeds by up to 30%.'
 tags:
 - LLMs
 - Token Compression
@@ -27,4 +26,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
 ---
+
 

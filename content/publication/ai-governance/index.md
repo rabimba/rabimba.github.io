@@ -1,6 +1,5 @@
 ---
-title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and Research
-  Challenges'
+title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and Research Challenges'
 authors:
 - Dana R Alsagheer
 - Nour Diallo
@@ -14,8 +13,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: 'Short Paper: We map the open questions and technical roadblocks in establishing
-  decentralized protocols for auditing ML model weights.'
+abstract: 'Short Paper: We map the open questions and technical roadblocks in establishing decentralized protocols for auditing ML model weights.'
 tags:
 - AI Governance
 - Security
@@ -25,4 +23,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC56567.2023.10174931
 ---
+
 

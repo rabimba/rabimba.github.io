@@ -1,6 +1,5 @@
 ---
-title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement
-  Learning from Formal Verification Feedback'
+title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement Learning from Formal Verification Feedback'
 authors:
 - Rabimba Karanjai
 - Lei Xu
@@ -13,8 +12,7 @@ publication_types:
 - '3'
 publication: NeurIPS 2026 (Under Review)
 publication_short: NeurIPS 2026 (Under Review)
-abstract: 'Preprint: We use formal verification proofs in RL loops to ensure generated
-  cross-chain contracts are bug-free.'
+abstract: 'Preprint: We use formal verification proofs in RL loops to ensure generated cross-chain contracts are bug-free.'
 tags:
 - Blockchain
 - Generative AI
@@ -25,4 +23,5 @@ links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=VerifyGen-X%3A%20Secure%20Cross-Chain%20Smart%20Contract%20Generation%20via%20Scalable%20Reinforcement%20Learning%20from%20Formal%20Verification%20Feedback
 ---
+
 

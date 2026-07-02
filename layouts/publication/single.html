@@ -54,24 +54,7 @@
     </div>
   </div>
 
-  <!-- Generate BibTeX -->
-  {{ $pubType := index .Params.publication_types 0 | default "1" }}
-  {{ $year := time.Format "2006" .Date }}
-  {{ $key := printf "karanjai_%s" $year }}
-  {{ $authors := delimit .Params.authors " and " }}
-  {{ $titleSafe := .Title | safeJS }}
-  {{ $venueSafe := (.Params.publication | default "") | safeJS }}
-
-  {{ $bibtex := "" }}
-  {{ if eq $pubType "7" }}
-    {{ $bibtex = printf "@phdthesis{%s,\n  author = {%s},\n  title = {%s},\n  school = {University of Houston},\n  year = {%s},\n  note = {%s}\n}" $key $authors $titleSafe $year $venueSafe }}
-  {{ else if eq $pubType "2" }}
-    {{ $bibtex = printf "@article{%s,\n  author = {%s},\n  title = {%s},\n  journal = {%s},\n  year = {%s}\n}" $key $authors $titleSafe $venueSafe $year }}
-  {{ else if eq $pubType "3" }}
-    {{ $bibtex = printf "@misc{%s,\n  author = {%s},\n  title = {%s},\n  howpublished = {arXiv preprint},\n  year = {%s},\n  note = {%s}\n}" $key $authors $titleSafe $year $venueSafe }}
-  {{ else }}
-    {{ $bibtex = printf "@inproceedings{%s,\n  author = {%s},\n  title = {%s},\n  booktitle = {%s},\n  year = {%s}\n}" $key $authors $titleSafe $venueSafe $year }}
-  {{ end }}
+  {{ $bibtex := .Params.bibtex | default "" }}
 
   <!-- BibTeX Citation Card -->
   <div class="article-container">

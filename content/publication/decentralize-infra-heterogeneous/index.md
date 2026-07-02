@@ -15,8 +15,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: 'Short Paper: Building structured overlays for auditing and routing data
-  across multi-vendor secure enclaves.'
+abstract: 'Short Paper: Building structured overlays for auditing and routing data across multi-vendor secure enclaves.'
 tags:
 - TEE
 - Security
@@ -28,4 +27,5 @@ links:
 - name: arXiv
   url: https://arxiv.org/pdf/2308.01474
 ---
+
 

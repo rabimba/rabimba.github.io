@@ -13,8 +13,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: 'Short Paper: We design lightweight container orchestrators over public
-  blockchains for serverless edge compute.'
+abstract: 'Short Paper: We design lightweight container orchestrators over public blockchains for serverless edge compute.'
 tags:
 - FaaS
 - Blockchain
@@ -27,4 +26,5 @@ links:
 - name: arXiv
   url: https://arxiv.org/pdf/2404.08151
 ---
+
 

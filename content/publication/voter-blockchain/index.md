@@ -15,8 +15,7 @@ publication_types:
 - '1'
 publication: IEEE ICEDEG 2024
 publication_short: IEEE ICEDEG 2024
-abstract: We study decentralized governance architectures that incorporate continuous
-  feedback loops via blockchain votes.
+abstract: We study decentralized governance architectures that incorporate continuous feedback loops via blockchain votes.
 tags:
 - Blockchain
 - Governance
@@ -26,4 +25,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC56567.2023.10174914
 ---
+
 

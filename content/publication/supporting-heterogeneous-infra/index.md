@@ -16,8 +16,7 @@ publication_types:
 - '1'
 publication: ACM AsiaCCS 2023
 publication_short: ACM AsiaCCS 2023
-abstract: We design a middleware framework to secure critical systems using multiple
-  diverse Trusted Execution Environments (TEEs).
+abstract: We design a middleware framework to secure critical systems using multiple diverse Trusted Execution Environments (TEEs).
 tags:
 - Security
 - TEE
@@ -30,4 +29,5 @@ links:
 - name: arXiv
   url: https://arxiv.org/pdf/2308.01474
 ---
+
 

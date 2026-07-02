@@ -13,8 +13,7 @@ publication_types:
 - '1'
 publication: ACM SAC 2024
 publication_short: ACM SAC 2024
-abstract: We introduce a decentralized Function-as-a-Service (FaaS) model that coordinates
-  execution tasks across multiple cloud networks.
+abstract: We introduce a decentralized Function-as-a-Service (FaaS) model that coordinates execution tasks across multiple cloud networks.
 tags:
 - Decentralized Systems
 - FaaS
@@ -25,4 +24,5 @@ links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC59979.2024.10634372
 ---
+
 

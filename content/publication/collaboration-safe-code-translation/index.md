@@ -12,8 +12,7 @@ publication_types:
 - '1'
 publication: ACM Foundations of Software Engineering (FSE) 2025
 publication_short: ACM Foundations of Software Engineering (FSE) 2025
-abstract: We present collaborative LLM strategies to safely translate source code
-  between low-resource or domain-specific languages with formal checks.
+abstract: We present collaborative LLM strategies to safely translate source code between low-resource or domain-specific languages with formal checks.
 tags:
 - LLMs
 - Software Engineering
@@ -26,5 +25,6 @@ links:
 - name: arXiv
   url: https://arxiv.org/pdf/2503.11237
 ---
+
 
 
