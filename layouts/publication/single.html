@@ -57,6 +57,7 @@
   {{ $bibtex := .Params.bibtex | default "" }}
 
   <!-- BibTeX Citation Card -->
+  {{ if $bibtex }}
   <div class="article-container">
     <div class="bibtex-card">
       <div class="bibtex-header">
@@ -70,6 +71,7 @@
       <span id="copy-feedback" class="bibtex-feedback">Copied to clipboard</span>
     </div>
   </div>
+  {{ end }}
 
   <!-- Read Paper section -->
   {{ $arxivUrl := "" }}
