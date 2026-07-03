@@ -20,8 +20,9 @@ tags:
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1109/BRAINS64422.2025.10920153
+  url: https://doi.org/10.1109/BRAINS67003.2025.11302909
 ---
+
 
 
 

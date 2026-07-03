@@ -21,12 +21,13 @@ tags:
 featured: true
 links:
 - name: DOI
-  url: https://doi.org/10.1145/3717097
+  url: https://doi.org/10.1109/AIWARE69974.2025.00032
 - name: arXiv
   url: https://arxiv.org/pdf/2502.18515
 bibtex: "@article{karanjai2025multi,\n  title={A multi-agent framework for automated vulnerability detection and repair in solidity and move smart contracts},\n  author={Karanjai, Rabimba and Blackshear,\
   \ Sam and Xu, Lei and Shi, Weidong},\n  journal={arXiv e-prints},\n  pages={arXiv--2502},\n  year={2025}\n}"
 ---
+
 
 
 

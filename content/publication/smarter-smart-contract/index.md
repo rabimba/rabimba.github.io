@@ -21,12 +21,13 @@ tags:
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1109/BRAINS59668.2023.10316812
+  url: https://doi.org/10.1109/BRAINS59668.2023.10316829
 - name: arXiv
   url: https://arxiv.org/pdf/2308.02955
 bibtex: "@inproceedings{karanjai2023smarter,\n  title={Who is Smarter? An Empirical Study of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and Li, Edward and Xu, Lei and Shi, Weidong},\n\
   \  booktitle={Blockchain, Robotics and AI for Networking Security Conference (BRAINS)},\n  year={2023}\n}"
 ---
+
 
 
 

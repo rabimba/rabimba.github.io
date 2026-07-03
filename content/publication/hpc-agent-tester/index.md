@@ -19,11 +19,10 @@ tags:
 - First Author
 featured: false
 links:
-- name: DOI
-  url: https://doi.org/10.1145/3717101
 - name: arXiv
   url: https://arxiv.org/pdf/2511.10860
 ---
+
 
 
 
