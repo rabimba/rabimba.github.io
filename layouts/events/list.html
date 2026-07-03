@@ -189,13 +189,19 @@
             <h2 class="event-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             {{ with .Params.event }}<p class="event-conf">{{ . }}</p>{{ end }}
             {{ with .Params.summary }}<p class="event-summary">{{ . }}</p>{{ end }}
-            {{ $hasLinks := or .Params.url_slides .Params.url_video .Params.url_pdf .Params.event_url }}
-            {{ if $hasLinks }}
+            {{ if .Params.links }}
             <div class="event-actions">
-              {{ with .Params.event_url }}<a class="event-link link-primary" href="{{ . }}" target="_blank" rel="noopener">Event ↗</a>{{ end }}
-              {{ with .Params.url_slides }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">Slides</a>{{ end }}
-              {{ with .Params.url_video }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">Video</a>{{ end }}
-              {{ with .Params.url_pdf }}<a class="event-link link-secondary" href="{{ . }}" target="_blank">PDF</a>{{ end }}
+              {{ range .Params.links }}
+                {{ if eq .name "Video" }}
+                <a class="event-link link-secondary" href="{{ .url }}" target="_blank">Video</a>
+                {{ else if eq .name "Slides" }}
+                <a class="event-link link-secondary" href="{{ .url }}" target="_blank">Slides</a>
+                {{ else if eq .name "Event" }}
+                <a class="event-link link-primary" href="{{ .url }}" target="_blank" rel="noopener">Event ↗</a>
+                {{ else }}
+                <a class="event-link link-secondary" href="{{ .url }}" target="_blank">{{ .name }}</a>
+                {{ end }}
+              {{ end }}
             </div>
             {{ end }}
           </div>
