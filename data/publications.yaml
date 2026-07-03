@@ -22,6 +22,9 @@
   - Network Security
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Context%20Contamination%20in%20LLM%20Analysis%20of%20Network%20Security%20Logs%3A%20Poison%20with%20Passive%20Prompt%20Injection%20and%20Mitigation%20Evaluation
 - slug: empowering-smart-contracts-ai
   title: Empowering Smart Contracts with Real-time On-Chain AI Inferences
   authors:
@@ -43,6 +46,9 @@
   - AI Inference
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Empowering%20Smart%20Contracts%20with%20Real-time%20On-Chain%20AI%20Inferences
 - slug: qucowe
   title: 'QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for
     Near-Term Quantum Devices'
@@ -67,8 +73,19 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: https://arxiv.org/pdf/2511.10179.pdf
+  - name: DOI
+    url: https://doi.org/10.1007/978-3-032-17625-7_6
+  bibtex: "@inproceedings{DBLP:conf/qcai/KaranjaiMXS26,\n  author       = {Rabimba\
+    \ Karanjai and\n                  Hemanth Hegadehalli Madhavarao and\n       \
+    \           Lei Xu and\n                  Weidong Shi},\n  title        = {QuCoWE:\
+    \ Quantum Contrastive Word Embeddings with Variational Circuits\n            \
+    \      for Near-Term Quantum Devices},\n  booktitle    = {Quantum Computing and\
+    \ Artificial Intelligence - Second International\n                  Workshop,\
+    \ {QC+AI} 2026, Singapore, January 27, 2026, Proceedings},\n  series       = {Communications\
+    \ in Computer and Information Science},\n  volume       = {2872},\n  pages   \
+    \     = {83--100},\n  publisher    = {Springer},\n  year         = {2026},\n \
+    \ url          = {https://doi.org/10.1007/978-3-032-17625-7_6},\n  doi       \
+    \   = {10.1007/978-3-032-17625-7_6},\n}"
 - slug: causalgraphx
   title: 'CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable
     Systemic Risk Assessment'
@@ -92,6 +109,9 @@
   - Explainable AI
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
 - slug: closing-cost-gap-rl
   title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
   authors:
@@ -114,6 +134,28 @@
   - Formal Verification
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Closing%20the%20Cost%20Gap%20in%20Verifier-Guided%20RL%3A%20A%20Smart%20Contract%20Case%20Study
+- slug: latency-optimized-cascaded-voice
+  title: Latency-Optimized Cascaded Voice Agent Pipeline
+  authors:
+  - Rabimba Karanjai
+  date: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '8'
+  publication: Patent Pending (PayPal)
+  publication_short: Patent Pending (PayPal)
+  abstract: A latency-optimized cascaded voice agent pipeline for production-scale
+    voice commerce systems.
+  tags:
+  - Patent
+  - Voice Commerce
+  - AI Agents
+  featured: false
+  links: []
+  publishDate: '2026-01-01T00:00:00Z'
+  doi: ''
 - slug: rules-that-govern
   title: 'Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation'
   authors:
@@ -136,6 +178,9 @@
   - Multi-Agent Systems
   - Policy
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Rules%20That%20Govern%3A%20A%20Per-Property%20Analysis%20of%20Multi-Agent%20LLM%20Deliberation
 - slug: vision-language-models-anchor
   title: Aligning Vision Language Models via anchor
   authors:
@@ -158,6 +203,9 @@
   - Multi-Modal
   - AI Alignment
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Aligning%20Vision%20Language%20Models%20via%20anchor
 - slug: verifygen-x
   title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement
     Learning from Formal Verification Feedback'
@@ -181,6 +229,9 @@
   - Formal Verification
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=VerifyGen-X%3A%20Secure%20Cross-Chain%20Smart%20Contract%20Generation%20via%20Scalable%20Reinforcement%20Learning%20from%20Formal%20Verification%20Feedback
 - slug: specialists-hold-routing
   title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
     Auctions'
@@ -206,6 +257,9 @@
   - Game Theory
   - Routing
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Specialists%20Hold%2C%20Generalists%20Discount%3A%20Asymmetric%20Equilibrium%20in%20LLM%20Routing%20Auctions
 - slug: cm-dpo-planning
   title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning'
   authors:
@@ -235,6 +289,9 @@
   - Planning
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
 - slug: profiler-persona
   title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
     and Fusion of Synthesized Profiles'
@@ -257,6 +314,9 @@
   - Persona Tuning
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Profiler%3A%20Per-Question%20Persona%20Conditioning%20of%20Frozen%20LLMs%20via%20Retrieval%20and%20Fusion%20of%20Synthesized%20Profiles
 - slug: training-llms-decentralized
   title: Hype or Hope? Training LLMs on Decentralized GPU Clouds
   authors:
@@ -278,6 +338,9 @@
   - GPU Clouds
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
 - slug: allocation-before-ranking
   title: 'Allocation Before Ranking: Decoupled Token Compression for OmniLLMs'
   authors:
@@ -303,6 +366,29 @@
   - Token Compression
   - Efficiency
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
+- slug: thread-based-conversational-commerce
+  title: Thread-Based Conversational Commerce System with Multi-Modal Ordering and
+    Real-Time Fulfillment Tracking in Messaging Platforms
+  authors:
+  - Rabimba Karanjai
+  date: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '8'
+  publication: Patent Pending (PayPal)
+  publication_short: Patent Pending (PayPal)
+  abstract: A conversational commerce system enabling real-time, multi-turn AI-driven
+    ordering and fulfillment tracking within messaging platforms.
+  tags:
+  - Patent
+  - Voice Commerce
+  - Conversational AI
+  featured: false
+  links: []
+  publishDate: '2026-01-01T00:00:00Z'
+  doi: ''
 - slug: bridging-confidentiality-reliability
   title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
   authors:
@@ -325,6 +411,30 @@
   - Security
   - Law
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
+- slug: severity-aware-preference-training
+  title: Severity-Aware Preference Training Framework for Constraint-Satisfying AI
+    Planners with Minimal-Edit Supervision
+  authors:
+  - Rabimba Karanjai
+  date: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '8'
+  publication: Patent Pending (PayPal)
+  publication_short: Patent Pending (PayPal)
+  abstract: A novel preference optimization framework for improving LLM planning under
+    real-world constraints, using minimal-edit supervision signals.
+  tags:
+  - Patent
+  - LLMs
+  - Preference Optimization
+  - Planning
+  featured: false
+  links: []
+  publishDate: '2026-01-01T00:00:00Z'
+  doi: ''
 - slug: unlock-onchain-intel-mw
   title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
     Smart Contracts'
@@ -347,6 +457,9 @@
   - AI Inference
   - First Author
   featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/BRAINS67003.2025.11302909
 - slug: unlocking-onchain-intelligence
   title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
     Smart Contracts'
@@ -369,6 +482,9 @@
   - Generative AI
   - First Author
   featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/BRAINS67003.2025.11302909
 - slug: securing-multi-chain
   title: 'Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for
     Vulnerability Repair in Solidity and Move'
@@ -383,8 +499,21 @@
   - '1'
   publication: ACM AIWare 2025
   publication_short: ACM AIWare 2025
-  abstract: This work presents an agent-based framework designed to automatically
-    detect and repair security vulnerabilities in Solidity and Move smart contracts.
+  abstract: The rapid growth of the blockchain ecosystem and the increasing value
+    locked in smart contracts necessitate robust security measures. While languages
+    like Solidity and Move aim to improve smart contract security, vulnerabilities
+    persist. This paper presents Smartify, a novel multi-agent framework leveraging
+    Large Language Models (LLMs) to automatically detect and repair vulnerabilities
+    in Solidity and Move smart contracts. Unlike traditional methods that rely solely
+    on vast pre-training datasets, Smartify employs a team of specialized agents working
+    on different specially fine-tuned LLMs to analyze code based on underlying programming
+    concepts and language-specific security principles. We evaluated Smartify on a
+    dataset for Solidity and a curated dataset for Move, demonstrating its effectiveness
+    in fixing a wide range of vulnerabilities. Our results show that Smartify (Gemma2+codegemma)
+    achieves state-of-the-art performance, surpassing existing LLMs and enhancing
+    general-purpose models' capabilities, such as Llama 3.1. Notably, Smartify can
+    incorporate language-specific knowledge, such as the nuances of Move, without
+    requiring massive language-specific pre-training datasets. This w
   tags:
   - Blockchain
   - Security
@@ -393,8 +522,14 @@
   - Agents
   featured: true
   links:
-  - name: PDF
-    url: /uploads/publications/securing-multi-chain.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/AIWARE69974.2025.00032
+  - name: arXiv
+    url: https://arxiv.org/pdf/2502.18515
+  bibtex: "@article{karanjai2025multi,\n  title={A multi-agent framework for automated\
+    \ vulnerability detection and repair in solidity and move smart contracts},\n\
+    \  author={Karanjai, Rabimba and Blackshear, Sam and Xu, Lei and Shi, Weidong},\n\
+    \  journal={arXiv e-prints},\n  pages={arXiv--2502},\n  year={2025}\n}"
 - slug: hpc-agent-tester
   title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
   authors:
@@ -408,8 +543,21 @@
   - '1'
   publication: ACM AIWare 2025
   publication_short: ACM AIWare 2025
-  abstract: We explore multi-agent LLM systems to improve unit test generation for
-    High-Performance Computing (HPC) software environments.
+  abstract: Unit testing in High-Performance Computing (HPC) is critical but challenged
+    by parallelism, complex algorithms, and diverse hardware. Traditional methods
+    often fail to address non-deterministic behavior and synchronization issues in
+    HPC applications. This paper introduces HPCAgentTester, a novel multi-agent Large
+    Language Model (LLM) framework designed to automate and enhance unit test generation
+    for HPC software utilizing OpenMP and MPI. HPCAgentTester employs a unique collaborative
+    workflow where specialized LLM agents (Recipe Agent and Test Agent) iteratively
+    generate and refine test cases through a critique loop. This architecture enables
+    the generation of context-aware unit tests that specifically target parallel execution
+    constructs, complex communication patterns, and hierarchical parallelism. We demonstrate
+    HPCAgentTester's ability to produce compilable and functionally correct tests
+    for OpenMP and MPI primitives, effectively identifying subtle bugs that are often
+    missed by conventional techniques. Our evaluation shows that HPCAgentTester significantly
+    improves test compilation rates and correctness compared to standalone LLMs, offering
+    a more robust and scalable solution f
   tags:
   - HPC
   - Testing
@@ -417,8 +565,8 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/hpc-agent-tester.pdf
+  - name: arXiv
+    url: https://arxiv.org/pdf/2511.10860
 - slug: evaluating-quality-randomness
   title: Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large
     Language Models
@@ -435,8 +583,21 @@
   - '1'
   publication: KDD - Agentic & GenAI Evaluation 2025
   publication_short: KDD - Agentic & GenAI Evaluation 2025
-  abstract: We evaluate how LLMs generate entropy and pseudorandom outputs in critical
-    computational tasks, identifying key vulnerabilities and patterns.
+  abstract: The rapid advancement of large language model (LLM) technology has led
+    to diverse applications, many of which inherently require randomness, such as
+    stochastic decision-making, gaming, scheduling, AI agents, and cryptography-related
+    tasks. However, the capabilities of LLMs in handling randomness, particularly
+    in generating and utilizing random numbers effectively, remain unclear. This paper
+    investigates the capacity of LLMs for handling tasks that involve randomness through
+    a series of experiments. We designed a set of experiments that consider various
+    factors that can influence an LLM's performance in tasks involving randomness,
+    such as accessibility to external tools, types of tasks, model states (fresh vs.
+    non-fresh), and prompting strategies. The experiments cover a range of tasks,
+    including generating random numbers, generating random strings such as passwords,
+    shuffling items, and evaluating the quality of randomness using entropy and the
+    NIST randomness test-suite. Our findings reveal that while LLMs can generate outputs
+    that exhibit some degree of randomness, their performance is inconsistent and
+    often deviates significantly from the expected behavior. The analysis of the e
   tags:
   - LLMs
   - Randomness
@@ -445,8 +606,8 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: https://arxiv.org/pdf/2510.12080.pdf
+  - name: arXiv
+    url: https://arxiv.org/pdf/2510.12080
 - slug: teaching-ais-reason-confidentially
   title: Teaching AIs to Reason and Code, Confidentially
   authors:
@@ -467,6 +628,9 @@
   - Security
   - Confidentiality
   featured: true
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Teaching%20AIs%20to%20Reason%20and%20Code%2C%20Confidentially
 - slug: collaboration-safe-code-translation
   title: 'Collaboration is all you need: LLM Assisted Safe Code Translation'
   authors:
@@ -481,14 +645,29 @@
   - '1'
   publication: ACM Foundations of Software Engineering (FSE) 2025
   publication_short: ACM Foundations of Software Engineering (FSE) 2025
-  abstract: We present collaborative LLM strategies to safely translate source code
-    between low-resource or domain-specific languages with formal checks.
+  abstract: This paper introduces UniTranslator, a visionary framework that re-imagines
+    code translation as a collaborative endeavor among multiple, compact LLMs. By
+    orchestrating the interaction of specialized agents, each focused on different
+    aspects of the translation process and grounded in a deep understanding of programming
+    concepts, UniTranslator achieves a level of accuracy and efficiency that rivals
+    larger, monolithic models. Our preliminary evaluation demonstrates the potential
+    of UniTranslator to overcome the limitations of existing approaches and unlock
+    the power of smaller LLMs for complex code translation tasks. We explore the effectiveness
+    of this dynamic multi-agent paradigm in handling diverse language pairs, including
+    low-resource languages, and in mitigating common issues such as code artifacts
+    and hallucinations through the use of Natural Language Inference (NLI) grounding
+    and iterative feedback mechanisms
   tags:
   - LLMs
   - Software Engineering
   - Code Translation
   - First Author
   featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1145/3696630.3728521
+  - name: arXiv
+    url: https://arxiv.org/pdf/2503.11237
 - slug: ransomware-3-0
   title: 'Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability
     and Smart Contracts'
@@ -513,8 +692,8 @@
   - Ransomware
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/ransomware-3-0.pdf
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Ransomware%203.0%3A%20Enhancing%20Risk%20Management%20and%20Mitigation%20Options%20with%20Proof-of-Decryptability%20and%20Smart%20Contracts
 - slug: synthesizing-public-opinions
   title: 'Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the
     Future to eDemocracy'
@@ -533,14 +712,28 @@
   - '1'
   publication: ICEDEG 2025
   publication_short: ICEDEG 2025
-  abstract: We investigate the potential of LLMs to model and synthesize diverse public
-    opinions, exploring ethical dimensions and technical accuracy.
+  abstract: 'This paper investigates the use of Large Language Models (LLMs) to synthesize
+    public opinion data, addressing challenges in traditional survey methods like
+    declining response rates and non-response bias. We introduce a novel technique:
+    role creation based on knowledge injection, a form of in-context learning that
+    leverages RAG and specified personality profiles from the HEXACO model and demographic
+    information, and uses that for dynamically generated prompts. This method allows
+    LLMs to simulate diverse opinions more accurately than existing prompt engineering
+    approaches. We compare our results with pre-trained models with standard few-shot
+    prompts. Experiments using questions from the Cooperative Election Study (CES)
+    demonstrate that our role-creation approach significantly improves the alignment
+    of LLM-generated opinions with real-world human survey responses, increasing answer
+    adherence. In addition, we discuss challenges, limitations and future research
+    directions.'
   tags:
   - LLMs
   - eDemocracy
   - AI Society
   - First Author
   featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2504.00241
 - slug: log-babylon
   title: 'LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis'
   authors:
@@ -558,13 +751,36 @@
   - '1'
   publication: ACM SAC 2025
   publication_short: ACM SAC 2025
-  abstract: LogBabylon provides a unified framework for matching and integrating log
-    files across different systems to improve security audits and diagnostics.
+  abstract: Logs are critical resources that record events, activities, or messages
+    produced by software applications, operating systems, servers, and network devices.
+    However, consolidating the heterogeneous logs and cross-referencing them is challenging
+    and complicated. Manually analyzing the log data is time-consuming and prone to
+    errors. LogBabylon is a centralized log data consolidating solution that leverages
+    Large Language Models (LLMs) integrated with Retrieval-Augmented Generation (RAG)
+    technology. LogBabylon interprets the log data in a human-readable way and adds
+    insight analysis of the system performance and anomaly alerts. It provides a paramount
+    view of the system landscape, enabling proactive management and rapid incident
+    response. LogBabylon consolidates diverse log sources and enhances the extracted
+    information's accuracy and relevancy. This facilitates a deeper understanding
+    of log data, supporting more effective decision-making and operational efficiency.
+    Furthermore, LogBabylon streamlines the log analysis process, significantly reducing
+    the time and effort required to interpret complex datasets. Its capabilities extend
+    to generating context-aware insights, offering an inva
   tags:
   - Security
   - Log Analysis
   - First Author
   featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1145/3672608.3707883
+  - name: arXiv
+    url: https://arxiv.org/pdf/2412.12364
+  bibtex: "@inproceedings{lu2025logbabylon,\n  title={Logbabylon: A unified framework\
+    \ for cross-log file integration and analysis},\n  author={Lu, Yang and Karanjai,\
+    \ Rabimba and Alsagheer, Dana and Kasichainula, Keshav and Xu, Lei and Shi, Weidong\
+    \ and Huang, Shou-Hsuan Stephen},\n  booktitle={Proceedings of the 40th ACM/SIGAPP\
+    \ Symposium on Applied Computing},\n  pages={1953--1960},\n  year={2025}\n}"
 - slug: ai-personalized-interventions
   title: AI-Based Target for Personalized Interventions of Atherosclerosis from Gut
     Microbiota Signature
@@ -602,8 +818,22 @@
   - '1'
   publication: ACM Foundations of Software Engineering (FSE) 2024
   publication_short: ACM Foundations of Software Engineering (FSE) 2024
-  abstract: We explore using conceptual mappings to translate smart contracts safely
-    between high-level smart contract languages.
+  abstract: The advent of large language models (LLMs) has marked a significant milestone
+    in the realm of artificial intelligence, with their capabilities often matching
+    or surpassing human expertise in various domains. Among these achievements, their
+    adeptness in translation tasks stands out, closely mimicking the intricate and
+    preliminary processes undertaken by human translators to ensure the fidelity and
+    quality of the translated content. Despite the advancements in utilizing LLMs
+    for translating programming code across different languages, the domain of smart
+    contract translation, particularly into languages not previously encountered by
+    the LLM, remains largely unexplored. In our research, we present a pioneering
+    approach, SolMover, which harnesses the synergy of two distinct LLMs within a
+    unified framework. This framework is designed to grasp coding principles and apply
+    this understanding to the translation of code into an unfamiliar language. Our
+    study delves into the capacity of LLMs to mimic human learning processes, offering
+    an in-depth evaluation of our methodology for converting smart contracts written
+    in Solidity to Move, a language with limited resources. The framework employs
+    o
   tags:
   - Smart Contracts
   - Blockchain
@@ -611,8 +841,14 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/smart-contract-translation.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3664646.3664771
+  - name: arXiv
+    url: https://arxiv.org/pdf/2403.09740
+  bibtex: "@inproceedings{karanjai2024solmover,\n  title={Solmover: Smart contract\
+    \ code translation based on concepts},\n  author={Karanjai, Rabimba and Xu, Lei\
+    \ and Shi, Weidong},\n  booktitle={Proceedings of the 1st ACM International Conference\
+    \ on AI-Powered Software},\n  pages={112--121},\n  year={2024}\n}"
 - slug: cryptographic-accelerator
   title: TPU as Cryptographic Accelerator
   authors:
@@ -634,14 +870,36 @@
   - '1'
   publication: MICRO 2024
   publication_short: MICRO 2024
-  abstract: We investigate leveraging Tensor Processing Units (TPUs) to accelerate
-    intensive cryptographic primitives in blockchain and zero-knowledge systems.
+  abstract: Cryptographic schemes like Fully Homomorphic Encryption (FHE) and Zero-Knowledge
+    Proofs (ZKPs), while offering powerful privacy-preserving capabilities, are often
+    hindered by their computational complexity. Polynomial multiplication, a core
+    operation in these schemes, is a major performance bottleneck. While algorithmic
+    advancements and specialized hardware like GPUs and FPGAs have shown promise in
+    accelerating these computations, the recent surge in AI accelerators (TPUs/NPUs)
+    presents a new opportunity. This paper explores the potential of leveraging TPUs/NPUs
+    to accelerate polynomial multiplication, thereby enhancing the performance of
+    FHE and ZKP schemes. We present techniques to adapt polynomial multiplication
+    to these AI-centric architectures and provide a preliminary evaluation of their
+    effectiveness. We also discuss current limitations and outline future directions
+    for further performance improvements, paving the way for wider adoption of advanced
+    cryptographic tools.
   tags:
   - TPU
   - Cryptography
   - Hardware Accelerator
   - First Author
   featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1145/3696843.3696844
+  - name: arXiv
+    url: https://arxiv.org/pdf/2307.06554
+  bibtex: "@inproceedings{karanjai2024tpu,\n  title={Tpu as cryptographic accelerator},\n\
+    \  author={Karanjai, Rabimba and Shin, Sangwon and Xiong, Wujie and Fan, Xinxin\
+    \ and Chen, Lin and Zhang, Tianwei and Suh, Taeweon and Shi, Weidong and Kuchta,\
+    \ Veronika and Sica, Francesco and others},\n  booktitle={Proceedings of the International\
+    \ Workshop on Hardware and Architectural Support for Security and Privacy 2024},\n\
+    \  pages={37--44},\n  year={2024}\n}"
 - slug: adding-flavors-rng
   title: 'Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3'
   authors:
@@ -659,8 +917,21 @@
     Systems (SSS) 2024
   publication_short: International Symposium on Stabilization, Safety, and Security
     of Distributed Systems (SSS) 2024
-  abstract: We propose a hybrid on-chain and off-chain random number generator suitable
-    for decentralized applications (dApps) requiring high entropy.
+  abstract: Random numbers play a vital role in many decentralized applications (dApps),
+    such as gaming and decentralized finance (DeFi) applications. Existing random
+    number provision mechanisms can be roughly divided into two categories, on-chain,
+    and off-chain. On-chain approaches usually rely on the blockchain as the major
+    input and all computations are done by blockchain nodes. The major risk for this
+    type of method is that the input itself is susceptible to the adversary's influence.
+    Off-chain approaches, as the name suggested, complete the generation without the
+    involvement of blockchain nodes and share the result directly with a dApp. These
+    mechanisms usually have a strong security assumption and high complexity. To mitigate
+    these limitations and provide a framework that allows a dApp to balance different
+    factors involved in random number generation, we propose a hybrid random number
+    generation solution that leverages IoT devices equipped with trusted execution
+    environment (TEE) as the randomness sources, and then utilizes a set of cryptographic
+    tools to aggregate the multiple sources and obtain the final random number that
+    can be consumed by the dApp. The new approach only needs one ho
   tags:
   - Web3
   - Randomness
@@ -668,8 +939,10 @@
   - Security
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/adding-flavors-rng.pdf
+  - name: DOI
+    url: https://doi.org/10.1007/978-3-031-74498-3_21
+  - name: arXiv
+    url: https://arxiv.org/pdf/2510.12062
 - slug: evaluating-rationality
   title: Evaluating Irrationality in Large Language Models and Open Research Questions
   authors:
@@ -687,16 +960,31 @@
   - '1'
   publication: ACM CHI HEAL 2024
   publication_short: ACM CHI HEAL 2024
-  abstract: 'Workshop Paper: We examine cognitive cognitive anomalies and systematic
-    biases in LLM choices when given human reasoning dilemmas.'
+  abstract: This paper delves into the dynamic landscape of artificial intelligence,
+    specifically focusing on the burgeoning prominence of large language models (LLMs).
+    We underscore the pivotal role of Reinforcement Learning from Human Feedback (RLHF)
+    in augmenting LLMs' rationality and decision-making prowess. By meticulously examining
+    the intricate relationship between human interaction and LLM behavior, we explore
+    questions surrounding rationality and performance disparities between humans and
+    LLMs, with particular attention to the Chat Generative Pre-trained Transformer.
+    Our research employs comprehensive comparative analysis and delves into the inherent
+    challenges of irrationality in LLMs, offering valuable insights and actionable
+    strategies for enhancing their rationality. These findings hold significant implications
+    for the widespread adoption of LLMs across diverse domains and applications, underscoring
+    their potential to catalyze advancements in artificial intelligence.
   tags:
   - LLMs
   - Cognitive Bias
   - AI Safety
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/evaluating-rationality.pdf
+  - name: arXiv
+    url: https://arxiv.org/pdf/2403.09798
+  bibtex: "@article{alsagheer2024comparing,\n  title={Comparing rationality between\
+    \ large language models and humans: Insights and open questions},\n  author={Alsagheer,\
+    \ Dana and Karanjai, Rabimba and Diallo, Nour and Shi, Weidong and Lu, Yang and\
+    \ Beydoun, Suha and Zhang, Qiaoning},\n  journal={arXiv preprint arXiv:2403.09798},\n\
+    \  year={2024}\n}"
 - slug: enhancing-vascular-diagnosis
   title: Enhancing Vascular Disease Diagnosis through AI-Driven Analysis of Histopathology
     Images
@@ -718,6 +1006,9 @@
   - Computer Vision
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Enhancing%20Vascular%20Disease%20Diagnosis%20through%20AI-Driven%20Analysis%20of%20Histopathology%20Images
 - slug: trusted-infer-edge
   title: Trusted LLM Inference on the Edge with Smart Contracts
   authors:
@@ -739,8 +1030,12 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/trusted-infer-edge.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC59979.2024.10634373
+  bibtex: "@inproceedings{karanjai2024trusted,\n  title={Trusted llm inference on\
+    \ the edge with smart contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n\
+    \  booktitle={2024 IEEE International Conference on Blockchain and Cryptocurrency\
+    \ (ICBC)},\n  pages={1--7},\n  year={2024},\n  organization={IEEE}\n}"
 - slug: mitigating-hallucinations
   title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
   authors:
@@ -761,6 +1056,9 @@
   - LLM Hallucinations
   - First Author
   featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
 - slug: voter-blockchain
   title: All We Need is Voter Feedback
   authors:
@@ -786,8 +1084,13 @@
   - Decentralized Voting
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/voter-blockchain.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC56567.2023.10174914
+  bibtex: "@inproceedings{karanjai2023dhtee,\n  title={Dhtee: Decentralized infrastructure\
+    \ for heterogeneous tees},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen,\
+    \ Lin and Fan, Xinxin and Suh, Teweon and Shi, Weidong and Xu, Lei},\n  booktitle={2023\
+    \ IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n\
+    \  year={2023},\n  organization={IEEE}\n}"
 - slug: decentralize-multi-clouds
   title: Decentralized FaaS over Multi-Clouds
   authors:
@@ -812,8 +1115,8 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/decentralize-multi-clouds.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC59979.2024.10634372
 - slug: diac-infrastructure
   title: 'DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain'
   authors:
@@ -838,8 +1141,13 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/diac-infrastructure.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/TNSM.2023.3325768
+  bibtex: "@article{karanjai2023diac,\n  title={DIaC: Re-imagining decentralized infrastructure\
+    \ as code using blockchain},\n  author={Karanjai, Rabimba and Kasichainula, Keshav\
+    \ and Xu, Lei and Diallo, Nour and Chen, Lin and Shi, Weidong},\n  journal={IEEE\
+    \ Transactions on Network and Service Management},\n  volume={21},\n  number={2},\n\
+    \  pages={1319--1332},\n  year={2023},\n  publisher={IEEE}\n}"
 - slug: smarter-smart-contract
   title: Who is Smarter? An Empirical Study of AI-based Smart Contract Creation
   authors:
@@ -854,8 +1162,21 @@
   - '1'
   publication: BRAINS 2023
   publication_short: BRAINS 2023
-  abstract: We conduct a comparative study evaluating the quality, safety, and functionality
-    of smart contracts generated by LLMs vs human engineers.
+  abstract: The introduction of large language models (LLMs) like ChatGPT and Google
+    Palm2 for smart contract generation seems to be the first well-established instance
+    of an AI pair programmer. LLMs have access to a large number of open-source smart
+    contracts, enabling them to utilize more extensive code in Solidity than other
+    code generation tools. Although the initial and informal assessments of LLMs for
+    smart contract generation are promising, a systematic evaluation is needed to
+    explore the limits and benefits of these models. The main objective of this study
+    is to assess the quality of generated code provided by LLMs for smart contracts.
+    We also aim to evaluate the impact of the quality and variety of input parameters
+    fed to LLMs. To achieve this aim, we created an experimental setup for evaluating
+    the generated code in terms of validity, correctness, and efficiency. Our study
+    finds crucial evidence of security bugs getting introduced in the generated smart
+    contracts as well as the overall quality and correctness of the code getting impacted.
+    However, we also identified the areas where it can be improved. The paper also
+    proposes several potential research directions to improve the proces
   tags:
   - LLMs
   - Smart Contracts
@@ -863,8 +1184,14 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/smarter-smart-contract.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/BRAINS59668.2023.10316829
+  - name: arXiv
+    url: https://arxiv.org/pdf/2308.02955
+  bibtex: "@inproceedings{karanjai2023smarter,\n  title={Who is Smarter? An Empirical\
+    \ Study of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and\
+    \ Li, Edward and Xu, Lei and Shi, Weidong},\n  booktitle={Blockchain, Robotics\
+    \ and AI for Networking Security Conference (BRAINS)},\n  year={2023}\n}"
 - slug: decentralize-infra-heterogeneous
   title: 'DHTee: Decentralized Infrastructure for Heterogeneous TEE'
   authors:
@@ -882,16 +1209,32 @@
   - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: 'Short Paper: Building structured overlays for auditing and routing data
-    across multi-vendor secure enclaves.'
+  abstract: Trusted execution environment (TEE) technology has found many applications
+    in mitigating various security risks in an efficient man- ner, which is attractive
+    for critical infrastructure protection. First, the natural of critical infrastructure
+    requires it to be well protected from various cyber attacks. Second, performance
+    is usually impor- tant for critical infrastructure and it cannot afford an expensive
+    protection mechanism. While a large number of TEE-based critical infrastructure
+    protection systems have been proposed to address various security challenges (e.g.,
+    secure sensing and reliable con- trol), most existing works ignore one important
+    feature, i.e., devices comprised the critical infrastructure may be equipped with
+    multiple incompatible TEE technologies and belongs to different
   tags:
   - TEE
   - Security
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/decentralize-infra-heterogeneous.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3594556.3594626
+  - name: arXiv
+    url: https://arxiv.org/pdf/2308.01474
+  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
+    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
+    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
+    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
+    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
+    \  pages={85--94},\n  year={2023}\n}"
 - slug: ai-governance
   title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and
     Research Challenges'
@@ -916,8 +1259,8 @@
   - Decentralized Systems
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/ai-governance.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC56567.2023.10174931
 - slug: supporting-heterogeneous-infra
   title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
   authors:
@@ -936,8 +1279,21 @@
   - '1'
   publication: ACM AsiaCCS 2023
   publication_short: ACM AsiaCCS 2023
-  abstract: We design a middleware framework to secure critical systems using multiple
-    diverse Trusted Execution Environments (TEEs).
+  abstract: Trusted execution environment (TEE) technology has found many applications
+    in mitigating various security risks in an efficient manner, which is attractive
+    for critical infrastructure protection. First, the natural of critical infrastructure
+    requires it to be well protected from various cyber attacks. Second, performance
+    is usually important for critical infrastructure and it cannot afford an expensive
+    protection mechanism. While a large number of TEE-based critical infrastructure
+    protection systems have been proposed to address various security challenges (e.g.,
+    secure sensing and reliable control), most existing works ignore one important
+    feature, i.e., devices comprised the critical infrastructure may be equipped with
+    multiple incompatible TEE technologies and belongs to different owners. This feature
+    makes it hard for these devices to establish mutual trust and form a unified TEE
+    environment. To address these challenges and fully unleash the potential of TEE
+    technology for critical infrastructure protection, we propose DHTee, a decentralized
+    coordination mechanism. DHTee uses blockchain technology to support key TEE functions
+    in a heterogeneous TEE environment, especially the a
   tags:
   - Security
   - TEE
@@ -945,8 +1301,16 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/supporting-heterogeneous-infra.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3594556.3594626
+  - name: arXiv
+    url: https://arxiv.org/pdf/2308.01474
+  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
+    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
+    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
+    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
+    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
+    \  pages={85--94},\n  year={2023}\n}"
 - slug: faas-decentralized
   title: 'DeFaaS: Decentralized Function-as-a-Service for Emerging dApps and Web'
   authors:
@@ -962,8 +1326,17 @@
   - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: 'Short Paper: We design lightweight container orchestrators over public
-    blockchains for serverless edge compute.'
+  abstract: Function-as-a-Service (FaaS) offers a streamlined cloud computing paradigm,
+    but existing centralized systems suffer from vendor lock-in and single points
+    of failure. We propose DeFaaS, a decentralized FaaS system leveraging blockchain
+    technology and decentralized API management. DeFaaS addresses these limitations
+    by establishing a secure, transparent registry of functions on a blockchain and
+    enabling applications to discover and invoke them. This approach fosters scalability,
+    flexibility, enhanced security, and improved reliability. Furthermore, DeFaaS's
+    architecture extends beyond decentralized FaaS, supporting other distributed computing
+    scenarios like dApps, volunteer computing, and multi-cloud service meshes. DeFaaS
+    represents a significant advancement in decentralized computing with the potential
+    to unlock a multitude of novel applications and use cases.
   tags:
   - FaaS
   - Blockchain
@@ -971,8 +1344,15 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/faas-decentralized.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3605098.3636029
+  - name: arXiv
+    url: https://arxiv.org/pdf/2404.08151
+  bibtex: "@inproceedings{karanjai2023defaas,\n  title={Defaas: Decentralized function-as-a-service\
+    \ for emerging dapps and web3},\n  author={Karanjai, Rabimba and Xu, Lei and Diallo,\
+    \ Nour and Chen, Lin and Shi, Weidong},\n  booktitle={2023 IEEE International\
+    \ Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2023},\n\
+    \  organization={IEEE}\n}"
 - slug: decentralized-apps
   title: Decentralized Application Infrastructures as Smart Contract Codes
   authors:
@@ -998,8 +1378,14 @@
   - First Author
   featured: true
   links:
-  - name: PDF
-    url: /uploads/publications/decentralized-apps.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC54727.2022.9805524
+  bibtex: "@inproceedings{karanjai2022decentralized,\n  title={Decentralized application\
+    \ infrastructures as smart contract codes},\n  author={Karanjai, Rabimba and Kasichainula,\
+    \ Keshav and Diallo, Nour and Kaleem, Mudabbir and Xu, Lei and Chen, Lin and Shi,\
+    \ Weidong},\n  booktitle={2022 IEEE International Conference on Blockchain and\
+    \ Cryptocurrency (ICBC)},\n  pages={1--9},\n  year={2022},\n  organization={IEEE}\n\
+    }"
 - slug: privacy-preserving-event
   title: Privacy preserving event based transaction system in a decentralized environment
   authors:
@@ -1024,8 +1410,13 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/privacy-preserving-event.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3464298.3493401
+  bibtex: "@inproceedings{karanjai2021privacy,\n  title={Privacy preserving event\
+    \ based transaction system in a decentralized environment},\n  author={Karanjai,\
+    \ Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Kaleem, Mudabbir and Shi,\
+    \ Weidong},\n  booktitle={Proceedings of the 22nd International Middleware Conference},\n\
+    \  pages={286--297},\n  year={2021}\n}"
 - slug: blockchain-tee
   title: Lessons Learned from Blockchain Applications of Trusted Execution Environments
     and Implications
@@ -1052,8 +1443,14 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/blockchain-tee.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3505253.3505259
+  bibtex: "@inproceedings{rabimba2021lessons,\n  title={Lessons learned from blockchain\
+    \ applications of trusted execution environments and implications for future research},\n\
+    \  author={Rabimba, Karanjai and Xu, Lei and Chen, Lin and Zhang, Fengwei and\
+    \ Gao, Zhimin and Shi, Weidong},\n  booktitle={Proceedings of the 10th International\
+    \ Workshop on Hardware and Architectural Support for Security and Privacy},\n\
+    \  pages={1--8},\n  year={2021}\n}"
 - slug: event-driven-framework
   title: An event driven framework for smart contract execution
   authors:
@@ -1079,8 +1476,37 @@
   - Smart Contracts
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/event-driven-framework.pdf
+  - name: DOI
+    url: https://doi.org/10.1145/3465480.3466924
+  bibtex: "@inproceedings{kaleem2021event,\n  title={An event driven framework for\
+    \ smart contract execution},\n  author={Kaleem, Mudabbir and Kasichainula, Keshav\
+    \ and Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Shi, Weidong},\n\
+    \  booktitle={Proceedings of the 15th ACM International Conference on Distributed\
+    \ and Event-based Systems},\n  pages={78--89},\n  year={2021}\n}"
+- slug: us11025643b2
+  title: Mobile multi-party digitally signed documents and techniques for using these
+    allowing detection of tamper
+  authors:
+  - Rabimba Karanjai
+  date: '2021-06-01T00:00:00Z'
+  publication_types:
+  - '8'
+  publication: US Patent US11025643B2
+  publication_short: US Patent US11025643B2
+  abstract: A multi-party authentication system integrating biometric features and
+    blockchain technology for tamper-evident mobile document signing. Developed at
+    IBM Almaden Research Center.
+  tags:
+  - Patent
+  - Security
+  - Blockchain
+  - Authentication
+  featured: false
+  links:
+  - name: DOI
+    url: https://patents.google.com/patent/US11025643B2/en
+  publishDate: '2021-06-01T00:00:00Z'
+  doi: ''
 - slug: conditional-cryptocurrency
   title: On Conditional Cryptocurrency With Privacy
   authors:
@@ -1106,8 +1532,13 @@
   - First Author
   featured: false
   links:
-  - name: PDF
-    url: /uploads/publications/conditional-cryptocurrency.pdf
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC51069.2021.9461103
+  bibtex: "@inproceedings{karanjai2021conditional,\n  title={On conditional cryptocurrency\
+    \ with privacy},\n  author={Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and\
+    \ Chen, Lin and Kaleem, Mudabbir and Shi, Weidong},\n  booktitle={2021 IEEE International\
+    \ Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2021},\n\
+    \  organization={IEEE}\n}"
 - slug: optimizing-vr-thesis
   title: Optimizing Web Virtual Reality
   authors:

@@ -15,7 +15,11 @@ publication_types:
 - '1'
 publication: ICEDEG 2025
 publication_short: ICEDEG 2025
-abstract: We investigate the potential of LLMs to model and synthesize diverse public opinions, exploring ethical dimensions and technical accuracy.
+abstract: 'This paper investigates the use of Large Language Models (LLMs) to synthesize public opinion data, addressing challenges in traditional survey methods like declining response rates and non-response
+  bias. We introduce a novel technique: role creation based on knowledge injection, a form of in-context learning that leverages RAG and specified personality profiles from the HEXACO model and demographic
+  information, and uses that for dynamically generated prompts. This method allows LLMs to simulate diverse opinions more accurately than existing prompt engineering approaches. We compare our results with
+  pre-trained models with standard few-shot prompts. Experiments using questions from the Cooperative Election Study (CES) demonstrate that our role-creation approach significantly improves the alignment
+  of LLM-generated opinions with real-world human survey responses, increasing answer adherence. In addition, we discuss challenges, limitations and future research directions.'
 tags:
 - LLMs
 - eDemocracy
@@ -26,6 +30,7 @@ links:
 - name: arXiv
   url: https://arxiv.org/pdf/2504.00241
 ---
+
 
 
 

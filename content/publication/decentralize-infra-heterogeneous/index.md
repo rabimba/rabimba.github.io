@@ -15,7 +15,10 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: 'Short Paper: Building structured overlays for auditing and routing data across multi-vendor secure enclaves.'
+abstract: Trusted execution environment (TEE) technology has found many applications in mitigating various security risks in an efficient man- ner, which is attractive for critical infrastructure protection.
+  First, the natural of critical infrastructure requires it to be well protected from various cyber attacks. Second, performance is usually impor- tant for critical infrastructure and it cannot afford an
+  expensive protection mechanism. While a large number of TEE-based critical infrastructure protection systems have been proposed to address various security challenges (e.g., secure sensing and reliable
+  con- trol), most existing works ignore one important feature, i.e., devices comprised the critical infrastructure may be equipped with multiple incompatible TEE technologies and belongs to different
 tags:
 - TEE
 - Security
@@ -30,6 +33,7 @@ bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized trans
   \ Rowan and Gao, Zhimin and Chen, Lin and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings of the 5th ACM International Symposium on Blockchain and Secure Critical\
   \ Infrastructure},\n  pages={85--94},\n  year={2023}\n}"
 ---
+
 
 
 
