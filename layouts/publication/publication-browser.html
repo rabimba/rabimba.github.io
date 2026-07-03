@@ -215,7 +215,13 @@
       {{ range $publications }}
         {{ $typeCode := index .Params.publication_types 0 | default "0" }}
         {{ $typeLabel := index $typeMap $typeCode | default "Research" }}
-        {{ $typeSlug := lower (replaceRE "[^a-z0-9]+" "-" $typeLabel) }}
+        {{ $typeSlug := "" }}
+        {{ if eq $typeCode "1" }}{{ $typeSlug = "conference" }}
+        {{ else if eq $typeCode "2" }}{{ $typeSlug = "journal" }}
+        {{ else if eq $typeCode "3" }}{{ $typeSlug = "preprint" }}
+        {{ else if eq $typeCode "7" }}{{ $typeSlug = "thesis" }}
+        {{ else if eq $typeCode "8" }}{{ $typeSlug = "patent" }}
+        {{ else }}{{ $typeSlug = $typeLabel | lower }}{{ end }}
         {{ if or (eq $typeLabel "Book Section") (eq $typeLabel "Book") }}{{ $typeSlug = "book" }}{{ end }}
         {{ if or (eq $typeLabel "Research") (eq $typeLabel "Uncategorized") }}{{ $typeSlug = "other" }}{{ end }}
         {{ $year := time.Format "2006" .Date }}
