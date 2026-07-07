@@ -29,7 +29,10 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2510.12080
+bibtex: "@article{karanjai2025evaluati,\n  title={Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large Language Models},\n  author={Rabimba Karanjai and Yang Lu and Ranjith Chodavarapu\
+  \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2510.12080},\n  year={2025}\n}"
 ---
+
 
 
 

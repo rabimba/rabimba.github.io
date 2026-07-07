@@ -20,9 +20,10 @@ tags:
 - Ransomware
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=Ransomware%203.0%3A%20Enhancing%20Risk%20Management%20and%20Mitigation%20Options%20with%20Proof-of-Decryptability%20and%20Smart%20Contracts
+- name: DOI
+  url: https://doi.org/10.1109/ICBC63407.2025.10945400
 ---
+
 
 
 

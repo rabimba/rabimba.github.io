@@ -26,7 +26,10 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2511.10860
+bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai and Lei Xu and Weidong Shi},\n  journal={arXiv\
+  \ preprint arXiv:2511.10860},\n  year={2025}\n}"
 ---
+
 
 
 

@@ -29,7 +29,10 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2504.00241
+bibtex: "@article{karanjai2025synthesi,\n  title={Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the Future to eDemocracy},\n  author={Rabimba Karanjai and Boris Shor and Amanda Austin\
+  \ and Ryan Kennedy and Yang Lu and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2504.00241},\n  year={2025}\n}"
 ---
+
 
 
 

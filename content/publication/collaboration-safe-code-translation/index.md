@@ -28,7 +28,10 @@ links:
   url: https://doi.org/10.1145/3696630.3728521
 - name: arXiv
   url: https://arxiv.org/pdf/2503.11237
+bibtex: "@article{karanjai2025collabor,\n  title={Collaboration is all you need: LLM Assisted Safe Code Translation},\n  author={Rabimba Karanjai and Sam Blackshear and Lei Xu and Weidong Shi},\n  journal={arXiv\
+  \ preprint arXiv:2503.11237},\n  year={2025}\n}"
 ---
+
 
 
 

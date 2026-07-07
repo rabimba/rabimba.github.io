@@ -27,10 +27,13 @@ tags:
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1007/978-3-031-74498-3_21
+  url: https://link.springer.com/chapter/10.1007/978-3-031-74498-3_21
 - name: arXiv
   url: https://arxiv.org/pdf/2510.12062
+bibtex: "@article{karanjai2024adding-f,\n  title={Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3},\n  author={Ranjith Chodavarapu and Rabimba Karanjai and Xinxin Fan and Larry Shi\
+  \ and Lei Xu},\n  journal={arXiv preprint arXiv:2510.12062},\n  year={2024}\n}"
 ---
+
 
 
 

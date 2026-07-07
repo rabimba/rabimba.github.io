@@ -611,6 +611,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2511.10860
+  bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent\
+    \ LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai\
+    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2511.10860},\n\
+    \  year={2025}\n}"
 - slug: evaluating-quality-randomness
   title: Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large
     Language Models
@@ -652,6 +656,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2510.12080
+  bibtex: "@article{karanjai2025evaluati,\n  title={Evaluating the Quality of Randomness\
+    \ and Entropy in Tasks Supported by Large Language Models},\n  author={Rabimba\
+    \ Karanjai and Yang Lu and Ranjith Chodavarapu and Lei Xu and Weidong Shi},\n\
+    \  journal={arXiv preprint arXiv:2510.12080},\n  year={2025}\n}"
 - slug: teaching-ais-reason-confidentially
   title: Teaching AIs to Reason and Code, Confidentially
   authors:
@@ -712,6 +720,10 @@
     url: https://doi.org/10.1145/3696630.3728521
   - name: arXiv
     url: https://arxiv.org/pdf/2503.11237
+  bibtex: "@article{karanjai2025collabor,\n  title={Collaboration is all you need:\
+    \ LLM Assisted Safe Code Translation},\n  author={Rabimba Karanjai and Sam Blackshear\
+    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2503.11237},\n\
+    \  year={2025}\n}"
 - slug: ransomware-3-0
   title: 'Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability
     and Smart Contracts'
@@ -736,8 +748,8 @@
   - Ransomware
   featured: false
   links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Ransomware%203.0%3A%20Enhancing%20Risk%20Management%20and%20Mitigation%20Options%20with%20Proof-of-Decryptability%20and%20Smart%20Contracts
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC63407.2025.10945400
 - slug: synthesizing-public-opinions
   title: 'Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the
     Future to eDemocracy'
@@ -778,6 +790,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2504.00241
+  bibtex: "@article{karanjai2025synthesi,\n  title={Synthesizing Public Opinions with\
+    \ LLMs: Role Creation, Impacts, and the Future to eDemocracy},\n  author={Rabimba\
+    \ Karanjai and Boris Shor and Amanda Austin and Ryan Kennedy and Yang Lu and Lei\
+    \ Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2504.00241},\n  year={2025}\n\
+    }"
 - slug: log-babylon
   title: 'LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis'
   authors:
@@ -984,9 +1001,13 @@
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1007/978-3-031-74498-3_21
+    url: https://link.springer.com/chapter/10.1007/978-3-031-74498-3_21
   - name: arXiv
     url: https://arxiv.org/pdf/2510.12062
+  bibtex: "@article{karanjai2024adding-f,\n  title={Adding All Flavors: A Hybrid Random\
+    \ Number Generator for dApps and Web3},\n  author={Ranjith Chodavarapu and Rabimba\
+    \ Karanjai and Xinxin Fan and Larry Shi and Lei Xu},\n  journal={arXiv preprint\
+    \ arXiv:2510.12062},\n  year={2024}\n}"
 - slug: evaluating-rationality
   title: Evaluating Irrationality in Large Language Models and Open Research Questions
   authors:
