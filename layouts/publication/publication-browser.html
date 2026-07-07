@@ -81,6 +81,16 @@
     .pub-badge-year { background: transparent; color: #94a3b8; font-weight: 600; font-size: 0.8125rem; }
     .pub-badge-distinguished { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
     .pub-badge-first { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .pub-badge-review { background: rgba(251, 113, 133, 0.2); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); }
+    
+    .pub-item.under-review {
+      border-left: 3px solid rgba(251, 113, 133, 0.5);
+      background: rgba(251, 113, 133, 0.04);
+    }
+    .pub-item.under-review:hover {
+      border-color: rgba(251, 113, 133, 0.6);
+      background: rgba(251, 113, 133, 0.08);
+    }
     
     .pub-title { font-size: 1.0625rem; font-weight: 600; color: white; line-height: 1.4; margin-bottom: 0.25rem; }
     .pub-title a:hover { color: #a5b4fc; }
@@ -185,6 +195,14 @@
         </div>
       </div>
       <div class="filter-row">
+        <span class="filter-label">Status</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-status="all">All</button>
+          <button class="filter-btn" data-status="published">Published</button>
+          <button class="filter-btn" data-status="under-review">Under Review</button>
+        </div>
+      </div>
+      <div class="filter-row">
         <span class="filter-label">Year</span>
         <div class="filter-buttons">
           <button class="filter-btn active" data-year="all">All</button>
@@ -241,10 +259,15 @@
         {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
         {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
-        <article class="pub-item{{ if .Params.featured }} distinguished{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+        {{ $isUnderReview := or (in .Params.publication "Under Review") (in .Params.publication "To Appear") }}
+        {{ $statusSlug := "published" }}
+        {{ if $isUnderReview }}{{ $statusSlug = "under-review" }}{{ end }}
+
+        <article class="pub-item{{ if .Params.featured }} distinguished{{ end }}{{ if $isUnderReview }} under-review{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-status="{{ $statusSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
           <div class="pub-meta">
             <span class="pub-badge pub-badge-type">{{ $typeLabel }}</span>
             <span class="pub-badge pub-badge-year">{{ $year }}</span>
+            {{ if $isUnderReview }}<span class="pub-badge pub-badge-review">Under Review</span>{{ end }}
             {{ if .Params.featured }}<span class="pub-badge pub-badge-distinguished">Distinguished</span>{{ end }}
             {{ if $isFirstAuthor }}<span class="pub-badge pub-badge-first">1st Author</span>{{ end }}
           </div>
@@ -285,6 +308,7 @@
     var yearButtons = document.querySelectorAll('[data-year]');
     var tagButtons = document.querySelectorAll('[data-tag]');
     var chipButtons = document.querySelectorAll('[data-card-tag]');
+    var statusButtons = document.querySelectorAll('[data-status]');
     var cards = Array.from(document.querySelectorAll('[data-card]'));
     var list = document.getElementById('pub-list');
     var empty = document.querySelector('[data-empty]');
@@ -292,7 +316,7 @@
     var clearButton = document.querySelector('[data-clear]');
     var total = cards.length;
 
-    var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all' };
+    var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all', status: 'all' };
 
     function setActive(buttons, value, attr) {
       buttons.forEach(function(btn) {
@@ -319,6 +343,7 @@
         var ok = (!q || d.search.indexOf(q) !== -1)
               && (state.type === 'all' || d.type === state.type)
               && (state.year === 'all' || d.year === state.year)
+              && (state.status === 'all' || d.status === state.status)
               && (state.tag === 'all' || d.tags.indexOf('|' + state.tag + '|') !== -1);
         c.classList.toggle('hidden', !ok);
         if (ok) visible++;
@@ -342,6 +367,9 @@
     tagButtons.forEach(function(btn) {
       btn.addEventListener('click', function() { state.tag = btn.dataset.tag; setActive(tagButtons, state.tag, 'tag'); filter(); });
     });
+    statusButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() { state.status = btn.dataset.status; setActive(statusButtons, state.status, 'status'); filter(); });
+    });
     chipButtons.forEach(function(btn) {
       btn.addEventListener('click', function() { state.tag = btn.dataset.cardTag; setActive(tagButtons, state.tag, 'tag'); filter(); });
     });
@@ -353,11 +381,13 @@
         state.type = 'all';
         state.year = 'all';
         state.tag = 'all';
+        state.status = 'all';
         if (searchInput) searchInput.value = '';
         setActive(sortButtons, state.sort, 'sort');
         setActive(typeButtons, state.type, 'type');
         setActive(yearButtons, state.year, 'year');
         setActive(tagButtons, state.tag, 'tag');
+        setActive(statusButtons, state.status, 'status');
         filter();
       });
     }
