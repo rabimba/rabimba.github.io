@@ -4,312 +4,460 @@ date: 2026-06-12
 type: page
 ---
 
-# Rabimba Karanjai
+<div class="cv-story">
 
-**Staff Agentic AI Researcher** at PayPal Research  
-**PhD** in Computer Science, University of Houston  
-**Google Developer Expert** (Web Technologies & Machine Learning)  
-**NVIDIA Developer Champion** | **Google TPU Builders Champion**
+<!-- Hero Section -->
+<div class="cv-hero">
+  <div class="cv-hero-content">
+    <h1>Rabimba Karanjai</h1>
+    <p class="cv-hero-tagline">Staff Agentic AI Researcher · PhD · Google Developer Expert</p>
+    <div class="cv-hero-links">
+      <a href="/uploads/resume.pdf" class="cv-btn cv-btn-primary" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full CV (PDF)
+      </a>
+      <a href="mailto:rabimba@gmail.com" class="cv-btn cv-btn-ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contact
+      </a>
+    </div>
+  </div>
+</div>
 
-📧 [rabimba@gmail.com](mailto:rabimba@gmail.com) / [rkaranjai@uh.edu](mailto:rkaranjai@uh.edu) | 🌐 [rabimba.me](https://www.rabimba.me) | 📞 (469) 438-2410  
-📍 San Jose, CA 95112
+<!-- Timeline Story -->
+<div class="cv-timeline">
 
----
+  <!-- Chapter 1: The Beginning -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2010 – 2013</div>
+      <h2>The Builder Awakens</h2>
+      <p>Started as a Programmer Analyst at <strong>Cognizant</strong>, building automated mobile testing solutions with OpenCV. First taste of making machines see and decide.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">OpenCV</span>
+        <span class="cv-tag">Mobile Testing</span>
+        <span class="cv-tag">Automation</span>
+      </div>
+    </div>
+  </div>
 
-## Research Interests
+  <!-- Chapter 2: IBM -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2014 – 2015</div>
+      <h2>Watson & The Research Lab</h2>
+      <p>Joined <strong>IBM T.J. Watson Research Lab</strong>. Embedded cognitive computing and NLP into Watson solutions. Trained custom NLP models before "LLM" was a buzzword.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">Watson</span>
+        <span class="cv-tag">NLP</span>
+        <span class="cv-tag">DeepQA</span>
+      </div>
+    </div>
+  </div>
 
-My research interests lie at the intersection of blockchain technology, programming languages, and artificial intelligence, with a particular focus on code generation, repair, and AI Reasoning. I am specifically interested in exploring novel applications of large language models (LLMs) to enhance the security and reliability of smart contracts and low-resource domain-specific codes, including vulnerability detection, code analysis, and automated program repair. 
+  <!-- Chapter 3: Rice & Mozilla -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h20v14H2z"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2015 – 2018</div>
+      <h2>VR, Browsers & a Master's Degree</h2>
+      <p>MS at <strong>Rice University</strong>. Research Assistant parallelizing JavaScript for VR headsets at Mozilla Research. Optimized WebGL and Three.js for wearable VR. Earned a Mozilla Research Fellowship.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">WebVR</span>
+        <span class="cv-tag">WebGL</span>
+        <span class="cv-tag">Three.js</span>
+        <span class="cv-tag">Mozilla</span>
+      </div>
+    </div>
+  </div>
 
-I also investigate applying these learnings to other areas of science such as biomedical data and financial data. I am interested in broader topics related to decentralized systems, formal verification, and software engineering.
+  <!-- Chapter 4: IBM Almaden -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2015 & 2017</div>
+      <h2>Patents at IBM Almaden</h2>
+      <p>Two summer internships at <strong>IBM Almaden Research Center</strong>. Invented a multi-factor authentication system using biometrics + blockchain — awarded <strong>US Patent US11025643B2</strong>. Built tamper-evident systems with ARM TrustZone.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">Patent</span>
+        <span class="cv-tag">Blockchain</span>
+        <span class="cv-tag">Biometrics</span>
+        <span class="cv-tag">TrustZone</span>
+      </div>
+    </div>
+  </div>
 
----
+  <!-- Chapter 5: Industry -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2020</div>
+      <h2>The Startup Life</h2>
+      <p>Machine Learning Lead at <strong>Fireflies.ai</strong> — built the on-premise ASR engine used by 10M+ users. Then Senior Engineer at <strong>Clearedin</strong>, designing phishing detection and URL scanning pipelines.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">ASR</span>
+        <span class="cv-tag">DeepSpeech</span>
+        <span class="cv-tag">Phishing Detection</span>
+      </div>
+    </div>
+  </div>
 
-## Education
+  <!-- Chapter 6: PhD -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2020 – 2025</div>
+      <h2>The PhD Quest: Teaching AI to Reason</h2>
+      <p>PhD at <strong>University of Houston</strong>, advised by Prof. Weidong Shi. Dissertation: "Teaching AIs to Reason and Code, Confidentially." Won the <strong>Dan E. Wells Outstanding Dissertation Award</strong> and <strong>UH Best Dissertation Award</strong>.</p>
+      <p class="cv-highlight">35+ papers. 3x Sui Foundation grants. ACM SIGSOFT Distinguished Paper Award. Google Cloud Research Innovator.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">LLM Reasoning</span>
+        <span class="cv-tag">Smart Contracts</span>
+        <span class="cv-tag">Code Generation</span>
+        <span class="cv-tag">Blockchain</span>
+      </div>
+    </div>
+  </div>
 
-*   **Ph.D. in Computer Science**, University of Houston, Houston, TX (2020 – 2025)
-    *   *Dissertation:* "Teaching AI's to reason and Code, Confidentially"
-    *   *Award:* Winner of the Dan E. Wells Outstanding Dissertation Award & UH Best Dissertation Award
-    *   *Advisor:* Prof. Weidong (Larry) Shi
-    *   *Defended:* July 2025
-*   **M.S. in Computer Science**, Rice University, Houston, TX (2015 – 2018)
-    *   *Thesis:* "Optimizing Virtual Reality"
+  <!-- Chapter 7: PayPal -->
+  <div class="cv-chapter">
+    <div class="cv-chapter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    <div class="cv-chapter-content">
+      <div class="cv-chapter-year">2025 – Present</div>
+      <h2>PayPal: Production AI at Scale</h2>
+      <p>Staff Agentic AI Researcher at <strong>PayPal Research</strong>. Leading voice commerce systems with 120B parameter models. Filed 3 patents. Building multi-agent adversarial evaluation arenas.</p>
+      <div class="cv-chapter-tags">
+        <span class="cv-tag">Voice Commerce</span>
+        <span class="cv-tag">Agentic AI</span>
+        <span class="cv-tag">120B LLMs</span>
+        <span class="cv-tag">Production</span>
+      </div>
+    </div>
+  </div>
 
----
+</div>
 
-## Work Experience
+<!-- Stats Grid -->
+<div class="cv-stats">
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">35+</div>
+    <div class="cv-stat-label">Peer-Reviewed Papers</div>
+  </div>
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">4</div>
+    <div class="cv-stat-label">US Patents</div>
+  </div>
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">50+</div>
+    <div class="cv-stat-label">Invited Talks</div>
+  </div>
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">3x</div>
+    <div class="cv-stat-label">Sui Foundation Grants</div>
+  </div>
+</div>
 
-### Staff Agentic AI Researcher
-**PayPal Research** | *San Jose, CA* | *Sep 2025 – Present*
-*   Lead the design and deployment of production-scale voice commerce systems enabling real-time, multi-turn conversational AI for financial applications.
-*   Developed a novel preference optimization framework (CM-DPO) for improving LLM planning under real-world constraints, submitted to ACL Rolling Review (2026).
-*   Fine-tune and deploy frontier large language models with up to 120 billion parameters for agentic reasoning and voice applications.
-*   Designed a multi-agent adversarial evaluation arena to benchmark robustness of AI systems against coordinated attacks.
-*   Filed two U.S. patents in emerging AI technologies at PayPal with a third in progress.
+<!-- Awards Strip -->
+<div class="cv-awards">
+  <h3>Selected Awards</h3>
+  <div class="cv-awards-grid">
+    <div class="cv-award">
+      <span class="cv-award-icon">🏆</span>
+      <span>Dan E. Wells Outstanding Dissertation Award</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🏅</span>
+      <span>ACM SIGSOFT Distinguished Paper Award</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">⭐</span>
+      <span>Google Developer Expert (Web & ML)</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🌐</span>
+      <span>Google Cloud Research Innovator</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🎓</span>
+      <span>UH Best Dissertation Award</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🔥</span>
+      <span>NVIDIA Developer Champion</span>
+    </div>
+  </div>
+</div>
 
-### Senior Software Engineer
-**Clearedin** | *Dec 2020 – Aug 2021*
-*   Designed and implemented advanced policy and threat detection engines within the email scanning pipeline, ensuring robust email security.
-*   Spearheaded the development of innovative solutions, including URL scanning, phishing detection algorithms, and machine learning pipelines for malicious email classification.
+<!-- Service & Community -->
+<div class="cv-service">
+  <h3>Service & Community</h3>
+  <div class="cv-service-list">
+    <div class="cv-service-item">
+      <strong>Associate Chair</strong> — ACM CSCW 2026
+    </div>
+    <div class="cv-service-item">
+      <strong>Scientific Advisory Committee</strong> — Texas Quantum Initiative
+    </div>
+    <div class="cv-service-item">
+      <strong>Google Developer Expert</strong> — Web Technologies (2018–present), Google Cloud (2024–present)
+    </div>
+    <div class="cv-service-item">
+      <strong>Reviewer</strong> — IEEE ICBC, ACM CSCW, BRAINS, CHI, AAAI, ICLR
+    </div>
+  </div>
+</div>
 
-### Machine Learning Lead
-**Fireflies.ai** | *Aug 2020 – Dec 2020*
-*   Developed and deployed an on-premise Automatic Speech Recognition (ASR) engine, leveraging DeepSpeech and customized models to enhance performance (currently used by over 10 million users worldwide).
-*   Built the first Machine Learning team at Fireflies.
+<!-- CV Download CTA -->
+<div class="cv-cta">
+  <p>Want the full detailed CV with publications, references, and complete work history?</p>
+  <a href="/uploads/resume.pdf" class="cv-btn cv-btn-primary" target="_blank">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Full CV (PDF)
+  </a>
+</div>
 
-### Programmer Analyst
-**Cognizant Technology Solutions** | *Dec 2010 – Aug 2013*
-*   Contributed to the Innovation team by spearheading the development of automated mobile hardware and software testing solutions.
-*   Leveraged OpenCV and vision-based technologies to design advanced testing frameworks, enabling efficient and reliable validation of mobile devices.
+</div>
 
----
+<style>
+.cv-story {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
 
-## Research Experience
+/* Hero */
+.cv-hero {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(37, 99, 235, 0.05));
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+}
+.cv-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+}
+.cv-hero-tagline {
+  font-size: 1.125rem;
+  opacity: 0.7;
+  margin: 0 0 1.5rem;
+}
+.cv-hero-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-### Graduate Research Assistant
-**University of Houston** | *Houston, TX* | *Sep 2021 – 2025*
-*   **AI & Software Engineering:** Explored AI in Code Generation, Low-Resource Code Translation, and Reasoning. Investigated healthcare AI by developing analysis systems for histopathology images to enhance vascular disease diagnosis and mitigated hallucinations in AI-driven medical diagnosis. Examined LLM irrationality to identify open research questions.
-*   **Decentralization:** Investigated decentralized infrastructure as code (IaC) using blockchain, developing DIaC for secure infrastructure management. Designed and implemented a decentralized Function-as-a-Service (FaaS) framework over multi-clouds. Researched Trusted Execution Environments (TEEs) for critical infrastructure protection.
+/* Buttons */
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.cv-btn-primary {
+  background: var(--color-primary, #6366f1);
+  color: #fff;
+}
+.cv-btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.cv-btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--color-border, #334155);
+}
+.cv-btn-ghost:hover { background: rgba(99, 102, 241, 0.1); }
 
-### Research Assistant
-**Rice University** | *Houston, TX* | *Jan 2015 – Aug 2018*
-*   **High Performance Computing:** Worked on JavaScript parallelization on Mozilla Firefox and other web browser engines to enable running on wearable VR headsets.
+/* Timeline */
+.cv-timeline {
+  position: relative;
+  padding-left: 0;
+}
+.cv-chapter {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.cv-chapter::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 48px;
+  bottom: -2.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary, #6366f1), transparent);
+  opacity: 0.3;
+}
+.cv-chapter:last-child::before { display: none; }
+.cv-chapter-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.12);
+  border: 2px solid var(--color-primary, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary, #6366f1);
+  z-index: 1;
+}
+.cv-chapter-icon svg { width: 24px; height: 24px; }
+.cv-chapter-content {
+  flex: 1;
+  padding-top: 0.25rem;
+}
+.cv-chapter-year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary, #6366f1);
+  margin-bottom: 0.25rem;
+}
+.cv-chapter-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.cv-chapter-content p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  opacity: 0.85;
+  margin: 0 0 0.75rem;
+}
+.cv-highlight {
+  padding: 0.75rem 1rem;
+  background: rgba(99, 102, 241, 0.08);
+  border-left: 3px solid var(--color-primary, #6366f1);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  margin: 0.75rem 0;
+}
+.cv-chapter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.cv-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.375rem;
+  background: rgba(148, 163, 184, 0.12);
+}
 
-### Research Associate
-**Mozilla Research** | *Sep 2017 – Jan 2018*
-*   Conducted in-depth research to optimize parallelism and performance in Web Virtual Reality and WebGL, focusing on enhancing the efficiency of `three.js` (which became the MS thesis).
-*   Developed techniques to offload resource-intensive computations to the GPU using WebAssembly, parallelizing object loading and texture rendering.
+/* Stats Grid */
+.cv-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.cv-stat-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--color-border, #334155);
+  border-radius: 1rem;
+  background: rgba(99, 102, 241, 0.04);
+}
+.cv-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary, #6366f1);
+  line-height: 1;
+}
+.cv-stat-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-top: 0.35rem;
+}
 
-### Summer Research Intern
-**IBM Almaden Research Center** | *May 2017 – Aug 2017*
-*   Developed and was awarded a patented multi-factor authentication system (US Patent US11025643B2) integrating biometric features and blockchain technology.
-*   Designed identity specifications for Hyperledger Fabric and innovated Android-based multi-party fingerprint authentication and iris recognition.
+/* Awards */
+.cv-awards {
+  margin: 3rem 0;
+}
+.cv-awards h3, .cv-service h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.cv-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+.cv-award {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-border, #334155);
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+}
+.cv-award-icon { font-size: 1.25rem; }
 
-### Summer Research Intern
-**IBM Almaden Research Center** | *May 2015 – Aug 2015*
-*   Developed a tamper-evident mobile application solution capable of provably verifying application integrity on rooted or jailbroken devices.
-*   Designed a tamper-evident data structure and logging system leveraging ARM TrustZone and blockchain.
+/* Service */
+.cv-service {
+  margin: 3rem 0;
+}
+.cv-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cv-service-item {
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  border-left: 3px solid var(--color-primary, #6366f1);
+  background: rgba(99, 102, 241, 0.04);
+  border-radius: 0 0.375rem 0.375rem 0;
+}
 
-### Researcher
-**IBM T.J. Watson Research Lab** | *May 2014 – Nov 2014*
-*   Embedded cognitive computing and NLP into Watson solutions. Designed document parsing using OCR and DeepQA.
-*   Engineered scalable storage/processing for massive datasets and trained customized NLP models and evidence-scoring systems.
+/* CTA */
+.cv-cta {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--color-border, #334155);
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(37, 99, 235, 0.03));
+}
+.cv-cta p {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0 0 1.25rem;
+}
 
----
-
-## Academic Honors & Selected Awards
-
-*   **ACM SIGSOFT Distinguished Paper Award**, 2025
-*   **Dan E. Wells Outstanding Dissertation Award**, University of Houston, Fall 2025
-*   **UH CS Best Dissertation Award**, University of Houston, 2025
-*   **Outstanding PhD Student**, University of Houston, 2022–2023, 2023–2024
-*   **Graduate Tuition Fellowship**, University of Houston, 2021–2025
-*   **Google Cloud Research Innovator**, 2023, 2024
-*   **Cullen Travel Fellowship**, 2023
-*   **Google Research CS Research Mentorship Program**, 2023
-*   **HPE DSI Artificial Intelligence Summer Student Showcase (3rd Place)**, 2023–2024
-*   **Sui Foundation Academic Research Award**, 2023, 2024, 2025
-*   **Distinguished Paper Candidate**, IEEE ICBC 2022
-*   **Mozilla Research Fellowship**, 2018
-*   **Graduate Tuition Fellowship**, Rice University, 2015–2018
-
----
-
-## Publications
-
-### Journal & Conference Papers
-
-1.  **Context Contamination in LLM Analysis of Network Security Logs: Poison with Passive Prompt Injection and Mitigation Evaluation**  
-    Rabimba Karanjai, Yang Lu, Hemanth Hegadehalli Madhavarao, Lei Xu, Weidong Shi. *USENIX Security 2026* (To Appear).
-2.  **CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable Systemic Risk Assessment**  
-    Rabimba Karanjai, Hemanth Hegadehalli Madhavarao, Lei Xu, Weidong Shi. *AAAI AI4Finance 2026*.
-3.  **QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for Near-Term Quantum Devices**  
-    Rabimba Karanjai, Hemanth Madhavarao, Lei Xu, Weidong Shi. *AAAI QC+AI 2026*.
-4.  **Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for Vulnerability Repair in Solidity and Move**  
-    Rabimba Karanjai, Lei Xu, Weidong Shi. *ACM AIWare 2025* (Winner of the **ACM SIGSOFT Distinguished Paper Award**).
-5.  **Teaching AIs to Reason and Code, Confidentially**  
-    Rabimba Karanjai. *PhD Thesis, University of Houston* (**Best Dissertation Award**).
-6.  **HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation**  
-    Rabimba Karanjai, Lei Xu, Weidong Shi. *ACM AIWare 2025*.
-7.  **Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large Language Models**  
-    Rabimba Karanjai, Yang Lu, Ranjith Chodavarapu, Lei Xu, Weidong Shi. *KDD Agentic & GenAI Evaluation 2025*.
-8.  **Collaboration is all you need: LLM Assisted Safe Code Translation**  
-    Rabimba Karanjai, Sam Blackshear, Lei Xu, Weidong Shi. *FSE 2025*.
-9.  **Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the Future to eDemocracy**  
-    Rabimba Karanjai, Boris Shor, Amanda Austin, Ryan Kennedy, Yang Lu, Lei Xu, Weidong Shi. *ICEDEG 2025*.
-10. **LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis**  
-    Rabimba Karanjai, Yang Lu, Dana Alsagheer, Keshav Kasichainula, Lei Xu, Weidong Shi, Stephen Huang. *ACM SAC 2025*.
-11. **AI-Based Target for Personalized Interventions of Atherosclerosis from Gut Microbiota Signature**  
-    Suravi Majumder, Koushik Sen, Rabimba Karanjai. *SynBio 2025*.
-12. **Smart Contract Code Translation based on Concepts**  
-    Rabimba Karanjai, Lei Xu, Weidong Shi. *ACM Foundations of Software Engineering (FSE) 2024*.
-13. **TPU as Cryptographic Accelerator**  
-    Rabimba Karanjai, Sangwon Shin, Wujie Xiong, Xinxin Fan, Lin Chen, Tianwei Zhang, Taeweon Suh, Weidong Shi, Veronika Kuchta, Francesco Sica, Lei Xu. *MICRO 2024*.
-14. **Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3**  
-    Ranjith Chodavarapu, Rabimba Karanjai, Xinxin Fan, Larry Shi, Lei Xu. *International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS) 2024*.
-15. **Trusted LLM Inference on the Edge with Smart Contracts**  
-    Rabimba Karanjai, Weidong Shi. *IEEE ICBC 2024*.
-16. **Decentralized FaaS over Multi-Clouds**  
-    Rabimba Karanjai, Lei Xu, Lin Chen, Nour Diallo, Weidong Shi. *ACM SAC 2024*.
-17. **All We Need is Voter Feedback**  
-    Nour Diallo, Dana Alsagheer, Lei Xu, Yang Lu, Rabimba Karanjai, Weidong Shi, Mohammad Kamal. *IEEE ICEDEG 2024*.
-18. **DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain**  
-    Rabimba Karanjai, Keshav Kasichainula, Lei Xu, Nour Diallo, Lin Chen, Weidong Shi. *IEEE TNSM 2023*.
-19. **Who is Smarter? An Empirical Study of AI-based Smart Contract Creation**  
-    Rabimba Karanjai, E Li, L Xu, W Shi. *BRAINS 2023*.
-20. **Supporting Heterogeneous TEE for Critical Infrastructure Protection**  
-    Rabimba Karanjai, Rowan Collier, Zhimin Gao, Lin Chen, Xinxin Fan, Taeweon Suh, Weidong Shi, Lei Xu. *ACM AsiaCCS 2023*.
-21. **Decentralized Application Infrastructures as Smart Contract Codes**  
-    Rabimba Karanjai, Keshav Kasichainula, Nour Diallo, Mudabbir Kaleem, Lei Xu, Lin Chen, Weidong Shi. *IEEE ICBC 2022* (**Distinguished Paper Award**).
-22. **Privacy preserving event based transaction system in a decentralized environment**  
-    Rabimba Karanjai, Lei Xu, Zhimin Gao, Lin Chen, Mudabbir Kaleem, Weidong Shi. *ACM Middleware 2021*.
-23. **On Conditional Cryptocurrency With Privacy**  
-    Rabimba Karanjai, Lei Xu, Zhimin Gao, Lin Chen, Mudabbir Kaleem, Weidong Shi. *IEEE ICBC 2021*.
-24. **Lessons Learned from Blockchain Applications of Trusted Execution Environments and Implications**  
-    Rabimba Karanjai, L Xu, L Chen, F Zhang, Z Gao, W Shi. *ACM HASP 2021*.
-25. **An event driven framework for smart contract execution**  
-    Mudabbir Kaleem, Keshav Kasichainula, Rabimba Karanjai, Lei Xu, Zhimin Gao, Lin Chen, Weidong Shi. *ACM DEBS 2021*.
-26. **Optimizing Web Virtual Reality**  
-    Rabimba Karanjai. *Masters Thesis, Rice University, 2018*.
-
-### Short Papers
-
-27. **Empowering Smart Contracts with Real-time On-Chain AI Inferences**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong (Larry) Shi. *IEEE ICBC 2026*.
-28. **Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart Contracts**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong (Larry) Shi. *BRAINS 2025*.
-29. **Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability and Smart Contracts**  
-    Xinyu Hou, Yang Lu, Rabimba Karanjai, Lei Xu, Weidong Shi. *IEEE ICBC 2025*.
-30. **DeFaaS: Decentralized Function-as-a-Service for Emerging dApps and Web**  
-    Rabimba Karanjai, Lei Xu, Nour Diallo, Lin Chen, Weidong Shi. *IEEE ICBC 2023*.
-31. **DHTee: Decentralized Infrastructure for Heterogeneous TEE**  
-    Rabimba Karanjai, Zhimin Gao, Lin Chen, Xinxin Fan, Taeweon Suh, Weidong Shi, Lei Xu. *IEEE ICBC 2023*.
-32. **Decentralized Machine Learning Governance: Overview, Opportunities, and Research Challenges**  
-    Dana R. Alsagheer, Nour Diallo, Lei Xu, Rabimba Karanjai, Weidong Shi. *IEEE ICBC 2023*.
-
-### Workshop Papers
-
-33. **Mitigating Hallucinations in AI-Driven Medical Diagnosis**  
-    Rabimba Karanjai, Suravi Majumder. *3rd Annual AI in Health Conference, Rice University, Ken Kennedy, 2024*.
-34. **Enhancing Vascular Disease Diagnosis through AI-Driven Analysis of Histopathology Images**  
-    Rabimba Karanjai, Suravi Majumder. *3rd Annual AI in Health Conference, Rice University, Ken Kennedy, 2024*.
-35. **Evaluating Irrationality in Large Language Models and Open Research Questions**  
-    Dana R. Alsagheer, Rabimba Karanjai, Weidong Shi, Nour Diallo, Yang Lu, Suha Beydoun, Qiaoning Zhang. *ACM CHI HEAL 2024*.
-
-### Papers Under Review / Preprints
-
-36. **Allocation Before Ranking: Decoupled Token Compression for OmniLLMs**  
-    Zhenghui Guo, Yilin Yang, Yuanbin Man, Miao Yin, Weidong Shi, Rabimba Karanjai, Omprakash Gnawali, Chengming Zhang. *NeurIPS 2026* (Under Review).
-37. **Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing Auctions**  
-    Xinyu Hou, Yang Lu, Rabimba Karanjai, Pei-Chi Pan, Sen Lin, Lei Xu, Weidong Shi. *NeurIPS 2026* (Under Review).
-38. **Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong Shi. *NeurIPS 2026* (Under Review).
-39. **CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning**  
-    Rabimba Karanjai, Qun Gu, Hemanth Hegadehalli Madhavarao, Wenhuan Sun, Xiaojiao Yu, Suryabhan Singh Hada, Libin N. George, Uma Kona, Richard Williamson, Linsey Pang, Prakhar Mehrotra. *NeurIPS 2026* (Under Review).
-40. **Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation**  
-    Yang Lu, Rabimba Karanjai, Dana Alsagheer, Lei Xu, Weidong Shi. *EMNLP 2026* (Under Review).
-41. **Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval and Fusion of Synthesized Profiles**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong Shi. *EMNLP 2026* (Under Review).
-42. **VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement Learning from Formal Verification Feedback**  
-    Rabimba Karanjai, Lei Xu, Yang Lu, Weidong Shi. *NeurIPS 2026* (Under Review).
-43. **Aligning Vision Language Models via anchor**  
-    Yilin Yang, Yuke Wang, Rabimba Karanjai, Weidong Shi, Chengming Zhang. *NeurIPS 2026* (Under Review).
-44. **Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart Contracts**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong Shi. *Middleware 2026* (Under Review).
-45. **Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning**  
-    Dana Alsagheer, Yang Lu, Lei Xu, Weidong Shi, Rabimba Karanjai. *ACM Symposium on Computer Science and Law 2026* (Under Review).
-46. **Hype or Hope? Training LLMs on Decentralized GPU Clouds**  
-    Rabimba Karanjai, Yang Lu, Lei Xu, Weidong Shi. *Middleware 2026* (Under Review).
-
----
-
-## Patents
-
-*   **US Patent US11025643B2:** Mobile Multi-Party Digitally Signed Documents and Techniques for Using These Allowing Detection of Tamper.
-*   **Severity-Aware Preference Training Framework for Constraint-Satisfying AI Planners with Minimal-Edit Supervision** (Patent Pending - PayPal).
-*   **Thread-Based Conversational Commerce System with Multi-Modal Ordering and Real-Time Fulfillment Tracking in Messaging Platforms** (Patent Pending - PayPal).
-*   **Latency-Optimized Cascaded Voice Agent Pipeline** (Patent Pending - PayPal).
-
----
-
-## Invited & Conference Talks
-
-1.  "Beyond the Chatbot: A Blueprint for Trustable AI", Google DeepMind, 2026.
-2.  "United in Defense: Architecting Safe and Trustworthy AI Agents", BSides Seattle, 2026.
-3.  "Unmasking the Shadows: AI Red Teaming in the Age of Gemini and VertexAI, fortified by SAIF", KCDC 2025.
-4.  "From Whiteboard to Users: Making Research Accessible", Google I/O GDE Summit, 2025.
-5.  "Unmasking the Shadows: AI Red Teaming in the Age of Gemini and VertexAI, fortified by SAIF", Drexel University, 2025.
-6.  "LLM, Reasoning and Agentic Gemma", Google Korea, 2024.
-7.  "Supercharging GenAI: Ray, Kubernetes, and TPUs for Lightning-Fast Inference", KubeCon 2024.
-8.  "LLMinABox: On Device Personalized Diary & Concierge using your voice and Gemma", Google Mountain View, 2024.
-9.  "Mitigating Hallucinations in AI-Driven Medical Diagnosis", Rice University, 2024.
-10. "SolMover: Smart Contract Code Translation Based on Concepts", Berkeley RDI, 2024.
-11. "Privacy aware Zero Knowledge Login using Oauth2 and Passkey", Columbia University, 2024.
-12. "LLM Applications components and design patterns Hands on Workshop", University of Washington, 2024.
-13. "Give your web apps superpower with Generative AI and Mediapipe", University of Missouri - Kansas City, 2024.
-14. "An Empirical Study of AI-based Smart Contract Creation", Berkeley RDI, 2023.
-15. "On Device Generative AI: Building your own Dall-E in the browser, welcome WebGPU", Google San Jose, 2023.
-16. "DeepSpeech: A Journey to <10% Word Error Rate", Google Mountain View, 2023 / DevFest NC Chapel Hill, 2023.
-17. "Visualize your Data in a 3D VR world using A-Frame in WebVR", OpenVis Conf, 2018.
-18. "Turning sensors into signals", MIT, 2017.
-19. "Hardening Your IoT Endpoints: A Preventive Toolkit", LinuxCon ContainerCon, 2017.
-20. "Optimizing Web Virtual Reality", Web3d, 2017.
-21. "SecurityPI: IronClad your Raspberry PI", Linux Foundation Open IoT & ELC, 2017.
-22. "State of WebVR & A-Frame: Yesterday, Today, and Tomorrow Beyond Horizon", Open Networking Summit, 2017.
-
----
-
-## Research Grants
-
-*   **Sui Academic Research Award** (2025) – Primary Investigator, $25,000.
-*   **Sui Academic Research Award** (2024) – Primary Investigator, $25,000.
-*   **Sui Academic Research Award** (2023) – Primary Investigator, $25,000.
-*   **Grant for Web** – Primary Investigator, $15,000.
-
----
-
-## Professional Activities & Service
-
-*   **NVIDIA Developer Champion**, 2026
-*   **Google TPU Builders Champion**, 2026
-*   **Scientific Advisory Committee Member**, Texas Quantum Initiative (from University of Houston), 2025
-*   **Google Cloud Research Innovator**, Google Research, 2024
-*   **Google Cloud Champions Innovator - AI & ML**, 2023–2025
-*   **Google Developer Expert (GDE)** – AI (Google Cloud) 2024–2025, Web Technologies (Chrome Team) 2018–2024
-*   **Certificate of Excellence in Artificial Intelligence**, University of Houston
-*   **Mozilla Tech Speaker**, Emerging Technologies, 2019
-*   **Mentor**, Google Solutions Challenge (2024) & Women Developer Academy (2024)
-*   **Judge**, MIT Solve, 2020
-
-### Academic Service & Reviewing
-*   **Associate Chair (AC):** The 27th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)
-*   **Track Chair:** ICEDEG 2026
-*   **Reviewer (Journals):** PLOS One, Frontiers in Blockchain, ACM Distributed Ledger Technologies: Research and Practice, ACM Transactions on Asian and Low-Resource Language Information Processing, Connection Science, ACM Transactions on the Web
-*   **Reviewer (Conferences):** CHI 2026, IEEE VR 2026, AAAI 2025, ICLR 2024, IEEE ICEDEG 2025
-
----
-
-## Languages
-*   Proficient in English, Bengali, and Hindi.
-
----
-
-## References
-
-### Academic References
-*   **Dr. Weidong Shi**  
-    Associate Professor, Department of Computer Science, University of Houston  
-    📧 [wshi3@uh.edu](mailto:wshi3@uh.edu)
-*   **Dr. Lei Xu**  
-    Assistant Professor, Department of Computer Science, Kent State University  
-    📧 [lxu12@kent.edu](mailto:lxu12@kent.edu) | 📞 (330) 672-9037
-*   **Dr. Amin Alipour**  
-    Associate Professor, Department of Computer Science, University of Houston  
-    📧 [maalipou@central.uh.edu](mailto:maalipou@central.uh.edu) | 📞 (713) 743-7462
-
-### Industry References
-*   **Dr. Davide Pasetto**  
-    Managing Director - Modeling Engineering, Two Sigma  
-    📧 [davide@twosigma.com](mailto:davide@twosigma.com)
-*   **Dr. Lars Bergstrom**  
-    Director of Engineering, Android Platform Tools & Libraries, Google  
-    📧 [lars@lars.com](mailto:lars@lars.com)
+@media (max-width: 640px) {
+  .cv-hero h1 { font-size: 1.75rem; }
+  .cv-chapter { flex-direction: column; gap: 0.75rem; }
+  .cv-chapter::before { left: 27px; top: 56px; }
+  .cv-stat-number { font-size: 2rem; }
+}
+</style>

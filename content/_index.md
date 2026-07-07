@@ -91,6 +91,17 @@ sections:
           - events
     design:
       view: card
+  - block: collection
+    id: blog
+    content:
+      title: Recent Blog Posts
+      filters:
+        folders:
+          - blog
+        count: 3
+    design:
+      view: article-grid
+      columns: 3
   - block: markdown
     id: service
     content:
