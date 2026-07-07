@@ -1,18 +1,21 @@
 ---
-title: "Voice Driven VR"
-event: "Invited Presentation"
-location: "Online"
-summary: "Talk at Invited Presentation (2024)."
-abstract: "Presented 'Voice Driven VR' at Invited Presentation."
-date: "2024-06-01T10:00:00Z"
-date_end: "2024-06-01T11:00:00Z"
+title: Voice Driven VR
+event: Invited Presentation
+location: Online
+summary: Lightning Talk for Mozilla Techspeaker Singapore Meetup 2019
+abstract: Presented 'Voice Driven VR' at Invited Presentation.
+date: '2024-06-01T10:00:00Z'
+date_end: '2024-06-01T11:00:00Z'
 all_day: false
-publishDate: "2025-01-01T00:00:00Z"
-authors: [admin]
-tags: ["Talk", "2024"]
+publishDate: '2025-01-01T00:00:00Z'
+authors:
+- admin
+tags:
+- Talk
+- '2024'
 featured: false
-
 links:
-  - name: Video
-    url: 'https://www.youtube.com/watch?v=DDat5OgtMQ4'
+- name: Video
+  url: https://www.youtube.com/watch?v=DDat5OgtMQ4
 ---
+
