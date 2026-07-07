@@ -1,0 +1,82 @@
+{{- define "main" -}}
+
+<div class="pub">
+
+  <div class="article-container pt-3">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.subtitle }}
+    <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+    {{ end }}
+
+    <!-- Event metadata -->
+    <div class="article-metadata" style="margin-top: 0.5rem; margin-bottom: 0.75rem;">
+      {{ with .Params.event }}<span style="opacity: 0.85; font-size: 0.9375rem;">{{ . }}</span>{{ end }}
+      {{ if .Date }}<span style="opacity: 0.6; font-size: 0.8125rem; margin-left: 0.75rem;">{{ time.Format "Jan 2, 2006" .Date }}</span>{{ end }}
+      {{ with .Params.location }}<span style="opacity: 0.6; font-size: 0.8125rem; margin-left: 0.75rem;">📍 {{ . }}</span>{{ end }}
+    </div>
+
+    <!-- Link buttons -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+      {{ range .Params.links }}
+        {{ if eq .name "Video" }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" class="pub-link-btn pub-link-arxiv" style="background: rgba(255, 0, 0, 0.1); color: #cc0000; border-color: rgba(255, 0, 0, 0.2); display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.85rem; font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid; text-decoration: none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+        {{ else if eq .name "Event" }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.85rem; font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--color-primary, #6366f1); background: rgba(99, 102, 241, 0.12); color: var(--color-primary, #6366f1); text-decoration: none;">
+          Event ↗
+        </a>
+        {{ else }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.85rem; font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--color-border, #334155); text-decoration: none;">
+          {{ .name }}
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Embedded YouTube Player -->
+  {{ $videoUrl := "" }}
+  {{ range .Params.links }}
+    {{ if eq .name "Video" }}{{ $videoUrl = .url }}{{ end }}
+  {{ end }}
+
+  {{ if $videoUrl }}
+    {{ $youtubeId := "" }}
+    {{ if in $videoUrl "watch?v=" }}
+      {{ $parts := split (replace $videoUrl "https://www.youtube.com/watch?v=" "") "&" }}
+      {{ $youtubeId = index $parts 0 }}
+    {{ else if in $videoUrl "youtu.be/" }}
+      {{ $youtubeId = replace $videoUrl "https://youtu.be/" "" }}
+    {{ end }}
+
+    {{ if $youtubeId }}
+    <div class="article-container" style="margin-bottom: 2rem;">
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--color-border, #334155);">
+        <iframe src="https://www.youtube.com/embed/{{ $youtubeId }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen loading="lazy" title="{{ .Title }}"></iframe>
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+  <!-- Abstract/Summary -->
+  <div class="article-container">
+    {{ if .Params.abstract }}
+    <h3>Abstract</h3>
+    <p class="pub-abstract" style="font-size: 1rem; line-height: 1.65; opacity: 0.85;">{{ .Params.abstract | markdownify }}</p>
+    {{ else if .Params.summary }}
+    <h3>About this talk</h3>
+    <p class="pub-abstract" style="font-size: 1rem; line-height: 1.65; opacity: 0.85;">{{ .Params.summary | markdownify }}</p>
+    {{ end }}
+
+    <div class="space-below"></div>
+
+    <div class="article-style">{{ .Content }}</div>
+
+    {{ partial "page_footer" . }}
+  </div>
+</div>
+
+{{- end -}}
