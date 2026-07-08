@@ -4,7 +4,7 @@ event: Open Source Bridge 2015
 location: Online
 summary: Language input for mobile devices has always been a challenge on how to provide intuitive experience along with the easy of type. One approach towards that end is predictive text input. But prediction
 abstract: Presented 'OSB 2015 - Building a self learning word prediction and auto-correct module for FirefoxOS' at Open Source Bridge 2015.
-date: '2015-06-01T10:00:00Z'
+date: '2015-06-24T10:00:00Z'
 date_end: '2015-06-01T11:00:00Z'
 all_day: false
 publishDate: '2025-01-01T00:00:00Z'
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=3rhF5iFcmiY
 ---
+
 

@@ -5,7 +5,7 @@ location: Portland, OR
 summary: 'SecurityPI: IronClad your Raspberry PI - Rabimba Karanjai Raspberry Pi has garnered huge interest in last few years and now one of the most popular linux boards out there sparking all kinds of
   DIY pr'
 abstract: 'Presented ''SecurityPI: IronClad your Raspberry PI'' at Linux Foundation Open IoT & ELC in Portland, OR.'
-date: '2017-05-20T10:00:00Z'
+date: '2017-05-15T10:00:00Z'
 date_end: '2017-05-20T11:00:00Z'
 all_day: false
 publishDate: '2025-01-01T00:00:00Z'
@@ -20,4 +20,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=nls9t66ecq8
 ---
+
 

@@ -4,7 +4,7 @@ event: Invited Presentation
 location: Online
 summary: Lightning Talk for Mozilla Techspeaker Singapore Meetup 2019
 abstract: Presented 'Voice Driven VR' at Invited Presentation.
-date: '2024-06-01T10:00:00Z'
+date: '2019-11-04T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
 publishDate: '2025-01-01T00:00:00Z'
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=DDat5OgtMQ4
 ---
+
 
