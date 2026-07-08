@@ -4,12 +4,13 @@ date: '2026-03-23T00:00:00Z'
 publishDate: '2026-03-23T00:00:00Z'
 authors:
 - admin
-summary: 'import mermaid from ''https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs''; mermaid.initialize({ startOnLoad: true, theme: ''default'' }); End-to-End Gemma 2B LoRA Fine-Tuning and
-  Serving on GPU &amp; TPU If you have ever prototyped a Large Language Model (LLM) on your local GPU and then s...'
+summary: End-to-End Gemma 2B LoRA Fine-Tuning and Serving on GPU &amp TPU If you have ever prototyped a Large Language Model LLM on your local GPU and then s......
 tags:
 - Blog
 external_link: https://rkrants.blogspot.com/2026/03/write-once-scale-everywhere.html
 type: blog
 ---
+
+
 
 [Read full post →](https://rkrants.blogspot.com/2026/03/write-once-scale-everywhere.html)
