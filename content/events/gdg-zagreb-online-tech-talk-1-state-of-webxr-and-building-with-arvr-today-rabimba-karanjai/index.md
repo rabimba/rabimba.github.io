@@ -2,8 +2,36 @@
 title: 'GDG Zagreb - Online Tech Talk #1 - State of WebXR and building with AR/VR today - Rabimba Karanjai'
 event: GDG Zagreb
 location: Zagreb, Croatia
-summary: We had our first online event in which we hosted 3 speakers that presented their topics to us. We learned about Apache Kafka, picking photos in Android 13 and working with latest AR/VR technologies.
-abstract: 'Presented ''GDG Zagreb - Online Tech Talk #1 - State of WebXR and building with AR/VR today - Rabimba Karanjai'' at GDG Zagreb.'
+summary: 'Talk at GDG Zagreb on the state of WebXR and building with AR/VR today.
+
+
+  **Key points:**
+
+  - State of WebXR API across browsers
+
+  - Building AR and VR experiences for the web
+
+  - Latest AR/VR technologies and tools
+
+  - Live demos of WebXR applications
+
+
+  **Takeaway:** AR/VR development for the web is accessible today with WebXR, enabling cross-platform immersive experiences without native SDKs.'
+abstract: 'Talk at GDG Zagreb on the state of WebXR and building with AR/VR today.
+
+
+  **Key points:**
+
+  - State of WebXR API across browsers
+
+  - Building AR and VR experiences for the web
+
+  - Latest AR/VR technologies and tools
+
+  - Live demos of WebXR applications
+
+
+  **Takeaway:** AR/VR development for the web is accessible today with WebXR, enabling cross-platform immersive experiences without native SDKs.'
 date: '2024-06-06T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,5 +46,6 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=h5xhnPKrrYk
 ---
+
 
 

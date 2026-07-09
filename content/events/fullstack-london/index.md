@@ -2,8 +2,36 @@
 title: Fullstack London
 event: Fullstack Conf
 location: London, UK
-summary: Talk at Fullstack London on building browser-based VR experiences with WebVR and A-Frame, covering the WebXR API, performance optimization, and cross-platform deployment strategies.
-abstract: Talk at Fullstack London on building browser-based VR experiences with WebVR and A-Frame, covering the WebXR API, performance optimization, and cross-platform deployment strategies.
+summary: 'Talk at Fullstack London on building browser-based VR experiences with WebVR and A-Frame.
+
+
+  **Key points:**
+
+  - WebVR API and browser support
+
+  - A-Frame framework for declarative VR development
+
+  - Performance optimization for web-based VR
+
+  - Cross-platform deployment strategies
+
+
+  **Takeaway:** Browser-based VR is production-ready and accessible to any web developer willing to learn the WebXR API.'
+abstract: 'Talk at Fullstack London on building browser-based VR experiences with WebVR and A-Frame.
+
+
+  **Key points:**
+
+  - WebVR API and browser support
+
+  - A-Frame framework for declarative VR development
+
+  - Performance optimization for web-based VR
+
+  - Cross-platform deployment strategies
+
+
+  **Takeaway:** Browser-based VR is production-ready and accessible to any web developer willing to learn the WebXR API.'
 date: '2018-05-16T10:00:00Z'
 date_end: '2018-05-16T11:00:00Z'
 all_day: false
@@ -19,6 +47,7 @@ links:
 - name: Event
   url: https://fullstackconf.com/
 ---
+
 
 
 

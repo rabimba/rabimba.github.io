@@ -2,8 +2,36 @@
 title: DeepSpeech Architecture at North Carolina DevFest 2022 at Chapel Hill
 event: GDG DevFest 2022 2022
 location: Chapel Hill, NC
-summary: North Carolina DevFest 2022 at Chapel Hill talk on Deepspeech.
-abstract: Presented 'DeepSpeech Architecture at North Carolina DevFest 2022 at Chapel Hill' at GDG DevFest 2022 2022.
+summary: 'Talk at North Carolina DevFest 2022 on DeepSpeech architecture.
+
+
+  **Key points:**
+
+  - DeepSpeech neural network architecture explained
+
+  - Training pipelines for speech recognition models
+
+  - Optimizing for different languages and accents
+
+  - Live demo of on-device speech recognition
+
+
+  **Takeaway:** Open-source speech recognition has matured to the point where it can be deployed in production with accuracy rivaling commercial offerings.'
+abstract: 'Talk at North Carolina DevFest 2022 on DeepSpeech architecture.
+
+
+  **Key points:**
+
+  - DeepSpeech neural network architecture explained
+
+  - Training pipelines for speech recognition models
+
+  - Optimizing for different languages and accents
+
+  - Live demo of on-device speech recognition
+
+
+  **Takeaway:** Open-source speech recognition has matured to the point where it can be deployed in production with accuracy rivaling commercial offerings.'
 date: '2022-11-30T10:00:00Z'
 date_end: '2022-06-01T11:00:00Z'
 all_day: false
@@ -18,5 +46,6 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=1VScYsN4z9U
 ---
+
 
 

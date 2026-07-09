@@ -2,9 +2,36 @@
 title: 'DeepSpeech: A Journey to <10% Word Error Rate'
 event: Google Mt. View & NC Chapel Hill
 location: Chapel Hill, NC
-summary: 'Rabimba Karanjai is a Tech Speaker at Mozilla and GDE Web and he is talking about DeepSpeech with his talk DeepSpeech: A Journey to less than 10% Word Error Rate at DevFest Ranchi 2019. Follow
-  Rabimba'
-abstract: 'Presented ''DeepSpeech: A Journey to <10% Word Error Rate'' at Google Mt. View & NC Chapel Hill in Chapel Hill, NC.'
+summary: 'Talk on DeepSpeech and the journey to achieving less than 10% word error rate in automatic speech recognition.
+
+
+  **Key points:**
+
+  - Mozilla DeepSpeech architecture and training
+
+  - Challenges in achieving low word error rates
+
+  - On-premise ASR deployment for privacy
+
+  - Real-world deployment at Fireflies.ai serving 10M+ users
+
+
+  **Takeaway:** Open-source ASR can achieve production-quality results while keeping speech data on-premise for privacy.'
+abstract: 'Talk on DeepSpeech and the journey to achieving less than 10% word error rate in automatic speech recognition.
+
+
+  **Key points:**
+
+  - Mozilla DeepSpeech architecture and training
+
+  - Challenges in achieving low word error rates
+
+  - On-premise ASR deployment for privacy
+
+  - Real-world deployment at Fireflies.ai serving 10M+ users
+
+
+  **Takeaway:** Open-source ASR can achieve production-quality results while keeping speech data on-premise for privacy.'
 date: '2023-09-22T10:00:00Z'
 date_end: '2023-09-22T11:00:00Z'
 all_day: false
@@ -20,4 +47,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=taIchuKg8hs
 ---
+
 

@@ -2,10 +2,40 @@
 title: JSFoo 2015
 event: JSFoo
 location: Bangalore, India
-summary: Talk at JSFoo 2015 on building a self-learning word prediction and auto-correct module for Firefox OS, covering predictive text input for multilingual languages and the challenges of localized
-  language prediction.
-abstract: Talk at JSFoo 2015 on building a self-learning word prediction and auto-correct module for Firefox OS, covering predictive text input for multilingual languages and the challenges of localized
-  language prediction.
+summary: 'Talk at JSFoo 2015 on building a self-learning word prediction module for Firefox OS.
+
+
+  **Key points:**
+
+  - Predictive text input for mobile devices
+
+  - Self-learning from user typing patterns
+
+  - Handling multilingual input (Hindi, Bengali)
+
+  - Implementation in JavaScript for Firefox OS
+
+  - Challenges with transliteration systems
+
+
+  **Takeaway:** Self-learning word prediction can significantly improve typing experience for localized languages, adapting to each user''s patterns over time.'
+abstract: 'Talk at JSFoo 2015 on building a self-learning word prediction module for Firefox OS.
+
+
+  **Key points:**
+
+  - Predictive text input for mobile devices
+
+  - Self-learning from user typing patterns
+
+  - Handling multilingual input (Hindi, Bengali)
+
+  - Implementation in JavaScript for Firefox OS
+
+  - Challenges with transliteration systems
+
+
+  **Takeaway:** Self-learning word prediction can significantly improve typing experience for localized languages, adapting to each user''s patterns over time.'
 date: '2015-09-18T10:00:00Z'
 date_end: '2015-09-18T11:00:00Z'
 all_day: false
@@ -23,6 +53,7 @@ links:
 - name: Event
   url: https://jsfoo.talkfunnel.com/2015/
 ---
+
 
 
 

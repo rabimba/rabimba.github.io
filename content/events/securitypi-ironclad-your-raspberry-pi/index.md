@@ -2,9 +2,40 @@
 title: 'SecurityPI: IronClad your Raspberry PI'
 event: Linux Foundation Open IoT & ELC
 location: Portland, OR
-summary: 'SecurityPI: IronClad your Raspberry PI - Rabimba Karanjai Raspberry Pi has garnered huge interest in last few years and now one of the most popular linux boards out there sparking all kinds of
-  DIY pr'
-abstract: 'Presented ''SecurityPI: IronClad your Raspberry PI'' at Linux Foundation Open IoT & ELC in Portland, OR.'
+summary: 'Talk at Linux Foundation Open IoT & ELC on hardening Raspberry Pi security.
+
+
+  **Key points:**
+
+  - Security risks of default Raspberry Pi configurations
+
+  - A toolkit and cookbook for hardening Pi devices
+
+  - Techniques for preventing botnet recruitment
+
+  - Continuous audit and behavioral analysis
+
+  - Code examples and live demonstrations
+
+
+  **Takeaway:** Protecting your IoT device protects everyone — an unsecured Raspberry Pi can become part of a botnet like the Mirai DDoS attack. The IronClad toolkit makes hardening systematic.'
+abstract: 'Talk at Linux Foundation Open IoT & ELC on hardening Raspberry Pi security.
+
+
+  **Key points:**
+
+  - Security risks of default Raspberry Pi configurations
+
+  - A toolkit and cookbook for hardening Pi devices
+
+  - Techniques for preventing botnet recruitment
+
+  - Continuous audit and behavioral analysis
+
+  - Code examples and live demonstrations
+
+
+  **Takeaway:** Protecting your IoT device protects everyone — an unsecured Raspberry Pi can become part of a botnet like the Mirai DDoS attack. The IronClad toolkit makes hardening systematic.'
 date: '2017-05-15T10:00:00Z'
 date_end: '2017-05-20T11:00:00Z'
 all_day: false
@@ -20,5 +51,6 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=nls9t66ecq8
 ---
+
 
 

@@ -2,9 +2,36 @@
 title: 'DevFest Ranchi 2019 – Rabimba Karanjai - DeepSpeech: A Journey to less than 10% Word Error Rate'
 event: GDG DevFest Ranchi 2019
 location: Ranchi, India
-summary: 'Rabimba Karanjai is a Tech Speaker at Mozilla and GDE Web and he is talking about DeepSpeech with his talk DeepSpeech: A Journey to less than 10% Word Error Rate at DevFest Ranchi 2019. Follow
-  Rabimba'
-abstract: 'Presented ''DevFest Ranchi 2019 – Rabimba Karanjai - DeepSpeech: A Journey to less than 10% Word Error Rate'' at GDG DevFest Ranchi 2019.'
+summary: 'Talk at DevFest Ranchi 2019 on DeepSpeech and the journey to less than 10% word error rate.
+
+
+  **Key points:**
+
+  - Mozilla DeepSpeech open-source ASR engine
+
+  - Training and fine-tuning speech models
+
+  - Achieving production-quality accuracy
+
+  - Deployment at Fireflies.ai for 10M+ users
+
+
+  **Takeaway:** Open-source speech recognition can match commercial accuracy while keeping data private and on-premise.'
+abstract: 'Talk at DevFest Ranchi 2019 on DeepSpeech and the journey to less than 10% word error rate.
+
+
+  **Key points:**
+
+  - Mozilla DeepSpeech open-source ASR engine
+
+  - Training and fine-tuning speech models
+
+  - Achieving production-quality accuracy
+
+  - Deployment at Fireflies.ai for 10M+ users
+
+
+  **Takeaway:** Open-source speech recognition can match commercial accuracy while keeping data private and on-premise.'
 date: '2019-10-04T10:00:00Z'
 date_end: '2019-06-01T11:00:00Z'
 all_day: false
@@ -19,5 +46,6 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=taIchuKg8hs
 ---
+
 
 

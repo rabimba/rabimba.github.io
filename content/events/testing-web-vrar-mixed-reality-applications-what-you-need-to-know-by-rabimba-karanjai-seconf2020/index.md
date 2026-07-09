@@ -2,9 +2,40 @@
 title: 'Testing Web VR/AR Mixed Reality Applications: What you need to know by Rabimba Karanjai #SeConf2020'
 event: Invited Presentation
 location: Online
-summary: There are already over 200 million users consuming VR applications by 2018. And with Google, Mozilla pushing WebXR capabilities in browser and vendors like BBC, Amnesty International, Universal,
-  Disne
-abstract: 'Presented ''Testing Web VR/AR Mixed Reality Applications: What you need to know by Rabimba Karanjai #SeConf2020'' at Invited Presentation.'
+summary: 'Talk at Selenium Conference 2020 on testing Web VR/AR Mixed Reality applications.
+
+
+  **Key points:**
+
+  - WebXR specification and the W3C Immersive Web Group
+
+  - Differences between testing regular web pages and Mixed Reality
+
+  - How to define "smooth" vs just "responsive" in VR
+
+  - Automation strategies for MR testing
+
+  - Performance metrics for immersive experiences
+
+
+  **Takeaway:** Testing Mixed Reality requires new approaches — traditional web testing tools need adaptation for spatial, immersive, and motion-based interactions.'
+abstract: 'Talk at Selenium Conference 2020 on testing Web VR/AR Mixed Reality applications.
+
+
+  **Key points:**
+
+  - WebXR specification and the W3C Immersive Web Group
+
+  - Differences between testing regular web pages and Mixed Reality
+
+  - How to define "smooth" vs just "responsive" in VR
+
+  - Automation strategies for MR testing
+
+  - Performance metrics for immersive experiences
+
+
+  **Takeaway:** Testing Mixed Reality requires new approaches — traditional web testing tools need adaptation for spatial, immersive, and motion-based interactions.'
 date: '2020-01-15T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -19,5 +50,6 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=-AKeaHh3urs
 ---
+
 
 

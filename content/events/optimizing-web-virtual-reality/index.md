@@ -2,9 +2,40 @@
 title: Optimizing Web Virtual Reality
 event: Web3d Conference
 location: Brisbane, Australia
-summary: 'by Rabimba Karanjai At: FOSDEM 2020 https://video.fosdem.org/2020/H.1302/building_decentralized_social_vr.webm Learn how to build auditable privacy aware social vre experinces right inside your
-  webp'
-abstract: Presented 'Optimizing Web Virtual Reality' at Web3d Conference in Brisbane, Australia.
+summary: 'Talk on optimizing WebVR performance, from the MS thesis at Rice University.
+
+
+  **Key points:**
+
+  - WebGL rendering optimization for VR workloads
+
+  - Three.js performance tuning techniques
+
+  - Browser-level JavaScript parallelization for VR
+
+  - Offloading computations to GPU with WebAssembly
+
+  - Object loading and texture rendering optimization
+
+
+  **Takeaway:** WebVR can achieve near-native performance with careful optimization of the rendering pipeline, GPU offloading, and browser-level parallelism.'
+abstract: 'Talk on optimizing WebVR performance, from the MS thesis at Rice University.
+
+
+  **Key points:**
+
+  - WebGL rendering optimization for VR workloads
+
+  - Three.js performance tuning techniques
+
+  - Browser-level JavaScript parallelization for VR
+
+  - Offloading computations to GPU with WebAssembly
+
+  - Object loading and texture rendering optimization
+
+
+  **Takeaway:** WebVR can achieve near-native performance with careful optimization of the rendering pipeline, GPU offloading, and browser-level parallelism.'
 date: '2017-06-15T10:00:00Z'
 date_end: '2017-06-05T11:00:00Z'
 all_day: false
@@ -22,6 +53,7 @@ links:
 - name: Event
   url: https://web.archive.org/web/20200821045253/http://www.openvisconf.com/workshops/#webvr
 ---
+
 
 
 

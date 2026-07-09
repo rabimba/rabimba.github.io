@@ -2,8 +2,36 @@
 title: DevDay Nang
 event: DevDay
 location: Bangalore, India
-summary: Talk at DevDay on WebVR and open web technologies, covering how to build cross-platform VR experiences using JavaScript and open web standards.
-abstract: Talk at DevDay on WebVR and open web technologies, covering how to build cross-platform VR experiences using JavaScript and open web standards.
+summary: 'Talk at DevDay on WebVR and open web technologies.
+
+
+  **Key points:**
+
+  - Building cross-platform VR with JavaScript
+
+  - The WebXR API and browser support landscape
+
+  - A-Frame as a beginner-friendly VR framework
+
+  - Demos of browser-based VR experiences
+
+
+  **Takeaway:** The open web is a viable platform for VR development, offering cross-platform compatibility without vendor lock-in.'
+abstract: 'Talk at DevDay on WebVR and open web technologies.
+
+
+  **Key points:**
+
+  - Building cross-platform VR with JavaScript
+
+  - The WebXR API and browser support landscape
+
+  - A-Frame as a beginner-friendly VR framework
+
+  - Demos of browser-based VR experiences
+
+
+  **Takeaway:** The open web is a viable platform for VR development, offering cross-platform compatibility without vendor lock-in.'
 date: '2018-09-20T10:00:00Z'
 date_end: '2018-09-20T11:00:00Z'
 all_day: false
@@ -17,5 +45,6 @@ tags:
 featured: false
 links: []
 ---
+
 
 
