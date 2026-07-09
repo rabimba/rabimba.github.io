@@ -93,6 +93,19 @@
   var total = cards.length;
   var state = { search: '', type: 'all' };
 
+  // Restore state from sessionStorage (browser back button support)
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('evt-list-state') || '{}');
+    if (saved && Object.keys(saved).length > 0) {
+      state = Object.assign(state, saved);
+      if (searchInput && state.search) searchInput.value = state.search;
+    }
+  } catch(e) {}
+
+  function saveState() {
+    try { sessionStorage.setItem('evt-list-state', JSON.stringify(state)); } catch(e) {}
+  }
+
   function setActive(buttons, value, attr) {
     buttons.forEach(function(btn) { btn.classList.toggle('active', btn.dataset[attr] === value); });
   }
@@ -108,7 +121,11 @@
     });
     empty.classList.toggle('hidden', visible > 0);
     countEl.textContent = visible === total ? total + ' events' : visible + ' of ' + total + ' events';
+    saveState();
   }
+
+  // Restore active button states
+  setActive(typeButtons, state.type, 'type');
 
   searchInput.addEventListener('input', function(e) { state.search = e.target.value; filter(); });
   typeButtons.forEach(function(btn) {

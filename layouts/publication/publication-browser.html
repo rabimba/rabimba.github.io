@@ -164,6 +164,19 @@
 
   var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all', status: 'all' };
 
+  // Restore state from sessionStorage (browser back button support)
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('pub-browser-state') || '{}');
+    if (saved && Object.keys(saved).length > 0) {
+      state = Object.assign(state, saved);
+      if (searchInput && state.search) searchInput.value = state.search;
+    }
+  } catch(e) {}
+
+  function saveState() {
+    try { sessionStorage.setItem('pub-browser-state', JSON.stringify(state)); } catch(e) {}
+  }
+
   function setActive(buttons, value, attr) {
     buttons.forEach(function(btn) {
       btn.classList.toggle('active', btn.dataset[attr] === value);
@@ -197,7 +210,15 @@
     empty.classList.toggle('hidden', visible > 0);
     countEl.textContent = visible === total ? total + ' papers' : visible + ' of ' + total + ' papers';
     sortCards();
+    saveState();
   }
+
+  // Restore active button states
+  setActive(sortButtons, state.sort, 'sort');
+  setActive(typeButtons, state.type, 'type');
+  setActive(yearButtons, state.year, 'year');
+  setActive(tagButtons, state.tag, 'tag');
+  setActive(statusButtons, state.status, 'status');
 
   searchInput.addEventListener('input', function(e) { state.search = e.target.value; filter(); });
   sortButtons.forEach(function(btn) {
