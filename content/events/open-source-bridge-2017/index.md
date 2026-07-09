@@ -1,0 +1,20 @@
+---
+title: Open Source Bridge 2017
+event: Open Source Bridge
+location: Portland, OR
+summary: Talk at Open Source Bridge on open web and VR technologies.
+abstract: Talk at Open Source Bridge on open web and VR technologies.
+date: '2017-06-21T10:00:00Z'
+date_end: '2017-06-21T11:00:00Z'
+all_day: false
+publishDate: '2025-01-01T00:00:00Z'
+authors:
+- admin
+event_type: talk
+tags:
+- Talk
+- '2017'
+featured: false
+links: []
+---
+
