@@ -16,6 +16,12 @@ tags:
 - '2017'
 - VR
 featured: false
-links: []
+links:
+- name: Video
+  url: https://www.youtube.com/watch?v=piGEm4Tl17Q
+- name: Event
+  url: https://www.svvr.com/
 ---
+
+
 

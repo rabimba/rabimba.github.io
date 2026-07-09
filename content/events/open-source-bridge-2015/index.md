@@ -18,6 +18,9 @@ featured: false
 links:
 - name: Video
   url: https://www.youtube.com/watch?v=UDiLJjNLb10
+- name: Event
+  url: https://www.osbridge.org/
 ---
+
 
 
