@@ -19,7 +19,41 @@
     font-size: 0.8em;
 }
 
-/* Apply homepage gradient background to all pages */
+/* Hobbies grid on Experience page */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+.hobby-card {
+    padding: 1.5rem 1.25rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(37, 99, 235, 0.03));
+    text-align: center;
+    transition: all 0.25s ease;
+}
+.hobby-card:hover {
+    border-color: #6366f1;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
+}
+.hobby-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+.hobby-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+.hobby-desc {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+    line-height: 1.4;
+}
 .page-body {
     position: relative;
     isolation: isolate;
