@@ -59,6 +59,71 @@
 #hobbies .max-w-prose {
     max-width: min(100%, 72rem) !important;
 }
+
+/* Technical Skills — card grid instead of a vertical list of bars */
+#section-resume-skills .max-w-prose {
+    max-width: min(100%, 72rem) !important;
+}
+#section-resume-skills .w-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+/* Inner group heading duplicates the section title — hide it */
+#section-resume-skills .w-full > .mb-5.text-xl {
+    display: none;
+}
+#section-resume-skills .skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1.4rem 1.1rem 1.1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(37, 99, 235, 0.03));
+    transition: all 0.25s ease;
+}
+#section-resume-skills .skills-content:hover {
+    border-color: #6366f1;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
+}
+#section-resume-skills .skills-icon {
+    color: #6366f1;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
+.dark #section-resume-skills .skills-icon {
+    color: #a5b4fc;
+}
+#section-resume-skills .skills-icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+#section-resume-skills .skills-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+/* Progress bar — slim, full-width, pinned to card bottom */
+#section-resume-skills .skills-wrapper {
+    width: 100%;
+    height: 6px;
+    margin-top: auto;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.12);
+    overflow: hidden;
+}
+#section-resume-skills .skills-percent {
+    height: 100%;
+    border-radius: 999px;
+    background-image: linear-gradient(90deg, #6366f1, #2563eb) !important;
+}
 .page-body {
     position: relative;
     isolation: isolate;
