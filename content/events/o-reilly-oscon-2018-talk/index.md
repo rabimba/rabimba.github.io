@@ -18,7 +18,8 @@ tags:
 featured: false
 links:
 - name: Video
-  url: https://www.youtube.com/watch?v=N72ZNa84y54
+  url: https://www.oreilly.com/videos/oscon-2018/9781492026075/9781492026075-video321449/
 ---
+
 
 

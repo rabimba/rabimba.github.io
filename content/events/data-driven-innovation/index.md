@@ -15,6 +15,9 @@ tags:
 - Talk
 - '2018'
 featured: false
-links: []
+links:
+- name: Event
+  url: https://2018.datadriveninnovation.org/it/speakers-2018/?id=4
 ---
+
 

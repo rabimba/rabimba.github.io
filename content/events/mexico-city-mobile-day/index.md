@@ -15,6 +15,9 @@ tags:
 - Talk
 - '2017'
 featured: false
-links: []
+links:
+- name: Event
+  url: https://web.archive.org/web/20200821150600/https://sg.com.mx/mobileday/session/virtual-reality-for-humans-build-your-world-using-webvr-and-aframe/
 ---
+
 

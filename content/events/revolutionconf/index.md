@@ -17,7 +17,8 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://revolutionconf.com/
+  url: https://web.archive.org/web/20201023061536/https://revolutionconf.com/#rabimba_karanjai
 ---
+
 
 

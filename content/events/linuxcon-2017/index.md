@@ -17,8 +17,11 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://events.linuxfoundation.org/
+  url: https://lc3china2017.sched.com/event/AVAy
+- name: Slides
+  url: https://hosted-files.sched.co/lc3china2017/c2/Rabimba%20Karanjai_LinuxCon2017.pdf
 ---
+
 
 
 

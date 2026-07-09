@@ -17,7 +17,8 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://www.osbridge.org/
+  url: https://web.archive.org/web/20190930071234/http://opensourcebridge.org/sessions/2025
 ---
+
 
 

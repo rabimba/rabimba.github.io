@@ -17,7 +17,8 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://devweek.com/
+  url: https://developerweekny2018.sched.com/event/EUSU/open-talk-state-of-webxr-what-do-you-need-to-know-today-for-building-web-mixed-reality-applications
 ---
+
 
 

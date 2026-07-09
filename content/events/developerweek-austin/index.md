@@ -17,7 +17,8 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://www.developerweek.com/
+  url: https://developerweekaustin2017.sched.com/event/CHDe/mixing-real-and-virtual-in-webar-augmented-and-mixed-reality-for-everyone
 ---
+
 
 

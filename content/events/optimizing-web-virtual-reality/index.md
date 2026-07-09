@@ -19,6 +19,9 @@ featured: false
 links:
 - name: Video
   url: https://www.youtube.com/watch?v=rlx4uwbN1pk
+- name: Event
+  url: https://web.archive.org/web/20200821045253/http://www.openvisconf.com/workshops/#webvr
 ---
+
 
 
