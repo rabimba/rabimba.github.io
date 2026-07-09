@@ -19,8 +19,11 @@ tags:
 - First Author
 featured: false
 links:
-- name: Scholar
-  url: https://scholar.google.com/scholar?q=Empowering%20Smart%20Contracts%20with%20Real-time%20On-Chain%20AI%20Inferences
+- name: DOI
+  url: https://ieeexplore.ieee.org/document/11575548
+bibtex: "@INPROCEEDINGS{11575548,\n  author={Karanjai, Rabimba and Lu, Yang and Xu, Lei and Shi, Weidong},\n  booktitle={2026 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  title={Empowering\
+  \ Smart Contracts with Real-time On-Chain AI Inferences},\n  year={2026},\n  pages={1-3},\n  doi={10.1109/ICBC67748.2026.11575548}\n}"
 ---
+
 
 
