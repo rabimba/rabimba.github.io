@@ -54,6 +54,11 @@
     opacity: 0.6;
     line-height: 1.4;
 }
+/* Widen Hobbies section beyond the markdown block's max-w-prose so the
+   auto-fit grid fills the page width instead of collapsing to one column. */
+#hobbies .max-w-prose {
+    max-width: min(100%, 72rem) !important;
+}
 .page-body {
     position: relative;
     isolation: isolate;
