@@ -36,9 +36,9 @@ profiles:
   - icon: brands/github
     url: https://github.com/rabimba
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/rabimba/
+    url: https://www.linkedin.com/in/niceboybao/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=rabimba
+    url: https://scholar.google.com/citations?user=PYmmdne2aRMC
 
 interests:
   - Agentic AI & AI Reasoning
@@ -88,7 +88,7 @@ work:
     date_start: 2020-12-01
     date_end: 2021-08-31
     summary: |
-      Designed and implemented advanced policy threat detection engines, URL scanning, phishing detection algorithms, and maliciousemail classification.
+      Designed and implemented advanced policy threat detection engines, URL scanning, phishing detection algorithms, and malicious email classification.
   - position: Machine Learning Lead
     company_name: Fireflies.ai
     company_url: 'https://fireflies.ai/'

@@ -1,6 +1,6 @@
 # Rabimba Karanjai - Academic Website
 
-Personal academic website for **Rabimba Karanjai**, Staff Agent Researcher at PayPal and PhD graduate from the University of Houston.
+Personal academic website for **Rabimba Karanjai**, Staff Agentic AI Researcher at PayPal and PhD graduate from the University of Houston.
 
 🌐 **Live Site:** [rabimba.github.io](https://rabimba.github.io)
 
@@ -23,7 +23,7 @@ This website showcases my research, publications, talks, and professional experi
 
 - **QuCoWE: Quantum Contrastive Embeddings with Variational Circuits** - AAAI 2026
 - **Weaving the Cosmos: WASM-Powered Interchain Communication** - arXiv 2025
-- **Securing Multi-Chain Ecosystem** - AIWar 2025 (Distinguished Paper Candidate)
+- **Securing Multi-Chain Ecosystem** - ACM AIWare 2025 (ACM SIGSOFT Distinguished Paper Award)
 - **Harnessing the Power of LLMs for HPC Unit Testing** - arXiv 2024
 - **DIaC: Re-imagining Decentralized Infrastructure using Blockchain** - IEEE TNSM 2023
 
@@ -32,7 +32,7 @@ This website showcases my research, publications, talks, and professional experi
 - 🏆 Outstanding PhD Student Award - University of Houston
 - 🌟 Google Cloud Research Innovator
 - 🎓 Sui Foundation Academic Research Award
-- 📜 Distinguished Paper Candidate - IEEE ICBC 2024
+- 📜 Distinguished Paper Candidate - IEEE ICBC 2022
 - 🦊 Mozilla Research Fellowship
 
 ---
@@ -41,7 +41,7 @@ This website showcases my research, publications, talks, and professional experi
 
 | Role | Organization | Period |
 |------|--------------|--------|
-| Staff Agent Researcher | PayPal | 2025 - Present |
+| Staff Agentic AI Researcher | PayPal | 2025 - Present |
 | Research Assistant | University of Houston | 2021 - 2025 |
 | Google Developer Expert | Google | 2018 - Present |
 | Senior Software Engineer | Clearedin | 2020 - 2021 |
