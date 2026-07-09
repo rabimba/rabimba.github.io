@@ -8,6 +8,26 @@
 {{ $byTopic := $publications.GroupByParam "tags" }}
 {{ $total := len $publications }}
 
+{{/* Build year list for timeline */}}
+{{ $pubYears := slice }}
+{{ range $publications }}
+  {{ $y := time.Format "2006" .Date }}
+  {{ if not (in $pubYears $y) }}
+    {{ $pubYears = $pubYears | append $y }}
+  {{ end }}
+{{ end }}
+
+<!-- Floating Timeline -->
+<div class="pub-timeline-bar" id="pub-timeline">
+  <div class="pub-timeline-spine"></div>
+  {{ range $pubYears }}
+  <div class="pub-timeline-node" data-year="{{ . }}">
+    <div class="pub-timeline-dot"></div>
+    <span class="pub-timeline-tooltip">{{ . }}</span>
+  </div>
+  {{ end }}
+</div>
+
 <div class="article-container pt-3">
   <h1>Publications</h1>
   <p class="page-subtitle">{{ .Params.description | default "Browse my research papers by topic, venue, and year." }}</p>
@@ -161,6 +181,7 @@
   var countEl = document.querySelector('[data-count]');
   var clearButton = document.querySelector('[data-clear]');
   var total = cards.length;
+  var timelineNodes = document.querySelectorAll('.pub-timeline-node');
 
   var state = { search: '', sort: 'newest', type: 'all', year: 'all', tag: 'all', status: 'all' };
 
@@ -259,10 +280,121 @@
   }
 
   filter();
+
+  // Timeline click — scroll to year
+  timelineNodes.forEach(function(node) {
+    node.addEventListener('click', function() {
+      var year = this.dataset.year;
+      var target = null;
+      cards.forEach(function(c) {
+        if (!target && !c.classList.contains('hidden') && c.dataset.year === year) {
+          target = c;
+        }
+      });
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.style.transition = 'all 0.3s';
+        target.style.borderColor = 'var(--color-primary, #6366f1)';
+        target.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0.3)';
+        setTimeout(function() {
+          target.style.borderColor = '';
+          target.style.boxShadow = '';
+        }, 1500);
+      }
+    });
+  });
+
+  // Active year on scroll
+  function updatePubTimeline() {
+    var scrollPos = window.scrollY + 200;
+    var activeYear = null;
+    cards.forEach(function(c) {
+      if (c.classList.contains('hidden')) return;
+      var top = c.getBoundingClientRect().top + window.scrollY;
+      if (top <= scrollPos) {
+        activeYear = c.dataset.year;
+      }
+    });
+    timelineNodes.forEach(function(n) {
+      n.classList.toggle('active', n.dataset.year === activeYear);
+    });
+  }
+  window.addEventListener('scroll', updatePubTimeline, { passive: true });
+  updatePubTimeline();
 })();
 </script>
 
 <style>
+/* Floating timeline — fixed position, unobtrusive */
+.pub-timeline-bar {
+  position: fixed;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0;
+}
+.pub-timeline-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.15), transparent);
+  transform: translateX(-50%);
+}
+.pub-timeline-node {
+  position: relative;
+  cursor: pointer;
+  padding: 0.6rem 0;
+  display: flex;
+  align-items: center;
+}
+.pub-timeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.3);
+  border: 2px solid transparent;
+  transition: all 0.25s;
+  z-index: 1;
+}
+.pub-timeline-tooltip {
+  position: absolute;
+  left: 18px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary, #6366f1);
+  background: var(--color-background, #fff);
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border, #e2e8f0);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.pub-timeline-node:hover .pub-timeline-dot {
+  background: var(--color-primary, #6366f1);
+  transform: scale(1.5);
+}
+.pub-timeline-node:hover .pub-timeline-tooltip {
+  opacity: 1;
+}
+.pub-timeline-node.active .pub-timeline-dot {
+  background: var(--color-primary, #6366f1);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+  transform: scale(1.3);
+}
+@media (max-width: 900px) {
+  .pub-timeline-bar { display: none; }
+}
+
 /* Publication browser — adapts to site theme */
 .pub-browser-filters {
   border: 1px solid var(--color-border, #e2e8f0);
