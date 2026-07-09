@@ -56,7 +56,7 @@
           </div>
           <h2 class="evt-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Params.event }}<p class="evt-conf">{{ . }}</p>{{ end }}
-          {{ with .Params.summary }}<p class="evt-summary">{{ . }}</p>{{ end }}
+          {{ with .Params.summary }}<div class="evt-summary">{{ . | markdownify }}</div>{{ end }}
           {{ if .Params.links }}
           <div class="evt-actions">
             {{ range .Params.links }}
@@ -201,9 +201,12 @@
 .evt-title a:hover { color: var(--color-primary, #6366f1); }
 .evt-conf { font-size: 0.875rem; opacity: 0.7; margin: 0 0 0.375rem; font-style: italic; }
 .evt-summary {
-  font-size: 0.875rem; opacity: 0.5; display: -webkit-box; -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 1.5;
+  font-size: 0.875rem; opacity: 0.65; line-height: 1.5; margin-top: 0.5rem;
 }
+.evt-summary p { margin: 0 0 0.35rem; }
+.evt-summary ul { margin: 0.25rem 0; padding-left: 1.25rem; list-style: disc; }
+.evt-summary li { font-size: 0.8125rem; margin-bottom: 0.15rem; opacity: 0.8; }
+.evt-summary strong { opacity: 0.9; font-weight: 600; }
 
 .evt-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
 .evt-link {
