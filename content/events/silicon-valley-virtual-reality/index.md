@@ -2,8 +2,8 @@
 title: Silicon Valley Virtual Reality
 event: SVVR
 location: San Jose, CA
-summary: Talk at Silicon Valley Virtual Reality meetup.
-abstract: Talk at Silicon Valley Virtual Reality meetup.
+summary: Talk at Silicon Valley Virtual Reality meetup on VR for Humans, covering how to build virtual reality worlds using WebVR and A-Frame that are accessible to everyone with a browser.
+abstract: Talk at Silicon Valley Virtual Reality meetup on VR for Humans, covering how to build virtual reality worlds using WebVR and A-Frame that are accessible to everyone with a browser.
 date: '2017-04-15T10:00:00Z'
 date_end: '2017-04-15T11:00:00Z'
 all_day: false
@@ -22,6 +22,7 @@ links:
 - name: Event
   url: https://www.svvr.com/
 ---
+
 
 
 

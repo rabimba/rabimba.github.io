@@ -2,8 +2,8 @@
 title: Mexico City Mobile Day
 event: Mobile Day
 location: Mexico City, Mexico
-summary: Talk at Mexico City Mobile Day on VR for Humans using WebVR and A-Frame.
-abstract: Talk at Mexico City Mobile Day on VR for Humans using WebVR and A-Frame.
+summary: Talk at Mexico City Mobile Day on VR for Humans, covering how to build virtual reality worlds using WebVR and A-Frame that run on any mobile device with a browser.
+abstract: Talk at Mexico City Mobile Day on VR for Humans, covering how to build virtual reality worlds using WebVR and A-Frame that run on any mobile device with a browser.
 date: '2017-11-15T10:00:00Z'
 date_end: '2017-11-15T11:00:00Z'
 all_day: false
@@ -19,5 +19,6 @@ links:
 - name: Event
   url: https://web.archive.org/web/20200821150600/https://sg.com.mx/mobileday/session/virtual-reality-for-humans-build-your-world-using-webvr-and-aframe/
 ---
+
 
 

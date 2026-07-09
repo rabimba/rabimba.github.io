@@ -2,8 +2,8 @@
 title: DeveloperWeek Austin
 event: DeveloperWeek
 location: Austin, TX
-summary: Talk at DeveloperWeek Austin on WebVR and Mozilla technologies.
-abstract: Talk at DeveloperWeek Austin on WebVR and Mozilla technologies.
+summary: Talk at DeveloperWeek Austin 2017 on mixing real and virtual in WebAR, covering augmented and mixed reality for everyone using open web standards and the WebXR API.
+abstract: Talk at DeveloperWeek Austin 2017 on mixing real and virtual in WebAR, covering augmented and mixed reality for everyone using open web standards and the WebXR API.
 date: '2018-02-07T10:00:00Z'
 date_end: '2018-02-07T11:00:00Z'
 all_day: false
@@ -19,6 +19,7 @@ links:
 - name: Event
   url: https://developerweekaustin2017.sched.com/event/CHDe/mixing-real-and-virtual-in-webar-augmented-and-mixed-reality-for-everyone
 ---
+
 
 
 

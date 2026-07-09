@@ -2,8 +2,10 @@
 title: 'TPU As Cryptographic Accelerator: At Google Cloud Research Innovator Showcase'
 event: Invited Presentation
 location: Online
-summary: Talk at Invited Presentation (2024).
-abstract: 'Presented ''TPU As Cryptographic Accelerator: At Google Cloud Research Innovator Showcase'' at Invited Presentation.'
+summary: Talk at Google Cloud Research Innovator Showcase on using TPUs as cryptographic accelerators, presenting techniques to leverage AI hardware (TPUs/NPUs) for accelerating polynomial multiplication
+  in FHE and ZKP schemes.
+abstract: Talk at Google Cloud Research Innovator Showcase on using TPUs as cryptographic accelerators, presenting techniques to leverage AI hardware (TPUs/NPUs) for accelerating polynomial multiplication
+  in FHE and ZKP schemes.
 date: '2024-06-10T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,4 +20,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=J29M3DE6MOM
 ---
+
 

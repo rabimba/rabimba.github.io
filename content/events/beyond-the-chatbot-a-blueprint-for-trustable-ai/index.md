@@ -2,8 +2,10 @@
 title: 'Beyond the Chatbot: A Blueprint for Trustable AI'
 event: Google Deepmind
 location: Google Deepmind, CA
-summary: Talk at Google Deepmind (2026).
-abstract: 'Presented ''Beyond the Chatbot: A Blueprint for Trustable AI'' at Google Deepmind in Google Deepmind, CA.'
+summary: Talk at Google DeepMind on building trustable AI systems beyond simple chatbots, covering agentic AI architecture, safety frameworks, and the SAIF (Secure AI Framework) approach for production
+  AI deployments.
+abstract: Talk at Google DeepMind on building trustable AI systems beyond simple chatbots, covering agentic AI architecture, safety frameworks, and the SAIF (Secure AI Framework) approach for production
+  AI deployments.
 date: '2026-04-15T10:00:00Z'
 date_end: '2026-04-15T11:00:00Z'
 all_day: false
@@ -19,4 +21,5 @@ links:
 - name: Event
   url: https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/
 ---
+
 

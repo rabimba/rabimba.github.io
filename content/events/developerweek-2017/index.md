@@ -2,8 +2,8 @@
 title: DeveloperWeek 2017
 event: DeveloperWeek
 location: San Francisco, CA
-summary: Talk at DeveloperWeek 2017 on WebVR technologies.
-abstract: Talk at DeveloperWeek 2017 on WebVR technologies.
+summary: Talk at DeveloperWeek 2017 on building WebVR applications using A-Frame and the WebXR API, demonstrating how web developers can create immersive VR experiences with their existing toolchain.
+abstract: Talk at DeveloperWeek 2017 on building WebVR applications using A-Frame and the WebXR API, demonstrating how web developers can create immersive VR experiences with their existing toolchain.
 date: '2017-02-15T10:00:00Z'
 date_end: '2017-02-15T11:00:00Z'
 all_day: false
@@ -19,5 +19,6 @@ links:
 - name: Event
   url: https://www.developerweek.com/
 ---
+
 
 

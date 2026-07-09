@@ -2,8 +2,8 @@
 title: LinuxCon 2017
 event: LinuxCon ContainerCon
 location: Los Angeles, CA
-summary: Talk at LinuxCon on hardening IoT endpoints.
-abstract: Talk at LinuxCon on hardening IoT endpoints.
+summary: Talk at LinuxCon on hardening IoT endpoints, presenting a preventive toolkit for securing embedded Linux devices with code examples and security audit techniques. Slides available.
+abstract: Talk at LinuxCon on hardening IoT endpoints, presenting a preventive toolkit for securing embedded Linux devices with code examples and security audit techniques. Slides available.
 date: '2017-09-25T10:00:00Z'
 date_end: '2017-09-25T11:00:00Z'
 all_day: false
@@ -21,6 +21,7 @@ links:
 - name: Slides
   url: https://hosted-files.sched.co/lc3china2017/c2/Rabimba%20Karanjai_LinuxCon2017.pdf
 ---
+
 
 
 

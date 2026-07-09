@@ -2,8 +2,8 @@
 title: 'LLMinABox: On Device Personalized Diary & Concierge using your voice and Gemma'
 event: Google Mount View Seminar
 location: Mountain View, CA
-summary: Talk at Google Mount View Seminar (2024).
-abstract: 'Presented ''LLMinABox: On Device Personalized Diary & Concierge using your voice and Gemma'' at Google Mount View Seminar in Mountain View, CA.'
+summary: Talk at Google Mountain View on LLMinABox, an on-device personalized diary and concierge application using voice input and Google Gemma models running locally for privacy-preserving AI.
+abstract: Talk at Google Mountain View on LLMinABox, an on-device personalized diary and concierge application using voice input and Google Gemma models running locally for privacy-preserving AI.
 date: '2024-09-24T10:00:00Z'
 date_end: '2024-09-08T11:00:00Z'
 all_day: false
@@ -16,4 +16,5 @@ tags:
 - '2024'
 featured: false
 ---
+
 

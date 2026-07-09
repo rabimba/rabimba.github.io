@@ -2,8 +2,8 @@
 title: 'United in Defense: Architecting Safe and Trustworthy AI Agents'
 event: BSides Seattle
 location: Seattle, WA
-summary: Talk at BSides Seattle (2026).
-abstract: 'Presented ''United in Defense: Architecting Safe and Trustworthy AI Agents'' at BSides Seattle in Seattle, WA.'
+summary: Talk at BSides Seattle 2026 on architecting safe and trustworthy AI agents, covering adversarial robustness, multi-agent security, and defense frameworks for production AI systems.
+abstract: Talk at BSides Seattle 2026 on architecting safe and trustworthy AI agents, covering adversarial robustness, multi-agent security, and defense frameworks for production AI systems.
 date: '2026-03-20T10:00:00Z'
 date_end: '2026-03-20T11:00:00Z'
 all_day: false
@@ -19,4 +19,5 @@ links:
 - name: Event
   url: https://www.youtube.com/watch?v=Yy9VFRMwe98
 ---
+
 

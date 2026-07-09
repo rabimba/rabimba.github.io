@@ -2,8 +2,8 @@
 title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
 event: Rice University Seminar
 location: Houston, TX
-summary: Talk at Rice University Seminar (2024).
-abstract: Presented 'Mitigating Hallucinations in AI-Driven Medical Diagnosis' at Rice University Seminar in Houston, TX.
+summary: Talk at Rice University Seminar on mitigating hallucinations in AI-driven medical diagnosis, presenting techniques to reduce false outputs from LLMs when used in healthcare applications.
+abstract: Talk at Rice University Seminar on mitigating hallucinations in AI-driven medical diagnosis, presenting techniques to reduce false outputs from LLMs when used in healthcare applications.
 date: '2024-05-20T10:00:00Z'
 date_end: '2024-05-10T11:00:00Z'
 all_day: false
@@ -16,4 +16,5 @@ tags:
 - '2024'
 featured: false
 ---
+
 

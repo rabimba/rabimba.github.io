@@ -2,8 +2,8 @@
 title: 'SolMover: https://dl.acm.org/doi/10.1145/3664646.3664771'
 event: Invited Presentation
 location: Online
-summary: Talk at Invited Presentation (2024).
-abstract: 'Presented ''SolMover: https://dl.acm.org/doi/10.1145/3664646.3664771'' at Invited Presentation.'
+summary: Talk on SolMover, a framework for smart contract code translation based on concepts, presenting how LLMs can translate Solidity smart contracts to Move using concept retrieval and planning.
+abstract: Talk on SolMover, a framework for smart contract code translation based on concepts, presenting how LLMs can translate Solidity smart contracts to Move using concept retrieval and planning.
 date: '2024-06-05T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=V7kSbGkIaJA
 ---
+
 

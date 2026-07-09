@@ -2,8 +2,8 @@
 title: LangChain Deep Dive with Rabimba Karanjai (Google Developer Expert)
 event: Invited Presentation
 location: Online
-summary: Talk at Invited Presentation (2024).
-abstract: Presented 'LangChain Deep Dive with Rabimba Karanjai (Google Developer Expert)' at Invited Presentation.
+summary: Deep dive talk on LangChain as a Google Developer Expert, covering chains, agents, memory, tools, and building production LLM applications with the LangChain framework.
+abstract: Deep dive talk on LangChain as a Google Developer Expert, covering chains, agents, memory, tools, and building production LLM applications with the LangChain framework.
 date: '2024-06-10T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=cqrFeyFufKA
 ---
+
 

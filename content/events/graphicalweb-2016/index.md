@@ -2,8 +2,8 @@
 title: GraphicalWeb 2016
 event: GraphicalWeb
 location: Boston, MA
-summary: Talk at GraphicalWeb 2016 on web graphics and VR.
-abstract: Talk at GraphicalWeb 2016 on web graphics and VR.
+summary: Talk at GraphicalWeb 2016 on web graphics and VR, covering WebGL rendering optimization, Three.js performance techniques, and the emerging WebVR standard for browser-based virtual reality.
+abstract: Talk at GraphicalWeb 2016 on web graphics and VR, covering WebGL rendering optimization, Three.js performance techniques, and the emerging WebVR standard for browser-based virtual reality.
 date: '2016-10-12T10:00:00Z'
 date_end: '2016-10-12T11:00:00Z'
 all_day: false
@@ -17,6 +17,7 @@ tags:
 featured: false
 links: []
 ---
+
 
 
 

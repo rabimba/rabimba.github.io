@@ -2,8 +2,8 @@
 title: WikiConfUSA 2014
 event: WikiConference USA
 location: New York, NY
-summary: Talk at WikiConference USA 2014.
-abstract: Talk at WikiConference USA 2014.
+summary: Talk at WikiConference USA 2014 on open knowledge and web technologies, covering contributions to Wikipedia, MDN, and the broader open knowledge ecosystem.
+abstract: Talk at WikiConference USA 2014 on open knowledge and web technologies, covering contributions to Wikipedia, MDN, and the broader open knowledge ecosystem.
 date: '2014-06-07T10:00:00Z'
 date_end: '2014-06-07T11:00:00Z'
 all_day: false
@@ -19,6 +19,7 @@ links:
 - name: Event
   url: https://meta.wikimedia.org/wiki/WikiConference_USA_2014
 ---
+
 
 
 

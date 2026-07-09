@@ -2,8 +2,8 @@
 title: Google I⧸O Extended Edmonton 2024 Immersive art with AI
 event: Invited Presentation
 location: Edmonton, Canada
-summary: Talk at Invited Presentation (2024).
-abstract: Presented 'Google I⧸O Extended Edmonton 2024 Immersive art with AI' at Invited Presentation.
+summary: Talk at Google I/O Extended Edmonton 2024 on creating immersive art with AI, combining generative AI models with WebXR for interactive artistic experiences in the browser.
+abstract: Talk at Google I/O Extended Edmonton 2024 on creating immersive art with AI, combining generative AI models with WebXR for interactive artistic experiences in the browser.
 date: '2024-06-15T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=HviE-ITNLos
 ---
+
 

@@ -2,8 +2,8 @@
 title: Build with AI   Intro to Function Calling with Gemini by Rabimba Karanjai GDE 2024 03 20 18 07 GMT 5
 event: Invited Presentation
 location: Online
-summary: Talk at Invited Presentation (2024).
-abstract: Presented 'Build with AI   Intro to Function Calling with Gemini by Rabimba Karanjai GDE 2024 03 20 18 07 GMT 5' at Invited Presentation.
+summary: Hands-on session introducing function calling with Google Gemini API, demonstrating how to connect LLMs to external tools and APIs for building agentic applications.
+abstract: Hands-on session introducing function calling with Google Gemini API, demonstrating how to connect LLMs to external tools and APIs for building agentic applications.
 date: '2024-03-20T10:00:00Z'
 date_end: '2024-06-01T11:00:00Z'
 all_day: false
@@ -18,4 +18,5 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=ukMyCFb2WP8
 ---
+
 

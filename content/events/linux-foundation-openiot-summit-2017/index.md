@@ -2,8 +2,8 @@
 title: Linux Foundation OpenIoT Summit 2017
 event: OpenIoT Summit
 location: San Jose, CA
-summary: Talk at Linux Foundation OpenIoT Summit on IoT and connected devices.
-abstract: Talk at Linux Foundation OpenIoT Summit on IoT and connected devices.
+summary: Talk at Linux Foundation OpenIoT Summit on IoT and connected devices, covering how to use JavaScript and open web technologies to build privacy-aware IoT applications.
+abstract: Talk at Linux Foundation OpenIoT Summit on IoT and connected devices, covering how to use JavaScript and open web technologies to build privacy-aware IoT applications.
 date: '2017-02-15T10:00:00Z'
 date_end: '2017-02-15T11:00:00Z'
 all_day: false
@@ -20,5 +20,6 @@ links:
 - name: Event
   url: https://events.linuxfoundation.org/
 ---
+
 
 

@@ -2,8 +2,8 @@
 title: Kansas City Developer Conference 2017
 event: KCDC
 location: Kansas City, MO
-summary: Talk at Kansas City Developer Conference on WebVR.
-abstract: Talk at Kansas City Developer Conference on WebVR.
+summary: Talk at Kansas City Developer Conference 2017 on building WebVR applications with A-Frame, covering the WebXR API, immersive web experiences, and cross-platform VR development.
+abstract: Talk at Kansas City Developer Conference 2017 on building WebVR applications with A-Frame, covering the WebXR API, immersive web experiences, and cross-platform VR development.
 date: '2017-06-28T10:00:00Z'
 date_end: '2017-06-28T11:00:00Z'
 all_day: false
@@ -19,5 +19,6 @@ links:
 - name: Event
   url: https://www.kcdc.info/
 ---
+
 
 

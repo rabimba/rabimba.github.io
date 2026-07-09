@@ -2,8 +2,8 @@
 title: LLM Applications components and design patterns Hands on Workshop
 event: University Of Washington Workshop
 location: Seattle, WA
-summary: Talk at University Of Washington Workshop (2024).
-abstract: Presented 'LLM Applications components and design patterns Hands on Workshop' at University Of Washington Workshop in Seattle, WA.
+summary: Hands-on workshop at University of Washington on LLM application components and design patterns, covering RAG, agents, tool use, memory management, and building production LLM systems.
+abstract: Hands-on workshop at University of Washington on LLM application components and design patterns, covering RAG, agents, tool use, memory management, and building production LLM systems.
 date: '2024-02-20T10:00:00Z'
 date_end: '2024-02-28T11:00:00Z'
 all_day: false
@@ -16,4 +16,5 @@ tags:
 - '2024'
 featured: false
 ---
+
 

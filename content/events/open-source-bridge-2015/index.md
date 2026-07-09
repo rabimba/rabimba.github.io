@@ -2,8 +2,10 @@
 title: Open Source Bridge 2015
 event: Open Source Bridge
 location: Portland, OR
-summary: Talk at Open Source Bridge 2015 on self-learning word prediction.
-abstract: Talk at Open Source Bridge 2015 on self-learning word prediction.
+summary: Talk at Open Source Bridge 2015 on building a self-learning word prediction module for handling multilingual input on Firefox OS, covering predictive text for localized languages like Hindi and
+  Bengali.
+abstract: Talk at Open Source Bridge 2015 on building a self-learning word prediction module for handling multilingual input on Firefox OS, covering predictive text for localized languages like Hindi and
+  Bengali.
 date: '2015-06-24T10:00:00Z'
 date_end: '2015-06-24T11:00:00Z'
 all_day: false
@@ -21,6 +23,7 @@ links:
 - name: Event
   url: https://www.osbridge.org/
 ---
+
 
 
 

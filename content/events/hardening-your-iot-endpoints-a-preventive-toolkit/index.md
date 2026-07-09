@@ -2,8 +2,10 @@
 title: 'Hardening Your IoT Endpoints: A Preventive Toolkit'
 event: LinuxCon ContainerCon
 location: Los Angeles, CA
-summary: Talk at LinuxCon ContainerCon (2017).
-abstract: 'Presented ''Hardening Your IoT Endpoints: A Preventive Toolkit'' at LinuxCon ContainerCon in Los Angeles, CA.'
+summary: Talk at LinuxCon ContainerCon on hardening IoT endpoints, presenting a toolkit and cookbook for securing Raspberry Pi and embedded Linux devices against common attacks, with code examples and audit
+  techniques.
+abstract: Talk at LinuxCon ContainerCon on hardening IoT endpoints, presenting a toolkit and cookbook for securing Raspberry Pi and embedded Linux devices against common attacks, with code examples and
+  audit techniques.
 date: '2017-09-25T10:00:00Z'
 date_end: '2017-09-12T11:00:00Z'
 all_day: false
@@ -16,4 +18,5 @@ tags:
 - '2017'
 featured: false
 ---
+
 

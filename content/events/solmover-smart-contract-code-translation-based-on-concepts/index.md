@@ -2,8 +2,8 @@
 title: 'SolMover: Smart Contract Code Translation Based on Concepts'
 event: Berkeley RDI Research Meeting
 location: Berkeley, CA
-summary: Talk at Berkeley RDI Research Meeting (2024).
-abstract: 'Presented ''SolMover: Smart Contract Code Translation Based on Concepts'' at Berkeley RDI Research Meeting in Berkeley, CA.'
+summary: Talk at Berkeley RDI Research Meeting on SolMover, presenting a framework for translating smart contracts between programming languages using LLMs and concept-based retrieval.
+abstract: Talk at Berkeley RDI Research Meeting on SolMover, presenting a framework for translating smart contracts between programming languages using LLMs and concept-based retrieval.
 date: '2024-04-10T10:00:00Z'
 date_end: '2024-04-20T11:00:00Z'
 all_day: false
@@ -16,4 +16,5 @@ tags:
 - '2024'
 featured: false
 ---
+
 
