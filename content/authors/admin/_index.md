@@ -157,6 +157,23 @@ skills:
         percent: 85
         icon: code-bracket
 
+hobbies:
+  - name: Reading Books
+    icon: book-open
+    description: Sci-fi, research papers, and everything in between
+  - name: Otaku
+    icon: sparkles
+    description: Anime, manga, and Japanese pop culture enthusiast
+  - name: Hiking
+    icon: mountain
+    description: Exploring trails and finding perspective at altitude
+  - name: Biking
+    icon: bicycle
+    description: Road and trail cycling around the Bay Area
+  - name: Appreciating Brews
+    icon: beaker
+    description: Coffee connoisseur and craft beer explorer
+
 languages:
   - name: English
     percent: 100
