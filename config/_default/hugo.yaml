@@ -8,6 +8,12 @@ title: Rabimba Karanjai
 # Website URL
 baseURL: 'https://rabimba.github.io/'
 
+# Resource hints for performance
+refLinks:
+  preconnect:
+    - https://fonts.googleapis.com
+    - https://fonts.gstatic.com
+
 ############################
 ## LANGUAGE
 ############################
@@ -37,9 +43,10 @@ outputs:
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
-  quality: 90
+  quality: 75
   anchor: smart
   hint: picture
+  webpQuality: 75
 timeout: 600000
 taxonomies:
   author: authors
