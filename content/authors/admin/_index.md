@@ -186,10 +186,12 @@ awards:
   - title: ACM SIGSOFT Distinguished Paper Award
     date: '2025-11-01'
     awarder: ACM
+    url: 'https://www.uh.edu/nsm/news-events/stories/2025/1218-distinguished-paper.php'
     summary: "For 'Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for Vulnerability Repair in Solidity and Move'."
   - title: Dan E. Wells Outstanding Dissertation Award
     date: '2025-10-01'
     awarder: University of Houston
+    url: 'https://www.uh.edu/nsm/news-events/stories/2025/1219-dissertation-award.php'
     summary: "Awarded to the top PhD dissertation in the College of Natural Sciences and Mathematics."
   - title: Outstanding PhD Student
     date: '2024-05-01'
@@ -198,9 +200,11 @@ awards:
   - title: Google Cloud Research Innovator
     date: '2023-01-01'
     awarder: Google
+    url: 'https://cloud.google.com/blog/topics/public-sector/google-cloud-research-innovators-launch-fourth-cohort-to-drive-innovation/'
   - title: Sui Academic Research Award
     date: '2025-01-01'
     awarder: Sui Foundation
+    url: 'https://www.uh.edu/nsm/news-events/stories/2025/0815-ai-awards.php'
     summary: "Awarded Sui Foundation Research Grants in 2023 ($15k), 2024 ($25k), and 2025 ($25k)."
   - title: Mozilla Research Fellowship
     date: '2018-01-01'
