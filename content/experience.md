@@ -53,7 +53,7 @@ sections:
         </div>
         </div>
     design:
-      columns: '1'
+      columns: '3'
   - block: resume-awards
     content:
       title: Awards
