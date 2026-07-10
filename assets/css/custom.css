@@ -124,6 +124,30 @@
     border-radius: 999px;
     background-image: linear-gradient(90deg, #6366f1, #2563eb) !important;
 }
+
+/* Dark mode — hobbies and skills card grids */
+.dark .hobby-card {
+    border-color: rgba(165, 180, 252, 0.15);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(37, 99, 235, 0.06));
+}
+.dark .hobby-card:hover {
+    border-color: #818cf8;
+    box-shadow: 0 10px 30px rgba(129, 140, 248, 0.15);
+}
+.dark .hobby-desc {
+    opacity: 0.45;
+}
+.dark #section-resume-skills .skills-content {
+    border-color: rgba(165, 180, 252, 0.15);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(37, 99, 235, 0.06));
+}
+.dark #section-resume-skills .skills-content:hover {
+    border-color: #818cf8;
+    box-shadow: 0 10px 30px rgba(129, 140, 248, 0.15);
+}
+.dark #section-resume-skills .skills-wrapper {
+    background: rgba(129, 140, 248, 0.15);
+}
 .page-body {
     position: relative;
     isolation: isolate;
