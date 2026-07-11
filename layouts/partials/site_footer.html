@@ -5,5 +5,8 @@
         {{- replace . "{year}" now.Year | markdownify -}}
       {{- end -}}
     </p>
+    {{ if .IsHome }}
+    {{ partial "dino-game.html" . }}
+    {{ end }}
   </div>
 </footer>
