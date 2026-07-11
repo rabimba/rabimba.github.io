@@ -1,19 +1,22 @@
 <div class="dino-footer">
-  <canvas id="dino-canvas" aria-label="Dino game — press space or click to play"></canvas>
+  <canvas id="dino-canvas" aria-label="Dino game — press space or tap to play"></canvas>
 </div>
 <style>
 .dino-footer {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 80px;
   margin-top: 0.5rem;
   cursor: pointer;
+  overflow: hidden;
 }
 .dino-footer canvas {
   display: block;
   width: 100%;
   height: 80px;
-  opacity: 0.55;
+  opacity: 0.5;
   transition: opacity 0.4s ease;
 }
 .dino-footer:hover canvas,
@@ -28,12 +31,10 @@
   var ctx = canvas.getContext('2d');
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-  var W = 0, H = 80;
-  var GROUND = 64;
+  var W = 0, H = 80, GROUND = 64, PX = 2;
 
   function resize() {
-    var rect = wrap.getBoundingClientRect();
-    W = rect.width;
+    W = wrap.getBoundingClientRect().width;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
     canvas.style.width = W + 'px';
@@ -43,149 +44,161 @@
   resize();
   window.addEventListener('resize', resize);
 
-  var state = 'idle'; // idle | running | over
-  var score = 0, hi = 0;
+  /* Chrome T-rex pixel bitmaps (17 wide) */
+  var DINO_BODY = [
+    "00000000111111100",
+    "00000001111111110",
+    "00000001111011110",
+    "00000001111111110",
+    "00000001111111110",
+    "00000000111111100",
+    "00111111111110000",
+    "11111111111110000",
+    "11111111111100000",
+    "11111111110000000",
+    "01111111110000000",
+    "00111111110000000",
+    "00111110000000000",
+    "00111110000000000",
+    "00111110000000000",
+    "00111100000000000",
+    "00111000000000000",
+  ];
+  var LEGS_A = ["00111000010000000", "00111000010000000"];
+  var LEGS_B = ["00010000111000000", "00010000111000000"];
+  var EYE = { row: 2, col: 11 };
+
+  /* Cactus pixel bitmaps */
+  var CACTUS_S = [
+    "00100", "00100", "00100",
+    "01110", "01110", "00100",
+    "00100", "00100", "01110",
+    "01110", "00100", "00100",
+  ];
+  var CACTUS_L = [
+    "0001000", "0001000", "0001000",
+    "0011100", "0011100", "0001000",
+    "0001000", "0011100", "0011100",
+    "0001000", "0001000", "0001000",
+    "0011100", "0011100", "0001000",
+    "0001000", "0001000", "0001000",
+  ];
+
+  function drawBitmap(bmp, x, y) {
+    for (var r = 0; r < bmp.length; r++) {
+      for (var c = 0; c < bmp[r].length; c++) {
+        if (bmp[r][c] === '1') ctx.fillRect(x + c * PX, y + r * PX, PX, PX);
+      }
+    }
+  }
+
+  var state = 'idle', score = 0, hi = 0, frame = 0, speed = 5, spawnTimer = 0;
   try { hi = parseInt(localStorage.getItem('dinohi') || '0', 10) || 0; } catch (e) {}
 
-  var dino = { x: 50, y: GROUND, w: 22, h: 26, vy: 0, onGround: true, legFrame: 0 };
-  var obstacles = [];
-  var clouds = [];
-  var speed = 5;
-  var frame = 0;
-  var spawnTimer = 0;
+  var dino = { x: 50, y: GROUND, vy: 0, onGround: true, legTick: 0 };
+  var obstacles = [], clouds = [];
 
-  function jump() {
-    if (dino.onGround) { dino.vy = -10; dino.onGround = false; }
-  }
+  var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  var hintText = isTouch ? 'tap to play' : 'press space or tap to play';
 
+  function jump() { if (dino.onGround) { dino.vy = -10; dino.onGround = false; } }
   function reset() {
     dino.y = GROUND; dino.vy = 0; dino.onGround = true;
-    obstacles = []; speed = 5; score = 0; frame = 0; spawnTimer = 0;
+    obstacles = []; clouds = []; speed = 5; score = 0; frame = 0; spawnTimer = 0;
   }
-
-  function start() {
-    reset();
-    state = 'running';
-    canvas.classList.add('dino-active');
-  }
+  function start() { reset(); state = 'running'; canvas.classList.add('dino-active'); }
 
   function spawnObstacle() {
-    var big = Math.random() < 0.3;
-    obstacles.push({
-      x: W + 20,
-      w: big ? 16 : 12,
-      h: big ? 28 : 20,
-      big: big
-    });
+    var big = Math.random() < 0.25;
+    var bmp = big ? CACTUS_L : CACTUS_S;
+    obstacles.push({ x: W + 20, bmp: bmp, w: bmp[0].length * PX, h: bmp.length * PX });
   }
-
   function spawnCloud() {
-    clouds.push({ x: W + 20, y: 10 + Math.random() * 20, w: 18 + Math.random() * 14 });
+    clouds.push({ x: W + 20, y: 8 + Math.random() * 18, w: 16 + Math.random() * 12 });
   }
 
   function drawDino() {
-    var x = dino.x, y = GROUND - dino.h + (dino.y - GROUND);
+    var dy = GROUND - DINO_BODY.length * PX + (dino.y - GROUND);
     ctx.fillStyle = 'currentColor';
-    // body
-    ctx.fillRect(x + 8, y + 4, 12, 10);
-    // head
-    ctx.fillRect(x + 14, y, 10, 8);
-    // tail
-    ctx.fillRect(x + 2, y + 6, 8, 6);
-    // legs — animate
-    if (dino.onGround) {
-      dino.legFrame = (dino.legFrame + 1) % 8;
-      if (dino.legFrame < 4) {
-        ctx.fillRect(x + 8, y + 14, 4, 12);
-        ctx.fillRect(x + 16, y + 14, 4, 8);
-      } else {
-        ctx.fillRect(x + 8, y + 14, 4, 8);
-        ctx.fillRect(x + 16, y + 14, 4, 12);
-      }
+    drawBitmap(DINO_BODY, dino.x, dy);
+    /* legs — alternate only when running on ground */
+    if (state === 'running' && dino.onGround) {
+      dino.legTick = (dino.legTick + 1) % 10;
+      drawBitmap(dino.legTick < 5 ? LEGS_A : LEGS_B, dino.x, dy + DINO_BODY.length * PX);
     } else {
-      ctx.fillRect(x + 8, y + 14, 4, 10);
-      ctx.fillRect(x + 16, y + 14, 4, 10);
+      drawBitmap(LEGS_A, dino.x, dy + DINO_BODY.length * PX);
     }
-    // eye (white pixel)
+    /* eye */
     ctx.fillStyle = '#fff';
-    ctx.fillRect(x + 20, y + 2, 2, 2);
+    ctx.fillRect(dino.x + EYE.col * PX, dy + EYE.row * PX, PX, PX);
   }
 
   function drawObstacle(o) {
-    var x = o.x, y = GROUND - o.h;
     ctx.fillStyle = 'currentColor';
-    // cactus trunk
-    ctx.fillRect(x + o.w / 2 - 2, y, 4, o.h);
-    // arms
-    if (o.big) {
-      ctx.fillRect(x, y + 6, 4, 10);
-      ctx.fillRect(x + o.w - 4, y + 4, 4, 12);
-    } else {
-      ctx.fillRect(x + 1, y + 5, 3, 8);
-    }
+    drawBitmap(o.bmp, o.x, GROUND - o.h);
   }
 
   function drawCloud(c) {
     ctx.fillStyle = 'currentColor';
-    ctx.globalAlpha = 0.25;
-    ctx.fillRect(c.x, c.y, c.w, 4);
-    ctx.fillRect(c.x + 4, c.y - 2, c.w - 8, 2);
-    ctx.fillRect(c.x + 2, c.y + 4, c.w - 4, 2);
+    ctx.globalAlpha = 0.2;
+    ctx.fillRect(c.x, c.y, c.w, 3);
+    ctx.fillRect(c.x + 3, c.y - 2, c.w - 6, 2);
+    ctx.fillRect(c.x + 2, c.y + 3, c.w - 4, 2);
     ctx.globalAlpha = 1;
   }
 
   function drawGround() {
     ctx.fillStyle = 'currentColor';
-    ctx.globalAlpha = 0.35;
+    ctx.globalAlpha = 0.3;
     ctx.fillRect(0, GROUND + 2, W, 1);
-    // dashes
-    var off = (frame * speed) % 24;
-    for (var i = -off; i < W; i += 24) {
-      ctx.fillRect(i, GROUND + 5, 10, 1);
-    }
+    var off = (frame * speed) % 28;
+    for (var i = -off; i < W; i += 28) ctx.fillRect(i, GROUND + 5, 12, 1);
     ctx.globalAlpha = 1;
   }
 
   function drawScore() {
     if (state === 'idle') return;
     ctx.fillStyle = 'currentColor';
-    ctx.globalAlpha = 0.5;
+    ctx.globalAlpha = 0.45;
     ctx.font = '600 10px system-ui, sans-serif';
     ctx.textAlign = 'right';
     var label = String(score).padStart(5, '0');
     if (hi > 0) label += '  HI ' + String(hi).padStart(5, '0');
-    ctx.fillText(label, W - 8, 14);
+    ctx.fillText(label, W - 10, 14);
     ctx.globalAlpha = 1;
   }
 
-  function drawIdle() {
+  function drawHint() {
+    if (state !== 'idle') return;
+    var t = Date.now() * 0.001;
+    var pulse = 0.2 + 0.15 * Math.sin(t * 2.2);
     ctx.fillStyle = 'currentColor';
-    ctx.globalAlpha = 0.4;
+    ctx.globalAlpha = pulse;
     ctx.font = '600 11px system-ui, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('press space or click to play', W / 2, GROUND - 18);
+    ctx.fillText(hintText, W / 2, GROUND - 22);
     ctx.globalAlpha = 1;
   }
 
   function drawOver() {
     ctx.fillStyle = 'currentColor';
-    ctx.globalAlpha = 0.08;
+    ctx.globalAlpha = 0.06;
     ctx.fillRect(0, 0, W, H);
-    ctx.globalAlpha = 0.6;
+    ctx.globalAlpha = 0.55;
     ctx.font = '700 13px system-ui, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('GAME OVER', W / 2, GROUND - 16);
+    ctx.fillText('GAME OVER', W / 2, GROUND - 18);
     ctx.font = '600 10px system-ui, sans-serif';
-    ctx.globalAlpha = 0.4;
-    ctx.fillText('score ' + score + ' · best ' + hi + ' · click to retry', W / 2, GROUND - 2);
+    ctx.globalAlpha = 0.35;
+    ctx.fillText('score ' + score + '  best ' + hi + '  ' + (isTouch ? 'tap to retry' : 'space / click to retry'), W / 2, GROUND - 4);
     ctx.globalAlpha = 1;
   }
 
   function collide(o) {
-    var dx = dino.x + 6, dy = GROUND - dino.h + (dino.y - GROUND) + 2;
-    var dw = dino.w - 10, dh = dino.h - 4;
-    return dx < o.x + o.w && dx + dw > o.x &&
-           dy < GROUND - o.h + o.h && dy + dh > GROUND - o.h;
+    var dw = 13 * PX, dh = 17 * PX;
+    var dx = dino.x + 2 * PX, dy = GROUND - DINO_BODY.length * PX + (dino.y - GROUND) + 1;
+    return dx < o.x + o.w - PX && dx + dw > o.x + PX &&
+           dy < GROUND - 1 && dy + dh > GROUND - o.h;
   }
 
   function update() {
@@ -193,22 +206,19 @@
     score = Math.floor(frame / 6);
     if (score > 0 && score % 100 === 0) speed = Math.min(speed + 0.3, 11);
 
-    // physics
     if (!dino.onGround) {
       dino.y += dino.vy;
       dino.vy += 0.55;
       if (dino.y >= GROUND) { dino.y = GROUND; dino.vy = 0; dino.onGround = true; }
     }
 
-    // spawn
     spawnTimer--;
     if (spawnTimer <= 0) {
       spawnObstacle();
-      spawnTimer = 50 + Math.random() * 60;
+      spawnTimer = 55 + Math.random() * 55;
     }
-    if (frame % 90 === 0 && Math.random() < 0.5) spawnCloud();
+    if (frame % 80 === 0 && Math.random() < 0.5) spawnCloud();
 
-    // move + collision
     for (var i = obstacles.length - 1; i >= 0; i--) {
       obstacles[i].x -= speed;
       if (obstacles[i].x + obstacles[i].w < 0) { obstacles.splice(i, 1); continue; }
@@ -219,7 +229,7 @@
       }
     }
     for (var j = clouds.length - 1; j >= 0; j--) {
-      clouds[j].x -= speed * 0.4;
+      clouds[j].x -= speed * 0.35;
       if (clouds[j].x + clouds[j].w < 0) clouds.splice(j, 1);
     }
   }
@@ -231,8 +241,8 @@
     for (var j = 0; j < obstacles.length; j++) drawObstacle(obstacles[j]);
     drawDino();
     drawScore();
-    if (state === 'idle') drawIdle();
-    else if (state === 'over') drawOver();
+    drawHint();
+    if (state === 'over') drawOver();
   }
 
   function loop() {
@@ -241,19 +251,24 @@
     requestAnimationFrame(loop);
   }
 
+  var lastInput = 0;
   function handleInput() {
-    if (state === 'idle') start();
-    else if (state === 'over') start();
+    var now = Date.now();
+    if (now - lastInput < 80) return;
+    lastInput = now;
+    if (state === 'idle' || state === 'over') start();
     else if (state === 'running') jump();
   }
 
   wrap.addEventListener('click', handleInput);
+  wrap.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    handleInput();
+  }, { passive: false });
   document.addEventListener('keydown', function (e) {
     if (e.code === 'Space' || e.code === 'ArrowUp') {
-      if (state === 'running' || state === 'idle' || state === 'over') {
-        e.preventDefault();
-        handleInput();
-      }
+      e.preventDefault();
+      handleInput();
     }
   });
 
