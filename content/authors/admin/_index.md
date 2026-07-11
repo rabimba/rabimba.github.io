@@ -36,7 +36,7 @@ profiles:
   - icon: brands/github
     url: https://github.com/rabimba
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/niceboybao/
+    url: https://www.linkedin.com/in/rabimba/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=PYmmdne2aRMC
 

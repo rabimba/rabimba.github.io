@@ -90,7 +90,7 @@ hugo server -D
 
 - 📧 Email: rkaranjai@uh.edu
 - 🐙 GitHub: [github.com/rabimba](https://github.com/rabimba)
-- 🔗 LinkedIn: [linkedin.com/in/niceboybao](https://linkedin.com/in/niceboybao)
+- 🔗 LinkedIn: [linkedin.com/in/rabimba](https://linkedin.com/in/rabimba)
 - 📚 Google Scholar: [Rabimba Karanjai](https://scholar.google.com/citations?user=PYmmdne2aRMC)
 
 ---
