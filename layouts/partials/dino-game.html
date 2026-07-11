@@ -1,202 +1,262 @@
-<div class="dino-game-wrapper">
-  <canvas id="dino-canvas" width="400" height="120" aria-label="Dino game"></canvas>
-  <div id="dino-prompt" class="dino-prompt">click to play</div>
-  <div id="dino-score" class="dino-score"></div>
+<div class="dino-footer">
+  <canvas id="dino-canvas" aria-label="Dino game — press space or click to play"></canvas>
 </div>
 <style>
-.dino-game-wrapper {
+.dino-footer {
   position: relative;
-  display: inline-block;
-  margin-top: 0.75rem;
-  line-height: 0;
+  width: 100%;
+  height: 80px;
+  margin-top: 0.5rem;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
 }
-.dino-game-wrapper canvas {
+.dino-footer canvas {
   display: block;
-  border-radius: 0.5rem;
-  background: rgba(99,102,241,0.04);
-  border: 1px solid rgba(99,102,241,0.12);
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 80px;
+  opacity: 0.55;
+  transition: opacity 0.4s ease;
 }
-.dark .dino-game-wrapper canvas {
-  background: rgba(129,140,248,0.06);
-  border-color: rgba(129,140,248,0.15);
-}
-.dino-prompt {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  color: rgba(99,102,241,0.5);
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-.dark .dino-prompt {
-  color: rgba(165,180,252,0.35);
-}
-.dino-score {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: rgba(99,102,241,0.55);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.dark .dino-score {
-  color: rgba(165,180,252,0.45);
-}
-.dino-score.show {
+.dino-footer:hover canvas,
+.dino-footer canvas.dino-active {
   opacity: 1;
 }
 </style>
 <script>
-(function(){
-  var c = document.getElementById('dino-canvas');
-  var ctx = c.getContext('2d');
-  var W = c.width = 400, H = c.height = 120;
-  var prompt = document.getElementById('dino-prompt');
-  var scoreEl = document.getElementById('dino-score');
+(function () {
+  var wrap = document.querySelector('.dino-footer');
+  var canvas = document.getElementById('dino-canvas');
+  var ctx = canvas.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-  var GROUND = 100;
-  var running = false, gameOver = false, score = 0;
-  var dino = { x: 30, y: GROUND, w: 18, h: 24, vy: 0, grounded: true };
+  var W = 0, H = 80;
+  var GROUND = 64;
+
+  function resize() {
+    var rect = wrap.getBoundingClientRect();
+    W = rect.width;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var state = 'idle'; // idle | running | over
+  var score = 0, hi = 0;
+  try { hi = parseInt(localStorage.getItem('dinohi') || '0', 10) || 0; } catch (e) {}
+
+  var dino = { x: 50, y: GROUND, w: 22, h: 26, vy: 0, onGround: true, legFrame: 0 };
   var obstacles = [];
-  var speed = 4;
+  var clouds = [];
+  var speed = 5;
   var frame = 0;
-  var highScore = 0;
+  var spawnTimer = 0;
 
-  try { var hs = localStorage.getItem('dinohs'); if (hs) highScore = parseInt(hs,10)||0; } catch(e){}
-
-  function jump(){ if (dino.grounded) { dino.vy = -8.5; dino.grounded = false; } }
-
-  function spawnObstacle(){
-    obstacles.push({ x: W, y: GROUND, w: 8 + Math.random()*8, h: 14 + Math.random()*12 });
+  function jump() {
+    if (dino.onGround) { dino.vy = -10; dino.onGround = false; }
   }
 
-  function reset(){
-    dino.y = GROUND; dino.vy = 0; dino.grounded = true;
-    obstacles = []; speed = 4; score = 0; frame = 0; gameOver = false;
-    scoreEl.classList.remove('show');
+  function reset() {
+    dino.y = GROUND; dino.vy = 0; dino.onGround = true;
+    obstacles = []; speed = 5; score = 0; frame = 0; spawnTimer = 0;
   }
 
-  function drawDino(dy){
-    var x = dino.x, y = GROUND - dino.h + dy;
-    ctx.fillStyle = '#6366f1';
-    ctx.fillRect(x + 4, y + 4, 4, 6);
-    ctx.fillRect(x + 8, y, 6, 8);
-    ctx.fillRect(x + 2, y + 10, 14, 4);
-    ctx.fillRect(x, y + 14, 4, 10);
-    ctx.fillRect(x + 14, y + 14, 4, 10);
+  function start() {
+    reset();
+    state = 'running';
+    canvas.classList.add('dino-active');
+  }
+
+  function spawnObstacle() {
+    var big = Math.random() < 0.3;
+    obstacles.push({
+      x: W + 20,
+      w: big ? 16 : 12,
+      h: big ? 28 : 20,
+      big: big
+    });
+  }
+
+  function spawnCloud() {
+    clouds.push({ x: W + 20, y: 10 + Math.random() * 20, w: 18 + Math.random() * 14 });
+  }
+
+  function drawDino() {
+    var x = dino.x, y = GROUND - dino.h + (dino.y - GROUND);
+    ctx.fillStyle = 'currentColor';
+    // body
+    ctx.fillRect(x + 8, y + 4, 12, 10);
+    // head
+    ctx.fillRect(x + 14, y, 10, 8);
+    // tail
+    ctx.fillRect(x + 2, y + 6, 8, 6);
+    // legs — animate
+    if (dino.onGround) {
+      dino.legFrame = (dino.legFrame + 1) % 8;
+      if (dino.legFrame < 4) {
+        ctx.fillRect(x + 8, y + 14, 4, 12);
+        ctx.fillRect(x + 16, y + 14, 4, 8);
+      } else {
+        ctx.fillRect(x + 8, y + 14, 4, 8);
+        ctx.fillRect(x + 16, y + 14, 4, 12);
+      }
+    } else {
+      ctx.fillRect(x + 8, y + 14, 4, 10);
+      ctx.fillRect(x + 16, y + 14, 4, 10);
+    }
+    // eye (white pixel)
     ctx.fillStyle = '#fff';
-    ctx.fillRect(x + 10, y + 2, 2, 2);
+    ctx.fillRect(x + 20, y + 2, 2, 2);
   }
 
-  function drawObstacle(o){
-    ctx.fillStyle = '#6b7280';
+  function drawObstacle(o) {
     var x = o.x, y = GROUND - o.h;
-    ctx.fillRect(x + 1, y, o.w - 2, o.h);
-    ctx.fillRect(x, y + 4, 2, o.h - 4);
-    ctx.fillRect(x + o.w - 2, y + 4, 2, o.h - 4);
-    ctx.fillStyle = '#ef4444';
-    ctx.fillRect(x + o.w/2 - 3, y - 4, 6, 8);
-  }
-
-  function drawGround(){
-    ctx.fillStyle = '#e5e7eb';
-    ctx.fillRect(0, GROUND + 2, W, 1);
-    ctx.fillStyle = '#d1d5db';
-    for (var i = (frame % 20 / 20 * 20); i < W; i += 20) {
-      ctx.fillRect(i, GROUND + 6, 12, 1);
+    ctx.fillStyle = 'currentColor';
+    // cactus trunk
+    ctx.fillRect(x + o.w / 2 - 2, y, 4, o.h);
+    // arms
+    if (o.big) {
+      ctx.fillRect(x, y + 6, 4, 10);
+      ctx.fillRect(x + o.w - 4, y + 4, 4, 12);
+    } else {
+      ctx.fillRect(x + 1, y + 5, 3, 8);
     }
   }
 
-  function update(){
-    if (!running || gameOver) return;
+  function drawCloud(c) {
+    ctx.fillStyle = 'currentColor';
+    ctx.globalAlpha = 0.25;
+    ctx.fillRect(c.x, c.y, c.w, 4);
+    ctx.fillRect(c.x + 4, c.y - 2, c.w - 8, 2);
+    ctx.fillRect(c.x + 2, c.y + 4, c.w - 4, 2);
+    ctx.globalAlpha = 1;
+  }
+
+  function drawGround() {
+    ctx.fillStyle = 'currentColor';
+    ctx.globalAlpha = 0.35;
+    ctx.fillRect(0, GROUND + 2, W, 1);
+    // dashes
+    var off = (frame * speed) % 24;
+    for (var i = -off; i < W; i += 24) {
+      ctx.fillRect(i, GROUND + 5, 10, 1);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function drawScore() {
+    if (state === 'idle') return;
+    ctx.fillStyle = 'currentColor';
+    ctx.globalAlpha = 0.5;
+    ctx.font = '600 10px system-ui, sans-serif';
+    ctx.textAlign = 'right';
+    var label = String(score).padStart(5, '0');
+    if (hi > 0) label += '  HI ' + String(hi).padStart(5, '0');
+    ctx.fillText(label, W - 8, 14);
+    ctx.globalAlpha = 1;
+  }
+
+  function drawIdle() {
+    ctx.fillStyle = 'currentColor';
+    ctx.globalAlpha = 0.4;
+    ctx.font = '600 11px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('press space or click to play', W / 2, GROUND - 18);
+    ctx.globalAlpha = 1;
+  }
+
+  function drawOver() {
+    ctx.fillStyle = 'currentColor';
+    ctx.globalAlpha = 0.08;
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalAlpha = 0.6;
+    ctx.font = '700 13px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('GAME OVER', W / 2, GROUND - 16);
+    ctx.font = '600 10px system-ui, sans-serif';
+    ctx.globalAlpha = 0.4;
+    ctx.fillText('score ' + score + ' · best ' + hi + ' · click to retry', W / 2, GROUND - 2);
+    ctx.globalAlpha = 1;
+  }
+
+  function collide(o) {
+    var dx = dino.x + 6, dy = GROUND - dino.h + (dino.y - GROUND) + 2;
+    var dw = dino.w - 10, dh = dino.h - 4;
+    return dx < o.x + o.w && dx + dw > o.x &&
+           dy < GROUND - o.h + o.h && dy + dh > GROUND - o.h;
+  }
+
+  function update() {
     frame++;
     score = Math.floor(frame / 6);
+    if (score > 0 && score % 100 === 0) speed = Math.min(speed + 0.3, 11);
 
-    if (score > 0 && score % 50 === 0) speed = Math.min(speed + 0.15, 8);
-
-    if (dino.vy !== 0 || !dino.grounded){
+    // physics
+    if (!dino.onGround) {
       dino.y += dino.vy;
-      dino.vy += 0.5;
-      if (dino.y > GROUND) { dino.y = GROUND; dino.vy = 0; dino.grounded = true; }
+      dino.vy += 0.55;
+      if (dino.y >= GROUND) { dino.y = GROUND; dino.vy = 0; dino.onGround = true; }
     }
 
-    if (frame % Math.max(30, Math.floor(70 - speed * 5)) === 0) spawnObstacle();
+    // spawn
+    spawnTimer--;
+    if (spawnTimer <= 0) {
+      spawnObstacle();
+      spawnTimer = 50 + Math.random() * 60;
+    }
+    if (frame % 90 === 0 && Math.random() < 0.5) spawnCloud();
 
-    for (var i = obstacles.length - 1; i >= 0; i--){
+    // move + collision
+    for (var i = obstacles.length - 1; i >= 0; i--) {
       obstacles[i].x -= speed;
-      if (obstacles[i].x + obstacles[i].w < 0) { obstacles.splice(i,1); continue; }
-      var o = obstacles[i];
-      if (dino.x + dino.w > o.x + 4 && dino.x < o.x + o.w - 4 &&
-          GROUND - dino.h + (dino.y - GROUND) < GROUND - o.h + 8){
-        gameOver = true; running = false;
-        if (score > highScore){ highScore = score; try { localStorage.setItem('dinohs', highScore); } catch(e){} }
+      if (obstacles[i].x + obstacles[i].w < 0) { obstacles.splice(i, 1); continue; }
+      if (collide(obstacles[i])) {
+        state = 'over';
+        if (score > hi) { hi = score; try { localStorage.setItem('dinohi', hi); } catch (e) {} }
+        canvas.classList.remove('dino-active');
       }
     }
+    for (var j = clouds.length - 1; j >= 0; j--) {
+      clouds[j].x -= speed * 0.4;
+      if (clouds[j].x + clouds[j].w < 0) clouds.splice(j, 1);
+    }
   }
 
-  function draw(){
+  function render() {
     ctx.clearRect(0, 0, W, H);
     drawGround();
-    var dy = dino.y - GROUND;
-    for (var i = 0; i < obstacles.length; i++) drawObstacle(obstacles[i]);
-    drawDino(dy);
-    if (gameOver){
-      ctx.fillStyle = 'rgba(0,0,0,0.5)';
-      ctx.fillRect(0, 0, W, H);
-      ctx.fillStyle = '#fff';
-      ctx.font = 'bold 14px system-ui, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('game over', W/2, H/2 - 8);
-      ctx.font = '10px system-ui, sans-serif';
-      ctx.fillText('score: ' + score + '  best: ' + highScore, W/2, H/2 + 10);
-      ctx.fillText('click to retry', W/2, H/2 + 26);
-    }
+    for (var i = 0; i < clouds.length; i++) drawCloud(clouds[i]);
+    for (var j = 0; j < obstacles.length; j++) drawObstacle(obstacles[j]);
+    drawDino();
+    drawScore();
+    if (state === 'idle') drawIdle();
+    else if (state === 'over') drawOver();
   }
 
-  function loop(){
-    update();
-    draw();
-    if (running){
-      scoreEl.textContent = score;
-      scoreEl.classList.add('show');
-    }
-    if (gameOver){
-      scoreEl.textContent = score + ' | best: ' + highScore;
-      scoreEl.classList.add('show');
-    }
+  function loop() {
+    if (state === 'running') update();
+    render();
     requestAnimationFrame(loop);
   }
 
-  c.addEventListener('click', function(){
-    if (!running && !gameOver){
-      running = true; reset();
-      prompt.style.opacity = '0';
-      requestAnimationFrame(loop);
-    } else if (gameOver){
-      running = true; reset();
-      prompt.style.opacity = '0';
-    } else {
-      jump();
+  function handleInput() {
+    if (state === 'idle') start();
+    else if (state === 'over') start();
+    else if (state === 'running') jump();
+  }
+
+  wrap.addEventListener('click', handleInput);
+  document.addEventListener('keydown', function (e) {
+    if (e.code === 'Space' || e.code === 'ArrowUp') {
+      if (state === 'running' || state === 'idle' || state === 'over') {
+        e.preventDefault();
+        handleInput();
+      }
     }
   });
 
-  document.addEventListener('keydown', function(e){
-    if (e.code === 'Space' || e.code === 'ArrowUp'){
-      if (running && !gameOver) { e.preventDefault(); jump(); }
-    }
-  });
-
-  draw();
-  requestAnimationFrame(loop);
+  loop();
 })();
 </script>
