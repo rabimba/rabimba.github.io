@@ -38,15 +38,31 @@
   var W = 0, H = 80, GROUND = 64, PX = 2;
 
   function resize() {
-    W = wrap.getBoundingClientRect().width;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var rect = wrap.getBoundingClientRect();
+    var newW = Math.round(rect.width);
+    if (newW > 0 && newW !== W) {
+      W = newW;
+      canvas.width = W * dpr;
+      canvas.height = H * dpr;
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
   }
-  resize();
+
+  /* Defer initial measurement until layout has settled */
+  requestAnimationFrame(function () {
+    resize();
+    requestAnimationFrame(resize);
+  });
+
+  /* Catch all layout changes — viewport resize, container reflow, font load */
+  if (typeof ResizeObserver !== 'undefined') {
+    var ro = new ResizeObserver(function () { resize(); });
+    ro.observe(wrap);
+  }
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', resize);
 
   /* Chrome T-rex pixel bitmaps (17 wide) */
   var DINO_BODY = [
@@ -239,6 +255,7 @@
   }
 
   function render() {
+    if (W < 10) return;
     ctx.clearRect(0, 0, W, H);
     drawGround();
     for (var i = 0; i < clouds.length; i++) drawCloud(clouds[i]);
