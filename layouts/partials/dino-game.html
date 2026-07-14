@@ -10,18 +10,11 @@
   height: 80px;
   margin-top: 0.5rem;
   cursor: pointer;
-  overflow: hidden;
 }
 .dino-footer canvas {
   display: block;
   width: 100%;
   height: 80px;
-  opacity: 0.75;
-  transition: opacity 0.4s ease;
-}
-.dino-footer:hover canvas,
-.dino-footer canvas.dino-active {
-  opacity: 1;
 }
 </style>
 <script>
@@ -29,46 +22,42 @@
   var wrap = document.querySelector('.dino-footer');
   var canvas = document.getElementById('dino-canvas');
   var ctx = canvas.getContext('2d');
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-  var W = 0, H = 80, GROUND = 64, PX = 2;
+  var W, H = 80, GROUND = 64, PX = 2;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
   function resize() {
     var rect = wrap.getBoundingClientRect();
-    var newW = Math.round(rect.width);
-    if (newW > 0 && newW !== W) {
-      W = newW;
-      canvas.width = W * dpr;
-      canvas.height = H * dpr;
-      canvas.style.width = W + 'px';
-      canvas.style.height = H + 'px';
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
+    W = Math.max(rect.width, 1);
+    canvas.width  = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  requestAnimationFrame(function () { resize(); requestAnimationFrame(resize); });
+  /* Measure now + defer for layout settle */
+  resize();
+  setTimeout(resize, 50);
+  setTimeout(resize, 200);
   if (typeof ResizeObserver !== 'undefined') {
-    new ResizeObserver(function () { resize(); }).observe(wrap);
+    new ResizeObserver(resize).observe(wrap);
   }
   window.addEventListener('resize', resize);
   window.addEventListener('orientationchange', resize);
 
-  /* Colors — explicit, no currentColor */
-  function isDark() {
-    return document.documentElement.classList.contains('dark') ||
-           document.body.classList.contains('dark') ||
-           window.matchMedia('(prefers-color-scheme: dark)').matches;
+  /* Colors */
+  function dark() {
+    return document.documentElement.classList.contains('dark')
+        || document.body.classList.contains('dark')
+        || window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
-  function getColors() {
-    if (isDark()) {
-      return { dino: '#d1d5db', ground: '#4b5563', dash: '#6b7280',
-               cactus: '#9ca3af', cloud: 'rgba(255,255,255,0.15)', eye: '#111827' };
-    }
-    return { dino: '#374151', ground: '#9ca3af', dash: '#d1d5db',
-             cactus: '#6b7280', cloud: 'rgba(0,0,0,0.12)', eye: '#ffffff' };
+  function C() {
+    if (dark()) return {bg:'#111827', d:'#d1d5db', g:'#374151', dl:'#6b7280',
+                         c:'#9ca3af', cl:'rgba(255,255,255,0.12)', e:'#111827'};
+    return {bg:'#f9fafb', d:'#374151', g:'#9ca3af', dl:'#d1d5db',
+            c:'#6b7280', cl:'rgba(0,0,0,0.08)', e:'#ffffff'};
   }
 
-  /* Chrome T-rex pixel bitmap (17 wide, 19 tall body + 2 legs) */
+  /* Pixel bitmaps */
   var BODY = [
     "00000000111111100",
     "00000001111111110",
@@ -88,200 +77,94 @@
     "00111100000000000",
     "00111000000000000",
   ];
-  var LEG_A = ["00111000010000000", "00111000010000000"];
-  var LEG_B = ["00010000111000000", "00010000111000000"];
+  var LA = ["00111000010000000", "00111000010000000"];
+  var LB = ["00010000111000000", "00010000111000000"];
+  var CS = ["00100","00100","00100","01110","01110","00100","00100","00100","01110","01110","00100","00100"];
+  var CL = ["0001000","0001000","0001000","0011100","0011100","0001000","0001000","0011100","0011100","0001000","0001000","0001000","0011100","0011100","0001000","0001000","0001000","0001000"];
 
-  /* Cactus bitmaps */
-  var CACTUS_S = [
-    "00100", "00100", "00100", "01110", "01110",
-    "00100", "00100", "00100", "01110", "01110", "00100", "00100",
-  ];
-  var CACTUS_L = [
-    "0001000", "0001000", "0001000", "0011100", "0011100",
-    "0001000", "0001000", "0011100", "0011100", "0001000",
-    "0001000", "0001000", "0011100", "0011100", "0001000",
-    "0001000", "0001000", "0001000",
-  ];
-
-  function drawBitmap(bmp, x, y, color) {
-    ctx.fillStyle = color;
-    for (var r = 0; r < bmp.length; r++) {
-      for (var c = 0; c < bmp[r].length; c++) {
-        if (bmp[r][c] === '1') ctx.fillRect(x + c * PX, y + r * PX, PX, PX);
-      }
-    }
+  function bmp(arr,x,y,color){
+    ctx.fillStyle=color;
+    for(var r=0;r<arr.length;r++)for(var c=0;c<arr[r].length;c++)
+      if(arr[r][c]==='1')ctx.fillRect(x+c*PX,y+r*PX,PX,PX);
   }
 
-  var state = 'idle', score = 0, hi = 0, frame = 0, speed = 5, spawnT = 0;
-  try { hi = parseInt(localStorage.getItem('dinohi') || '0', 10) || 0; } catch (e) {}
+  var state='idle', score=0, hi=0, frame=0, speed=5, spawn=0;
+  try{hi=parseInt(localStorage.getItem('dinohi')||'0',10)||0}catch(e){}
+  var dino={x:50,y:GROUND,vy:0,on:true,leg:0}, obs=[], cl=[];
+  var touch='ontouchstart'in window||navigator.maxTouchPoints>0;
+  var hint=touch?'tap to play':'press space or tap';
 
-  var dino = { x: 50, y: GROUND, vy: 0, onGround: true, legTick: 0 };
-  var obstacles = [], clouds = [];
+  function jump(){if(dino.on){dino.vy=-10;dino.on=false}}
+  function rst(){dino.y=GROUND;dino.vy=0;dino.on=true;obs=[];cl=[];speed=5;score=0;frame=0;spawn=0}
+  function start(){rst();state='running';canvas.classList.add('dino-active')}
 
-  var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  var hintText = isTouch ? 'tap to play' : 'press space or tap';
-
-  function jump() { if (dino.onGround) { dino.vy = -10; dino.onGround = false; } }
-  function reset() {
-    dino.y = GROUND; dino.vy = 0; dino.onGround = true;
-    obstacles = []; clouds = []; speed = 5; score = 0; frame = 0; spawnT = 0;
+  function addObs(){
+    var big=Math.random()<0.25, bmp=big?CL:CS;
+    obs.push({x:W+20,b:bmp,w:bmp[0].length*PX,h:bmp.length*PX});
   }
-  function start() { reset(); state = 'running'; canvas.classList.add('dino-active'); }
+  function addCl(){cl.push({x:W+20,y:10+Math.random()*16,w:20+Math.random()*14})}
 
-  function spawnObstacle() {
-    var big = Math.random() < 0.25;
-    var bmp = big ? CACTUS_L : CACTUS_S;
-    obstacles.push({ x: W + 20, bmp: bmp, w: bmp[0].length * PX, h: bmp.length * PX });
-  }
-  function spawnCloud() {
-    clouds.push({ x: W + 20, y: 10 + Math.random() * 16, w: 20 + Math.random() * 14 });
-  }
+  function drawD(c){var hh=BODY.length*PX, dy=GROUND-hh+(dino.y-GROUND);
+    bmp(BODY,dino.x,dy,c.d);
+    if(state==='running'&&dino.on){dino.leg=(dino.leg+1)%10;bmp(dino.leg<5?LA:LB,dino.x,dy+hh,c.d)}
+    else bmp(LA,dino.x,dy+hh,c.d);
+    ctx.fillStyle=c.e;ctx.fillRect(dino.x+11*PX,dy+2*PX,PX,PX);}
+  function drawO(o,c){bmp(o.b,o.x,GROUND-o.h,c.c)}
+  function drawCL(cc,c){ctx.fillStyle=c.cl;ctx.fillRect(cc.x,cc.y,cc.w,3);ctx.fillRect(cc.x+4,cc.y-2,cc.w-8,2);ctx.fillRect(cc.x+2,cc.y+3,cc.w-4,2)}
+  function drawG(c){ctx.fillStyle=c.g;ctx.fillRect(0,GROUND+2,W,1);
+    ctx.fillStyle=c.dl;var o=(frame*speed)%32;
+    for(var i=-o;i<W;i+=32)ctx.fillRect(i,GROUND+6,14,1);}
+  function drawSc(c){if(state==='idle')return;
+    ctx.fillStyle=c.d;ctx.globalAlpha=0.5;ctx.font='600 10px system-ui,sans-serif';ctx.textAlign='right';
+    var l=String(score).padStart(5,'0');if(hi>0)l+='  HI '+String(hi).padStart(5,'0');
+    ctx.fillText(l,W-12,16);ctx.globalAlpha=1;}
+  function drawHi(c){if(state!=='idle')return;
+    var t=Date.now()*0.001,p=0.25+0.2*Math.sin(t*2.5);
+    ctx.fillStyle=c.d;ctx.globalAlpha=p;ctx.font='600 12px system-ui,sans-serif';ctx.textAlign='center';
+    ctx.fillText(hint,W/2,GROUND-24);ctx.globalAlpha=1;}
+  function drawOv(c){ctx.fillStyle=c.d;ctx.globalAlpha=0.08;ctx.fillRect(0,0,W,H);
+    ctx.globalAlpha=0.6;ctx.font='700 14px system-ui,sans-serif';ctx.textAlign='center';
+    ctx.fillText('GAME OVER',W/2,GROUND-20);
+    ctx.font='600 11px system-ui,sans-serif';ctx.globalAlpha=0.4;
+    ctx.fillText('score '+score+'  best '+hi+'  '+(touch?'tap to retry':'space/click to retry'),W/2,GROUND-4);ctx.globalAlpha=1;}
 
-  function drawDino(colors) {
-    var bodyH = BODY.length * PX;
-    var dy = GROUND - bodyH + (dino.y - GROUND);
-    drawBitmap(BODY, dino.x, dy, colors.dino);
-    /* legs */
-    if (state === 'running' && dino.onGround) {
-      dino.legTick = (dino.legTick + 1) % 10;
-      drawBitmap(dino.legTick < 5 ? LEG_A : LEG_B, dino.x, dy + bodyH, colors.dino);
-    } else {
-      drawBitmap(LEG_A, dino.x, dy + bodyH, colors.dino);
-    }
-    /* eye */
-    ctx.fillStyle = colors.eye;
-    ctx.fillRect(dino.x + 11 * PX, dy + 2 * PX, PX, PX);
-  }
+  function hit(o){
+    var dx=dino.x+3*PX, dy=GROUND-BODY.length*PX+(dino.y-GROUND)+2, dw=13*PX, dh=16*PX;
+    return dx<o.x+o.w-PX&&dx+dw>o.x+PX&&dy<GROUND&&dy+dh>GROUND-o.h+2;}
 
-  function drawObstacle(o, colors) {
-    drawBitmap(o.bmp, o.x, GROUND - o.h, colors.cactus);
-  }
+  function upd(){
+    frame++;score=Math.floor(frame/6);
+    if(score>0&&score%100===0)speed=Math.min(speed+0.3,11);
+    if(!dino.on){dino.y+=dino.vy;dino.vy+=0.55;if(dino.y>=GROUND){dino.y=GROUND;dino.vy=0;dino.on=true}}
+    spawn--;if(spawn<=0){addObs();spawn=55+Math.random()*55}
+    if(frame%80===0&&Math.random()<0.5)addCl();
+    for(var i=obs.length-1;i>=0;i--){obs[i].x-=speed;if(obs[i].x+obs[i].w<0){obs.splice(i,1);continue}if(hit(obs[i])){state='over';if(score>hi){hi=score;try{localStorage.setItem('dinohi',hi)}catch(e){}}canvas.classList.remove('dino-active')}}
+    for(var j=cl.length-1;j>=0;j--){cl[j].x-=speed*0.35;if(cl[j].x+cl[j].w<0)cl.splice(j,1)}}
 
-  function drawCloud(c, colors) {
-    ctx.fillStyle = colors.cloud;
-    ctx.fillRect(c.x, c.y, c.w, 3);
-    ctx.fillRect(c.x + 4, c.y - 2, c.w - 8, 2);
-    ctx.fillRect(c.x + 2, c.y + 3, c.w - 4, 2);
-  }
-
-  function drawGround(colors) {
-    ctx.fillStyle = colors.ground;
-    ctx.fillRect(0, GROUND + 2, W, 2);
-    ctx.fillStyle = colors.dash;
-    var off = (frame * speed) % 32;
-    for (var i = -off; i < W; i += 32) ctx.fillRect(i, GROUND + 6, 14, 2);
-  }
-
-  function drawScore(colors) {
-    if (state === 'idle') return;
-    ctx.fillStyle = colors.dino;
-    ctx.globalAlpha = 0.5;
-    ctx.font = '600 11px system-ui, sans-serif';
-    ctx.textAlign = 'right';
-    var label = String(score).padStart(5, '0');
-    if (hi > 0) label += '  HI ' + String(hi).padStart(5, '0');
-    ctx.fillText(label, W - 12, 16);
-    ctx.globalAlpha = 1;
+  function render(){
+    if(!W||W<10)return;
+    var c=C();
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=c.bg;ctx.fillRect(0,0,W,H);
+    drawG(c);
+    for(var i=0;i<cl.length;i++)drawCL(cl[i],c);
+    for(var j=0;j<obs.length;j++)drawO(obs[j],c);
+    drawD(c);
+    drawSc(c);
+    drawHi(c);
+    if(state==='over')drawOv(c);
   }
 
-  function drawHint(colors) {
-    if (state !== 'idle') return;
-    var t = Date.now() * 0.001;
-    var pulse = 0.3 + 0.2 * Math.sin(t * 2.5);
-    ctx.fillStyle = colors.ground;
-    ctx.globalAlpha = pulse;
-    ctx.font = '600 12px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(hintText, W / 2, GROUND - 24);
-    ctx.globalAlpha = 1;
-  }
-
-  function drawOver(colors) {
-    ctx.fillStyle = colors.dino;
-    ctx.globalAlpha = 0.08;
-    ctx.fillRect(0, 0, W, H);
-    ctx.globalAlpha = 0.6;
-    ctx.font = '700 14px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('GAME OVER', W / 2, GROUND - 20);
-    ctx.font = '600 11px system-ui, sans-serif';
-    ctx.globalAlpha = 0.4;
-    var retry = isTouch ? 'tap to retry' : 'space or click to retry';
-    ctx.fillText('score ' + score + '  best ' + hi + '  ' + retry, W / 2, GROUND - 4);
-    ctx.globalAlpha = 1;
-  }
-
-  function collide(o) {
-    var dx = dino.x + 3 * PX, dy = GROUND - BODY.length * PX + (dino.y - GROUND) + 2;
-    var dw = 13 * PX, dh = 16 * PX;
-    return dx < o.x + o.w - PX && dx + dw > o.x + PX &&
-           dy < GROUND && dy + dh > GROUND - o.h + 2;
-  }
-
-  function update() {
-    frame++;
-    score = Math.floor(frame / 6);
-    if (score > 0 && score % 100 === 0) speed = Math.min(speed + 0.3, 11);
-
-    if (!dino.onGround) {
-      dino.y += dino.vy;
-      dino.vy += 0.55;
-      if (dino.y >= GROUND) { dino.y = GROUND; dino.vy = 0; dino.onGround = true; }
-    }
-
-    spawnT--;
-    if (spawnT <= 0) { spawnObstacle(); spawnT = 55 + Math.random() * 55; }
-    if (frame % 80 === 0 && Math.random() < 0.5) spawnCloud();
-
-    for (var i = obstacles.length - 1; i >= 0; i--) {
-      obstacles[i].x -= speed;
-      if (obstacles[i].x + obstacles[i].w < 0) { obstacles.splice(i, 1); continue; }
-      if (collide(obstacles[i])) {
-        state = 'over';
-        if (score > hi) { hi = score; try { localStorage.setItem('dinohi', hi); } catch (e) {} }
-        canvas.classList.remove('dino-active');
-      }
-    }
-    for (var j = clouds.length - 1; j >= 0; j--) {
-      clouds[j].x -= speed * 0.35;
-      if (clouds[j].x + clouds[j].w < 0) clouds.splice(j, 1);
-    }
-  }
-
-  function render() {
-    if (W < 10) return;
-    var colors = getColors();
-    ctx.clearRect(0, 0, W, H);
-    drawGround(colors);
-    for (var i = 0; i < clouds.length; i++) drawCloud(clouds[i], colors);
-    for (var j = 0; j < obstacles.length; j++) drawObstacle(obstacles[j], colors);
-    drawDino(colors);
-    drawScore(colors);
-    drawHint(colors);
-    if (state === 'over') drawOver(colors);
-  }
-
-  function loop() {
-    if (state === 'running') update();
-    render();
-    requestAnimationFrame(loop);
-  }
-
-  var lastInput = 0;
-  function handleInput() {
-    var now = Date.now();
-    if (now - lastInput < 80) return;
-    lastInput = now;
-    if (state === 'idle' || state === 'over') start();
-    else if (state === 'running') jump();
-  }
-
-  wrap.addEventListener('click', handleInput);
-  wrap.addEventListener('touchstart', function (e) { e.preventDefault(); handleInput(); }, { passive: false });
-  document.addEventListener('keydown', function (e) {
-    if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); handleInput(); }
-  });
-
+  function loop(){if(state==='running')upd();render();requestAnimationFrame(loop)}
   loop();
+
+  var last=0;
+  function inp(){
+    var now=Date.now();if(now-last<80)return;last=now;
+    if(state==='idle'||state==='over')start();else if(state==='running')jump();
+  }
+  wrap.addEventListener('click',inp);
+  wrap.addEventListener('touchstart',function(e){e.preventDefault();inp()},{passive:false});
+  document.addEventListener('keydown',function(e){if(e.code==='Space'||e.code==='ArrowUp'){e.preventDefault();inp()}});
 })();
 </script>
