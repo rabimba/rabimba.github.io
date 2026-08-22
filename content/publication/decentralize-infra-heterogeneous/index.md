@@ -15,10 +15,16 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: Trusted execution environment (TEE) technology has found many applications in mitigating various security risks in an efficient man- ner, which is attractive for critical infrastructure protection.
-  First, the natural of critical infrastructure requires it to be well protected from various cyber attacks. Second, performance is usually impor- tant for critical infrastructure and it cannot afford an
-  expensive protection mechanism. While a large number of TEE-based critical infrastructure protection systems have been proposed to address various security challenges (e.g., secure sensing and reliable
-  con- trol), most existing works ignore one important feature, i.e., devices comprised the critical infrastructure may be equipped with multiple incompatible TEE technologies and belongs to different
+abstract: 'Trusted execution environment (TEE) technology has many uses, such as protecting
+  data in the cloud and improving security for industrial IoT. However, there are technical challenges
+  that limit its widespread adoption. These challenges include the fact that different TEE vendors
+  have incompatible solutions, and devices equipped with the same TEE technology may belong to
+  different owners, making it difficult to establish trust between them. To address these challenges
+  and fully utilize TEE technology, a decentralized coordination mechanism called DHTee is proposed.
+  DHTee uses blockchain technology to support key TEE functions in a heterogeneous TEE environment,
+  especially attestation service. Devices equipped with TEE can interact securely with the blockchain
+  to determine whether potential collaborating devices meet the requirements. DHTee is also flexible
+  and can support new TEE schemes without affecting existing TEEs.'
 tags:
 - TEE
 - Security
@@ -26,12 +32,9 @@ tags:
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1145/3594556.3594626
-- name: arXiv
-  url: https://arxiv.org/pdf/2308.01474
-bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator of trust: Supporting heterogeneous tee for critical infrastructure protection},\n  author={Karanjai, Rabimba and Collier,\
-  \ Rowan and Gao, Zhimin and Chen, Lin and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings of the 5th ACM International Symposium on Blockchain and Secure Critical\
-  \ Infrastructure},\n  pages={85--94},\n  year={2023}\n}"
+  url: https://doi.org/10.1109/ICBC56567.2023.10174906
+bibtex: "@inproceedings{karanjai2023dhtee,\n  title={DHTee: Decentralized Infrastructure for Heterogeneous TEEs},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen, Lin and Fan, Xinxin and Suh, Taeweon and\
+  \ Shi, Weidong and Xu, Lei},\n  booktitle={2023 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--6},\n  year={2023},\n  organization={IEEE}\n}"
 ---
 
 

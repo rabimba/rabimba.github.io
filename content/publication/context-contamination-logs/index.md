@@ -13,7 +13,17 @@ publication_types:
 - '3'
 publication: USENIX Security 2026 (To Appear)
 publication_short: USENIX Security 2026 (To Appear)
-abstract: We analyze prompt injection risks in security log analysis systems powered by LLMs, demonstrating passive injections and proposing mitigation methods.
+abstract: 'Large Language Models are increasingly deployed in Security Operations Centers for log analysis tasks
+  including summarization, alert triage, and threat investigation. These systems ingest logs from external-facing
+  services and process network logs as natural language contexts to generate security insights. We demonstrate that
+  this architectural pattern introduces a critical vulnerability: adversaries can embed prompt injection payloads in
+  log-generating fields that persist in storage and are executed when analysts query the LLM, achieving what we term
+  passive prompt injection. We present LogInject, a systematic framework for evaluating these threats. Using
+  LogInject-1.0, a benchmark of 12,847 log entries including 2,569 adversarial samples, we evaluate three production
+  LLMs across four attack objectives. Our findings reveal an up to 88.2% attack success rate under baseline conditions.
+  We introduce Context Stitching, a novel technique that fragments payloads across multiple log entries to evade
+  stateless filters, achieving a 76.4% success rate. As mitigation, we evaluate layered defenses combining input
+  filtering, prompt hardening, and output validation, demonstrating a 90.4% attack reduction.'
 tags:
 - Security
 - LLMs

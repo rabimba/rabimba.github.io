@@ -3,7 +3,7 @@ title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Plannin
 authors:
 - Rabimba Karanjai
 - Qun Gu
-- Hemanth Hegadehalii Madhavarao
+- Hemanth Hegadehalli Madhavarao
 - Wenhuan Sun
 - Xiaojiao Yu
 - Suryabhan Singh Hada

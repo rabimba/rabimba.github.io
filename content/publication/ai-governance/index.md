@@ -3,8 +3,8 @@ title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and 
 authors:
 - Dana R Alsagheer
 - Nour Diallo
-- Lei Xu
 - Rabimba Karanjai
+- Lei Xu
 - Weidong Shi
 date: '2023-05-01T00:00:00Z'
 doi: ''
@@ -13,7 +13,12 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2023
 publication_short: IEEE ICBC 2023
-abstract: 'Short Paper: We map the open questions and technical roadblocks in establishing decentralized protocols for auditing ML model weights.'
+abstract: 'Researchers have started to recognize the necessity for a well-defined ML governance framework based
+  on the principle of decentralization and comprehensively defining its scope of research and practice due to the growth
+  of machine learning (ML) research and applications in the real world and the success of blockchain-based technology.
+  In this paper, we study decentralized ML governance, which includes ML value chain management, decentralized identity
+  for the ML community, decentralized ownership and rights management of ML assets, community-based decision-making for
+  the ML process, decentralized ML finance, and risk management.'
 tags:
 - AI Governance
 - Security
@@ -21,7 +26,7 @@ tags:
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1109/ICBC56567.2023.10174931
+  url: https://doi.org/10.1109/ICBC56567.2023.10175000
 ---
 
 

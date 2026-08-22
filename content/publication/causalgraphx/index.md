@@ -12,7 +12,19 @@ publication_types:
 - '1'
 publication: AAAI 2026 (AI4Finance)
 publication_short: AAAI 2026 (AI4Finance)
-abstract: CausalGraphX utilizes counterfactual graph neural networks to provide explainable risk assessments in complex financial and systemic environments.
+abstract: 'The interconnected nature of global financial systems makes them vulnerable to systemic risks,
+  where the failure of a few institutions can trigger catastrophic cascading defaults. Traditional risk models
+  often fail to capture the complex, non-linear dynamics of these networks. While Graph Neural Networks (GNNs)
+  have shown promise in modeling relational data, they primarily learn correlative patterns and function as black
+  boxes, offering little insight into the causal mechanisms of shock propagation. This limitation is critical for
+  regulators who require explainable models to perform stress tests and devise effective interventions. We introduce
+  CausalGraphX, a novel framework that integrates GNNs with counterfactual reasoning to provide explainable assessments
+  of systemic risk. CausalGraphX employs a Graph Attention mechanism to learn representations of institutional
+  vulnerability and uses an adversarial regularization technique to ensure these representations capture causal drivers
+  rather than spurious correlations. Furthermore, we propose an optimization-based approach to generate counterfactual
+  explanations. We validate CausalGraphX on large-scale synthetic financial networks, demonstrating that it significantly
+  outperforms traditional and deep learning baselines in predicting cascading defaults while providing sparse, plausible,
+  and actionable counterfactual explanations.'
 tags:
 - AI
 - Neural Networks

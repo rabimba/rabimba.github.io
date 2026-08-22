@@ -21,7 +21,9 @@ abstract: Trusted execution environment (TEE) technology has found many applicat
   expensive protection mechanism. While a large number of TEE-based critical infrastructure protection systems have been proposed to address various security challenges (e.g., secure sensing and reliable
   control), most existing works ignore one important feature, i.e., devices comprised the critical infrastructure may be equipped with multiple incompatible TEE technologies and belongs to different owners.
   This feature makes it hard for these devices to establish mutual trust and form a unified TEE environment. To address these challenges and fully unleash the potential of TEE technology for critical infrastructure
-  protection, we propose DHTee, a decentralized coordination mechanism. DHTee uses blockchain technology to support key TEE functions in a heterogeneous TEE environment, especially the a
+  protection, we propose DHTee, a decentralized coordination mechanism. DHTee uses blockchain technology to support key TEE functions in
+  a heterogeneous TEE environment, especially the attestation service. A Device equipped with one TEE can interact securely with the blockchain to verify whether another potential collaborating device
+  claiming to have a different TEE meets the security requirements. DHTee is also flexible and can support new TEE schemes without affecting devices using existing TEEs that have been supported by the system.
 tags:
 - Security
 - TEE

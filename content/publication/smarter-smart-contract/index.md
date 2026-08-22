@@ -17,7 +17,7 @@ abstract: The introduction of large language models (LLMs) like ChatGPT and Goog
   for smart contract generation are promising, a systematic evaluation is needed to explore the limits and benefits of these models. The main objective of this study is to assess the quality of generated
   code provided by LLMs for smart contracts. We also aim to evaluate the impact of the quality and variety of input parameters fed to LLMs. To achieve this aim, we created an experimental setup for evaluating
   the generated code in terms of validity, correctness, and efficiency. Our study finds crucial evidence of security bugs getting introduced in the generated smart contracts as well as the overall quality
-  and correctness of the code getting impacted. However, we also identified the areas where it can be improved. The paper also proposes several potential research directions to improve the proces
+  and correctness of the code getting impacted. However, we also identified the areas where it can be improved. The paper also proposes several potential research directions to improve the process, quality and safety of generated smart contract codes.
 tags:
 - LLMs
 - Smart Contracts

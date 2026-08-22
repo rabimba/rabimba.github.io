@@ -1,33 +1,41 @@
 ---
-title: All We Need is Voter Feedback
+title: 'All We Need is Voter Feedback: A New Paradigm to Realize Politics without Politicians Using AI Models Aligned with Voter Inputs'
 authors:
 - Nour Diallo
 - Dana Alsagheer
+- Mohammad Kamal
 - Lei Xu
 - Yang Lu
 - Rabimba Karanjai
 - Weidong Shi
-- Mohammad Kamal
 date: '2024-04-01T00:00:00Z'
-doi: ''
+doi: 10.1109/ICEDEG61611.2024.10702065
 publishDate: '2024-04-01T00:00:00Z'
 publication_types:
 - '1'
-publication: IEEE ICEDEG 2024
+publication: 2024 Tenth International Conference on eDemocracy & eGovernment (ICEDEG)
 publication_short: IEEE ICEDEG 2024
-abstract: We study decentralized governance architectures that incorporate continuous feedback loops via blockchain votes.
+abstract: 'In democratic societies, the people elect the government and it is expected to
+  represent their interests through various decisions and actions. However, the relationship
+  between voter opinions and the government''s actions is complex, and many factors can delay
+  or even transform the translation process so that the government''s operation does not reflect
+  the voters'' interests. Recent advancements in natural language processing (NLP) and large
+  language models (LLMs) provide a new opportunity to mitigate this challenge. Specifically,
+  we introduce a new framework that leverages LLMs to assess public sentiment and preferences
+  and transform citizen input into actionable policy recommendations and legislative structures.
+  This translation is highly automated and avoids unnecessary human inferences. Compared with
+  current practices, the new framework improves government transparency and reduces policy
+  unpredictability.'
 tags:
 - Blockchain
 - Governance
-- Decentralized Voting
+- LLMs
+- eDemocracy
 featured: false
 links:
 - name: DOI
-  url: https://doi.org/10.1109/ICBC56567.2023.10174914
-bibtex: "@inproceedings{karanjai2023dhtee,\n  title={Dhtee: Decentralized infrastructure for heterogeneous tees},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen, Lin and Fan, Xinxin and Suh, Teweon\
-  \ and Shi, Weidong and Xu, Lei},\n  booktitle={2023 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2023},\n  organization={IEEE}\n}"
+  url: https://doi.org/10.1109/ICEDEG61611.2024.10702065
+bibtex: "@inproceedings{diallo2024voter,\n  title={All We Need is Voter Feedback: a New Paradigm to Realize Politics without Politicians Using AI Models Aligned with Voter Inputs},\n  author={Diallo, Nour\
+  \ and Alsagheer, Dana and Kamal, Mohammad and Xu, Lei and Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  booktitle={2024 Tenth International Conference on eDemocracy \\& eGovernment (ICEDEG)},\n \
+  \ pages={1--9},\n  year={2024},\n  organization={IEEE}\n}"
 ---
-
-
-
-
