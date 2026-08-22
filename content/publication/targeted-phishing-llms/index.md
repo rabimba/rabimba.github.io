@@ -1,0 +1,33 @@
+---
+title: 'Targeted Phishing Campaigns using Large Scale Language Models'
+authors:
+- Rabimba Karanjai
+date: '2022-12-30T00:00:00Z'
+doi: ''
+publishDate: '2022-12-30T00:00:00Z'
+publication_types:
+- '3'
+publication: arXiv preprint arXiv:2301.00665
+publication_short: arXiv
+abstract: 'In this research, we aim to explore the potential of natural language models (NLMs)
+  such as GPT-3 and GPT-2 to generate effective phishing emails. Phishing emails are fraudulent
+  messages that aim to trick individuals into revealing sensitive information or taking actions
+  that benefit the attackers. We propose a framework for evaluating the performance of NLMs
+  in generating these types of emails based on various criteria, including the quality of the
+  generated text, the ability to bypass spam filters, and the success rate of tricking individuals.
+  Our evaluations show that NLMs are capable of generating phishing emails that are difficult
+  to detect and that have a high success rate in tricking individuals, but their effectiveness
+  varies based on the specific NLM and training data used. Our research indicates that NLMs
+  could have a significant impact on the prevalence of phishing attacks and emphasizes the need
+  for further study on the ethical and security implications of using NLMs for malicious purposes.'
+tags:
+- Security
+- LLMs
+- Phishing
+- First Author
+featured: false
+links:
+- name: arXiv
+  url: https://arxiv.org/pdf/2301.00665
+bibtex: "@misc{karanjai2022phishing,\n  title={Targeted Phishing Campaigns using Large Scale Language Models},\n  author={Karanjai, Rabimba},\n  howpublished={arXiv preprint arXiv:2301.00665},\n  year={2022}\n}"
+---
