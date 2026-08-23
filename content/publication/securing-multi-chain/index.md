@@ -20,6 +20,7 @@ abstract: The rapid growth of the blockchain ecosystem and the increasing value 
   This work offers a detailed analysis of various LLMs' performance on smart contract repair, highlighting the strengths of our multi-agent approach and providing a blueprint for developing more secure and
   reliable decentralized applications in the growing blockchain landscape. We also provide a detailed recipe for extending this to other similar use cases. Recipient of the ACM SIGSOFT Distinguished Paper Award at AIWare 2025.
 tags:
+- Distinguished
 - Blockchain
 - Security
 - Smart Contracts

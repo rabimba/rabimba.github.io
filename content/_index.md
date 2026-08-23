@@ -142,7 +142,7 @@ sections:
       filters:
         folders:
           - publication
-        featured_only: true
+        tag: Distinguished
     design:
       view: article-grid
       columns: 2
