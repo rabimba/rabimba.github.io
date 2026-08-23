@@ -26,6 +26,7 @@ sections:
         size: medium
         shape: circle
   - block: markdown
+    id: research-overview
     content:
       title: 'Research Overview'
       subtitle: ''

@@ -178,3 +178,16 @@
         radial-gradient(at 25% 80%, hsla(280, 35%, 15%, 1) 0px, transparent 50%),
         radial-gradient(at 75% 85%, hsla(30, 35%, 15%, 1) 0px, transparent 50%);
 }
+
+/* Homepage markdown sections — use the full content width on desktop
+   (the theme traps block content in .max-w-prose, ~48rem, which collapses
+   the card grids into a narrow column). Mobile is unaffected (100%). */
+#research-overview .max-w-prose {
+    max-width: min(100%, 60rem) !important; /* text section — keeps readable line lengths */
+}
+#achievements .max-w-prose,
+#open-source .max-w-prose,
+#gde-community .max-w-prose,
+#contact .max-w-prose {
+    max-width: min(100%, 72rem) !important;
+}
