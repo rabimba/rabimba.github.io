@@ -54,6 +54,15 @@
     </div>
   </div>
 
+  {{- $ldAuthors := slice -}}
+  {{- range .Params.authors }}{{ $ldAuthors = $ldAuthors | append (dict "@type" "Person" "name" .) }}{{ end -}}
+  {{- $ldSchema := dict "@context" "https://schema.org" "@type" "ScholarlyArticle" "headline" (.Title | plainify) "url" .Permalink "datePublished" (.Date | time.Format "2006-01-02") -}}
+  {{- with $ldAuthors }}{{ $ldSchema = merge $ldSchema (dict "author" .) }}{{ end -}}
+  {{- with .Params.abstract }}{{ $ldSchema = merge $ldSchema (dict "abstract" (. | plainify)) }}{{ end -}}
+  {{- with .Params.publication }}{{ $ldSchema = merge $ldSchema (dict "isPartOf" .) }}{{ end -}}
+  {{- with .Params.doi }}{{ $ldSchema = merge $ldSchema (dict "identifier" .) }}{{ end -}}
+  <script type="application/ld+json">{{ $ldSchema | jsonify }}</script>
+
   {{ $bibtex := .Params.bibtex | default "" }}
 
   <!-- BibTeX Citation Card -->
@@ -76,19 +85,42 @@
   <!-- Read Paper section -->
   {{ $arxivUrl := "" }}
   {{ $doiUrl := "" }}
+  {{ $pdfUrl := .Params.pdf | default "" }}
   {{ range .Params.links }}
     {{ if eq .name "arXiv" }}{{ $arxivUrl = .url }}{{ end }}
+    {{ if and (eq .name "PDF") (eq $pdfUrl "") }}{{ $pdfUrl = .url }}{{ end }}
     {{ if eq .name "DOI" }}{{ $doiUrl = .url }}{{ end }}
   {{ end }}
-
+  {{ if and $arxivUrl (eq $pdfUrl "") }}{{ $pdfUrl = $arxivUrl }}{{ end }}
+  {{ $embedUrl := "" }}
   {{ if $arxivUrl }}
+    {{ $embedUrl = $arxivUrl }}
+  {{ else if and $pdfUrl (or (in $pdfUrl "arxiv.org") (.Params.pdf_embed)) }}
+    {{ $embedUrl = $pdfUrl }}
+  {{ end }}
+
+  {{ if $embedUrl }}
   <div class="article-container" style="margin-bottom: 2rem;">
     <div class="paper-reader">
       <div class="paper-reader-header">
         <span class="paper-reader-title">Read Paper</span>
-        <a href="{{ $arxivUrl }}" target="_blank" rel="noopener" class="paper-download-btn">Download PDF</a>
+        <a href="{{ $pdfUrl | default $embedUrl }}" target="_blank" rel="noopener" class="paper-download-btn">Download PDF</a>
       </div>
-      <iframe src="{{ $arxivUrl }}#view=FitH" width="100%" height="700" style="border: none; display: block;" title="PDF Reader"></iframe>
+      <iframe src="{{ $embedUrl }}#view=FitH" width="100%" height="700" style="border: none; display: block;" title="PDF Reader"></iframe>
+    </div>
+  </div>
+  {{ else if $pdfUrl }}
+  <div class="article-container" style="margin-bottom: 2rem;">
+    <div class="paper-reader">
+      <div class="paper-reader-header">
+        <span class="paper-reader-title">Read Paper</span>
+        <a href="{{ $pdfUrl }}" target="_blank" rel="noopener" class="paper-download-btn">Download PDF</a>
+      </div>
+      <div class="paper-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <p>The publisher restricts in-page viewing of this PDF.</p>
+        <a href="{{ $pdfUrl }}" target="_blank" rel="noopener" class="paper-doi-link">Open PDF in a new tab →</a>
+      </div>
     </div>
   </div>
   {{ else if $doiUrl }}

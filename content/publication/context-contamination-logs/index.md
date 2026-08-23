@@ -33,6 +33,8 @@ featured: false
 links:
 - name: PDF
   url: https://www.usenix.org/system/files/usenixsecurity26-karanjai.pdf
+- name: arXiv
+  url: https://arxiv.org/pdf/2607.14493
 - name: USENIX
   url: https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai
 - name: Scholar

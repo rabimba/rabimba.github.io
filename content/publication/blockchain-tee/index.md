@@ -24,6 +24,8 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1145/3505253.3505259
+- name: arXiv
+  url: https://arxiv.org/pdf/2203.12724
 bibtex: "@inproceedings{rabimba2021lessons,\n  title={Lessons learned from blockchain applications of trusted execution environments and implications for future research},\n  author={Rabimba, Karanjai and\
   \ Xu, Lei and Chen, Lin and Zhang, Fengwei and Gao, Zhimin and Shi, Weidong},\n  booktitle={Proceedings of the 10th International Workshop on Hardware and Architectural Support for Security and Privacy},\n\
   \  pages={1--8},\n  year={2021}\n}"
