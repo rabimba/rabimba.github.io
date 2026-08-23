@@ -192,3 +192,28 @@
 #contact .max-w-prose {
     max-width: min(100%, 64rem) !important;
 }
+/* Match the collection blocks' box model exactly (px-8, xl:px-5 inside
+   max-w-screen-lg) so content edges align pixel-for-pixel across sections. */
+#research-overview > div,
+#achievements > div,
+#grants > div,
+#open-source > div,
+#gde-community > div,
+#service > div,
+#contact > div {
+    max-width: 64rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+@media (min-width: 1280px) {
+    #research-overview > div,
+    #achievements > div,
+    #grants > div,
+    #open-source > div,
+    #gde-community > div,
+    #service > div,
+    #contact > div {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
