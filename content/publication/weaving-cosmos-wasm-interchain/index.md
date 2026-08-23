@@ -7,6 +7,7 @@ authors:
 date: '2025-02-24T00:00:00Z'
 doi: ''
 publishDate: '2025-02-24T00:00:00Z'
+citations: 3
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2502.17604

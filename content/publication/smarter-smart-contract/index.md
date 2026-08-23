@@ -8,6 +8,7 @@ authors:
 date: '2023-10-01T00:00:00Z'
 doi: ''
 publishDate: '2023-10-01T00:00:00Z'
+citations: 20
 publication_types:
 - '1'
 publication: BRAINS 2023

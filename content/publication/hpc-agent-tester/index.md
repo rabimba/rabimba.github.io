@@ -7,6 +7,7 @@ authors:
 date: '2025-11-01T00:00:00Z'
 doi: ''
 publishDate: '2025-11-01T00:00:00Z'
+citations: 2
 publication_types:
 - '1'
 publication: ACM AIWare 2025

@@ -14,6 +14,7 @@ authors:
 date: '2025-06-16T00:00:00Z'
 doi: ''
 publishDate: '2025-06-16T00:00:00Z'
+citations: 2
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2506.21580

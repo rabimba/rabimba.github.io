@@ -8,6 +8,7 @@ authors:
 date: '2024-12-17T00:00:00Z'
 doi: ''
 publishDate: '2024-12-17T00:00:00Z'
+citations: 4
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2412.12513

@@ -9,6 +9,7 @@ authors:
 date: '2026-01-10T00:00:00Z'
 doi: ''
 publishDate: '2026-01-10T00:00:00Z'
+citations: 1
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2601.06667

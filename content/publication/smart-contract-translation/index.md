@@ -7,6 +7,7 @@ authors:
 date: '2024-11-01T00:00:00Z'
 doi: ''
 publishDate: '2024-11-01T00:00:00Z'
+citations: 13
 publication_types:
 - '1'
 publication: ACM Foundations of Software Engineering (FSE) 2024

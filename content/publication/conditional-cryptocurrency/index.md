@@ -10,6 +10,7 @@ authors:
 date: '2021-05-01T00:00:00Z'
 doi: ''
 publishDate: '2021-05-01T00:00:00Z'
+citations: 9
 publication_types:
 - '1'
 publication: IEEE ICBC 2021

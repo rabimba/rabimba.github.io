@@ -5,6 +5,7 @@ authors:
 date: '2022-12-30T00:00:00Z'
 doi: ''
 publishDate: '2022-12-30T00:00:00Z'
+citations: 67
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2301.00665

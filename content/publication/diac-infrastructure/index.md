@@ -10,6 +10,7 @@ authors:
 date: '2023-11-01T00:00:00Z'
 doi: ''
 publishDate: '2023-11-01T00:00:00Z'
+citations: 10
 publication_types:
 - '2'
 publication: IEEE TNSM 2023

@@ -11,6 +11,7 @@ authors:
 date: '2024-04-01T00:00:00Z'
 doi: 10.1109/ICEDEG61611.2024.10702065
 publishDate: '2024-04-01T00:00:00Z'
+citations: 2
 publication_types:
 - '1'
 publication: 2024 Tenth International Conference on eDemocracy & eGovernment (ICEDEG)

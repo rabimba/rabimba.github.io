@@ -11,6 +11,7 @@ authors:
 date: '2022-06-21T00:00:00Z'
 doi: 10.2139/ssrn.4141949
 publishDate: '2022-06-21T00:00:00Z'
+citations: 1
 publication_types:
 - '3'
 publication: Available at SSRN 4141949

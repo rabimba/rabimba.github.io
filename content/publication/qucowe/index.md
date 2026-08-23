@@ -8,6 +8,7 @@ authors:
 date: '2026-02-01T00:00:00Z'
 doi: ''
 publishDate: '2026-02-01T00:00:00Z'
+citations: 1
 publication_types:
 - '1'
 publication: International Workshop on Quantum Computing and Artificial Intelligence

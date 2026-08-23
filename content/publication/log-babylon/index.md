@@ -11,6 +11,7 @@ authors:
 date: '2025-03-01T00:00:00Z'
 doi: ''
 publishDate: '2025-03-01T00:00:00Z'
+citations: 10
 publication_types:
 - '1'
 publication: ACM SAC 2025

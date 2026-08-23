@@ -6,6 +6,7 @@ authors:
 date: '2024-03-16T00:00:00Z'
 doi: ''
 publishDate: '2024-03-16T00:00:00Z'
+citations: 4
 publication_types:
 - '3'
 publication: arXiv preprint arXiv:2403.10824

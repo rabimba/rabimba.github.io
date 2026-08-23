@@ -7,6 +7,7 @@ authors:
 date: '2024-05-01T00:00:00Z'
 doi: 10.1109/ICBC59979.2024.10634392
 publishDate: '2024-05-01T00:00:00Z'
+citations: 6
 publication_types:
 - '1'
 publication: 2024 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)

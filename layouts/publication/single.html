@@ -181,6 +181,12 @@
           <span class="pub-meta-label">Date</span>
           <span class="pub-meta-value">{{ time.Format "Jan 2006" .Date }}</span>
         </div>
+        {{ with .Params.citations }}
+        <div class="pub-meta-item">
+          <span class="pub-meta-label">Citations</span>
+          <span class="pub-meta-value">{{ . }}</span>
+        </div>
+        {{ end }}
       </div>
       {{ if .Params.tags }}
       <div class="pub-tags-list">

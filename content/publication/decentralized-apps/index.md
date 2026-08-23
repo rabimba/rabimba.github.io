@@ -11,6 +11,7 @@ authors:
 date: '2022-05-01T00:00:00Z'
 doi: ''
 publishDate: '2022-05-01T00:00:00Z'
+citations: 7
 publication_types:
 - '1'
 publication: IEEE ICBC 2022

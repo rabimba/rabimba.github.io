@@ -11,3 +11,6 @@ selected:
   - google-io-2025-gde-summit-from-whiteboard-to-users
 ---
 
+## The journey
+
+My talks trace three eras: the **Web & VR years** (2014–2018, Mozilla Tech Speaker days — WebXR, A-Frame, OSCON, FOSDEM), the **systems & security years** (2019–2023 — TEEs, blockchain, decentralized infrastructure), and the current **LLM & agents era** (2023– — Gemini, Gemma, reasoning, AI safety). Use the timeline or filters below to jump to any era.

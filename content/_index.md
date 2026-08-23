@@ -46,23 +46,23 @@ sections:
       title: 'Key Achievements'
       subtitle: 'A snapshot of research impact, recognition, and community contributions'
       text: |-
-        <div class="achievements-grid">
-        <div class="achievement-card">
+        <div class="achievements-grid" role="list">
+        <div class="achievement-card" role="listitem">
         <div class="achievement-number">35+</div>
         <div class="achievement-label">Peer-Reviewed Publications</div>
         <div class="achievement-detail">28 as first author across AAAI, IEEE ICBC, ACM FSE, USENIX Security, KDD, and more</div>
         </div>
-        <div class="achievement-card">
+        <div class="achievement-card" role="listitem">
         <div class="achievement-number">4</div>
         <div class="achievement-label">US Patents</div>
         <div class="achievement-detail">1 issued (US11025643B2) + 3 pending (PayPal) covering AI, voice commerce, and authentication</div>
         </div>
-        <div class="achievement-card">
+        <div class="achievement-card" role="listitem">
         <div class="achievement-number">4x</div>
         <div class="achievement-label">Research Grants</div>
         <div class="achievement-detail">$90K+ from Sui Foundation (3x) and Grant for Web as Principal Investigator</div>
         </div>
-        <div class="achievement-card">
+        <div class="achievement-card" role="listitem">
         <div class="achievement-number">85+</div>
         <div class="achievement-label">Invited Talks</div>
         <div class="achievement-detail">Google I/O, OSCON, NDC Sydney, FOSDEM, KubeCon, Stanford, MIT, Berkeley RDI, and more</div>
@@ -173,28 +173,28 @@ sections:
       title: 'Open Source'
       subtitle: 'Research code, benchmarks, and tools I build and maintain'
       text: |-
-        <div class="oss-grid">
-        <a class="oss-card" href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">
+        <div class="oss-grid" role="list">
+        <a class="oss-card" role="listitem" href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">
         <div class="oss-name">Dr.MRI.AI</div>
         <div class="oss-desc">Privacy-first DICOM viewer that plans slice selection with Gemma 4 before multimodal review — ~99% fewer image tokens, fully in-browser via WebGPU.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/drmriai/" target="_blank" rel="noopener">Live demo</a></div>
         </a>
-        <a class="oss-card" href="https://github.com/rabimba/vllm-xla-bench" target="_blank" rel="noopener">
+        <a class="oss-card" role="listitem" href="https://github.com/rabimba/vllm-xla-bench" target="_blank" rel="noopener">
         <div class="oss-name">vllm-xla-bench</div>
         <div class="oss-desc">Single-variable benchmark harness for serving LLMs with vLLM across CUDA and OpenXLA/XLA backends — honest goodput under fixed SLOs.</div>
         <div class="oss-meta">Python &middot; presented at OpenXLA DevLab 2026</div>
         </a>
-        <a class="oss-card" href="https://github.com/rabimba/speedracer-AI" target="_blank" rel="noopener">
+        <a class="oss-card" role="listitem" href="https://github.com/rabimba/speedracer-AI" target="_blank" rel="noopener">
         <div class="oss-name">speedracer-AI</div>
         <div class="oss-desc">The AI Race Coach Android dashboard from the Google I/O GDE Field Test — 10 Hz telemetry, Gemini reasoning, on-device Gemma 4 coaching.</div>
         <div class="oss-meta">Kotlin &middot; Jetpack Compose</div>
         </a>
-        <a class="oss-card" href="https://github.com/rabimba/context-contamination-usenix26" target="_blank" rel="noopener">
+        <a class="oss-card" role="listitem" href="https://github.com/rabimba/context-contamination-usenix26" target="_blank" rel="noopener">
         <div class="oss-name">context-contamination-usenix26</div>
         <div class="oss-desc">Artifacts for our USENIX Security 26 paper: the LogInject benchmark, Context Stitching attacks, and layered-defense mitigation evaluation.</div>
         <div class="oss-meta">Python &middot; USENIX Security 26</div>
         </a>
-        <a class="oss-card" href="https://github.com/rabimba/trustable-ai-codelab" target="_blank" rel="noopener">
+        <a class="oss-card" role="listitem" href="https://github.com/rabimba/trustable-ai-codelab" target="_blank" rel="noopener">
         <div class="oss-name">trustable-ai-codelab</div>
         <div class="oss-desc">Co-authored Google codelab &ldquo;Building Trustable AI at 100 MPH&rdquo; — split-brain architecture, telemetry streaming, guardrails, and Gemini strategy layers.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://codelabs.developers.google.com/codelabs/trustable-at-100-mph" target="_blank" rel="noopener">Official codelab</a></div>
