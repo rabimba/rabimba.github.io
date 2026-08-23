@@ -33,6 +33,36 @@
   </div>
 </div>
 
+{{ with .Params.selected }}
+<div class="article-container" style="margin-top: 1.5rem;">
+  <h2 style="font-size: 1.3rem; margin-bottom: 0.9rem;">Selected Talks</h2>
+  <div class="sel-grid">
+    {{ range . }}
+      {{ with site.GetPage (printf "/events/%s" .) }}
+      <a class="sel-card" href="{{ .RelPermalink }}">
+        {{ with .Resources.GetMatch "featured.*" }}
+        <img class="sel-img" src="{{ .RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+        {{ end }}
+        <div class="sel-body">
+          <div class="sel-title">{{ .Title }}</div>
+          <div class="sel-meta">{{ with .Params.event }}{{ . }} &middot; {{ end }}{{ time.Format "Jan 2006" .Date }}</div>
+        </div>
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+<style>
+.sel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.sel-card { display: flex; flex-direction: column; border: 1px solid var(--color-border, #e2e8f0); border-radius: 0.875rem; overflow: hidden; text-decoration: none; color: inherit; transition: all 0.2s; background: rgba(99, 102, 241, 0.03); }
+.sel-card:hover { border-color: var(--color-primary, #6366f1); transform: translateY(-3px); box-shadow: 0 10px 26px rgba(99, 102, 241, 0.12); }
+.sel-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.sel-body { padding: 0.75rem 0.9rem 0.9rem; }
+.sel-title { font-size: 0.875rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.3rem; }
+.sel-meta { font-size: 0.72rem; opacity: 0.6; }
+</style>
+</div>
+{{ end }}
 <div class="article-container" style="margin-top: 1.5rem;">
   <div class="evt-browser-filters">
     <div class="evt-filter-row">
