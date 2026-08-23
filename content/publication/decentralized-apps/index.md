@@ -21,6 +21,7 @@ tags:
 - Smart Contracts
 - First Author
 featured: true
+distinguished: true
 links:
 - name: DOI
   url: https://doi.org/10.1109/ICBC54727.2022.9805524

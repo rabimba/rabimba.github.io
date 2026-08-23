@@ -133,12 +133,12 @@
       {{ $statusSlug := "published" }}
       {{ if $isUnderReview }}{{ $statusSlug = "under-review" }}{{ end }}
 
-      <article class="pub-browser-item{{ if .Params.featured }} distinguished{{ end }}{{ if $isUnderReview }} under-review{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-status="{{ $statusSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
+      <article class="pub-browser-item{{ if .Params.distinguished }} distinguished{{ end }}{{ if $isUnderReview }} under-review{{ end }}" data-card data-year="{{ $year }}" data-type="{{ $typeSlug }}" data-status="{{ $statusSlug }}" data-tags="{{ $tagAttr }}" data-search="{{ $searchAttr }}" data-title="{{ .Title | plainify | lower }}">
         <div class="pub-browser-meta">
           <span class="pub-browser-badge pub-browser-badge-type">{{ $typeLabel }}</span>
           <span class="pub-browser-badge pub-browser-badge-year">{{ $year }}</span>
           {{ if $isUnderReview }}<span class="pub-browser-badge pub-browser-badge-review">Under Review</span>{{ end }}
-          {{ if .Params.featured }}<span class="pub-browser-badge pub-browser-badge-distinguished">Distinguished</span>{{ end }}
+          {{ if .Params.distinguished }}<span class="pub-browser-badge pub-browser-badge-distinguished">Distinguished</span>{{ end }}
           {{ if $isFirstAuthor }}<span class="pub-browser-badge pub-browser-badge-first">1st Author</span>{{ end }}
         </div>
         <h2 class="pub-browser-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
