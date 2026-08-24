@@ -5,8 +5,8 @@ Rabimba Karanjai                                                                
 
                             RABIMBA KARANJAI
                                                                                                   Phone: (469) 438-2410
- San Jose, CA-95112                                                                             Email: rkaranjai@uh.edu
- https://www.rabimba.me                                                                         Alt: rabimba@gmail.com
+ San Jose, CA-95112                                                                             Email: via https://www.rabimba.me
+ https://www.rabimba.me                                                                         Alt: via https://www.rabimba.me
 
 
 
