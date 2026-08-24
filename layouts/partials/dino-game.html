@@ -46,7 +46,7 @@
     canvas.width  = Math.round(W * dpr);
     canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (state !== 'running') render();
+    if (state) render(); /* skip until game vars initialized */
   }
 
   sizeWrap(); resize();

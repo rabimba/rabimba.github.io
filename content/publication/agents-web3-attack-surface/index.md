@@ -11,9 +11,9 @@ date: '2026-08-18T00:00:00Z'
 doi: ''
 publishDate: '2026-08-18T00:00:00Z'
 publication_types:
-- '3'
-publication: arXiv preprint arXiv:2608.17275
-publication_short: arXiv
+- '1'
+publication: BRAINS 2026
+publication_short: BRAINS 2026
 abstract: 'AI agents increasingly act rather than merely read: across the Model Context
   Protocol (MCP) ecosystem, the share of deployed tools that modify external state has risen
   from 27% to 65% of tool use. When agents exercise this authority on public blockchains through

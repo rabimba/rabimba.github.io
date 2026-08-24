@@ -12,9 +12,9 @@ date: '2026-08-18T00:00:00Z'
 doi: ''
 publishDate: '2026-08-18T00:00:00Z'
 publication_types:
-- '3'
-publication: arXiv preprint arXiv:2608.17220
-publication_short: arXiv
+- '1'
+publication: BRAINS 2026
+publication_short: BRAINS 2026
 abstract: 'Autonomous AI agents are emerging as interfaces for decentralized finance (DeFi)
   actions such as swaps, lending operations, and yield management. Because these agents rely
   on large language models (LLMs) to plan transactions, they inherit the LLM''s susceptibility

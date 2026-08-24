@@ -123,7 +123,7 @@ type: page
       <div class="cv-chapter-year">2020 – 2025</div>
       <h2>The PhD Quest: Teaching AI to Reason</h2>
       <p>PhD at <strong>University of Houston</strong>, advised by Prof. Weidong Shi. Dissertation: "Teaching AIs to Reason and Code, Confidentially." Won the <strong>Dan E. Wells Outstanding Dissertation Award</strong> and <strong>UH Best Dissertation Award</strong>.</p>
-      <p class="cv-highlight">35+ papers. 3x Sui Foundation grants. ACM SIGSOFT Distinguished Paper Award. Google Cloud Research Innovator.</p>
+      <p class="cv-highlight">50+ publications (37 published, 28 first-author). 4x research grants. ACM SIGSOFT Distinguished Paper Award. Best Dissertation Award. Google Cloud Research Innovator.</p>
       <div class="cv-chapter-tags">
         <span class="cv-tag">LLM Reasoning</span>
         <span class="cv-tag">Smart Contracts</span>
@@ -141,7 +141,7 @@ type: page
     <div class="cv-chapter-content">
       <div class="cv-chapter-year">2025 – Present</div>
       <h2>PayPal: Production AI at Scale</h2>
-      <p>Staff Agentic AI Researcher at <strong>PayPal Research</strong>. Leading voice commerce systems with 120B parameter models. Filed 3 patents. Building multi-agent adversarial evaluation arenas.</p>
+      <p>Staff Agentic AI Researcher at <strong>PayPal Research</strong> (San Jose). Lead technical strategy for production-scale agentic AI: built a voice-to-voice model with <strong>NVIDIA</strong> and a frontier multimodal model with <strong>Google</strong> (lead author on both), invented the <strong>CM-DPO</strong> preference-optimization framework, and train frontier LLMs up to 120B parameters. Designed a multi-agent adversarial evaluation arena; filed 3 U.S. patents.</p>
       <div class="cv-chapter-tags">
         <span class="cv-tag">Voice Commerce</span>
         <span class="cv-tag">Agentic AI</span>
@@ -156,20 +156,20 @@ type: page
 <!-- Stats Grid -->
 <div class="cv-stats">
   <div class="cv-stat-card">
-    <div class="cv-stat-number">35+</div>
-    <div class="cv-stat-label">Peer-Reviewed Papers</div>
-  </div>
-  <div class="cv-stat-card">
-    <div class="cv-stat-number">4</div>
-    <div class="cv-stat-label">US Patents</div>
-  </div>
-  <div class="cv-stat-card">
     <div class="cv-stat-number">50+</div>
+    <div class="cv-stat-label">Publications (37 published)</div>
+  </div>
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">6</div>
+    <div class="cv-stat-label">US Patents (1 issued)</div>
+  </div>
+  <div class="cv-stat-card">
+    <div class="cv-stat-number">85+</div>
     <div class="cv-stat-label">Invited Talks</div>
   </div>
   <div class="cv-stat-card">
-    <div class="cv-stat-number">3x</div>
-    <div class="cv-stat-label">Sui Foundation Grants</div>
+    <div class="cv-stat-number">$90K+</div>
+    <div class="cv-stat-label">Research Grants (4x)</div>
   </div>
 </div>
 
@@ -200,6 +200,14 @@ type: page
     <div class="cv-award">
       <span class="cv-award-icon">🔥</span>
       <span>NVIDIA Developer Champion</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🥇</span>
+      <span>Outstanding PhD Student — UH (2022–2024)</span>
+    </div>
+    <div class="cv-award">
+      <span class="cv-award-icon">🎖️</span>
+      <span>HPE DSI AI Showcase — 3rd Place (2023)</span>
     </div>
   </div>
 </div>
