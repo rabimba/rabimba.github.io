@@ -175,42 +175,44 @@ sections:
       subtitle: 'Research code, benchmarks, and tools I build and maintain'
       text: |-
         <div class="oss-grid" role="list">
-        <a class="oss-card" role="listitem" href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">
-        <div class="oss-name">Dr.MRI.AI</div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">Dr.MRI.AI</a></div>
         <div class="oss-desc">Privacy-first DICOM viewer that plans slice selection with Gemma 4 before multimodal review — ~99% fewer image tokens, fully in-browser via WebGPU.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/drmriai/" target="_blank" rel="noopener">Live demo</a></div>
-        </a>
-        <a class="oss-card" role="listitem" href="https://github.com/rabimba/vllm-xla-bench" target="_blank" rel="noopener">
-        <div class="oss-name">vllm-xla-bench</div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/vllm-xla-bench" target="_blank" rel="noopener">vllm-xla-bench</a></div>
         <div class="oss-desc">Single-variable benchmark harness for serving LLMs with vLLM across CUDA and OpenXLA/XLA backends — honest goodput under fixed SLOs.</div>
         <div class="oss-meta">Python &middot; presented at OpenXLA DevLab 2026</div>
-        </a>
-        <a class="oss-card" role="listitem" href="https://github.com/rabimba/speedracer-AI" target="_blank" rel="noopener">
-        <div class="oss-name">speedracer-AI</div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/speedracer-AI" target="_blank" rel="noopener">speedracer-AI</a></div>
         <div class="oss-desc">The AI Race Coach Android dashboard from the Google I/O GDE Field Test — 10 Hz telemetry, Gemini reasoning, on-device Gemma 4 coaching.</div>
         <div class="oss-meta">Kotlin &middot; Jetpack Compose</div>
-        </a>
-        <a class="oss-card" role="listitem" href="https://github.com/rabimba/context-contamination-usenix26" target="_blank" rel="noopener">
-        <div class="oss-name">context-contamination-usenix26</div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/context-contamination-usenix26" target="_blank" rel="noopener">context-contamination-usenix26</a></div>
         <div class="oss-desc">Artifacts for our USENIX Security 26 paper: the LogInject benchmark, Context Stitching attacks, and layered-defense mitigation evaluation.</div>
         <div class="oss-meta">Python &middot; USENIX Security 26</div>
-        </a>
-        <a class="oss-card" role="listitem" href="https://github.com/rabimba/trustable-ai-codelab" target="_blank" rel="noopener">
-        <div class="oss-name">trustable-ai-codelab</div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/trustable-ai-codelab" target="_blank" rel="noopener">trustable-ai-codelab</a></div>
         <div class="oss-desc">Co-authored Google codelab &ldquo;Building Trustable AI at 100 MPH&rdquo; — split-brain architecture, telemetry streaming, guardrails, and Gemini strategy layers.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://codelabs.developers.google.com/codelabs/trustable-at-100-mph" target="_blank" rel="noopener">Official codelab</a></div>
-        </a>
-        <a class="oss-card oss-more" href="https://github.com/rabimba?tab=repositories" target="_blank" rel="noopener">
-        <div class="oss-name">More on GitHub &rarr;</div>
+        </div>
+        <div class="oss-card oss-more" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba?tab=repositories" target="_blank" rel="noopener">More on GitHub &rarr;</a></div>
         <div class="oss-desc">Research prototypes, agents, and tooling — from smart-contract security scanners to multi-agent routers.</div>
         <div class="oss-meta">github.com/rabimba</div>
-        </a>
+        </div>
         </div>
         <style>
         .oss-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
         .oss-card { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.15rem; border: 1px solid var(--color-border, #e2e8f0); border-radius: 0.875rem; background: rgba(99, 102, 241, 0.04); text-decoration: none; color: inherit; transition: all 0.2s; }
         .oss-card:hover { border-color: var(--color-primary, #6366f1); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99, 102, 241, 0.10); }
-        .oss-name { font-weight: 800; font-size: 0.95rem; color: var(--color-primary, #6366f1); }
+        .oss-name { font-weight: 800; font-size: 0.95rem; }
+        .oss-name a { color: var(--color-primary, #6366f1); text-decoration: none; }
+        .oss-name a:hover { text-decoration: underline; }
         .oss-desc { font-size: 0.8125rem; opacity: 0.75; line-height: 1.45; flex-grow: 1; }
         .oss-meta { font-size: 0.72rem; opacity: 0.55; }
         .oss-meta a { color: inherit; }
