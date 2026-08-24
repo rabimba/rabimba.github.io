@@ -1,15 +1,17 @@
 <div class="dino-footer">
-  <canvas id="dino-canvas" aria-label="Dino game — press space or tap to play"></canvas>
+  <canvas id="dino-canvas" role="img" aria-label="Dino game — click or tap to play"></canvas>
 </div>
 <style>
 .dino-footer {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
   height: 80px;
   margin-top: 0.5rem;
   cursor: pointer;
+  background: #f9fafb;
+}
+.dark .dino-footer, html.dark .dino-footer {
+  background: #111827;
 }
 .dino-footer canvas {
   display: block;
@@ -26,20 +28,32 @@
   var W, H = 80, GROUND = 64, PX = 2;
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
+  /* Full-bleed sizing that never causes horizontal overflow:
+     width = document clientWidth (excludes scrollbar), shifted by the
+     parent's offset so the strip spans the real viewport edge-to-edge. */
+  function sizeWrap() {
+    var vw = document.documentElement.clientWidth;
+    if (!vw) return;
+    var left = wrap.parentElement.getBoundingClientRect().left;
+    wrap.style.width = vw + 'px';
+    wrap.style.marginLeft = (-left) + 'px';
+  }
+
   function resize() {
+    sizeWrap();
     var rect = wrap.getBoundingClientRect();
     W = Math.max(rect.width, 1);
     canvas.width  = Math.round(W * dpr);
     canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (state !== 'running') render();
   }
 
-  /* Measure now + defer for layout settle */
-  resize();
+  sizeWrap(); resize();
   setTimeout(resize, 50);
   setTimeout(resize, 200);
   if (typeof ResizeObserver !== 'undefined') {
-    new ResizeObserver(resize).observe(wrap);
+    new ResizeObserver(resize).observe(wrap.parentElement || wrap);
   }
   window.addEventListener('resize', resize);
   window.addEventListener('orientationchange', resize);
@@ -92,15 +106,15 @@
   try{hi=parseInt(localStorage.getItem('dinohi')||'0',10)||0}catch(e){}
   var dino={x:50,y:GROUND,vy:0,on:true,leg:0}, obs=[], cl=[];
   var touch='ontouchstart'in window||navigator.maxTouchPoints>0;
-  var hint=touch?'tap to play':'press space or tap';
+  var hint=touch?'tap to play':'click to play \u00b7 space jumps';
 
   function jump(){if(dino.on){dino.vy=-10;dino.on=false}}
   function rst(){dino.y=GROUND;dino.vy=0;dino.on=true;obs=[];cl=[];speed=5;score=0;frame=0;spawn=0}
   function start(){rst();state='running';canvas.classList.add('dino-active')}
 
   function addObs(){
-    var big=Math.random()<0.25, bmp=big?CL:CS;
-    obs.push({x:W+20,b:bmp,w:bmp[0].length*PX,h:bmp.length*PX});
+    var big=Math.random()<0.25, b=big?CL:CS;
+    obs.push({x:W+20,b:b,w:b[0].length*PX,h:b.length*PX});
   }
   function addCl(){cl.push({x:W+20,y:10+Math.random()*16,w:20+Math.random()*14})}
 
@@ -126,7 +140,7 @@
     ctx.globalAlpha=0.6;ctx.font='700 14px system-ui,sans-serif';ctx.textAlign='center';
     ctx.fillText('GAME OVER',W/2,GROUND-20);
     ctx.font='600 11px system-ui,sans-serif';ctx.globalAlpha=0.4;
-    ctx.fillText('score '+score+'  best '+hi+'  '+(touch?'tap to retry':'space/click to retry'),W/2,GROUND-4);ctx.globalAlpha=1;}
+    ctx.fillText('score '+score+'  best '+hi+'  '+(touch?'tap to retry':'click or space to retry'),W/2,GROUND-4);ctx.globalAlpha=1;}
 
   function hit(o){
     var dx=dino.x+3*PX, dy=GROUND-BODY.length*PX+(dino.y-GROUND)+2, dw=13*PX, dh=16*PX;
@@ -155,16 +169,27 @@
     if(state==='over')drawOv(c);
   }
 
-  function loop(){if(state==='running')upd();render();requestAnimationFrame(loop)}
+  /* Pause rendering while the strip is off-screen (battery + smooth page) */
+  var inView = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(en){ inView = en[0].isIntersecting; }).observe(wrap);
+  }
+  function loop(){ if(inView){ if(state==='running') upd(); render(); } requestAnimationFrame(loop) }
   loop();
 
-  var last=0;
+  /* Input: click/tap always works. Keyboard only after the player engages
+     with the strip, and only while it is on-screen — never hijacks scrolling. */
+  var engaged = false, last = 0;
   function inp(){
     var now=Date.now();if(now-last<80)return;last=now;
     if(state==='idle'||state==='over')start();else if(state==='running')jump();
   }
-  wrap.addEventListener('click',inp);
-  wrap.addEventListener('touchstart',function(e){e.preventDefault();inp()},{passive:false});
-  document.addEventListener('keydown',function(e){if(e.code==='Space'||e.code==='ArrowUp'){e.preventDefault();inp()}});
+  wrap.addEventListener('click',function(){engaged=true;inp()});
+  wrap.addEventListener('touchstart',function(e){e.preventDefault();engaged=true;inp()},{passive:false});
+  document.addEventListener('keydown',function(e){
+    if(e.code!=='Space'&&e.code!=='ArrowUp')return;
+    if(!engaged||!inView||state==='idle')return;
+    e.preventDefault();inp();
+  });
 })();
 </script>
