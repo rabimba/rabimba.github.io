@@ -160,8 +160,8 @@ type: page
     <div class="cv-stat-label">Publications (37 published)</div>
   </div>
   <div class="cv-stat-card">
-    <div class="cv-stat-number">6</div>
-    <div class="cv-stat-label">US Patents (1 issued)</div>
+    <div class="cv-stat-number">1</div>
+    <div class="cv-stat-label">Issued US Patent</div>
   </div>
   <div class="cv-stat-card">
     <div class="cv-stat-number">85+</div>

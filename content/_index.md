@@ -54,9 +54,9 @@ sections:
         <div class="achievement-detail">37 peer-reviewed (28 first author) across USENIX Security, AAAI, ACM FSE, IEEE ICBC, KDD — 17 more under review</div>
         </div>
         <div class="achievement-card" role="listitem">
-        <div class="achievement-number">6</div>
-        <div class="achievement-label">US Patents</div>
-        <div class="achievement-detail">1 issued (US11025643B2) + 5 pending (PayPal &amp; IBM) covering AI, voice commerce, and authentication</div>
+        <div class="achievement-number">1</div>
+        <div class="achievement-label">Issued US Patent</div>
+        <div class="achievement-detail">US11025643B2 — multi-factor authentication combining biometrics and blockchain (IBM)</div>
         </div>
         <div class="achievement-card" role="listitem">
         <div class="achievement-number">4x</div>
