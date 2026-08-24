@@ -278,7 +278,7 @@ sections:
       text: |-
         <p style="text-align:center; max-width: 42rem; margin: 0 auto 1.25rem; opacity: 0.75;">Happy to talk about research collaborations, industry problems, talks, or the GDE program. The fastest way to reach me is email or LinkedIn.</p>
         <div class="contact-grid">
-        <a class="contact-btn contact-primary" href="mailto:rkaranjai@uh.edu">&#9993; Email</a>
+        <a class="contact-btn contact-primary" href="#" data-email-user="rkaranjai" data-email-domain="uh.edu">&#9993; Email</a>
         <a class="contact-btn" href="https://www.linkedin.com/in/rabimba/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="contact-btn" href="https://github.com/rabimba" target="_blank" rel="noopener">GitHub</a>
         <a class="contact-btn" href="https://scholar.google.com/citations?user=PYmmdne2aRMC" target="_blank" rel="noopener">Google Scholar</a>

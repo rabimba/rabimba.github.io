@@ -10,3 +10,14 @@
     {{ end }}
   </div>
 </footer>
+<script>
+/* Harvesting-resistant email links: addresses are assembled client-side
+   from data attributes — nothing for static scrapers to regex. */
+(function(){
+  var links = document.querySelectorAll('[data-email-user]');
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i];
+    a.href = 'mailto:' + a.getAttribute('data-email-user') + '@' + a.getAttribute('data-email-domain');
+  }
+})();
+</script>

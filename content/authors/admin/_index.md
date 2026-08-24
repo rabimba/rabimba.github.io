@@ -31,8 +31,8 @@ organizations:
 # Social network links
 profiles:
   - icon: at-symbol
-    url: 'mailto:rkaranjai@uh.edu'
-    label: E-mail Me
+    url: '/#contact'
+    label: Email Me
   - icon: brands/github
     url: https://github.com/rabimba
   - icon: brands/linkedin
