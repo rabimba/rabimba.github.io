@@ -66,6 +66,15 @@
 }
 
 /* Technical Skills — card grid instead of a vertical list of bars */
+/* Center-pack the category cards: equal-width tracks capped at 460px and
+   justify-content center, so rows are balanced and an odd category centers
+   instead of hugging the left column. */
+#section-resume-skills .grid.grid-cols-1 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 460px)) !important;
+    justify-content: center;
+    align-items: stretch;
+}
+
 #section-resume-skills .w-full {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
