@@ -25,6 +25,8 @@ featured: false
 links:
 - name: DOI
   url: https://doi.org/10.1145/3465480.3466924
+- name: arXiv
+  url: https://arxiv.org/pdf/2101.05475
 bibtex: "@inproceedings{kaleem2021event,\n  title={An event driven framework for smart contract execution},\n  author={Kaleem, Mudabbir and Kasichainula, Keshav and Karanjai, Rabimba and Xu, Lei and Gao,\
   \ Zhimin and Chen, Lin and Shi, Weidong},\n  booktitle={Proceedings of the 15th ACM International Conference on Distributed and Event-based Systems},\n  pages={78--89},\n  year={2021}\n}"
 ---
