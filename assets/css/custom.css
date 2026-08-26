@@ -22,9 +22,8 @@
 /* Hobbies grid on Experience page */
 .hobbies-grid {
     display: grid;
-    /* capped tracks + center packing: all 5 cards fit one symmetric row on
-       desktop, and smaller breakpoints center the last partial row */
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 240px));
+    /* 3-column grid on desktop (3 + 2 centered), stacking on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 320px));
     justify-content: center;
     gap: 1.25rem;
     margin-top: 1.5rem;
@@ -66,6 +65,13 @@
 #section-resume-languages .max-w-prose,
 #hobbies .max-w-prose {
     max-width: min(100%, 64rem) !important;
+}
+/* Awards — multi-column card grid instead of a single stacked list */
+#section-resume-awards .w-full.flex.flex-col.gap-6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
 }
 
 /* Technical Skills — card grid instead of a vertical list of bars */
