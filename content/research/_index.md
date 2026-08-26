@@ -26,7 +26,7 @@ My research sits at the intersection of **AI reasoning**, **decentralized system
 <div class="arc-kicker">2014 — 2018</div>
 <div class="arc-title"><a class="arc-title-link" href="/tags/webvr/">Web, VR &amp; Emerging Interfaces</a></div>
 <p>Where it started: optimizing Web Virtual Reality (Rice University thesis), WebXR and A-Frame, decentralized social VR in the browser, and speech interfaces — work that became a decade of community teaching through Mozilla and Google Developer programs.</p>
-<div class="arc-links"><a href="/tags/webxr/">#WebXR</a> <a href="/tags/webvr/">#WebVR</a></div>
+<div class="arc-links"><a href="/tags/webvr/">#WebVR</a> <a href="/tags/webvr/">#WebVR</a></div>
 </div>
 
 <div class="arc-card">
