@@ -9,6 +9,7 @@ tags:
 - Gemma 4
 - Antigravity
 date: "2026-05-01"
+reading_time: false
 featured: true
 
 links:

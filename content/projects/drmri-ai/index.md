@@ -8,6 +8,7 @@ tags:
 - Gemma 4
 - Open Source
 date: "2026-05-18"
+reading_time: false
 featured: true
 
 links:

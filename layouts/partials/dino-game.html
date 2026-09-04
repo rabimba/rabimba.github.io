@@ -185,7 +185,9 @@
     if(state==='idle'||state==='over')start();else if(state==='running')jump();
   }
   wrap.addEventListener('click',function(){engaged=true;inp()});
-  wrap.addEventListener('touchstart',function(e){e.preventDefault();engaged=true;inp()},{passive:false});
+  /* Touch: only swallow the gesture once the game is actually running.
+     When idle, let the touch become a normal scroll/tap (click still starts). */
+  wrap.addEventListener('touchstart',function(e){if(state==='running'){e.preventDefault();}engaged=true;inp()},{passive:false});
   document.addEventListener('keydown',function(e){
     if(e.code!=='Space'&&e.code!=='ArrowUp')return;
     if(!engaged||!inView||state==='idle')return;

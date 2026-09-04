@@ -7,6 +7,7 @@ tags:
 - Agents
 - Software Engineering
 date: "2025-01-01"
+reading_time: false
 featured: true
 
 links:
