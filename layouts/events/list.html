@@ -3,6 +3,16 @@
 {{ $events := .RegularPages.ByDate.Reverse }}
 {{ $total := len $events }}
 
+{{/* Upcoming talks: event end (or start) date at or after build time */}}
+{{ $now := now }}
+{{ $upcoming := slice }}
+{{ range $events }}
+  {{ $end := .Date }}
+  {{ with .Params.date_end }}{{ $end = time . }}{{ end }}
+  {{ if ge $end $now }}{{ $upcoming = $upcoming | append . }}{{ end }}
+{{ end }}
+{{ $upcoming = sort $upcoming "Date" "asc" }}
+
 {{/* Group events by year for the timeline */}}
 {{ $years := slice }}
 {{ range $events }}
@@ -63,6 +73,22 @@
 </style>
 {{ end }}
 {{ with .Content }}<div class="article-container" style="margin-top: 1.25rem;">{{ . }}</div>{{ end }}
+{{ if gt (len $upcoming) 0 }}
+<div class="article-container" style="margin-top: 1.5rem;">
+  <h2 style="font-size: 1.3rem; margin-bottom: 0.9rem;">Upcoming</h2>
+  <div class="sel-grid">
+    {{ range $upcoming }}{{ partial "upcoming-card.html" . }}{{ end }}
+  </div>
+</div>
+{{ else }}
+<div class="article-container" style="margin-top: 1.5rem;">
+  <div class="up-invite">
+    <div class="up-invite-title">Planning an event?</div>
+    <div class="up-invite-text">I speak on LLM reasoning, AI agents and safety, and decentralized systems — keynotes, panels, and workshops, in person or remote.</div>
+    <a class="evt-link evt-link-primary" href="/#contact">Invite me to speak</a>
+  </div>
+</div>
+{{ end }}
 <div class="article-container" style="margin-top: 1.5rem;">
   <div class="evt-browser-filters">
     <div class="evt-filter-row">

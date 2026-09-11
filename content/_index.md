@@ -238,10 +238,19 @@ sections:
         exclude_featured: false
     design:
       view: citation
+  - block: markdown
+    id: upcoming-talks
+    content:
+      title: 'Upcoming Talks'
+      subtitle: ''
+      text: |-
+        {{< upcoming-talks >}}
+    design:
+      columns: '1'
   - block: collection
     id: talks
     content:
-      title: Recent & Upcoming Talks
+      title: Recent Talks
       filters:
         folders:
           - events

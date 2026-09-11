@@ -1,0 +1,17 @@
+{{/* Homepage "Upcoming Talks" block. Emits nothing when there are no future talks. */}}
+{{ $now := now }}
+{{ $upcoming := slice }}
+{{ range where site.RegularPages "Section" "events" }}
+  {{ $end := .Date }}
+  {{ with .Params.date_end }}{{ $end = time . }}{{ end }}
+  {{ if ge $end $now }}{{ $upcoming = $upcoming | append . }}{{ end }}
+{{ end }}
+{{ $upcoming = sort $upcoming "Date" "asc" }}
+{{ if gt (len $upcoming) 0 }}
+<div class="sel-grid up-grid">
+  {{ range first 3 $upcoming }}{{ partial "upcoming-card.html" . }}{{ end }}
+</div>
+{{ if gt (len $upcoming) 3 }}
+<div style="text-align:center; margin-top: 1rem;"><a class="evt-link evt-link-secondary" href="/events/">All upcoming talks &rarr;</a></div>
+{{ end }}
+{{ end }}
