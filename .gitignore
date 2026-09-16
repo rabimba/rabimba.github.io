@@ -62,6 +62,7 @@ cv_content.txt
 cv_extracted_python.txt
 cv_strings.txt
 grep_university.txt
+scripts/download_direct_pdfs.py
 
 # AI assistants
 .claude/
