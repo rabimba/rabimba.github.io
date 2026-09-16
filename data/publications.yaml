@@ -11,9 +11,9 @@
   doi: ''
   publishDate: '2026-08-01T00:00:00Z'
   publication_types:
-  - '3'
-  publication: USENIX Security 2026 (To Appear)
-  publication_short: USENIX Security 2026 (To Appear)
+  - '1'
+  publication: 35th USENIX Security Symposium (USENIX Security 2026)
+  publication_short: USENIX Security 2026
   abstract: We analyze prompt injection risks in security log analysis systems powered
     by LLMs, demonstrating passive injections and proposing mitigation methods.
   tags:
@@ -21,10 +21,27 @@
   - LLMs
   - Network Security
   - First Author
-  featured: false
+  featured: true
   links:
+  - name: Project Page
+    url: https://rabimba.github.io/context-contamination-usenix26/
+  - name: USENIX
+    url: https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai
+  - name: PDF
+    url: https://www.usenix.org/system/files/usenixsecurity26-karanjai.pdf
+  - name: arXiv
+    url: https://arxiv.org/pdf/2607.14493
+  - name: Artifacts
+    url: https://doi.org/10.5281/zenodo.20436935
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Context%20Contamination%20in%20LLM%20Analysis%20of%20Network%20Security%20Logs%3A%20Poison%20with%20Passive%20Prompt%20Injection%20and%20Mitigation%20Evaluation
+  bibtex: "@inproceedings{320609,\n  author = {Rabimba Karanjai and Yang Lu and Hemanth\
+    \ Hegadehalli Madhavarao and Lei Xu and Weidong Shi},\n  title = {Context Contamination\
+    \ in {LLM} Analysis of Network Security Logs: Poison with Passive Prompt Injection\
+    \ and Mitigation Evaluation},\n  booktitle = {35th USENIX Security Symposium (USENIX\
+    \ Security 26)},\n  year = {2026},\n  isbn = {978-1-939133-58-8},\n  address =\
+    \ {Baltimore, MD},\n  pages = {1507--1526},\n  url = {https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai},\n\
+    \  publisher = {USENIX Association},\n  month = aug\n}"
 - slug: empowering-smart-contracts-ai
   title: Empowering Smart Contracts with Real-time On-Chain AI Inferences
   authors:
@@ -484,31 +501,6 @@
   links: []
   publishDate: '2026-01-01T00:00:00Z'
   doi: ''
-- slug: unlock-onchain-intel-mw
-  title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
-    Smart Contracts'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: Middleware 2026 (Under Review)
-  publication_short: Middleware 2026 (Under Review)
-  abstract: 'Preprint: Expanding on-chain capabilities by linking secure oracle execution
-    paths with frozen LLM instances.'
-  tags:
-  - Blockchain
-  - AI Inference
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Unlocking%20On-Chain%20Intelligence%3A%20A%20Practical%20Framework%20for%20GenAI-Powered%20Smart%20Contracts
 - slug: unlocking-onchain-intelligence
   title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
     Smart Contracts'
@@ -684,7 +676,7 @@
   - First Author
   - Security
   - Confidentiality
-  featured: true
+  featured: false
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Teaching%20AIs%20to%20Reason%20and%20Code%2C%20Confidentially
@@ -719,7 +711,7 @@
   - Software Engineering
   - Code Translation
   - First Author
-  featured: false
+  featured: true
   links:
   - name: DOI
     url: https://doi.org/10.1145/3696630.3728521
@@ -907,7 +899,7 @@
   - Blockchain
   - Code Translation
   - First Author
-  featured: false
+  featured: true
   links:
   - name: DOI
     url: https://doi.org/10.1145/3664646.3664771
@@ -956,7 +948,7 @@
   - Cryptography
   - Hardware Accelerator
   - First Author
-  featured: false
+  featured: true
   links:
   - name: DOI
     url: https://doi.org/10.1145/3696843.3696844

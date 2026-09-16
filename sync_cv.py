@@ -8,11 +8,12 @@ publications = [
         "title": "Context Contamination in LLM Analysis of Network Security Logs: Poison with Passive Prompt Injection and Mitigation Evaluation",
         "date": "2026-08-01",
         "authors": ["Rabimba Karanjai", "Yang Lu", "Hemanth Hegadehalli Madhavarao", "Lei Xu", "Weidong Shi"],
-        "publication": "USENIX Security 2026 (To Appear)",
+        "publication": "35th USENIX Security Symposium (USENIX Security 2026)",
         "type": "1",
         "filename": "context-contamination-logs",
         "abstract": "We analyze prompt injection risks in security log analysis systems powered by LLMs, demonstrating passive injections and proposing mitigation methods.",
-        "tags": ["Security", "LLMs", "Network Security", "First Author"]
+        "tags": ["Security", "LLMs", "Network Security", "First Author"],
+        "featured": True
     },
     {
         "title": "CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable Systemic Risk Assessment",
@@ -54,7 +55,7 @@ publications = [
         "filename": "teaching-ais-reason-confidentially",
         "abstract": "My doctoral dissertation addresses methods and frameworks for secure and private code generation and reasoning in LLMs.",
         "tags": ["PhD Thesis", "AI Reasoning", "First Author", "Security", "Confidentiality"],
-        "featured": True
+        "featured": False
     },
     {
         "title": "HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation",
@@ -84,7 +85,8 @@ publications = [
         "type": "1",
         "filename": "collaboration-safe-code-translation",
         "abstract": "We present collaborative LLM strategies to safely translate source code between low-resource or domain-specific languages with formal checks.",
-        "tags": ["LLMs", "Software Engineering", "Code Translation", "First Author"]
+        "tags": ["LLMs", "Software Engineering", "Code Translation", "First Author"],
+        "featured": True
     },
     {
         "title": "Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the Future to eDemocracy",
@@ -124,7 +126,8 @@ publications = [
         "type": "1",
         "filename": "smart-contract-translation",
         "abstract": "We explore using conceptual mappings to translate smart contracts safely between high-level smart contract languages.",
-        "tags": ["Smart Contracts", "Blockchain", "Code Translation", "First Author"]
+        "tags": ["Smart Contracts", "Blockchain", "Code Translation", "First Author"],
+        "featured": True
     },
     {
         "title": "TPU as Cryptographic Accelerator",
@@ -134,7 +137,8 @@ publications = [
         "type": "1",
         "filename": "cryptographic-accelerator",
         "abstract": "We investigate leveraging Tensor Processing Units (TPUs) to accelerate intensive cryptographic primitives in blockchain and zero-knowledge systems.",
-        "tags": ["TPU", "Cryptography", "Hardware Accelerator", "First Author"]
+        "tags": ["TPU", "Cryptography", "Hardware Accelerator", "First Author"],
+        "featured": True
     },
     {
         "title": "Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3",
@@ -439,16 +443,6 @@ publications = [
         "filename": "vision-language-models-anchor",
         "abstract": "Preprint: Aligning visual tokens with semantic text anchors to enhance multi-modal reasoning capabilities.",
         "tags": ["Computer Vision", "Multi-Modal", "AI Alignment"]
-    },
-    {
-        "title": "Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered Smart Contracts",
-        "date": "2026-01-01",
-        "authors": ["Rabimba Karanjai", "Yang Lu", "Lei Xu", "Weidong Shi"],
-        "publication": "Middleware 2026 (Under Review)",
-        "type": "3",
-        "filename": "unlock-onchain-intel-mw",
-        "abstract": "Preprint: Expanding on-chain capabilities by linking secure oracle execution paths with frozen LLM instances.",
-        "tags": ["Blockchain", "AI Inference", "First Author"]
     },
     {
         "title": "Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning",

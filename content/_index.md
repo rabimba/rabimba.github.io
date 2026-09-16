@@ -48,9 +48,9 @@ sections:
       text: |-
         <div class="achievements-grid">
         <div class="achievement-card">
-        <div class="achievement-number">35+</div>
+        <div class="achievement-number">33</div>
         <div class="achievement-label">Peer-Reviewed Publications</div>
-        <div class="achievement-detail">28 as first author across AAAI, IEEE ICBC, ACM FSE, USENIX Security, KDD, and more</div>
+        <div class="achievement-detail">26 as first author across USENIX Security, ACM FSE, MICRO, AAAI, IEEE ICBC, KDD, and more (10 more under review)</div>
         </div>
         <div class="achievement-card">
         <div class="achievement-number">4</div>

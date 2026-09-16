@@ -16,7 +16,7 @@ tags:
 - First Author
 - Security
 - Confidentiality
-featured: true
+featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Teaching%20AIs%20to%20Reason%20and%20Code%2C%20Confidentially

@@ -21,7 +21,7 @@ This research thread represents my largest body of work, spanning smart contract
 - **Securing Multi-Chain Ecosystems** &mdash; A unified agent-based framework for vulnerability detection in Solidity and Move smart contracts (AIWare 2025).
 - **DIaC (Decentralized Infrastructure as Code)** &mdash; Re-imagining infrastructure management using blockchain (IEEE TNSM 2023).
 - **Smart Contract Translation** &mdash; Automated translation between smart contract languages using LLMs (FSE 2024).
-- **VerifyGen-X** &mdash; Cross-chain smart contract generation with verification (SANER 2026).
+- **VerifyGen-X** &mdash; Cross-chain smart contract generation with verification (NeurIPS 2026, under review).
 - **Ransomware 3.0** &mdash; Novel mitigation using proof-of-decryptability smart contracts (IEEE ICBC 2025).
 - **FaaS for dApps** &mdash; Decentralized Function-as-a-Service for emerging applications (IEEE ICBC 2023).
 - **Conditional Cryptocurrency** &mdash; Privacy-preserving conditional transactions (IEEE ICBC 2021).
