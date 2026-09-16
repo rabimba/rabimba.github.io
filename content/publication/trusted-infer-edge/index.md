@@ -6,6 +6,7 @@ authors:
 date: '2024-05-01T00:00:00Z'
 doi: ''
 publishDate: '2024-05-01T00:00:00Z'
+citations: 15
 publication_types:
 - '1'
 publication: IEEE ICBC 2024

@@ -15,6 +15,7 @@ authors:
 date: '2024-10-01T00:00:00Z'
 doi: ''
 publishDate: '2024-10-01T00:00:00Z'
+citations: 7
 publication_types:
 - '1'
 publication: MICRO 2024

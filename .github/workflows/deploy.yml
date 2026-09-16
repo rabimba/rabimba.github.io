@@ -9,6 +9,10 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ['main']
+  # Weekly rebuild so time-sensitive sections (e.g. Upcoming Talks)
+  # roll over automatically without manual pushes
+  schedule:
+    - cron: '0 6 * * 1'
   # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
@@ -107,7 +111,8 @@ jobs:
         HUGO_ENVIRONMENT: production
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # --buildFuture: future-dated event pages (Upcoming Talks) must render
+        hugo --minify --buildFuture --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Generate Pagefind search index (if applicable)
       run: |

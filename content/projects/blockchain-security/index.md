@@ -7,6 +7,7 @@ tags:
 - Smart Contracts
 - Distributed Systems
 date: "2024-01-01"
+reading_time: false
 featured: true
 
 links:

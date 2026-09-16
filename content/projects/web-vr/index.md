@@ -7,6 +7,7 @@ tags:
 - Web Technologies
 - Mozilla
 date: "2018-01-01"
+reading_time: false
 featured: false
 
 links:

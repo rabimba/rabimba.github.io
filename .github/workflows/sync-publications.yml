@@ -1,0 +1,57 @@
+# Weekly sync of new publications from OpenAlex + DBLP feeds.
+# New pages are committed to a branch and opened as a PR for review —
+# nothing is published without human approval (feeds can contain homonyms
+# or duplicate versions of existing works).
+
+name: Sync publications
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-publications
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Sync publications from feeds
+        run: python scripts/sync_publications.py
+
+      - name: Open PR if there are new publications
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ -z "$(git status --porcelain content/publication)" ]]; then
+            echo "No new publications — nothing to do."
+            exit 0
+          fi
+          BR="pub-sync/$(date +%Y-%m-%d)"
+          git config user.name "pub-sync-bot"
+          git config user.email "actions@github.com"
+          git checkout -b "$BR"
+          git add content/publication
+          git commit -m "content: add new publications from OpenAlex/DBLP feeds"
+          git push origin "$BR"
+          gh pr create \
+            --title "New publications detected in OpenAlex/DBLP" \
+            --body "Automated sync found new works not yet on the site. Review each page (authors, venue, abstract, duplicates) before merging." \
+            --base main --head "$BR"

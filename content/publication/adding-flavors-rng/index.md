@@ -18,7 +18,9 @@ abstract: Random numbers play a vital role in many decentralized applications (d
   of method is that the input itself is susceptible to the adversary's influence. Off-chain approaches, as the name suggested, complete the generation without the involvement of blockchain nodes and share
   the result directly with a dApp. These mechanisms usually have a strong security assumption and high complexity. To mitigate these limitations and provide a framework that allows a dApp to balance different
   factors involved in random number generation, we propose a hybrid random number generation solution that leverages IoT devices equipped with trusted execution environment (TEE) as the randomness sources,
-  and then utilizes a set of cryptographic tools to aggregate the multiple sources and obtain the final random number that can be consumed by the dApp. The new approach only needs one ho
+  and then utilizes a set of cryptographic tools to aggregate the multiple sources and obtain the final random number that can be consumed by the dApp. The new approach only needs one honest random source to guarantee the unbiasedness of the final random number and a user can configure the system to tolerate malicious participants who can refuse to respond to avoid unfavored results.
+  We also provide a concrete construction that can further reduce the on-chain computation complexity to lower the cost of the solution in practice. We evaluate the computation and gas costs to demonstrate
+  the effectiveness of the improvement.
 tags:
 - Web3
 - Randomness

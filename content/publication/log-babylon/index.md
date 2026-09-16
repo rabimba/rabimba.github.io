@@ -11,6 +11,7 @@ authors:
 date: '2025-03-01T00:00:00Z'
 doi: ''
 publishDate: '2025-03-01T00:00:00Z'
+citations: 10
 publication_types:
 - '1'
 publication: ACM SAC 2025
@@ -20,7 +21,8 @@ abstract: Logs are critical resources that record events, activities, or message
   leverages Large Language Models (LLMs) integrated with Retrieval-Augmented Generation (RAG) technology. LogBabylon interprets the log data in a human-readable way and adds insight analysis of the system
   performance and anomaly alerts. It provides a paramount view of the system landscape, enabling proactive management and rapid incident response. LogBabylon consolidates diverse log sources and enhances
   the extracted information's accuracy and relevancy. This facilitates a deeper understanding of log data, supporting more effective decision-making and operational efficiency. Furthermore, LogBabylon streamlines
-  the log analysis process, significantly reducing the time and effort required to interpret complex datasets. Its capabilities extend to generating context-aware insights, offering an inva
+  the log analysis process, significantly reducing the time and effort required to interpret complex datasets. Its capabilities extend to generating context-aware insights, offering an invaluable tool for continuous monitoring, performance optimization,
+  and security assurance in dynamic computing environments.
 tags:
 - Security
 - Log Analysis

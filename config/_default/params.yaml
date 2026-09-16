@@ -23,7 +23,7 @@ marketing:
     fathom: ''
     pirsch: ''
   verification:
-    google: ''
+    google: 'Pz_ij0BmeOZKi8IPMIXtmfvjQ4rlIIemA-UwmRaZfLY'
     baidu: ''
 
 # Site header
@@ -40,7 +40,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Rabimba Karanjai. This work is licensed under {license}'
+    notice: '© {year} Rabimba Karanjai · [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
     license:
       enable: true
       allow_derivatives: false

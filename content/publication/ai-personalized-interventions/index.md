@@ -7,6 +7,7 @@ authors:
 date: '2025-02-01T00:00:00Z'
 doi: ''
 publishDate: '2025-02-01T00:00:00Z'
+citations: 7
 publication_types:
 - '1'
 publication: SynBio 2025, MDPI

@@ -1,0 +1,19 @@
+{{/* Upcoming talk card. Context: an events page. Block-level card (no nested anchors). */}}
+{{ $end := .Date }}
+{{ with .Params.date_end }}{{ $end = time . }}{{ end }}
+{{ $fmt := "20060102T150405Z" }}
+{{ $cal := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&location=%s&details=%s" (.Title | urlquery) (time.Format $fmt .Date) (time.Format $fmt $end) (.Params.location | default "" | urlquery) (.Params.event | default "" | urlquery) }}
+<div class="sel-card up-card">
+  {{ with .Resources.GetMatch "featured.*" }}
+  <a href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true"><img class="sel-img" src="{{ .RelPermalink }}" alt="" loading="lazy"></a>
+  {{ end }}
+  <div class="sel-body">
+    <div class="up-badges"><span class="up-badge">Upcoming</span></div>
+    <div class="sel-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+    <div class="sel-meta">{{ with .Params.event }}{{ . }} &middot; {{ end }}{{ time.Format "Mon, Jan 2, 2006" .Date }}{{ with .Params.location }} &middot; 📍 {{ . }}{{ end }}</div>
+    <div class="up-actions">
+      {{ range .Params.links }}{{ if eq .name "Event" }}<a class="evt-link evt-link-primary" href="{{ .url }}" target="_blank" rel="noopener">Event ↗</a>{{ end }}{{ end }}
+      <a class="evt-link evt-link-secondary" href="{{ $cal }}" target="_blank" rel="noopener">Add to Calendar</a>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ authors:
 date: '2025-06-01T00:00:00Z'
 doi: ''
 publishDate: '2025-06-01T00:00:00Z'
+citations: 7
 publication_types:
 - '1'
 publication: ACM Foundations of Software Engineering (FSE) 2025

@@ -7,6 +7,7 @@ authors:
 date: '2025-11-01T00:00:00Z'
 doi: ''
 publishDate: '2025-11-01T00:00:00Z'
+citations: 2
 publication_types:
 - '1'
 publication: ACM AIWare 2025
@@ -16,7 +17,7 @@ abstract: Unit testing in High-Performance Computing (HPC) is critical but chall
   for HPC software utilizing OpenMP and MPI. HPCAgentTester employs a unique collaborative workflow where specialized LLM agents (Recipe Agent and Test Agent) iteratively generate and refine test cases
   through a critique loop. This architecture enables the generation of context-aware unit tests that specifically target parallel execution constructs, complex communication patterns, and hierarchical parallelism.
   We demonstrate HPCAgentTester's ability to produce compilable and functionally correct tests for OpenMP and MPI primitives, effectively identifying subtle bugs that are often missed by conventional techniques.
-  Our evaluation shows that HPCAgentTester significantly improves test compilation rates and correctness compared to standalone LLMs, offering a more robust and scalable solution f
+  Our evaluation shows that HPCAgentTester significantly improves test compilation rates and correctness compared to standalone LLMs, offering a more robust and scalable solution for ensuring the reliability of parallel software systems.
 tags:
 - HPC
 - Testing

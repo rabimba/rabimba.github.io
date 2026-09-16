@@ -11,6 +11,7 @@ authors:
 date: '2025-04-01T00:00:00Z'
 doi: ''
 publishDate: '2025-04-01T00:00:00Z'
+citations: 11
 publication_types:
 - '1'
 publication: ICEDEG 2025
