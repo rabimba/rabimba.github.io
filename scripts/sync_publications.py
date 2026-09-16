@@ -14,12 +14,16 @@ import os
 import re
 import sys
 import unicodedata
+import urllib3
 import xml.etree.ElementTree as ET
 from datetime import date
 
 import requests
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 OPENALEX_IDS = ["A5016852422", "A5100493788", "A5137309728"]
+SEMANTICSCHOLAR_AUTHOR_IDS = ["74167114", "2335666645"]
 DBLP_PID = "283/5555"
 PUB_DIR = os.path.join(os.path.dirname(__file__), "..", "content", "publication")
 MAILTO_UH = "uh.edu"
@@ -39,6 +43,16 @@ TAG_KEYWORDS = [
 ]
 
 
+def http_get(url, **kwargs):
+    """Make requests.get with sensible defaults, TLS fallback, and headers."""
+    kwargs.setdefault("headers", HEADERS)
+    kwargs.setdefault("timeout", 60)
+    try:
+        return requests.get(url, **kwargs)
+    except requests.exceptions.SSLError:
+        return requests.get(url, verify=False, **kwargs)
+
+
 def norm_title(t):
     s = unicodedata.normalize("NFKD", t or "").lower()
     return re.sub(r"[^a-z0-9]+", "", s)
@@ -51,8 +65,8 @@ def make_slug(t):
 
 
 def existing_index():
-    """Collect normalized titles, DOIs and arXiv IDs from existing pages."""
-    titles, dois, arxivs = set(), set(), set()
+    """Collect normalized titles, raw titles, DOIs and arXiv IDs from existing pages."""
+    titles, titles_raw, dois, arxivs = set(), [], set(), set()
     if os.path.isdir(PUB_DIR):
         for d in os.listdir(PUB_DIR):
             f = os.path.join(PUB_DIR, d, "index.md")
@@ -60,14 +74,16 @@ def existing_index():
                 s = open(f, encoding="utf-8").read()
                 m = re.search(r"^title:\s*'?(.+?)'?\s*$", s, re.M)
                 if m:
-                    titles.add(norm_title(m.group(1)))
+                    raw = m.group(1).strip()
+                    titles.add(norm_title(raw))
+                    titles_raw.append(raw)
                 for dm in re.findall(r'10\.\d{4,9}/[^\s\'"\n]+', s):
                     dois.add(dm.rstrip('.,)').lower())
                 for am in re.findall(r"arxiv\.org/(?:abs|pdf)/([0-9]{4}\.[0-9]{4,5})", s):
                     arxivs.add(am)
                 for dm in re.findall(r"10\.48550/arXiv\.([0-9]{4}\.[0-9]{4,5})", s, re.I):
                     arxivs.add(dm)
-    return titles, dois, arxivs
+    return titles, titles_raw, dois, arxivs
 
 
 def work_arxiv_id(w):
@@ -76,7 +92,7 @@ def work_arxiv_id(w):
     return m.group(1) if m else None
 
 
-def is_known(w, titles, dois, arxivs):
+def is_known(w, titles, titles_raw, dois, arxivs):
     if norm_title(w["title"]) in titles:
         return True
     if w.get("doi") and w["doi"].lower() in dois:
@@ -89,6 +105,17 @@ def is_known(w, titles, dois, arxivs):
     for t in titles:
         if abs(len(nt) - len(t)) <= max(len(nt), len(t)) * 0.25 and difflib.SequenceMatcher(None, nt, t).ratio() >= 0.90:
             return True
+        # Match if one title is a prefix/substring of the other (e.g. before subtitle / colon)
+        if (len(nt) >= 20 and nt in t) or (len(t) >= 20 and t in nt):
+            return True
+    words_w = set(re.findall(r'[a-zA-Z]{4,}', w["title"].lower())) - {'large', 'based', 'using', 'framework', 'towards', 'study', 'empirical', 'overview'}
+    if len(words_w) >= 3:
+        for raw_t in titles_raw:
+            wt = set(re.findall(r'[a-zA-Z]{4,}', raw_t.lower())) - {'large', 'based', 'using', 'framework', 'towards', 'study', 'empirical', 'overview'}
+            if len(wt) >= 3:
+                overlap = len(words_w & wt) / min(len(words_w), len(wt))
+                if overlap >= 0.80:
+                    return True
     return False
 
 
@@ -97,7 +124,7 @@ def fetch_openalex():
     for aid in OPENALEX_IDS:
         cursor = "*"
         while cursor:
-            r = requests.get(
+            r = http_get(
                 "https://api.openalex.org/works",
                 params={
                     "filter": f"author.id:{aid}",
@@ -106,7 +133,6 @@ def fetch_openalex():
                     "select": "id,doi,title,display_name,publication_date,publication_year,type,"
                               "authorships,primary_location,abstract_inverted_index",
                 },
-                headers=HEADERS,
                 timeout=60,
             )
             r.raise_for_status()
@@ -145,9 +171,19 @@ def reconstruct_abstract(inv):
 
 
 def fetch_dblp():
-    r = requests.get(f"https://dblp.org/pid/{DBLP_PID}.xml", headers=HEADERS, timeout=60)
-    r.raise_for_status()
-    root = ET.fromstring(r.content)
+    try:
+        r = http_get(f"https://dblp.org/pid/{DBLP_PID}.xml", timeout=30)
+        r.raise_for_status()
+        content = r.content.strip()
+        # DBLP often serves Cloudflare anti-bot HTML challenges to automated requests
+        if not content.startswith(b"<?xml") and not content.startswith(b"<dblpperson"):
+            print("DBLP returned non-XML response (likely bot challenge). Falling back gracefully.")
+            return []
+        root = ET.fromstring(content)
+    except Exception as e:
+        print(f"DBLP fetch unavailable ({e}); skipping DBLP feed.")
+        return []
+
     out = []
     for rec in root.findall(".//r/*"):
         t = rec.find("title")
@@ -172,6 +208,40 @@ def fetch_dblp():
             "url": ee.text if ee is not None else "",
             "source": "DBLP",
         })
+    return out
+
+
+def fetch_semanticscholar():
+    out = []
+    for aid in SEMANTICSCHOLAR_AUTHOR_IDS:
+        try:
+            r = http_get(
+                f"https://api.semanticscholar.org/graph/v1/author/{aid}/papers?fields=title,year,authors,venue,externalIds,abstract&limit=100",
+                timeout=30,
+            )
+            if r.status_code != 200:
+                continue
+            for p in r.json().get("data", []):
+                t = (p.get("title") or "").strip().rstrip(".")
+                if not t:
+                    continue
+                authors = [a.get("name") for a in p.get("authors", []) if a.get("name")]
+                ext = p.get("externalIds") or {}
+                doi = ext.get("DOI", "")
+                arxiv = ext.get("ArXiv", "")
+                out.append({
+                    "title": t,
+                    "date": f"{p.get('year') or 2000}-01-01",
+                    "authors": authors,
+                    "venue": p.get("venue") or "",
+                    "wtype": "conference-paper" if p.get("venue") else "preprint",
+                    "doi": doi,
+                    "abstract": p.get("abstract") or "",
+                    "url": f"https://arxiv.org/abs/{arxiv}" if arxiv else (f"https://doi.org/{doi}" if doi else ""),
+                    "source": "SemanticScholar",
+                })
+        except Exception as e:
+            print(f"Semantic Scholar fetch notice: {e}")
     return out
 
 
@@ -250,8 +320,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    titles, dois, arxivs = existing_index()
-    feed = fetch_openalex() + fetch_dblp()
+    titles, titles_raw, dois, arxivs = existing_index()
+    feed = fetch_openalex() + fetch_semanticscholar() + fetch_dblp()
 
     # dedupe within feed by normalized title; prefer published over preprint, more metadata over less
     def score(w):
@@ -264,7 +334,7 @@ def main():
         if k not in by_title or score(w) > score(by_title[k]):
             by_title[k] = w
 
-    new = [w for k, w in by_title.items() if k not in titles and not is_known(w, titles, dois, arxivs)
+    new = [w for k, w in by_title.items() if k not in titles and not is_known(w, titles, titles_raw, dois, arxivs)
            and not w["title"].lower().startswith("artifacts for")]
     new.sort(key=lambda w: w["date"], reverse=True)
 

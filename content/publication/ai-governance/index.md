@@ -7,7 +7,7 @@ authors:
 - Lei Xu
 - Weidong Shi
 date: '2023-05-01T00:00:00Z'
-doi: ''
+doi: '10.1109/ICBC56567.2023.10175000'
 publishDate: '2023-05-01T00:00:00Z'
 citations: 2
 publication_types:
