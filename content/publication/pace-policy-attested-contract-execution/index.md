@@ -35,7 +35,7 @@ tags:
 - AI Agents
 - DeFi
 - First Author
-featured: true
+featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2608.17220

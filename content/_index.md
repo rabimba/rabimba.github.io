@@ -140,10 +140,11 @@ sections:
     id: papers
     content:
       title: Distinguished Publications
+      count: 10
       filters:
         folders:
           - publication
-        tag: Distinguished
+        featured_only: true
     design:
       view: article-grid
       columns: 2

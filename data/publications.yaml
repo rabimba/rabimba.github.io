@@ -1,3 +1,183 @@
+- slug: reachability-capability-confinement
+  title: Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt
+    Injection
+  authors:
+  - Wujie Xiong
+  - Rabimba Karanjai
+  - Yang Lu
+  - Weidong Shi
+  - Lei Xu
+  date: '2026-08-30T00:00:00Z'
+  doi: ''
+  publishDate: '2026-08-30T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2608.30041
+  publication_short: arXiv:2608.30041
+  abstract: 'Large language model agents place outputs from external skills into their
+    execution context, allowing attacker-controlled data to influence later privileged
+    actions. Existing defenses mainly classify untrusted content or authorize proposed
+    operations. They do not directly address how an agent''s future authority should
+    change once untrusted data enters its state. We present SkillGuard, a harness-level
+    enforcement layer that treats this event as contamination and restricts future
+    capabilities to disconnect the resulting state from deployer-defined forbidden
+    states. Given sound skill summaries and policies, SkillGuard represents security-relevant
+    transitions with a Skill Impact Graph, specifies admissible control over skill
+    parameters via steerability signatures, and mediates invocations with an inline
+    reference monitor. Following contamination, it computes weighted capability restrictions
+    using binary, fractional, or fractional-flow strategies without auxiliary language-model
+    inference. We evaluate SkillGuard on four AgentDojo suites with two backend LLMs,
+    Gemini 2.5 Flash and Llama3.3-70B, against an LLM-only No Defense baseline and
+    three defenses at different system layers: Spotlighting, CaMeL, and AttriGuard.
+    Under AgentDojo''s Tool Knowledge attacks, SkillGuard eliminates attack success
+    on three of four suites for both backends. Against compositional attacks, it outperforms
+    every baseline on Llama and matches the strongest baseline on Gemini at higher
+    benign utility. Across both settings, SkillGuard adds no model calls or token
+    overhead.'
+  tags:
+  - Security
+  - AI Agents
+  - Prompt Injection
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2608.30041
+  bibtex: "@article{xiong2026reachability,\n  title={Reachability-Based Capability\
+    \ Confinement for LLM Agents under Indirect Prompt Injection},\n  author={Xiong,\
+    \ Wujie and Karanjai, Rabimba and Lu, Yang and Shi, Weidong and Xu, Lei},\n  journal={arXiv\
+    \ preprint arXiv:2608.30041},\n  year={2026}\n}"
+- slug: agents-web3-attack-surface
+  title: 'When Agents Act on Web3: An Attack-Surface Survey of MCP, Skills, and Tool
+    Calling'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Nour Diallo
+  - Wujie Xiong
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-08-18T00:00:00Z'
+  doi: ''
+  publishDate: '2026-08-18T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: BRAINS 2026
+  publication_short: BRAINS 2026
+  abstract: 'AI agents increasingly act rather than merely read: across the Model
+    Context Protocol (MCP) ecosystem, the share of deployed tools that modify external
+    state has risen from 27% to 65% of tool use. When agents exercise this authority
+    on public blockchains through MCP, skills, and tool calling, the consequences
+    of an attack are governed by the blockchain execution layer rather than by conventional
+    software assumptions. This survey argues that four properties of that layer (irreversibility,
+    signing authority, continuous autonomy, and sequence-level composition) qualitatively
+    change the threat model, turning the recoverable failures of generic agent security
+    into a standing, irreversible loss. We organize the fragmented MCP-security literature
+    into an attack-surface taxonomy, then contribute a Web3 risk-mapping matrix that
+    ties each attack class to its amplified impact, the responsible amplifiers, a
+    representative mitigation, and the residual gap. We synthesize defenses, including
+    emerging blockchain-based mechanisms, and find them improving but insufficient:
+    measured protections stop fewer than 30% of attacks, and model-level safety refuses
+    fewer than 3%.'
+  tags:
+  - Security
+  - AI Agents
+  - Web3
+  - Survey
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2608.17275
+  bibtex: "@misc{karanjai2026agents,\n  title={When Agents Act on Web3: An Attack-Surface\
+    \ Survey of MCP, Skills, and Tool Calling},\n  author={Karanjai, Rabimba and Lu,\
+    \ Yang and Diallo, Nour and Xiong, Wujie and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv\
+    \ preprint arXiv:2608.17275},\n  year={2026}\n}"
+- slug: pace-policy-attested-contract-execution
+  title: 'PACE: Policy-Attested Contract Execution for Safe AI Agents in Decentralized
+    Finance'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Richard Williamson
+  - Hemanth Hm
+  - Prakhar Mehrotra
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-08-18T00:00:00Z'
+  doi: ''
+  publishDate: '2026-08-18T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: BRAINS 2026
+  publication_short: BRAINS 2026
+  abstract: Autonomous AI agents are emerging as interfaces for decentralized finance
+    (DeFi) actions such as swaps, lending operations, and yield management. Because
+    these agents rely on large language models (LLMs) to plan transactions, they inherit
+    the LLM's susceptibility to prompt injection and lack mechanisms to bind a verifier's
+    approval to the exact transaction ultimately submitted on-chain. We present PACE
+    (Policy-Attested Contract Execution), a transaction-level authorization framework
+    that interposes between an LLM-based agent and on-chain execution. PACE introduces
+    typed transaction intents, a deterministic policy verifier, and signed Policy
+    Decision Records (PDRs) that cryptographically bind the approved intent, policy,
+    and simulation report to the exact execution bytes, with replay and expiration
+    protection. A Solidity smart account enforces PDR signatures on-chain with a measured
+    overhead of 29,826-31,822 gas. We evaluate PACE against six baselines on 40 tasks
+    spanning four attack categories plus benign utility (2,800 trials, 10 seeds).
+    In our deterministic sandbox, PACE achieves a 0.00 unsafe execution rate and 0.00
+    false-positive rate on benign tasks, compared to 0.80 for the unguarded baseline.
+  tags:
+  - Blockchain
+  - Security
+  - AI Agents
+  - DeFi
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2608.17220
+  bibtex: "@misc{karanjai2026pace,\n  title={PACE: Policy-Attested Contract Execution\
+    \ for Safe AI Agents in Decentralized Finance},\n  author={Karanjai, Rabimba and\
+    \ Lu, Yang and Williamson, Richard and Hm, Hemanth and Mehrotra, Prakhar and Xu,\
+    \ Lei and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2608.17220},\n\
+    \  year={2026}\n}"
+- slug: allocation-before-ranking
+  title: 'Allocation Before Ranking: Decoupled Token Compression for OmniLLMs'
+  authors:
+  - Zhenghui Guo
+  - Yilin Yang
+  - Yuanbin Man
+  - Miao Yin
+  - Weidong Shi
+  - Rabimba Karanjai
+  - Omprakash Gnawali
+  - Chengming Zhang
+  date: '2026-08-03T00:00:00Z'
+  doi: ''
+  publishDate: '2026-08-03T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Token compression in OmniLLMs is typically posed as a single saliency-ranking
+    problem: score each multimodal token, keep the top-K. We argue this abstraction
+    is mis-specified. The same attention score simultaneously decides two things:
+    how much retained capacity each modality receives, and which tokens within a modality
+    are kept. A shared top-K rule therefore inherits this audio-favoring allocation
+    prior, spending retained capacity on audio before video tokens have a chance to
+    compete. We propose Macer, a training-free compressor that first assigns explicit
+    audio and video budgets, then performs allocation-normalized ranking within each
+    modality at modality-specific shallow layers. Macer significantly reduces token
+    cost while preserving accuracy across audio-grounded, audio-video joint, visual-dominant,
+    and video-centric benchmarks. At 25% retention, Macer preserves 98.7% of full-token
+    performance on Qwen2.5-Omni-7B and 97.3% on Qwen2.5-Omni-3B.'
+  tags:
+  - LLMs
+  - Token Compression
+  - Efficiency
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
 - slug: context-contamination-logs
   title: 'Context Contamination in LLM Analysis of Network Security Logs: Poison with
     Passive Prompt Injection and Mitigation Evaluation'
@@ -10,17 +190,32 @@
   date: '2026-08-01T00:00:00Z'
   doi: ''
   publishDate: '2026-08-01T00:00:00Z'
+  citations: 1
   publication_types:
   - '1'
   publication: 35th USENIX Security Symposium (USENIX Security 2026)
   publication_short: USENIX Security 2026
-  abstract: We analyze prompt injection risks in security log analysis systems powered
-    by LLMs, demonstrating passive injections and proposing mitigation methods.
+  abstract: 'Large Language Models are increasingly deployed in Security Operations
+    Centers for log analysis tasks including summarization, alert triage, and threat
+    investigation. These systems ingest logs from external-facing services and process
+    network logs as natural language contexts to generate security insights. We demonstrate
+    that this architectural pattern introduces a critical vulnerability: adversaries
+    can embed prompt injection payloads in log-generating fields that persist in storage
+    and are executed when analysts query the LLM, achieving what we term passive prompt
+    injection. We present LogInject, a systematic framework for evaluating these threats.
+    Using LogInject-1.0, a benchmark of 12,847 log entries including 2,569 adversarial
+    samples, we evaluate three production LLMs across four attack objectives. Our
+    findings reveal an up to 88.2% attack success rate under baseline conditions.
+    We introduce Context Stitching, a novel technique that fragments payloads across
+    multiple log entries to evade stateless filters, achieving a 76.4% success rate.
+    As mitigation, we evaluate layered defenses combining input filtering, prompt
+    hardening, and output validation, demonstrating a 90.4% attack reduction.'
   tags:
   - Security
   - LLMs
   - Network Security
   - First Author
+  - Distinguished
   featured: true
   links:
   - name: Project Page
@@ -119,6 +314,7 @@
   date: '2026-02-01T00:00:00Z'
   doi: ''
   publishDate: '2026-02-01T00:00:00Z'
+  citations: 1
   publication_types:
   - '1'
   publication: International Workshop on Quantum Computing and Artificial Intelligence
@@ -167,8 +363,23 @@
   - '1'
   publication: AAAI 2026 (AI4Finance)
   publication_short: AAAI 2026 (AI4Finance)
-  abstract: CausalGraphX utilizes counterfactual graph neural networks to provide
-    explainable risk assessments in complex financial and systemic environments.
+  abstract: The interconnected nature of global financial systems makes them vulnerable
+    to systemic risks, where the failure of a few institutions can trigger catastrophic
+    cascading defaults. Traditional risk models often fail to capture the complex,
+    non-linear dynamics of these networks. While Graph Neural Networks (GNNs) have
+    shown promise in modeling relational data, they primarily learn correlative patterns
+    and function as black boxes, offering little insight into the causal mechanisms
+    of shock propagation. This limitation is critical for regulators who require explainable
+    models to perform stress tests and devise effective interventions. We introduce
+    CausalGraphX, a novel framework that integrates GNNs with counterfactual reasoning
+    to provide explainable assessments of systemic risk. CausalGraphX employs a Graph
+    Attention mechanism to learn representations of institutional vulnerability and
+    uses an adversarial regularization technique to ensure these representations capture
+    causal drivers rather than spurious correlations. Furthermore, we propose an optimization-based
+    approach to generate counterfactual explanations. We validate CausalGraphX on
+    large-scale synthetic financial networks, demonstrating that it significantly
+    outperforms traditional and deep learning baselines in predicting cascading defaults
+    while providing sparse, plausible, and actionable counterfactual explanations.
   tags:
   - AI
   - Neural Networks
@@ -178,6 +389,48 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
+- slug: zkransomware
+  title: 'zkRansomware: Proof-of-Data Recoverability and Multi-round Game Theoretic
+    Modeling of Ransomware Decisions'
+  authors:
+  - Xinyu Hou
+  - Yang Lu
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-10T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-10T00:00:00Z'
+  citations: 1
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2601.06667
+  publication_short: arXiv
+  abstract: Ransomware is still one of the most serious cybersecurity threats. Victims
+    often pay but fail to regain access to their data, while also facing the danger
+    of losing data privacy. These uncertainties heavily shape the attacker-victim
+    dynamics in decision-making. In this paper, we introduce and analyze zkRansomware.
+    This new ransomware model integrates zero-knowledge proofs to enable verifiable
+    data recovery and uses smart contracts to enforce multi-round payments while mitigating
+    the risk of data disclosure and privacy loss. We show that zkRansomware is technically
+    feasible using existing cryptographic and blockchain tools and, perhaps counterintuitively,
+    can align incentives between the attacker and the victim. Finally, we develop
+    a theoretical decision-making framework for zkRansomware that distinguishes it
+    from known ransomware decision models and discusses its implications for ransomware
+    risk analysis and response decision support.
+  tags:
+  - Blockchain
+  - Security
+  - Ransomware
+  - Zero-Knowledge Proofs
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2601.06667
+  bibtex: "@misc{hou2026zkransomware,\n  title={zkRansomware: Proof-of-Data Recoverability\
+    \ and Multi-round Game Theoretic Modeling of Ransomware Decisions},\n  author={Hou,\
+    \ Xinyu and Lu, Yang and Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv\
+    \ preprint arXiv:2601.06667},\n  year={2026}\n}"
 - slug: closing-cost-gap-rl
   title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
   authors:
@@ -203,25 +456,6 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Closing%20the%20Cost%20Gap%20in%20Verifier-Guided%20RL%3A%20A%20Smart%20Contract%20Case%20Study
-- slug: latency-optimized-cascaded-voice
-  title: Latency-Optimized Cascaded Voice Agent Pipeline
-  authors:
-  - Rabimba Karanjai
-  date: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '8'
-  publication: Patent Pending (PayPal)
-  publication_short: Patent Pending (PayPal)
-  abstract: A latency-optimized cascaded voice agent pipeline for production-scale
-    voice commerce systems.
-  tags:
-  - Patent
-  - Voice Commerce
-  - AI Agents
-  featured: false
-  links: []
-  publishDate: '2026-01-01T00:00:00Z'
-  doi: ''
 - slug: rules-that-govern
   title: 'Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation'
   authors:
@@ -331,7 +565,7 @@
   authors:
   - Rabimba Karanjai
   - Qun Gu
-  - Hemanth Hegadehalii Madhavarao
+  - Hemanth Hegadehalli Madhavarao
   - Wenhuan Sun
   - Xiaojiao Yu
   - Suryabhan Singh Hada
@@ -407,54 +641,6 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
-- slug: allocation-before-ranking
-  title: 'Allocation Before Ranking: Decoupled Token Compression for OmniLLMs'
-  authors:
-  - Zhenghui Guo
-  - Yilin Yang
-  - Yuanbin Man
-  - Miao Yin
-  - Weidong Shi
-  - Rabimba Karanjai
-  - Omprakash Gnawali
-  - Chengming Zhang
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: We decouple token compression from routing in multi-modal systems,
-    improving processing speeds by up to 30%.'
-  tags:
-  - LLMs
-  - Token Compression
-  - Efficiency
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
-- slug: thread-based-conversational-commerce
-  title: Thread-Based Conversational Commerce System with Multi-Modal Ordering and
-    Real-Time Fulfillment Tracking in Messaging Platforms
-  authors:
-  - Rabimba Karanjai
-  date: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '8'
-  publication: Patent Pending (PayPal)
-  publication_short: Patent Pending (PayPal)
-  abstract: A conversational commerce system enabling real-time, multi-turn AI-driven
-    ordering and fulfillment tracking within messaging platforms.
-  tags:
-  - Patent
-  - Voice Commerce
-  - Conversational AI
-  featured: false
-  links: []
-  publishDate: '2026-01-01T00:00:00Z'
-  doi: ''
 - slug: bridging-confidentiality-reliability
   title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
   authors:
@@ -480,27 +666,6 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
-- slug: severity-aware-preference-training
-  title: Severity-Aware Preference Training Framework for Constraint-Satisfying AI
-    Planners with Minimal-Edit Supervision
-  authors:
-  - Rabimba Karanjai
-  date: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '8'
-  publication: Patent Pending (PayPal)
-  publication_short: Patent Pending (PayPal)
-  abstract: A novel preference optimization framework for improving LLM planning under
-    real-world constraints, using minimal-edit supervision signals.
-  tags:
-  - Patent
-  - LLMs
-  - Preference Optimization
-  - Planning
-  featured: false
-  links: []
-  publishDate: '2026-01-01T00:00:00Z'
-  doi: ''
 - slug: unlocking-onchain-intelligence
   title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
     Smart Contracts'
@@ -527,8 +692,8 @@
   - name: DOI
     url: https://doi.org/10.1109/BRAINS67003.2025.11302909
 - slug: securing-multi-chain
-  title: 'Securing the Multi-Chain Ecosystem: A Unified, Agent-Based Framework for
-    Vulnerability Repair in Solidity and Move'
+  title: Securing Smart Contract Languages with a Unified Agentic Framework for Vulnerability
+    Repair in Solidity and Move
   authors:
   - Rabimba Karanjai
   - Lei Xu
@@ -536,6 +701,7 @@
   date: '2025-11-01T00:00:00Z'
   doi: ''
   publishDate: '2025-11-01T00:00:00Z'
+  citations: 15
   publication_types:
   - '1'
   publication: ACM AIWare 2025
@@ -554,23 +720,31 @@
     achieves state-of-the-art performance, surpassing existing LLMs and enhancing
     general-purpose models' capabilities, such as Llama 3.1. Notably, Smartify can
     incorporate language-specific knowledge, such as the nuances of Move, without
-    requiring massive language-specific pre-training datasets. This w
+    requiring massive language-specific pre-training datasets. This work offers a
+    detailed analysis of various LLMs' performance on smart contract repair, highlighting
+    the strengths of our multi-agent approach and providing a blueprint for developing
+    more secure and reliable decentralized applications in the growing blockchain
+    landscape. We also provide a detailed recipe for extending this to other similar
+    use cases. Recipient of the ACM SIGSOFT Distinguished Paper Award at AIWare 2025.
   tags:
+  - Distinguished
   - Blockchain
   - Security
   - Smart Contracts
   - First Author
   - Agents
   featured: true
+  distinguished: true
   links:
   - name: DOI
     url: https://doi.org/10.1109/AIWARE69974.2025.00032
   - name: arXiv
     url: https://arxiv.org/pdf/2502.18515
-  bibtex: "@article{karanjai2025multi,\n  title={A multi-agent framework for automated\
-    \ vulnerability detection and repair in solidity and move smart contracts},\n\
-    \  author={Karanjai, Rabimba and Blackshear, Sam and Xu, Lei and Shi, Weidong},\n\
-    \  journal={arXiv e-prints},\n  pages={arXiv--2502},\n  year={2025}\n}"
+  bibtex: "@inproceedings{karanjai2025securing,\n  title={Securing Smart Contract\
+    \ Languages with a Unified Agentic Framework for Vulnerability Repair in Solidity\
+    \ and Move},\n  author={Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  booktitle={2025\
+    \ 2nd IEEE/ACM International Conference on AI-powered Software (AIware)},\n  year={2025},\n\
+    \  organization={IEEE}\n}"
 - slug: hpc-agent-tester
   title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
   authors:
@@ -580,6 +754,7 @@
   date: '2025-11-01T00:00:00Z'
   doi: ''
   publishDate: '2025-11-01T00:00:00Z'
+  citations: 2
   publication_types:
   - '1'
   publication: ACM AIWare 2025
@@ -598,7 +773,8 @@
     for OpenMP and MPI primitives, effectively identifying subtle bugs that are often
     missed by conventional techniques. Our evaluation shows that HPCAgentTester significantly
     improves test compilation rates and correctness compared to standalone LLMs, offering
-    a more robust and scalable solution f
+    a more robust and scalable solution for ensuring the reliability of parallel software
+    systems.
   tags:
   - HPC
   - Testing
@@ -642,7 +818,9 @@
     shuffling items, and evaluating the quality of randomness using entropy and the
     NIST randomness test-suite. Our findings reveal that while LLMs can generate outputs
     that exhibit some degree of randomness, their performance is inconsistent and
-    often deviates significantly from the expected behavior. The analysis of the e
+    often deviates significantly from the expected behavior. The analysis of the experimental
+    results highlights key limitations and areas where improvement is needed for the
+    LLMs to effectively handle tasks involving randomness.
   tags:
   - LLMs
   - Randomness
@@ -680,6 +858,53 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Teaching%20AIs%20to%20Reason%20and%20Code%2C%20Confidentially
+- slug: general-reasoning-domain-expertise
+  title: 'From General Reasoning to Domain Expertise: Uncovering the Limits of Generalization
+    in Large Language Models'
+  authors:
+  - Dana Alsagheer
+  - Yang Lu
+  - Abdulrahman Kamal
+  - Omar Kamal
+  - Mohammad Kamal
+  - Nada Mansour
+  - Cosmo Yang Wu
+  - Rabimba Karanjai
+  - Sen Li
+  - Weidong Shi
+  date: '2025-06-16T00:00:00Z'
+  doi: ''
+  publishDate: '2025-06-16T00:00:00Z'
+  citations: 2
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2506.21580
+  publication_short: arXiv
+  abstract: Recent advancements in Large Language Models (LLMs) have demonstrated
+    remarkable capabilities in various domains. However, effective decision-making
+    relies heavily on strong reasoning abilities. Reasoning is the foundation for
+    decision-making, providing the analytical and logical framework to make sound
+    choices. Reasoning involves analyzing information, drawing inferences, and reaching
+    conclusions based on logic or evidence. Decision-making builds on this foundation
+    by applying the insights from reasoning to select the best course of action among
+    alternatives. Together, these processes create a continuous cycle of thought and
+    action aimed at achieving goals effectively. As AI technology evolves, there is
+    a growing trend to train LLMs to excel in general reasoning. This study explores
+    how the general reasoning capabilities of LLMs connect to their performance in
+    domain-specific reasoning tasks.
+  tags:
+  - LLMs
+  - Reasoning
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2506.21580
+  bibtex: "@misc{alsagheer2025general,\n  title={From General Reasoning to Domain\
+    \ Expertise: Uncovering the Limits of Generalization in Large Language Models},\n\
+    \  author={Alsagheer, Dana and Lu, Yang and Kamal, Abdulrahman and Kamal, Omar\
+    \ and Kamal, Mohammad and Mansour, Nada and Wu, Cosmo Yang and Karanjai, Rabimba\
+    \ and Li, Sen and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2506.21580},\n\
+    \  year={2025}\n}"
 - slug: collaboration-safe-code-translation
   title: 'Collaboration is all you need: LLM Assisted Safe Code Translation'
   authors:
@@ -690,6 +915,7 @@
   date: '2025-06-01T00:00:00Z'
   doi: ''
   publishDate: '2025-06-01T00:00:00Z'
+  citations: 7
   publication_types:
   - '1'
   publication: ACM Foundations of Software Engineering (FSE) 2025
@@ -711,6 +937,7 @@
   - Software Engineering
   - Code Translation
   - First Author
+  - Distinguished
   featured: true
   links:
   - name: DOI
@@ -761,6 +988,7 @@
   date: '2025-04-01T00:00:00Z'
   doi: ''
   publishDate: '2025-04-01T00:00:00Z'
+  citations: 11
   publication_types:
   - '1'
   publication: ICEDEG 2025
@@ -805,6 +1033,7 @@
   date: '2025-03-01T00:00:00Z'
   doi: ''
   publishDate: '2025-03-01T00:00:00Z'
+  citations: 10
   publication_types:
   - '1'
   publication: ACM SAC 2025
@@ -823,7 +1052,9 @@
     of log data, supporting more effective decision-making and operational efficiency.
     Furthermore, LogBabylon streamlines the log analysis process, significantly reducing
     the time and effort required to interpret complex datasets. Its capabilities extend
-    to generating context-aware insights, offering an inva
+    to generating context-aware insights, offering an invaluable tool for continuous
+    monitoring, performance optimization, and security assurance in dynamic computing
+    environments.
   tags:
   - Security
   - Log Analysis
@@ -839,6 +1070,47 @@
     \ Rabimba and Alsagheer, Dana and Kasichainula, Keshav and Xu, Lei and Shi, Weidong\
     \ and Huang, Shou-Hsuan Stephen},\n  booktitle={Proceedings of the 40th ACM/SIGAPP\
     \ Symposium on Applied Computing},\n  pages={1953--1960},\n  year={2025}\n}"
+- slug: weaving-cosmos-wasm-interchain
+  title: 'Weaving the Cosmos: WASM-Powered Interchain Communication for AI Enabled
+    Smart Contracts'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2025-02-24T00:00:00Z'
+  doi: ''
+  publishDate: '2025-02-24T00:00:00Z'
+  citations: 3
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2502.17604
+  publication_short: arXiv
+  abstract: In this era, significant transformations in industries and tool utilization
+    are driven by AI/Large Language Models (LLMs) and advancements in Machine Learning.
+    There's a growing emphasis on Machine Learning Operations (MLOps) for managing
+    and deploying these AI models. Concurrently, the imperative for richer smart contracts
+    and on-chain computation is escalating. Our paper introduces an innovative framework
+    that integrates blockchain technology, particularly the Cosmos SDK, to facilitate
+    on-chain AI inferences. This system, built on WebAssembly (WASM), enables interchain
+    communication and deployment of WASM modules executing AI inferences across multiple
+    blockchain nodes. We critically assess the framework from feasibility, scalability,
+    and model security, with a special focus on its portability and engine-model agnostic
+    deployment. The capability to support AI on-chain may enhance and expand the scope
+    of smart contracts, and as a result enable new use cases and applications.
+  tags:
+  - Blockchain
+  - Smart Contracts
+  - WebAssembly
+  - Interchain
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2502.17604
+  bibtex: "@misc{karanjai2025weaving,\n  title={Weaving the Cosmos: WASM-Powered Interchain\
+    \ Communication for AI Enabled Smart Contracts},\n  author={Karanjai, Rabimba\
+    \ and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2502.17604},\n\
+    \  year={2025}\n}"
 - slug: ai-personalized-interventions
   title: Artificial Intelligence-Based Target for Personalized Interventions of Atherosclerosis
     from Gut Microbiota Signature
@@ -849,6 +1121,7 @@
   date: '2025-02-01T00:00:00Z'
   doi: ''
   publishDate: '2025-02-01T00:00:00Z'
+  citations: 7
   publication_types:
   - '1'
   publication: SynBio 2025, MDPI
@@ -865,6 +1138,46 @@
     url: https://doi.org/10.3390/synbio3010002
   - name: PDF
     url: https://www.mdpi.com/2674-0583/3/1/2/pdf?version=1736757129
+- slug: conmover-move-concepts
+  title: Generating Move Smart Contracts based on Concepts
+  authors:
+  - Rabimba Karanjai
+  - Sam Blackshear
+  - Lei Xu
+  - Weidong Shi
+  date: '2024-12-17T00:00:00Z'
+  doi: ''
+  publishDate: '2024-12-17T00:00:00Z'
+  citations: 4
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2412.12513
+  publication_short: arXiv
+  abstract: The growing adoption of formal verification for smart contracts has spurred
+    the development of new verifiable languages like Move. However, the limited availability
+    of training data for these languages hinders effective code generation by large
+    language models (LLMs). This paper presents ConMover, a novel framework that enhances
+    LLM-based code generation for Move by leveraging a knowledge graph of Move concepts
+    and a small set of verified code examples. ConMover integrates concept retrieval,
+    planning, coding, and debugging agents in an iterative process to refine generated
+    code. Evaluations with various open-source LLMs demonstrate substantial accuracy
+    improvements over baseline models. These results underscore ConMover's potential
+    to address low-resource code generation challenges, bridging the gap between natural
+    language descriptions and reliable smart contract development.
+  tags:
+  - Smart Contracts
+  - Blockchain
+  - Code Generation
+  - LLMs
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2412.12513
+  bibtex: "@misc{karanjai2024conmover,\n  title={Generating Move Smart Contracts based\
+    \ on Concepts},\n  author={Karanjai, Rabimba and Blackshear, Sam and Xu, Lei and\
+    \ Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2412.12513},\n  year={2024}\n\
+    }"
 - slug: smart-contract-translation
   title: Smart Contract Code Translation based on Concepts
   authors:
@@ -874,6 +1187,7 @@
   date: '2024-11-01T00:00:00Z'
   doi: ''
   publishDate: '2024-11-01T00:00:00Z'
+  citations: 13
   publication_types:
   - '1'
   publication: ACM Foundations of Software Engineering (FSE) 2024
@@ -893,12 +1207,19 @@
     study delves into the capacity of LLMs to mimic human learning processes, offering
     an in-depth evaluation of our methodology for converting smart contracts written
     in Solidity to Move, a language with limited resources. The framework employs
-    o
+    one LLM to decipher coding conventions for the new language, creating a blueprint
+    for the second LLM, which, lacking planning abilities, possesses coding expertise.
+    The empirical evidence from our experiments suggests that SolMover substantially
+    enhances performance compared to gpt-3.5-turbo-1106, and achieves superior results
+    over competitors such as Palm2 and Mixtral-8x7B-Instruct. Additionally, our analysis
+    highlights the efficacy of our bug mitigation strategy in elevating code quality
+    across all models, even outside the SolMover framework.
   tags:
   - Smart Contracts
   - Blockchain
   - Code Translation
   - First Author
+  - Distinguished
   featured: true
   links:
   - name: DOI
@@ -926,6 +1247,7 @@
   date: '2024-10-01T00:00:00Z'
   doi: ''
   publishDate: '2024-10-01T00:00:00Z'
+  citations: 7
   publication_types:
   - '1'
   publication: MICRO 2024
@@ -948,6 +1270,7 @@
   - Cryptography
   - Hardware Accelerator
   - First Author
+  - Distinguished
   featured: true
   links:
   - name: DOI
@@ -991,7 +1314,13 @@
     generation solution that leverages IoT devices equipped with trusted execution
     environment (TEE) as the randomness sources, and then utilizes a set of cryptographic
     tools to aggregate the multiple sources and obtain the final random number that
-    can be consumed by the dApp. The new approach only needs one ho
+    can be consumed by the dApp. The new approach only needs one honest random source
+    to guarantee the unbiasedness of the final random number and a user can configure
+    the system to tolerate malicious participants who can refuse to respond to avoid
+    unfavored results. We also provide a concrete construction that can further reduce
+    the on-chain computation complexity to lower the cost of the solution in practice.
+    We evaluate the computation and gas costs to demonstrate the effectiveness of
+    the improvement.
   tags:
   - Web3
   - Randomness
@@ -1007,6 +1336,50 @@
     \ Number Generator for dApps and Web3},\n  author={Ranjith Chodavarapu and Rabimba\
     \ Karanjai and Xinxin Fan and Larry Shi and Lei Xu},\n  journal={arXiv preprint\
     \ arXiv:2510.12062},\n  year={2024}\n}"
+- slug: harnessing-llms-hpc-unit-tests
+  title: 'Harnessing the Power of LLMs: Automating Unit Test Generation for High-Performance
+    Computing'
+  authors:
+  - Rabimba Karanjai
+  - Aftab Hussain
+  - Md Rafiqul Islam Rabin
+  - Lei Xu
+  - Weidong Shi
+  - Mohammad Amin Alipour
+  date: '2024-07-06T00:00:00Z'
+  doi: ''
+  publishDate: '2024-07-06T00:00:00Z'
+  citations: 16
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2407.05202
+  publication_short: arXiv
+  abstract: Unit testing is crucial in software engineering for ensuring quality.
+    However, it's not widely used in parallel and high-performance computing software,
+    particularly scientific applications, due to their smaller, diverse user base
+    and complex logic. These factors make unit testing challenging and expensive,
+    as it requires specialized knowledge and existing automated tools are often ineffective.
+    To address this, we propose an automated method for generating unit tests for
+    such software, considering their unique features like complex logic and parallel
+    processing. Recently, large language models (LLMs) have shown promise in coding
+    and testing. We explored the capabilities of Davinci (text-davinci-002) and ChatGPT
+    (gpt-3.5-turbo) in creating unit tests for C++ parallel programs. Our results
+    show that LLMs can generate mostly correct and comprehensive unit tests, although
+    they have some limitations, such as repetitive assertions and blank test cases.
+  tags:
+  - LLMs
+  - Software Engineering
+  - High-Performance Computing
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2407.05202
+  bibtex: "@misc{karanjai2024harnessing,\n  title={Harnessing the Power of LLMs: Automating\
+    \ Unit Test Generation for High-Performance Computing},\n  author={Karanjai, Rabimba\
+    \ and Hussain, Aftab and Rabin, Md Rafiqul Islam and Xu, Lei and Shi, Weidong\
+    \ and Alipour, Mohammad Amin},\n  howpublished={arXiv preprint arXiv:2407.05202},\n\
+    \  year={2024}\n}"
 - slug: evaluating-rationality
   title: Evaluating Irrationality in Large Language Models and Open Research Questions
   authors:
@@ -1020,6 +1393,7 @@
   date: '2024-05-01T00:00:00Z'
   doi: ''
   publishDate: '2024-05-01T00:00:00Z'
+  citations: 3
   publication_types:
   - '1'
   publication: ACM CHI HEAL 2024
@@ -1081,6 +1455,7 @@
   date: '2024-05-01T00:00:00Z'
   doi: ''
   publishDate: '2024-05-01T00:00:00Z'
+  citations: 15
   publication_types:
   - '1'
   publication: IEEE ICBC 2024
@@ -1123,38 +1498,125 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
+- slug: solmover-feasibility-icbc
+  title: 'SolMover: Feasibility of Using LLMs for Translating Smart Contracts'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2024-05-01T00:00:00Z'
+  doi: 10.1109/ICBC59979.2024.10634392
+  publishDate: '2024-05-01T00:00:00Z'
+  citations: 6
+  publication_types:
+  - '1'
+  publication: 2024 IEEE International Conference on Blockchain and Cryptocurrency
+    (ICBC)
+  publication_short: IEEE ICBC 2024
+  abstract: We investigate the feasibility of employing large language models (LLMs)
+    to translate smart contracts, focusing on their ability to emulate human translation
+    techniques. This inquiry centers on the potential of LLMs to comprehend a smart
+    contract written in Solidity and to produce an equivalent in Move, a low-resource
+    language. We introduce SolMover, a system designed to bridge the gap between Solidity
+    and Move through a multi-step knowledge distillation process. Our study aims to
+    elucidate whether LLMs can internalize coding concepts, generate specific sub-tasks
+    from a general prompt, produce compilable code in a language they were not extensively
+    trained on, and how compiler feedback can be used to debug and enhance the quality
+    of the generated code.
+  tags:
+  - Smart Contracts
+  - Blockchain
+  - Code Translation
+  - LLMs
+  - First Author
+  featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC59979.2024.10634392
+  bibtex: "@inproceedings{karanjai2024solmoverfeasibility,\n  title={SolMover: Feasibility\
+    \ of Using LLMs for Translating Smart Contracts},\n  author={Karanjai, Rabimba\
+    \ and Xu, Lei and Shi, Weidong},\n  booktitle={2024 IEEE International Conference\
+    \ on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2024}\n}"
 - slug: voter-blockchain
-  title: All We Need is Voter Feedback
+  title: 'All We Need is Voter Feedback: A New Paradigm to Realize Politics without
+    Politicians Using AI Models Aligned with Voter Inputs'
   authors:
   - Nour Diallo
   - Dana Alsagheer
+  - Mohammad Kamal
   - Lei Xu
   - Yang Lu
   - Rabimba Karanjai
   - Weidong Shi
-  - Mohammad Kamal
   date: '2024-04-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICEDEG61611.2024.10702065
   publishDate: '2024-04-01T00:00:00Z'
+  citations: 2
   publication_types:
   - '1'
-  publication: IEEE ICEDEG 2024
+  publication: 2024 Tenth International Conference on eDemocracy & eGovernment (ICEDEG)
   publication_short: IEEE ICEDEG 2024
-  abstract: We study decentralized governance architectures that incorporate continuous
-    feedback loops via blockchain votes.
+  abstract: In democratic societies, the people elect the government and it is expected
+    to represent their interests through various decisions and actions. However, the
+    relationship between voter opinions and the government's actions is complex, and
+    many factors can delay or even transform the translation process so that the government's
+    operation does not reflect the voters' interests. Recent advancements in natural
+    language processing (NLP) and large language models (LLMs) provide a new opportunity
+    to mitigate this challenge. Specifically, we introduce a new framework that leverages
+    LLMs to assess public sentiment and preferences and transform citizen input into
+    actionable policy recommendations and legislative structures. This translation
+    is highly automated and avoids unnecessary human inferences. Compared with current
+    practices, the new framework improves government transparency and reduces policy
+    unpredictability.
   tags:
   - Blockchain
   - Governance
-  - Decentralized Voting
+  - LLMs
+  - eDemocracy
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1109/ICBC56567.2023.10174914
-  bibtex: "@inproceedings{karanjai2023dhtee,\n  title={Dhtee: Decentralized infrastructure\
-    \ for heterogeneous tees},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen,\
-    \ Lin and Fan, Xinxin and Suh, Teweon and Shi, Weidong and Xu, Lei},\n  booktitle={2023\
-    \ IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n\
-    \  year={2023},\n  organization={IEEE}\n}"
+    url: https://doi.org/10.1109/ICEDEG61611.2024.10702065
+  bibtex: "@inproceedings{diallo2024voter,\n  title={All We Need is Voter Feedback:\
+    \ a New Paradigm to Realize Politics without Politicians Using AI Models Aligned\
+    \ with Voter Inputs},\n  author={Diallo, Nour and Alsagheer, Dana and Kamal, Mohammad\
+    \ and Xu, Lei and Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  booktitle={2024\
+    \ Tenth International Conference on eDemocracy \\& eGovernment (ICEDEG)},\n  pages={1--9},\n\
+    \  year={2024},\n  organization={IEEE}\n}"
+- slug: lookalike-human-mimicry
+  title: 'LookALike: Human Mimicry based collaborative decision making'
+  authors:
+  - Rabimba Karanjai
+  - Weidong Shi
+  date: '2024-03-16T00:00:00Z'
+  doi: ''
+  publishDate: '2024-03-16T00:00:00Z'
+  citations: 4
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2403.10824
+  publication_short: arXiv
+  abstract: Artificial General Intelligence falls short when communicating role specific
+    nuances to other systems. This is more pronounced when building autonomous LLM
+    agents capable and designed to communicate with each other for real world problem
+    solving. Humans can communicate context and domain specific nuances along with
+    knowledge, and that has led to refinement of skills. In this work we propose and
+    evaluate a novel method that leads to knowledge distillation among LLM agents
+    leading to realtime human role play preserving unique contexts without relying
+    on any stored data or pretraining. We also evaluate how our system performs better
+    in simulated real world tasks compared to state of the art.
+  tags:
+  - LLMs
+  - AI Agents
+  - Machine Learning
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2403.10824
+  bibtex: "@misc{karanjai2024lookalike,\n  title={LookALike: Human Mimicry based collaborative\
+    \ decision making},\n  author={Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv\
+    \ preprint arXiv:2403.10824},\n  year={2024}\n}"
 - slug: decentralize-multi-clouds
   title: Decentralized FaaS over Multi-Clouds
   authors:
@@ -1166,12 +1628,22 @@
   date: '2024-03-01T00:00:00Z'
   doi: ''
   publishDate: '2024-03-01T00:00:00Z'
+  citations: 3
   publication_types:
   - '1'
   publication: ACM SAC 2024
   publication_short: ACM SAC 2024
-  abstract: We introduce a decentralized Function-as-a-Service (FaaS) model that coordinates
-    execution tasks across multiple cloud networks.
+  abstract: Function-as-a-Service (FaaS) offers a streamlined cloud computing paradigm,
+    but existing centralized systems suffer from vendor lock-in and single points
+    of failure. We propose DeFaaS, a decentralized FaaS system leveraging blockchain
+    technology and decentralized API management. DeFaaS addresses these limitations
+    by establishing a secure, transparent registry of functions on a blockchain and
+    enabling applications to discover and invoke them. This approach fosters scalability,
+    flexibility, enhanced security, and improved reliability. Furthermore, DeFaaS's
+    architecture extends beyond decentralized FaaS, supporting other distributed computing
+    scenarios like dApps, volunteer computing, and multi-cloud service meshes. DeFaaS
+    represents a significant advancement in decentralized computing with the potential
+    to unlock a multitude of novel applications and use cases.
   tags:
   - Decentralized Systems
   - FaaS
@@ -1180,7 +1652,9 @@
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1109/ICBC59979.2024.10634372
+    url: https://doi.org/10.1145/3605098.3636029
+  - name: arXiv
+    url: https://arxiv.org/pdf/2404.08151
 - slug: diac-infrastructure
   title: 'DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain'
   authors:
@@ -1193,6 +1667,7 @@
   date: '2023-11-01T00:00:00Z'
   doi: ''
   publishDate: '2023-11-01T00:00:00Z'
+  citations: 10
   publication_types:
   - '2'
   publication: IEEE TNSM 2023
@@ -1222,6 +1697,7 @@
   date: '2023-10-01T00:00:00Z'
   doi: ''
   publishDate: '2023-10-01T00:00:00Z'
+  citations: 20
   publication_types:
   - '1'
   publication: BRAINS 2023
@@ -1240,7 +1716,8 @@
     finds crucial evidence of security bugs getting introduced in the generated smart
     contracts as well as the overall quality and correctness of the code getting impacted.
     However, we also identified the areas where it can be improved. The paper also
-    proposes several potential research directions to improve the proces
+    proposes several potential research directions to improve the process, quality
+    and safety of generated smart contract codes.
   tags:
   - LLMs
   - Smart Contracts
@@ -1256,6 +1733,46 @@
     \ Study of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and\
     \ Li, Edward and Xu, Lei and Shi, Weidong},\n  booktitle={Blockchain, Robotics\
     \ and AI for Networking Security Conference (BRAINS)},\n  year={2023}\n}"
+- slug: cross-chain-bribery-contracts-majority-vs-mighty-minority
+  title: 'Cross Chain Bribery Contracts: Majority vs Mighty Minority'
+  authors:
+  - Quang Nhat Tran
+  - Lin Chen
+  - Lei Xu
+  - Yang Lu
+  - Rabimba Karanjai
+  - Weidong Shi
+  date: '2023-06-08T00:00:00Z'
+  doi: ''
+  publishDate: '2023-06-08T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2306.07984
+  publication_short: arXiv
+  abstract: 'Bribery is a perilous issue in the real world, especially in an economical
+    aspect. This fraudulence is unavoidable, and more importantly, it is more difficult
+    to trace in case smart contracts are utilized for bribing on a distributed public
+    blockchain. In our paper, we propose a new threat to the security of a blockchain
+    system: cross-chain bribery using smart contracts. An arbitrary wealthy briber
+    can utilize cross-chain smart contracts to manipulate a consensus mechanism on
+    a victim''s blockchain or to disgrace a victim''s blockchain. To better understand
+    this threat, our paper proposes a framework to analyze bribery using cross-chain
+    smart contracts. We analyze the amount of incentive needed to bribe rational miners
+    in a victim''s blockchain and also the full cost of conducting a cross-chain bribery
+    attack. The result is that such attacks can be carried out with a reasonable amount
+    of money or cryptocurrencies.'
+  tags:
+  - Blockchain
+  - Security
+  - Smart Contracts
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2306.07984
+  bibtex: "@misc{tran2023bribery,\n  title={Cross Chain Bribery Contracts: Majority\
+    \ vs Mighty Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and\
+    \ Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint\
+    \ arXiv:2306.07984},\n  year={2023}\n}"
 - slug: decentralize-infra-heterogeneous
   title: 'DHTee: Decentralized Infrastructure for Heterogeneous TEE'
   authors:
@@ -1269,20 +1786,23 @@
   date: '2023-05-01T00:00:00Z'
   doi: ''
   publishDate: '2023-05-01T00:00:00Z'
+  citations: 11
   publication_types:
   - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: Trusted execution environment (TEE) technology has found many applications
-    in mitigating various security risks in an efficient man- ner, which is attractive
-    for critical infrastructure protection. First, the natural of critical infrastructure
-    requires it to be well protected from various cyber attacks. Second, performance
-    is usually impor- tant for critical infrastructure and it cannot afford an expensive
-    protection mechanism. While a large number of TEE-based critical infrastructure
-    protection systems have been proposed to address various security challenges (e.g.,
-    secure sensing and reliable con- trol), most existing works ignore one important
-    feature, i.e., devices comprised the critical infrastructure may be equipped with
-    multiple incompatible TEE technologies and belongs to different
+  abstract: Trusted execution environment (TEE) technology has many uses, such as
+    protecting data in the cloud and improving security for industrial IoT. However,
+    there are technical challenges that limit its widespread adoption. These challenges
+    include the fact that different TEE vendors have incompatible solutions, and devices
+    equipped with the same TEE technology may belong to different owners, making it
+    difficult to establish trust between them. To address these challenges and fully
+    utilize TEE technology, a decentralized coordination mechanism called DHTee is
+    proposed. DHTee uses blockchain technology to support key TEE functions in a heterogeneous
+    TEE environment, especially attestation service. Devices equipped with TEE can
+    interact securely with the blockchain to determine whether potential collaborating
+    devices meet the requirements. DHTee is also flexible and can support new TEE
+    schemes without affecting existing TEEs.
   tags:
   - TEE
   - Security
@@ -1290,33 +1810,37 @@
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1145/3594556.3594626
-  - name: arXiv
-    url: https://arxiv.org/pdf/2308.01474
-  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
-    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
-    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
-    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
-    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
-    \  pages={85--94},\n  year={2023}\n}"
+    url: https://doi.org/10.1109/ICBC56567.2023.10174906
+  bibtex: "@inproceedings{karanjai2023dhtee,\n  title={DHTee: Decentralized Infrastructure\
+    \ for Heterogeneous TEEs},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen,\
+    \ Lin and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={2023\
+    \ IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--6},\n\
+    \  year={2023},\n  organization={IEEE}\n}"
 - slug: ai-governance
   title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and
     Research Challenges'
   authors:
   - Dana R Alsagheer
   - Nour Diallo
-  - Lei Xu
   - Rabimba Karanjai
+  - Lei Xu
   - Weidong Shi
   date: '2023-05-01T00:00:00Z'
   doi: ''
   publishDate: '2023-05-01T00:00:00Z'
+  citations: 2
   publication_types:
   - '1'
   publication: IEEE ICBC 2023
   publication_short: IEEE ICBC 2023
-  abstract: 'Short Paper: We map the open questions and technical roadblocks in establishing
-    decentralized protocols for auditing ML model weights.'
+  abstract: Researchers have started to recognize the necessity for a well-defined
+    ML governance framework based on the principle of decentralization and comprehensively
+    defining its scope of research and practice due to the growth of machine learning
+    (ML) research and applications in the real world and the success of blockchain-based
+    technology. In this paper, we study decentralized ML governance, which includes
+    ML value chain management, decentralized identity for the ML community, decentralized
+    ownership and rights management of ML assets, community-based decision-making
+    for the ML process, decentralized ML finance, and risk management.
   tags:
   - AI Governance
   - Security
@@ -1324,7 +1848,7 @@
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1109/ICBC56567.2023.10174931
+    url: https://doi.org/10.1109/ICBC56567.2023.10175000
 - slug: supporting-heterogeneous-infra
   title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
   authors:
@@ -1339,6 +1863,7 @@
   date: '2023-05-01T00:00:00Z'
   doi: ''
   publishDate: '2023-05-01T00:00:00Z'
+  citations: 12
   publication_types:
   - '1'
   publication: ACM AsiaCCS 2023
@@ -1357,7 +1882,12 @@
     environment. To address these challenges and fully unleash the potential of TEE
     technology for critical infrastructure protection, we propose DHTee, a decentralized
     coordination mechanism. DHTee uses blockchain technology to support key TEE functions
-    in a heterogeneous TEE environment, especially the a
+    in a heterogeneous TEE environment, especially the attestation service. A Device
+    equipped with one TEE can interact securely with the blockchain to verify whether
+    another potential collaborating device claiming to have a different TEE meets
+    the security requirements. DHTee is also flexible and can support new TEE schemes
+    without affecting devices using existing TEEs that have been supported by the
+    system.
   tags:
   - Security
   - TEE
@@ -1386,6 +1916,7 @@
   date: '2023-05-01T00:00:00Z'
   doi: ''
   publishDate: '2023-05-01T00:00:00Z'
+  citations: 14
   publication_types:
   - '1'
   publication: IEEE ICBC 2023
@@ -1409,14 +1940,98 @@
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1145/3605098.3636029
-  - name: arXiv
-    url: https://arxiv.org/pdf/2404.08151
+    url: https://doi.org/10.1109/ICBC56567.2023.10174945
   bibtex: "@inproceedings{karanjai2023defaas,\n  title={Defaas: Decentralized function-as-a-service\
     \ for emerging dapps and web3},\n  author={Karanjai, Rabimba and Xu, Lei and Diallo,\
     \ Nour and Chen, Lin and Shi, Weidong},\n  booktitle={2023 IEEE International\
     \ Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2023},\n\
     \  organization={IEEE}\n}"
+- slug: targeted-phishing-llms
+  title: Targeted Phishing Campaigns using Large Scale Language Models
+  authors:
+  - Rabimba Karanjai
+  date: '2022-12-30T00:00:00Z'
+  doi: ''
+  publishDate: '2022-12-30T00:00:00Z'
+  citations: 67
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2301.00665
+  publication_short: arXiv
+  abstract: In this research, we aim to explore the potential of natural language
+    models (NLMs) such as GPT-3 and GPT-2 to generate effective phishing emails. Phishing
+    emails are fraudulent messages that aim to trick individuals into revealing sensitive
+    information or taking actions that benefit the attackers. We propose a framework
+    for evaluating the performance of NLMs in generating these types of emails based
+    on various criteria, including the quality of the generated text, the ability
+    to bypass spam filters, and the success rate of tricking individuals. Our evaluations
+    show that NLMs are capable of generating phishing emails that are difficult to
+    detect and that have a high success rate in tricking individuals, but their effectiveness
+    varies based on the specific NLM and training data used. Our research indicates
+    that NLMs could have a significant impact on the prevalence of phishing attacks
+    and emphasizes the need for further study on the ethical and security implications
+    of using NLMs for malicious purposes.
+  tags:
+  - Security
+  - LLMs
+  - Phishing
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2301.00665
+  bibtex: "@misc{karanjai2022phishing,\n  title={Targeted Phishing Campaigns using\
+    \ Large Scale Language Models},\n  author={Karanjai, Rabimba},\n  howpublished={arXiv\
+    \ preprint arXiv:2301.00665},\n  year={2022}\n}"
+- slug: fpswap
+  title: 'Fpswap: Fair and Privacy Friendly Swap of Digital Assets on Blockchain'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Zhimin Gao
+  - Lin Chen
+  - Keshav Kasichainula
+  - Bogdan Carbunar
+  - Weidong Shi
+  date: '2022-06-21T00:00:00Z'
+  doi: 10.2139/ssrn.4141949
+  publishDate: '2022-06-21T00:00:00Z'
+  citations: 1
+  publication_types:
+  - '3'
+  publication: Available at SSRN 4141949
+  publication_short: SSRN Preprint
+  abstract: Recently, cryptocurrencies have been introduced to enhance the privacy
+    provided by Bitcoin. For example, CryptoNote, which implements the "Traceable
+    Ring Signature" approach to achieve Untraceability, and Zcash seek to hide the
+    content of a crypto note to enhance privacy while allowing the public to verify
+    the validity of a payment transaction. However, all these schemes consider one-way
+    transaction, and there are few mechanisms to support the two-way exchange of privacy-preserving
+    notes or digital assets on the chain and simultaneously protect the privacy of
+    the exchange operation. Existing approaches for fair exchange of assets with privacy
+    mostly rely on off-chain or sidechain exchanges, escrow, or centralized services.
+    Instead, in this paper, we propose a solution that supports the oblivious and
+    private, fully on-chain fair exchange of crypto notes or confidential digital
+    assets. We demonstrate this technology by extending zero-knowledge-based crypto
+    notes. To address privacy and multiasset support, we built a new zero-knowledge
+    proof system and extended the crypto note format with a new property to represent
+    various types of digital or "tokenized" assets. We extend the payment protocol
+    to implement fair exchange operations through the orchestration of privacy-enhanced
+    asset transfer and payment transactions.
+  tags:
+  - Blockchain
+  - Security
+  - Privacy
+  - Zero-Knowledge Proofs
+  - First Author
+  featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.2139/ssrn.4141949
+  bibtex: "@article{karanjai2022fpswap,\n  title={Fpswap: Fair and Privacy Friendly\
+    \ Swap of Digital Assets on Blockchain},\n  author={Karanjai, Rabimba and Xu,\
+    \ Lei and Gao, Zhimin and Chen, Lin and Kasichainula, Keshav and Carbunar, Bogdan\
+    \ and Shi, Weidong},\n  journal={Available at SSRN 4141949},\n  year={2022}\n}"
 - slug: decentralized-apps
   title: Decentralized Application Infrastructures as Smart Contract Codes
   authors:
@@ -1430,6 +2045,7 @@
   date: '2022-05-01T00:00:00Z'
   doi: ''
   publishDate: '2022-05-01T00:00:00Z'
+  citations: 7
   publication_types:
   - '1'
   publication: IEEE ICBC 2022
@@ -1437,10 +2053,12 @@
   abstract: We introduce secure frameworks for modeling decentralized application
     deployment using smart contracts, earning the Distinguished Paper Award.
   tags:
+  - Distinguished
   - Blockchain
   - Smart Contracts
   - First Author
   featured: true
+  distinguished: true
   links:
   - name: DOI
     url: https://doi.org/10.1109/ICBC54727.2022.9805524
@@ -1462,6 +2080,7 @@
   date: '2021-12-01T00:00:00Z'
   doi: ''
   publishDate: '2021-12-01T00:00:00Z'
+  citations: 7
   publication_types:
   - '1'
   publication: ACM Middleware 2021
@@ -1494,6 +2113,7 @@
   date: '2021-11-01T00:00:00Z'
   doi: ''
   publishDate: '2021-11-01T00:00:00Z'
+  citations: 17
   publication_types:
   - '1'
   publication: ACM HASP 2021
@@ -1509,6 +2129,8 @@
   links:
   - name: DOI
     url: https://doi.org/10.1145/3505253.3505259
+  - name: arXiv
+    url: https://arxiv.org/pdf/2203.12724
   bibtex: "@inproceedings{rabimba2021lessons,\n  title={Lessons learned from blockchain\
     \ applications of trusted execution environments and implications for future research},\n\
     \  author={Rabimba, Karanjai and Xu, Lei and Chen, Lin and Zhang, Fengwei and\
@@ -1528,6 +2150,7 @@
   date: '2021-06-01T00:00:00Z'
   doi: ''
   publishDate: '2021-06-01T00:00:00Z'
+  citations: 21
   publication_types:
   - '1'
   publication: ACM DEBS 2021
@@ -1542,6 +2165,8 @@
   links:
   - name: DOI
     url: https://doi.org/10.1145/3465480.3466924
+  - name: arXiv
+    url: https://arxiv.org/pdf/2101.05475
   bibtex: "@inproceedings{kaleem2021event,\n  title={An event driven framework for\
     \ smart contract execution},\n  author={Kaleem, Mudabbir and Kasichainula, Keshav\
     \ and Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Shi, Weidong},\n\
@@ -1551,15 +2176,24 @@
   title: Mobile multi-party digitally signed documents and techniques for using these
     allowing detection of tamper
   authors:
+  - Divyesh Jadav
   - Rabimba Karanjai
+  - Lawrence Koved
+  - Gabriel Alatorre
   date: '2021-06-01T00:00:00Z'
   publication_types:
   - '8'
   publication: US Patent US11025643B2
   publication_short: US Patent US11025643B2
-  abstract: A multi-party authentication system integrating biometric features and
-    blockchain technology for tamper-evident mobile document signing. Developed at
-    IBM Almaden Research Center.
+  abstract: Techniques for mobile multi-party digitally signed documents that allow
+    detection of tamper. An issuing authority issues an authenticated base digital
+    document, and aggregate documents comprising the base document and one or more
+    attachments (such as visas or stamps) are created, updated, merged, and verified
+    by multiple parties. Using digital signatures, Merkle-tree structures, and optional
+    blockchain-based credential stores, updates can be performed and verified both
+    online and offline, so that unauthorized modifications, removal of attachments,
+    or concurrent changes can be detected and resolved by an arbiter. Assigned to
+    International Business Machines Corporation.
   tags:
   - Patent
   - Security
@@ -1583,6 +2217,7 @@
   date: '2021-05-01T00:00:00Z'
   doi: ''
   publishDate: '2021-05-01T00:00:00Z'
+  citations: 9
   publication_types:
   - '1'
   publication: IEEE ICBC 2021

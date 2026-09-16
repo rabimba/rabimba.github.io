@@ -33,7 +33,7 @@ tags:
 - Web3
 - Survey
 - First Author
-featured: true
+featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2608.17275

@@ -30,6 +30,7 @@ tags:
 - Cryptography
 - Hardware Accelerator
 - First Author
+- Distinguished
 featured: true
 links:
 - name: DOI
