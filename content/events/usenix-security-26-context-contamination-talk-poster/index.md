@@ -18,6 +18,8 @@ tags:
 - Conference
 featured: true
 links:
+- name: Video
+  url: https://youtu.be/CAzYXdkKnBM
 - name: USENIX Page
   url: https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai
 - name: Paper PDF

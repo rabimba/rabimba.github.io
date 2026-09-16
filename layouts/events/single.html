@@ -49,7 +49,7 @@
       {{ $parts := split (replace $videoUrl "https://www.youtube.com/watch?v=" "") "&" }}
       {{ $youtubeId = index $parts 0 }}
     {{ else if in $videoUrl "youtu.be/" }}
-      {{ $youtubeId = replace $videoUrl "https://youtu.be/" "" }}
+      {{ $youtubeId = index (split (replace $videoUrl "https://youtu.be/" "") "?") 0 }}
     {{ end }}
 
     {{ if $youtubeId }}

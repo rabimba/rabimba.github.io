@@ -33,6 +33,8 @@ tags:
 - Distinguished
 featured: true
 links:
+- name: Video
+  url: https://youtu.be/CAzYXdkKnBM
 - name: Project Page
   url: https://rabimba.github.io/context-contamination-usenix26/
 - name: USENIX
