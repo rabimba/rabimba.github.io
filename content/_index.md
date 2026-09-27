@@ -177,6 +177,11 @@ sections:
       text: |-
         <div class="oss-grid" role="list">
         <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/ConferenceRank" target="_blank" rel="noopener">ConferenceRank</a></div>
+        <div class="oss-desc">One-stop CS venue evaluation — CORE/SJR ranks, acceptance-rate trends, AoE deadlines, and venue suggester. Ships MCP server, JSON API, and agent skill for LLM consumption.</div>
+        <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/ConferenceRank/" target="_blank" rel="noopener">Live site</a></div>
+        </div>
+        <div class="oss-card" role="listitem">
         <div class="oss-name"><a href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">Dr.MRI.AI</a></div>
         <div class="oss-desc">Privacy-first DICOM viewer that plans slice selection with Gemma 4 before multimodal review — ~99% fewer image tokens, fully in-browser via WebGPU.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/drmriai/" target="_blank" rel="noopener">Live demo</a></div>
