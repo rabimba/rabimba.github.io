@@ -45,7 +45,7 @@ links:
 - name: Benchmark Code
   url: https://github.com/rabimba/vllm-xla-bench
 - name: Deep-Dive Blog
-  url: /blog/the-throughput-trap-benchmarking-vllm/
+  url: https://rkrants.blogspot.com/2026/06/the-throughput-trap-benchmarking-vllm.html
 ---
 
 ### Talk Overview
@@ -85,5 +85,5 @@ The talk details our empirical evaluation of the matured **vLLM + OpenXLA** stac
 
 - **Presentation Slides:** [devlab-vllm-xla_talk.pdf](https://github.com/rabimba/vllm-xla-bench/blob/main/devlab-vllm-xla_talk%20.pdf)
 - **Benchmark Harness & Test Suite:** [github.com/rabimba/vllm-xla-bench](https://github.com/rabimba/vllm-xla-bench)
-- **Deep-Dive Engineering Post:** [The Throughput Trap: Benchmarking vLLM on OpenXLA](/blog/the-throughput-trap-benchmarking-vllm/)
+- **Deep-Dive Engineering Post:** [The Throughput Trap: Benchmarking vLLM on OpenXLA](https://rkrants.blogspot.com/2026/06/the-throughput-trap-benchmarking-vllm.html)
 - **Recorded Session Stream:** [Watch on YouTube](https://www.youtube.com/watch?v=-AjLjr5kPqY)
