@@ -187,7 +187,7 @@ publications = [
         "publication": "IEEE TNSM 2023",
         "type": "2",
         "filename": "diac-infrastructure",
-        "abstract": "We propose DlaC, a system that uses smart contracts to securely manage and audit cloud infrastructure deployment configurations.",
+        "abstract": "We propose DIaC, a system that uses smart contracts to securely manage and audit cloud infrastructure deployment configurations.",
         "tags": ["Blockchain", "Infrastructure as Code", "First Author"]
     },
     {
@@ -360,7 +360,7 @@ publications = [
         "publication": "ACM CHI HEAL 2024",
         "type": "1",
         "filename": "evaluating-rationality",
-        "abstract": "Workshop Paper: We examine cognitive cognitive anomalies and systematic biases in LLM choices when given human reasoning dilemmas.",
+        "abstract": "Workshop Paper: We examine cognitive anomalies and systematic biases in LLM choices when given human reasoning dilemmas.",
         "tags": ["LLMs", "Cognitive Bias", "AI Safety"]
     },
     # Under Review
@@ -550,9 +550,16 @@ pdf_dest_dir = "static/uploads/publications"
 os.makedirs(pdf_dest_dir, exist_ok=True)
 
 pub_base_dir = "content/publication"
-# Remove existing publications to clean up
-if os.path.exists(pub_base_dir):
-    shutil.rmtree(pub_base_dir)
+# Clean ONLY the pages this script generates. Pages added by the feed
+# pipeline (scripts/sync_publications.py, scripts/fetch_scholar.py) or by
+# hand must survive a CV sync.
+known_pub_slugs = {pub["filename"] for pub in publications}
+if os.path.isdir(pub_base_dir):
+    for entry in os.listdir(pub_base_dir):
+        if entry in known_pub_slugs:
+            stale = os.path.join(pub_base_dir, entry)
+            if os.path.isdir(stale):
+                shutil.rmtree(stale)
 os.makedirs(pub_base_dir, exist_ok=True)
 
 # Generate publication _index.md
@@ -608,11 +615,16 @@ for pub in publications:
         if matched_pdf:
             print(f"  Matched arXiv fallback: {matched_pdf}")
 
+    if matched_pdf:
+        links_yaml = f"links:\n- name: PDF\n  url: '{matched_pdf}'\n"
+    else:
+        links_yaml = "links: []\n"
+
     # Generate markdown index.md
     authors_yaml = "\n".join([f"- {a}" for a in pub["authors"]])
     tags_yaml = "\n".join([f"- {t}" for t in pub["tags"]])
     featured_str = "true" if pub.get("featured", False) else "false"
-    
+
     front_matter = f"""---
 title: "{title}"
 authors:
@@ -627,16 +639,7 @@ abstract: "{pub['abstract']}"
 tags:
 {tags_yaml}
 featured: {featured_str}
-links:
-url_pdf: '{matched_pdf}'
-url_code: ''
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
----
+{links_yaml}---
 """
     with open(os.path.join(pub_dir, "index.md"), "w", encoding="utf-8") as f:
         f.write(front_matter)
@@ -644,8 +647,20 @@ url_video: ''
 # Generate Talks under content/events/
 print("Generating talks...")
 events_dir = "content/events"
-if os.path.exists(events_dir):
-    shutil.rmtree(events_dir)
+
+def talk_slug(title):
+    slug = title.lower().replace(":", "").replace(",", "").replace("&", "and").replace(" ", "-").replace("?", "")
+    return "".join([c for c in slug if c.isalnum() or c == "-"])
+
+# Clean ONLY the event pages this script generates; hand-edited or
+# feed-added events must survive a CV sync.
+known_event_slugs = {talk_slug(t["title"]) for t in talks}
+if os.path.isdir(events_dir):
+    for entry in os.listdir(events_dir):
+        if entry in known_event_slugs:
+            stale = os.path.join(events_dir, entry)
+            if os.path.isdir(stale):
+                shutil.rmtree(stale)
 os.makedirs(events_dir, exist_ok=True)
 
 # Generate event _index.md
@@ -658,8 +673,7 @@ type: landing
 
 for talk in talks:
     # Slugify title
-    slug = talk["title"].lower().replace(":", "").replace(",", "").replace("&", "and").replace(" ", "-").replace("?", "")
-    slug = "".join([c for c in slug if c.isalnum() or c == "-"])
+    slug = talk_slug(talk["title"])
     
     # Event folder
     talk_dir = os.path.join(events_dir, slug)
@@ -679,7 +693,7 @@ date_end: "{date_start}T11:00:00Z"
 all_day: false
 publishDate: "2025-01-01T00:00:00Z"
 authors: [admin]
-tags: [{talk['event'].split()[0]}, "Talk", "{talk['year']}"]
+tags: ["{talk['event'].split()[0]}", "Talk", "{talk['year']}"]
 featured: false
 links: []
 url_code: ""
@@ -691,11 +705,10 @@ url_video: ""
     with open(os.path.join(talk_dir, "index.md"), "w", encoding="utf-8") as f:
         f.write(content)
 
-# Update Biography in content/authors/admin/_index.md
-print("Updating Biography...")
+# Biography lives in content/authors/admin/_index.md and is edited by hand.
+# Never overwrite it — write only when missing (fresh clone recovery).
+print("Checking biography...")
 bio_path = "content/authors/admin/_index.md"
-with open(bio_path, "r", encoding="utf-8") as f:
-    lines = f.readlines()
 
 new_bio_content = """---
 # Display name
@@ -737,7 +750,7 @@ profiles:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/rabimba/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=rabimba
+    url: https://scholar.google.com/citations?user=PYmmdne2aRMC
 
 interests:
   - Agentic AI & AI Reasoning
@@ -777,9 +790,9 @@ work:
     company_url: 'https://www.uh.edu/'
     icon: ''
     date_start: 2021-09-01
-    date_end: 2025-07-25
+    date_end: 2026-08-31
     summary: |
-      Conducted research in AI reasoning, smart contract translation, code generation, medical diagnosis, and decentralized infrastructures (DlaC, FaaS).
+      Conducted research in AI reasoning, smart contract translation, code generation, medical diagnosis, and decentralized infrastructures (DIaC, FaaS).
   - position: Senior Software Engineer
     company_name: Clearedin
     company_url: ''
@@ -787,7 +800,7 @@ work:
     date_start: 2020-12-01
     date_end: 2021-08-31
     summary: |
-      Designed and implemented advanced policy threat detection engines, URL scanning, phishing detection algorithms, and maliciousemail classification.
+      Designed and implemented advanced policy threat detection engines, URL scanning, phishing detection algorithms, and malicious email classification.
   - position: Machine Learning Lead
     company_name: Fireflies.ai
     company_url: 'https://fireflies.ai/'
@@ -883,7 +896,7 @@ awards:
   - title: Sui Academic Research Award
     date: '2025-01-01'
     awarder: Sui Foundation
-    summary: "Awarded Sui Foundation Research Grants in 2023 ($15k), 2024 ($25k), and 2025 ($25k)."
+    summary: "Awarded Sui Foundation Research Grants in 2023, 2024, and 2025 ($25k/year) as Primary Investigator."
   - title: Mozilla Research Fellowship
     date: '2018-01-01'
     awarder: Mozilla
@@ -892,7 +905,11 @@ awards:
 Rabimba Karanjai is a Staff Agentic AI Researcher at PayPal Research. He completed his Ph.D. in Computer Science at the University of Houston (defended July 2025), where his research focused on the intersection of blockchain, secure AI reasoning, and LLM-assisted program analysis and repair. 
 """
 
-with open(bio_path, "w", encoding="utf-8") as f:
-    f.write(new_bio_content)
+if os.path.exists(bio_path):
+    print("  Biography exists — left untouched (edit it directly in git).")
+else:
+    with open(bio_path, "w", encoding="utf-8") as f:
+        f.write(new_bio_content)
+    print("  Biography written (was missing).")
 
 print("CV sync complete!")

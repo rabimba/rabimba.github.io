@@ -114,7 +114,7 @@
     {{ range $events }}
       {{ $type := .Params.event_type | default "talk" | lower }}
       {{ $year := time.Format "2006" .Date }}
-      {{ $searchText := printf "%s %s %s %s" (.Title | plainify) (.Params.event | default "") (.Params.location | default "") (.Params.summary | default "") | lower | htmlEscape }}
+      {{ $searchText := printf "%s %s %s %s" (.Title | plainify) (.Params.event | default "") (.Params.location | default "") (.Params.summary | default "") | lower }}
       <article class="evt-item{{ if .Params.featured }} featured{{ end }}" data-card data-type="{{ $type }}" data-year="{{ $year }}" data-search="{{ $searchText }}">
         <div class="evt-date-col">
           <div class="evt-month">{{ time.Format "Jan" .Date }}</div>
@@ -137,13 +137,13 @@
           <div class="evt-actions">
             {{ range .Params.links }}
               {{ if eq .name "Video" }}
-              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank">Video</a>
+              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank" rel="noopener">Video</a>
               {{ else if eq .name "Slides" }}
-              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank">Slides</a>
+              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank" rel="noopener">Slides</a>
               {{ else if eq .name "Event" }}
               <a class="evt-link evt-link-primary" href="{{ .url }}" target="_blank" rel="noopener">Event ↗</a>
               {{ else }}
-              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank">{{ .name }}</a>
+              <a class="evt-link evt-link-secondary" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
               {{ end }}
             {{ end }}
           </div>

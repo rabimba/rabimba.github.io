@@ -10,23 +10,20 @@ and opened as a PR for human review before publishing.
 """
 
 import argparse
+import difflib
 import os
 import re
 import sys
 import unicodedata
-import urllib3
 import xml.etree.ElementTree as ET
 from datetime import date
 
 import requests
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 OPENALEX_IDS = ["A5016852422", "A5100493788", "A5137309728"]
 SEMANTICSCHOLAR_AUTHOR_IDS = ["74167114", "2335666645"]
 DBLP_PID = "283/5555"
 PUB_DIR = os.path.join(os.path.dirname(__file__), "..", "content", "publication")
-MAILTO_UH = "uh.edu"
 
 HEADERS = {"User-Agent": "rabimba-site-pub-sync/1.0 (mailto:contact@rabimba.me)"}
 
@@ -43,14 +40,17 @@ TAG_KEYWORDS = [
 ]
 
 
+INSECURE = False
+
+
 def http_get(url, **kwargs):
-    """Make requests.get with sensible defaults, TLS fallback, and headers."""
+    """Make requests.get with sensible defaults and headers. TLS errors fail loudly
+    (pass --insecure to bypass behind TLS-intercepting proxies)."""
     kwargs.setdefault("headers", HEADERS)
     kwargs.setdefault("timeout", 60)
-    try:
-        return requests.get(url, **kwargs)
-    except requests.exceptions.SSLError:
-        return requests.get(url, verify=False, **kwargs)
+    if INSECURE:
+        kwargs["verify"] = False
+    return requests.get(url, **kwargs)
 
 
 def norm_title(t):
@@ -100,7 +100,6 @@ def is_known(w, titles, titles_raw, dois, arxivs):
     ax = work_arxiv_id(w)
     if ax and ax in arxivs:
         return True
-    import difflib
     nt = norm_title(w["title"])
     for t in titles:
         if abs(len(nt) - len(t)) <= max(len(nt), len(t)) * 0.25 and difflib.SequenceMatcher(None, nt, t).ratio() >= 0.90:
@@ -318,7 +317,16 @@ def gen_page(w, slug):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--insecure", action="store_true",
+                    help="Disable TLS verification (only for local runs behind intercepting proxies)")
     args = ap.parse_args()
+
+    if args.insecure:
+        import urllib3
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        global INSECURE
+        INSECURE = True
+        print("WARNING: TLS verification disabled (--insecure). Never use in CI.")
 
     titles, titles_raw, dois, arxivs = existing_index()
     feed = fetch_openalex() + fetch_semanticscholar() + fetch_dblp()

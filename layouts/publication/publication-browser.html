@@ -126,7 +126,7 @@
       {{ end }}
       {{ $tagAttr := printf "|%s|" (delimit (apply $topicTags "urlize" ".") "|") }}
       {{ $searchPieces := slice (.Title | plainify) (delimit .Params.authors " ") (.Params.publication | plainify) (delimit $topicTags " ") (.Params.abstract | plainify) }}
-      {{ $searchAttr := (delimit $searchPieces " " | plainify | lower | htmlEscape) }}
+      {{ $searchAttr := (delimit $searchPieces " " | plainify | lower) }}
       {{ $isFirstAuthor := and (gt (len .Params.authors) 0) (eq (index .Params.authors 0) "Rabimba Karanjai") }}
 
       {{ $isUnderReview := or (in .Params.publication "Under Review") (in .Params.publication "To Appear") }}
@@ -154,7 +154,7 @@
           <a class="pub-browser-link pub-browser-link-primary" href="{{ .RelPermalink }}">View</a>
           {{ range .Params.links }}
             {{ if or (eq .name "PDF") (eq .name "arXiv") }}
-              <a class="pub-browser-link pub-browser-link-secondary" href="{{ .url }}" target="_blank">PDF</a>
+              <a class="pub-browser-link pub-browser-link-secondary" href="{{ .url }}" target="_blank" rel="noopener">PDF</a>
             {{ end }}
           {{ end }}
         </div>
