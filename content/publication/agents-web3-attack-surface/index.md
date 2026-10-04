@@ -12,7 +12,7 @@ doi: ''
 publishDate: '2026-08-18T00:00:00Z'
 publication_types:
 - '1'
-publication: BRAINS 2026
+publication: BRAINS 2026 (To appear)
 publication_short: BRAINS 2026
 abstract: 'AI agents increasingly act rather than merely read: across the Model Context
   Protocol (MCP) ecosystem, the share of deployed tools that modify external state has risen

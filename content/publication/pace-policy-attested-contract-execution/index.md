@@ -13,7 +13,7 @@ doi: ''
 publishDate: '2026-08-18T00:00:00Z'
 publication_types:
 - '1'
-publication: BRAINS 2026
+publication: BRAINS 2026 (To appear)
 publication_short: BRAINS 2026
 abstract: 'Autonomous AI agents are emerging as interfaces for decentralized finance (DeFi)
   actions such as swaps, lending operations, and yield management. Because these agents rely

@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitae
-date: 2026-08-24
+date: 2026-09-27
 type: page
 ---
 
@@ -123,7 +123,7 @@ type: page
       <div class="cv-chapter-year">2020 – 2025</div>
       <h2>The PhD Quest: Teaching AI to Reason</h2>
       <p>PhD at <strong>University of Houston</strong>, advised by Prof. Weidong Shi. Dissertation: "Teaching AIs to Reason and Code, Confidentially." Won the <strong>Dan E. Wells Outstanding Dissertation Award</strong> and <strong>UH Best Dissertation Award</strong>.</p>
-      <p class="cv-highlight">50+ publications (37 published, 28 first-author). 4x research grants. ACM SIGSOFT Distinguished Paper Award. Best Dissertation Award. Google Cloud Research Innovator.</p>
+      <p class="cv-highlight">40+ publications (40 published, 28 first-author). 4x research grants. ACM SIGSOFT Distinguished Paper Award. Best Dissertation Award. Google Cloud Research Innovator. NeurIPS 2026.</p>
       <div class="cv-chapter-tags">
         <span class="cv-tag">LLM Reasoning</span>
         <span class="cv-tag">Smart Contracts</span>
@@ -156,8 +156,8 @@ type: page
 <!-- Stats Grid -->
 <div class="cv-stats">
   <div class="cv-stat-card">
-    <div class="cv-stat-number">50+</div>
-    <div class="cv-stat-label">Publications (37 published)</div>
+    <div class="cv-stat-number">40+</div>
+    <div class="cv-stat-label">Publications (40 published)</div>
   </div>
   <div class="cv-stat-card">
     <div class="cv-stat-number">1 + 6</div>
