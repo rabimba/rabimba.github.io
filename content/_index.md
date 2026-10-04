@@ -38,7 +38,7 @@ sections:
         - **Blockchain & Smart Contract Security** &mdash; Cross-chain vulnerability detection, decentralized infrastructure, and formal verification of smart contracts
         - **Quantum-Enhanced ML** &mdash; Quantum contrastive embeddings for near-term devices (QuCoWE, AAAI 2026)
 
-        I am a [Google Developer Expert](https://developers.google.com/community/experts) in Web Technologies & ML, a 3x Sui Foundation Research Award recipient, and serve as Associate Chair for CSCW 2026.
+        I am a [Google Developer Expert](https://developers.google.com/community/experts) in Web Technologies & ML, a 3x Sui Foundation Research Award recipient, and serve as Associate Chair for AAAI 2027 and ACM CSCW 2026.
     design:
       columns: '1'
   - block: markdown
@@ -51,7 +51,7 @@ sections:
         <div class="achievement-card" role="listitem">
         <div class="achievement-number">37</div>
         <div class="achievement-label">Peer-Reviewed Publications</div>
-        <div class="achievement-detail">28 as first author across USENIX Security, AAAI, ACM FSE, MICRO, IEEE ICBC, KDD — 10 more under review</div>
+        <div class="achievement-detail">28 as first author across USENIX Security, AAAI, ACM FSE, MICRO, IEEE ICBC, KDD — 17 more under review</div>
         </div>
         <div class="achievement-card" role="listitem">
         <div class="achievement-number">1</div>
@@ -233,6 +233,7 @@ sections:
         - **Co-author** of Google's official [Building Trustable AI at 100 MPH](https://codelabs.developers.google.com/codelabs/trustable-at-100-mph) codelab with a global GDE cohort
         - **Invited speaker** at Google I/O Field Tests (Sonoma Raceway 2026), OpenXLA DevLab Summer 2026, and the GDE Summit at Google I/O 2025
         - **Google Cloud Research Innovator** (2023) and **Google Cloud Champions Innovator** (2023&ndash;2025)
+        - **Google TPU Builders** (2026) and **NVIDIA Developer Champion** (2026)
         - **Mentor & judge** for the Google Solutions Challenge and Women Techmakers Academy; earlier **Mozilla Tech Speaker** and Mozilla Research Fellowship (2018)
   - block: collection
     content:
@@ -279,10 +280,11 @@ sections:
       title: 'Professional Service'
       subtitle: ''
       text: |-
-        - **Associate Chair**, ACM CSCW 2026
+        - **Associate Chair**, AAAI 2027 and ACM CSCW 2026; **Track Chair**, ICEDEG 2026
         - **Scientific Advisory Committee**, Texas Quantum Initiative (2025)
         - **Google Developer Expert**, Web Technologies (2018-present) & Google Cloud (2024-present)
-        - **Reviewer**: IEEE ICBC, ACM CSCW, BRAINS
+        - **Reviewer (Journals)**: PLOS One, Frontiers in Blockchain, ACM DLT, ACM TALLIP, Connection Science, ACM TWEB
+        - **Reviewer (Conferences)**: CHI 2026, IEEE VR 2026, AAAI 2025, ICLR 2024, IEEE ICEDEG 2025
     design:
       columns: '1'
   - block: markdown

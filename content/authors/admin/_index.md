@@ -72,13 +72,13 @@ work:
     date_start: 2025-09-01
     date_end: ''
     summary: |
-      Lead design and deployment of production-scale voice commerce systems enabling real-time, multi-turn conversational AI for financial applications. Developed a novel preference optimization framework (CM-DPO).
+      Lead the technical strategy and deployment of production-scale agentic AI systems on massive-scale multimodal data for user engagement and financial applications. Spearheaded an in-house voice-to-voice model with NVIDIA and a frontier multimodal model with Google (lead author on both). Designed an agentic development loop using novel preference optimization (CM-DPO), and built automated training, evaluation, and feedback pipelines for frontier LLMs up to 120B parameters. Designed a multi-agent adversarial evaluation arena for robustness benchmarking. Filed 3 U.S. patents in emerging AI technologies.
   - position: Research Assistant
     company_name: University of Houston
     company_url: 'https://www.uh.edu/'
     icon: ''
     date_start: 2021-09-01
-    date_end: 2025-07-25
+    date_end: 2026-08-31
     summary: |
       Conducted research in AI reasoning, smart contract translation, code generation, medical diagnosis, and decentralized infrastructures (DlaC, FaaS).
   - position: Senior Software Engineer
@@ -210,11 +210,19 @@ awards:
     date: '2025-01-01'
     awarder: Sui Foundation
     url: 'https://www.uh.edu/nsm/news-events/stories/2025/0815-ai-awards.php'
-    summary: "Awarded Sui Foundation Research Grants in 2023 ($15k), 2024 ($25k), and 2025 ($25k)."
+    summary: "Awarded Sui Foundation Research Grants in 2023, 2024, and 2025 ($25k/year) as Primary Investigator."
   - title: Mozilla Research Fellowship
     icon: emoji/fox_face
     date: '2018-01-01'
     awarder: Mozilla
+  - title: NVIDIA Developer Champion
+    icon: emoji/fire
+    date: '2026-01-01'
+    awarder: NVIDIA
+  - title: Google TPU Builders
+    icon: emoji/zap
+    date: '2026-01-01'
+    awarder: Google
 ---
 
 Rabimba Karanjai is a Staff Agentic AI Researcher at PayPal Research. He completed his Ph.D. in Computer Science at the University of Houston (defended July 2025), where his research focused on the intersection of blockchain, secure AI reasoning, and LLM-assisted program analysis and repair. 

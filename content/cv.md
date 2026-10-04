@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitae
-date: 2026-06-12
+date: 2026-08-24
 type: page
 ---
 
@@ -160,8 +160,8 @@ type: page
     <div class="cv-stat-label">Publications (37 published)</div>
   </div>
   <div class="cv-stat-card">
-    <div class="cv-stat-number">1</div>
-    <div class="cv-stat-label">Issued US Patent</div>
+    <div class="cv-stat-number">1 + 6</div>
+    <div class="cv-stat-label">US Patents (1 issued, 6 filed/pending)</div>
   </div>
   <div class="cv-stat-card">
     <div class="cv-stat-number">85+</div>
@@ -202,6 +202,10 @@ type: page
       <span>NVIDIA Developer Champion</span>
     </div>
     <div class="cv-award">
+      <span class="cv-award-icon">⚡</span>
+      <span>Google TPU Builders (2026)</span>
+    </div>
+    <div class="cv-award">
       <span class="cv-award-icon">🥇</span>
       <span>Outstanding PhD Student — UH (2022–2024)</span>
     </div>
@@ -217,16 +221,19 @@ type: page
   <h3>Service & Community</h3>
   <div class="cv-service-list">
     <div class="cv-service-item">
-      <strong>Associate Chair</strong> — ACM CSCW 2026
+      <strong>Associate Chair</strong> — AAAI 2027 & ACM CSCW 2026 · <strong>Track Chair</strong> — ICEDEG 2026
     </div>
     <div class="cv-service-item">
       <strong>Scientific Advisory Committee</strong> — Texas Quantum Initiative
     </div>
     <div class="cv-service-item">
-      <strong>Google Developer Expert</strong> — Web Technologies (2018–present), Google Cloud (2024–present)
+      <strong>Google Developer Expert</strong> — Web Technologies (2018–present), Google Cloud (2024–present) · <strong>Google TPU Builders</strong> (2026)
     </div>
     <div class="cv-service-item">
-      <strong>Reviewer</strong> — IEEE ICBC, ACM CSCW, BRAINS, CHI, AAAI, ICLR
+      <strong>Reviewer (Journals)</strong> — PLOS One, Frontiers in Blockchain, ACM DLT, ACM TALLIP, Connection Science, ACM TWEB
+    </div>
+    <div class="cv-service-item">
+      <strong>Reviewer (Conferences)</strong> — CHI 2026, IEEE VR 2026, AAAI 2025, ICLR 2024, IEEE ICEDEG 2025
     </div>
   </div>
 </div>
