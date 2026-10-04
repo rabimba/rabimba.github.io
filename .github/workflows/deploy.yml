@@ -34,9 +34,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
-        fetch-depth: 0
+      # Shallow clone: enableGitInfo is false in hugo.yaml, so history is unused
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
