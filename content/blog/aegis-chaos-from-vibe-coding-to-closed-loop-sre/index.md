@@ -10,7 +10,9 @@ tags:
 - LLM Agents
 - SRE
 - techspeaker
-external_link: https://rkrants.blogspot.com/2026/07/aegis-chaos-from-vibe-coding-to-closed.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/07/aegis-chaos-from-vibe-coding-to-closed.html
 type: blog
 ---
 

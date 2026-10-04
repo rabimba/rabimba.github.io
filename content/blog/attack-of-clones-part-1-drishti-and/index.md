@@ -8,7 +8,9 @@ summary: 'Background : India recently banned certain Chinese Apps from being use
   to encourage building and using homegrown solutions. And along with that came a plethora of apps replica...'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2020/07/attack-of-clones-part-1-drishti-and.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2020/07/attack-of-clones-part-1-drishti-and.html
 type: blog
 ---
 

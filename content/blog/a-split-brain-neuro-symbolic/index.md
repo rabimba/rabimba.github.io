@@ -7,7 +7,9 @@ authors:
 summary: A blog post about a split‑brain neuro‑symbolic training method for high‑velocity autonomous coaching from telemetry
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2025/12/a-split-brain-neuro-symbolic.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/12/a-split-brain-neuro-symbolic.html
 type: blog
 ---
 

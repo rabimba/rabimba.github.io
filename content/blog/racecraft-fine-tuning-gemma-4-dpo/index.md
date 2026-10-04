@@ -13,7 +13,9 @@ tags:
 - LLM Agents
 - security
 - techspeaker
-external_link: https://rkrants.blogspot.com/2026/08/racecraft-fine-tuning-gemma-4-with-dpo.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/08/racecraft-fine-tuning-gemma-4-with-dpo.html
 type: blog
 ---
 

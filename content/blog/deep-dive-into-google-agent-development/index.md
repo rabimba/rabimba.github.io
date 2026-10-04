@@ -11,7 +11,9 @@ tags:
 - Agents
 - AI
 - google
-external_link: https://rkrants.blogspot.com/2025/04/deep-dive-into-google-agent-development.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/04/deep-dive-into-google-agent-development.html
 type: blog
 ---
 

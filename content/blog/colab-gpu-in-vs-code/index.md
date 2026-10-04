@@ -12,7 +12,9 @@ tags:
 - LLMs
 - Machine Learning
 - VS Code
-external_link: https://rkrants.blogspot.com/2025/11/colab-gpu-in-vs-code.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/11/colab-gpu-in-vs-code.html
 type: blog
 ---
 

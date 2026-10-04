@@ -8,7 +8,9 @@ summary: 'button), not Compose view. Replace #REPO_URL with your GitHub URL and 
   models , I hit a wall that none of the papers prepared me for. My performance was capping out at half of wha...'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/05/the-hidden-performance-trap-in-causal.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/05/the-hidden-performance-trap-in-causal.html
 type: blog
 ---
 

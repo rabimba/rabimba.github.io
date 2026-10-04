@@ -8,7 +8,9 @@ summary: '"If you measure the wrong thing, you optimize for the wrong thing. And
   error." We are remarkably comfortable evaluating the AI models we’ve already built. We have our standard...'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/06/the-blind-spot-horizon-why-your-ai.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/the-blind-spot-horizon-why-your-ai.html
 type: blog
 ---
 

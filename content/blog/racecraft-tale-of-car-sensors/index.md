@@ -11,7 +11,9 @@ tags:
 - edge
 - gemma4
 - sensor-fusion
-external_link: https://rkrants.blogspot.com/2026/08/racecraft-tale-of-car-sensors.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/08/racecraft-tale-of-car-sensors.html
 type: blog
 ---
 

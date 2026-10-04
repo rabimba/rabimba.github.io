@@ -8,7 +8,9 @@ summary: 'Update: If you want to know how to circumvent this kind of blocking. h
   they do not want to hear. When Alexander Graham Bell invented in 1876, it literally changed how we communi...'
 tags:
 - censorship
-external_link: https://rkrants.blogspot.com/2019/08/blocking-communication-perspective-from.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2019/08/blocking-communication-perspective-from.html
 type: blog
 ---
 

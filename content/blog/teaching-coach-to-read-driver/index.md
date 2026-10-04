@@ -12,7 +12,9 @@ tags:
 - gemma4
 - Machine Learning
 - story
-external_link: https://rkrants.blogspot.com/2026/06/teaching-coach-to-read-driver.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/teaching-coach-to-read-driver.html
 type: blog
 ---
 

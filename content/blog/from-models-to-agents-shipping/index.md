@@ -16,7 +16,9 @@ tags:
 - Model Context Protocol
 - Open-source AI Tools
 - Python Tutorial
-external_link: https://rkrants.blogspot.com/2025/06/from-models-to-agents-shipping.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/06/from-models-to-agents-shipping.html
 type: blog
 ---
 

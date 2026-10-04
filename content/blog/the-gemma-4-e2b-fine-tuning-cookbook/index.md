@@ -7,7 +7,9 @@ authors:
 summary: content:'COOKBOOK' position:absolute right:-10px top:20px font-size:5r......
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/04/the-gemma-4-e2b-fine-tuning-cookbook.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/04/the-gemma-4-e2b-fine-tuning-cookbook.html
 type: blog
 ---
 

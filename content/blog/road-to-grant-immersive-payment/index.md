@@ -10,7 +10,9 @@ tags:
 - grantforweb
 - mozilla
 - MozTechSpeaker
-external_link: https://rkrants.blogspot.com/2020/10/road-to-grant-immersive-payment.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2020/10/road-to-grant-immersive-payment.html
 type: blog
 ---
 

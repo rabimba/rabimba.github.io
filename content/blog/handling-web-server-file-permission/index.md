@@ -8,7 +8,9 @@ summary: If you have to work with a LAMP stack one of the first things you do is
   that the server can read and execute them. This often becomes a headache quickly when the two user groups r...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2020/06/handling-web-server-file-permission.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2020/06/handling-web-server-file-permission.html
 type: blog
 ---
 

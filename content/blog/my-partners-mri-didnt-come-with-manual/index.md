@@ -9,7 +9,9 @@ tags:
 - AI
 - gemma4
 - MRI
-external_link: https://rkrants.blogspot.com/2026/05/my-partners-mri-didnt-come-with-manual.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/05/my-partners-mri-didnt-come-with-manual.html
 type: blog
 ---
 

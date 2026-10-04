@@ -11,7 +11,9 @@ tags:
 - racing
 - antigravity
 - google-io
-external_link: https://rkrants.blogspot.com/2026/06/racecraft-project-koru-prologue-origin.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/racecraft-project-koru-prologue-origin.html
 type: blog
 ---
 

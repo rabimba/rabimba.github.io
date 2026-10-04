@@ -8,7 +8,9 @@ summary: 'Disclaimer: As a Google Developer Expert (GDE), I was incredibly fortu
   today are based on my hands-on early access. Have you ever stared at a dense, 15-page academic paper a...'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/02/visualizing-invisible-how-nano-banana-2.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/02/visualizing-invisible-how-nano-banana-2.html
 type: blog
 ---
 

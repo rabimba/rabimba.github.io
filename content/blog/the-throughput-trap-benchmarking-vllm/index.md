@@ -17,7 +17,9 @@ tags:
 - TPU
 - vLLM
 - XLA
-external_link: https://rkrants.blogspot.com/2026/06/the-throughput-trap-benchmarking-vllm.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/the-throughput-trap-benchmarking-vllm.html
 type: blog
 ---
 

@@ -8,7 +8,9 @@ summary: COVID-19 has been already assigned as a pandemic worldwide now. It is n
   this moment are essentially social distancing and maintaining hygiene until a cure is discovered. And whi...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2020/03/help-finding-cure-for-covid19-foldinghome.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2020/03/help-finding-cure-for-covid19-foldinghome.html
 type: blog
 ---
 

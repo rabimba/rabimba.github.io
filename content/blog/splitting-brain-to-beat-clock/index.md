@@ -12,7 +12,9 @@ tags:
 - gemma4
 - LLM Agents
 - story
-external_link: https://rkrants.blogspot.com/2026/06/splitting-brain-to-beat-clock.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/splitting-brain-to-beat-clock.html
 type: blog
 ---
 

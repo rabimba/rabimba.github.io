@@ -8,7 +8,9 @@ summary: This is the second update to the Immersive Payment project update under
   Background Technically, WebXR is a device API that makes it possible to distribute VR/AR...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2022/01/immersive-payment-second-update.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2022/01/immersive-payment-second-update.html
 type: blog
 ---
 

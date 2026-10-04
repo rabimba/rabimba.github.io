@@ -10,7 +10,9 @@ tags:
 - AnyConnect
 - VPN
 - WSL2
-external_link: https://rkrants.blogspot.com/2023/01/curious-case-of-cisco-anyconnect-and.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2023/01/curious-case-of-cisco-anyconnect-and.html
 type: blog
 ---
 

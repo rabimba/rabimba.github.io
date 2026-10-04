@@ -8,7 +8,9 @@ summary: New York's cab data visualization from Uber's Engineering blog Last mon
   to explore their awesome GUI and to play with the data. However, their UI for exploring the dataset leav...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2018/11/visualizing-large-scale-uber-movement.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2018/11/visualizing-large-scale-uber-movement.html
 type: blog
 ---
 

@@ -7,7 +7,9 @@ authors:
 summary: body h1, h2 Hey tech enthusiasts!
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2024/06/my-google-io-2024-adventure-gdes-front.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2024/06/my-google-io-2024-adventure-gdes-front.html
 type: blog
 ---
 

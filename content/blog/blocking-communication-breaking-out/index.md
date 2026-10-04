@@ -9,7 +9,9 @@ summary: I disapprove of what you say, but I will defend to the death your right
 tags:
 - blocking
 - censorship
-external_link: https://rkrants.blogspot.com/2019/08/blocking-communication-breaking-out.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2019/08/blocking-communication-breaking-out.html
 type: blog
 ---
 

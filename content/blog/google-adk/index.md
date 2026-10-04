@@ -11,7 +11,9 @@ tags:
 - Agents
 - AI
 - LLM
-external_link: https://rkrants.blogspot.com/2025/04/google-adk.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/04/google-adk.html
 type: blog
 ---
 

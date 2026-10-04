@@ -7,7 +7,9 @@ authors:
 summary: = " AI in a Jupyter notebook is safe.
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2025/12/fine-tuning-at-redline-architecting.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/12/fine-tuning-at-redline-architecting.html
 type: blog
 ---
 

@@ -7,7 +7,9 @@ authors:
 summary: and it works automatically --> Scoped to to avoid fighting the theme background:#5b5c60 color:#fff padding:3re...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/04/Building a Multimodal Document Intelligence Pipeline with Gemma 4 E2B.html
+links:
+  - type: site
+    url: 'https://rkrants.blogspot.com/2026/04/Building a Multimodal Document Intelligence Pipeline with Gemma 4 E2B.html'
 type: blog
 ---
 

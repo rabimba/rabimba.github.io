@@ -8,7 +8,9 @@ summary: We are currently living through the “ Post-Reasoning ” phase of the
   “think”—or at least, simulate a chain of thought that feels indistinguishable from reasoning. But as we pus...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2025/11/the-context-trap-why-scaling-laws-cant.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2025/11/the-context-trap-why-scaling-laws-cant.html
 type: blog
 ---
 

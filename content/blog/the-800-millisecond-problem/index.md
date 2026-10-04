@@ -11,7 +11,9 @@ tags:
 - edge
 - gemma4
 - story
-external_link: https://rkrants.blogspot.com/2026/06/the-800-millisecond-problem.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/06/the-800-millisecond-problem.html
 type: blog
 ---
 

@@ -8,7 +8,9 @@ summary: 'MovieBuff: Dive Deeper into Movies Before You Watch MovieBuff: Dive De
   to help! This Streamlit application leverages the power of Google''s Generative AI, specifically the Gemini...'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2024/03/moviebuff-dive-deeper-into-movies-with.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2024/03/moviebuff-dive-deeper-into-movies-with.html
 type: blog
 ---
 

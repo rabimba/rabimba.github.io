@@ -7,7 +7,9 @@ authors:
 summary: 'A blog post about unboxing gemma: high-throughput sparse autoencoder (sae) training on google cloud tpu v5e'
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2026/05/unboxing-gemma-high-throughput-sparse.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2026/05/unboxing-gemma-high-throughput-sparse.html
 type: blog
 ---
 

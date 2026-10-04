@@ -8,7 +8,9 @@ summary: It has been more than 6 months now that I have had the Immersive Paymen
   The project aimed to solve the following facets of distributed payment in the space of webvr. Can we have m...
 tags:
 - Blog
-external_link: https://rkrants.blogspot.com/2021/05/immersive-payment-first-update.html
+links:
+  - type: site
+    url: https://rkrants.blogspot.com/2021/05/immersive-payment-first-update.html
 type: blog
 ---
 
