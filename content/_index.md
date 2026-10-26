@@ -231,10 +231,11 @@ sections:
       text: |-
         - **Google Developer Expert** in AI/ML & Cloud (previously Chrome & Web, 2018&ndash;2024) &mdash; [directory profile](https://developers.google.com/community/experts/directory?specialization=ml%2Cgcp&text=rabimba)
         - **Co-author** of Google's official [Building Trustable AI at 100 MPH](https://codelabs.developers.google.com/codelabs/trustable-at-100-mph) codelab with a global GDE cohort
+        - **Workshop Instructor** at **LA Tech Week 2026** (Google for Developers & Google for Startups) alongside Kiruthika Subramani, delivering hands-on codelabs on [Location Intelligence ADK Agents with MCP](https://codelabs.developers.google.com/adk-mcp-bigquery-maps) and [Command & Control with Gemini & Antigravity](https://codelabs.developers.google.com/gemini-mcp-agy)
         - **Invited speaker** at Google I/O Field Tests (Sonoma Raceway 2026), OpenXLA DevLab Summer 2026, and the GDE Summit at Google I/O 2025
+        - **Mentor & Coach** for startup founders at the **Google for Startups Accelerator** in San Francisco; judge for Google Solutions Challenge and Women Techmakers Academy
         - **Google Cloud Research Innovator** (2023) and **Google Cloud Champions Innovator** (2023&ndash;2025)
-        - **Google TPU Builders** (2026) and **NVIDIA Developer Champion** (2026)
-        - **Mentor & judge** for the Google Solutions Challenge and Women Techmakers Academy; earlier **Mozilla Tech Speaker** and Mozilla Research Fellowship (2018)
+        - **Google TPU Builders** (2026) and **NVIDIA Developer Champion** (2026); earlier **Mozilla Tech Speaker** and Mozilla Research Fellowship (2018)
   - block: collection
     content:
       title: Recent Publications
