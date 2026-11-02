@@ -4,7 +4,7 @@ date: '2026-06-10T00:00:00Z'
 publishDate: '2026-06-10T00:00:00Z'
 authors:
 - admin
-summary: Paste everything between the BEGIN END markers below.
+summary: 'Why I stopped trusting every " AI race coach " I''d ever tried , and what it would take to build one I''d actually listen to at 130 km/h.'
 tags:
 - AI
 - android

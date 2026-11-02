@@ -25,6 +25,8 @@ tags:
 - First Author
 featured: false
 links:
+- name: DOI
+  url: https://doi.org/10.1109/aiware69974.2025.00031
 - name: arXiv
   url: https://arxiv.org/pdf/2511.10860
 bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai and Lei Xu and Weidong Shi},\n  journal={arXiv\

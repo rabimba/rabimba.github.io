@@ -4,7 +4,7 @@ date: '2024-06-05T00:00:00Z'
 publishDate: '2024-06-05T00:00:00Z'
 authors:
 - admin
-summary: body h1, h2 Hey tech enthusiasts!
+summary: 'Hey tech enthusiasts! Rabimba Karanjai here, your friendly neighborhood Google Developer Expert (GDE), back from an exhilarating whirlwind tour of Google I/O 2024. Let me tell you, this wasn''t just your average tech conference – it was...'
 tags:
 - Blog
 links:

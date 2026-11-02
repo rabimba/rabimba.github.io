@@ -32,6 +32,8 @@ tags:
 - Efficiency
 featured: false
 links:
+- name: arXiv
+  url: https://arxiv.org/pdf/2608.01665
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
 ---

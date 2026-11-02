@@ -49,7 +49,7 @@ sections:
       text: |-
         <div class="achievements-grid" role="list">
         <div class="achievement-card" role="listitem">
-        <div class="achievement-number">40</div>
+        <div class="achievement-number">41</div>
         <div class="achievement-label">Peer-Reviewed Publications</div>
         <div class="achievement-detail">28 as first author across NeurIPS, USENIX Security, AAAI, ACM FSE, MICRO, IEEE ICBC, KDD — 14 more under review</div>
         </div>
@@ -182,9 +182,24 @@ sections:
         <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/ConferenceRank/" target="_blank" rel="noopener">Live site</a></div>
         </div>
         <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/webai-badge" target="_blank" rel="noopener">webai-badge</a></div>
+        <div class="oss-desc">End-to-end browser studio and firmware modder for the Google WebAI Summit 2026 Espruino 4-Color ePaper Badge — bit-exact 2bpp BWYR codec and WebGPU LiteRT-LM/MediaPipe pipeline.</div>
+        <div class="oss-meta">JavaScript &middot; <a href="https://rabimba.github.io/webai-badge/" target="_blank" rel="noopener">Live studio</a></div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/Prism" target="_blank" rel="noopener">Prism</a></div>
+        <div class="oss-desc">Cross-platform (Linux &amp; macOS) local-first multimodal search engine, EmbeddingGemma 2 768-D Semantic-Space ASR, and Part-of-File containment engine in Rust.</div>
+        <div class="oss-meta">Rust &middot; Multimodal Search &amp; ASR</div>
+        </div>
+        <div class="oss-card" role="listitem">
         <div class="oss-name"><a href="https://github.com/rabimba/drmriai" target="_blank" rel="noopener">Dr.MRI.AI</a></div>
         <div class="oss-desc">Privacy-first DICOM viewer that plans slice selection with Gemma 4 before multimodal review — ~99% fewer image tokens, fully in-browser via WebGPU.</div>
         <div class="oss-meta">TypeScript &middot; <a href="https://rabimba.github.io/drmriai/" target="_blank" rel="noopener">Live demo</a></div>
+        </div>
+        <div class="oss-card" role="listitem">
+        <div class="oss-name"><a href="https://github.com/rabimba/GDE-ML-Artifacts" target="_blank" rel="noopener">GDE-ML-Artifacts</a></div>
+        <div class="oss-desc">Hands-on AI/ML workshop code, codelabs, and interactive presentation decks from Google Developer Expert sessions on Gemini, ADK, MCP, and Cloud Run.</div>
+        <div class="oss-meta">Jupyter &amp; TypeScript &middot; ★ 25</div>
         </div>
         <div class="oss-card" role="listitem">
         <div class="oss-name"><a href="https://github.com/rabimba/vllm-xla-bench" target="_blank" rel="noopener">vllm-xla-bench</a></div>

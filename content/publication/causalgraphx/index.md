@@ -32,6 +32,8 @@ tags:
 - First Author
 featured: false
 links:
+- name: arXiv
+  url: https://arxiv.org/pdf/2607.14416
 - name: Scholar
   url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
 ---

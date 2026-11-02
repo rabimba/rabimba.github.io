@@ -4,7 +4,7 @@ date: '2026-05-18T00:00:00Z'
 publishDate: '2026-05-18T00:00:00Z'
 authors:
 - admin
-summary: A wrapper to apply our enhancements without affecting other posts h3
+summary: 'The other was a flimsy paper sleeve containing a CD-ROM. This, we were told, held the actual images from her MRI scan. The ground truth. And we couldn''t even look at it.'
 tags:
 - AI
 - gemma4

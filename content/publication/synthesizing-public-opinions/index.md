@@ -28,6 +28,8 @@ tags:
 - First Author
 featured: false
 links:
+- name: DOI
+  url: https://doi.org/10.1109/icedeg65568.2025.11081685
 - name: arXiv
   url: https://arxiv.org/pdf/2504.00241
 bibtex: "@article{karanjai2025synthesi,\n  title={Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the Future to eDemocracy},\n  author={Rabimba Karanjai and Boris Shor and Amanda Austin\

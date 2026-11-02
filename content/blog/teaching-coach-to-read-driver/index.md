@@ -4,7 +4,7 @@ date: '2026-06-15T00:00:00Z'
 publishDate: '2026-06-15T00:00:00Z'
 authors:
 - admin
-summary: → paste between BEGIN END markers.
+summary: 'The best instructors don''t coach the car. They coach you , and they figure out who you are in about two laps. Here''s how we taught software to do the same.'
 tags:
 - AI
 - android

@@ -4,7 +4,7 @@ date: '2025-12-18T00:00:00Z'
 publishDate: '2025-12-18T00:00:00Z'
 authors:
 - admin
-summary: = " AI in a Jupyter notebook is safe.
+summary: '" AI in a Jupyter notebook is safe. AI on a race track—at 150 mph—is a different story." - Ajeet Mirwani'
 tags:
 - Blog
 links:

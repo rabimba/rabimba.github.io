@@ -4,7 +4,7 @@ date: '2026-04-02T00:00:00Z'
 publishDate: '2026-04-02T00:00:00Z'
 authors:
 - admin
-summary: content:'COOKBOOK' position:absolute right:-10px top:20px font-size:5r......
+summary: 'A complete, opinionated recipe for adapting Gemma 4 E2B to your domain — from multimodal dataset construction and QLoRA configuration through training loop debugging, evaluation, and production deployment.'
 tags:
 - Blog
 links:

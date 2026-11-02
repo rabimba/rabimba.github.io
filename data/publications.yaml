@@ -1,3 +1,299 @@
+- slug: transactqa
+  title: 'TxnQA: Benchmarking Analytical Reasoning and Evidence Grounding over Transaction
+    Event Sequences'
+  authors:
+  - Rabimba Karanjai
+  - Yiming Bian
+  - Yun-Shiuan Chuang
+  - Jenna L. Ballard
+  - Zijie Pan
+  - Shivani Shekhar
+  - Yixi Li
+  - Yirou Ge
+  - Avinash Thangali
+  - Richard Williamson
+  - Linsey Pang
+  - Prakhar Mehrotra
+  date: '2026-10-19T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-19T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Analyzing merchant transaction histories requires dynamic temporal filtering,
+    entity resolution, and aggregation over irregular event streams--operations poorly
+    captured by static tabular or time-series forecasting benchmarks. We introduce
+    TxnQA, an analytical QA benchmark comprising 27 task families (81 templates) alongside
+    a 5-scenario fraud-risk reasoning suite that evaluates both verdicts and supporting
+    evidence over synthetic, privacy-mitigated transaction data. Ground-truth answers
+    are computed programmatically, and model performance is decomposed into format-following
+    rate (FFR), conditional content accuracy (CA), and end-to-end correctness (E2E).
+    Evaluating prompted proprietary baselines and six LoRA-adapted open-weight models
+    shows that adaptation reliably enforces output schemas but leaves arithmetic bottlenecks:
+    Gemma-4-31B-IT and Qwen3-8B attain E2E scores of 0.867 and 0.816, whereas evaluated
+    MoE checkpoints reach only 0.632-0.713. Furthermore, on the 500-instance fraud
+    suite, verdict accuracy frequently exceeds 80%, yet joint accuracy (requiring
+    exact evidence attribution) collapses to at most ~23%. These findings identify
+    schema compliance, semantic calculation, and evidence attribution as three distinct
+    bottlenecks in transaction-sequence QA.'
+  tags:
+  - Question Answering
+  - Benchmark
+  - Financial AI
+  - LLMs
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2610.27256
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=TxnQA%3A%20Benchmarking%20Analytical%20Reasoning%20and%20Evidence%20Grounding%20over%20Transaction%20Event%20Sequences
+  bibtex: "@misc{karanjai2026txnqa,\n  title={TxnQA: Benchmarking Analytical Reasoning\
+    \ and Evidence Grounding over Transaction Event Sequences},\n  author={Rabimba\
+    \ Karanjai and Yiming Bian and Yun-Shiuan Chuang and Jenna L. Ballard and Zijie\
+    \ Pan and Shivani Shekhar and Yixi Li and Yirou Ge and Avinash Thangali and Richard\
+    \ Williamson and Linsey Pang and Prakhar Mehrotra},\n  howpublished={arXiv preprint\
+    \ arXiv:2610.27256},\n  year={2026}\n}"
+- slug: cm-dpo-planning
+  title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning'
+  authors:
+  - Rabimba Karanjai
+  - Qun Gu
+  - Hemanth Hegadehalli Madhavarao
+  - Wenhuan Sun
+  - Xiaojiao Yu
+  - Suryabhan Singh Hada
+  - Libin N. George
+  - Uma Kona
+  - Richard Williamson
+  - Linsey Pang
+  - Prakhar Mehrotra
+  date: '2026-10-06T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-06T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Direct Preference Optimization (DPO) treats all constraint violations
+    equally: a $1 budget overshoot and a $1,000 overshoot induce the same training
+    signal. It is also susceptible to length and style bias when preference pairs
+    come from different model families. We introduce Constraint-Margin DPO (CM-DPO),
+    which replaces DPO''s binary preference signal with a continuous margin derived
+    from a deterministic symbolic verifier and scaled by violation severity. Hard
+    and soft constraints are separated through a lexicographic objective, ensuring
+    hard constraints are never traded off against preferences. To supply CM-DPO with
+    bias-reduced training pairs, we generate preference data through procedurally
+    generated constraint profiles (DCCG) and minimal-edit distillation from a reasoning
+    teacher (RT-MED), within a framework we call SynPlan-R. On TravelPlanner, NaturalPlan,
+    and out-of-distribution PlanBench, an 8B model fine-tuned with CM-DPO achieves
+    89.2% pass rate and 93.4% solve rate, matching multi-agent systems at 13x lower
+    latency while outperforming GPT-4o on unseen Blocksworld by 9.2 points.'
+  tags:
+  - LLMs
+  - Preference Optimization
+  - Planning
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2610.09219
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
+- slug: unanimous-but-wrong-conformity
+  title: 'Unanimous but Wrong: Conformity in Multi-Agent LLM Audit Deliberation'
+  authors:
+  - Dana R Alsagheer
+  - Yang Lu
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: How conformity pressure in multi-agent LLM audit deliberation
+    produces unanimous but incorrect verdicts.'
+  tags:
+  - Agents
+  - Multi-Agent Systems
+  - LLM Evaluation
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Unanimous%20but%20Wrong%3A%20Conformity%20in%20Multi-Agent%20LLM%20Audit%20Deliberation
+- slug: outside-option-routing-auctions
+  title: 'Designing the Outside Option: Anchors, Mixed Equilibria, and Welfare in
+    LLM Routing Auctions'
+  authors:
+  - Xinyu Hou
+  - Yang Lu
+  - Rabimba Karanjai
+  - Pei-Chi Pan
+  - Sen Lin
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: Mechanism design for LLM routing auctions — outside options,
+    anchors, mixed equilibria, and welfare.'
+  tags:
+  - LLM Routing
+  - Mechanism Design
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Designing%20the%20Outside%20Option%3A%20Anchors%2C%20Mixed%20Equilibria%2C%20and%20Welfare%20in%20LLM%20Routing%20Auctions
+- slug: motivated-cot-llm-judges
+  title: Motivated Chain-of-Thought and Reduced Scrutiny in LLM Judges
+  authors:
+  - Yang Lu
+  - Rabimba Karanjai
+  - Dana R Alsagheer
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: Motivated reasoning in LLM judges — how chain-of-thought can
+    reduce scrutiny and bias evaluations.'
+  tags:
+  - LLM Evaluation
+  - Reasoning
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Motivated%20Chain-of-Thought%20and%20Reduced%20Scrutiny%20in%20LLM%20Judges
+- slug: cojo-rag
+  title: 'CoJo-RAG: Conformalized Joint Co-Optimization of Retrieval and Fine-Tuning'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Linsey Pang
+  - Richard Williamson
+  - Hemanth Hegadehalli Madhavarao
+  - Prakhar Mehrotra
+  - Weidong Shi
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: Conformalized joint co-optimization of retrieval and fine-tuning
+    for retrieval-augmented generation.'
+  tags:
+  - RAG
+  - First Author
+  - Conformal Prediction
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CoJo-RAG%3A%20Conformalized%20Joint%20Co-Optimization%20of%20Retrieval%20and%20Fine-Tuning
+- slug: picture-thousand-tokens
+  title: 'A Picture is Worth a Thousand Tokens: Lossless Multilingual Context Compression
+    via Pictorial Intermediate Representations'
+  authors:
+  - Rabimba Karanjai
+  - Suryabhan Singh Hada
+  - Hemanth Hegadehalli Madhavarao
+  - Libin N. George
+  - Qun Gu
+  - Wenhuan Sun
+  - Neha Monga
+  - Xiaojiao Yu
+  - Richard Williamson
+  - Prakhar Mehrotra
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: Lossless multilingual context compression through pictorial
+    intermediate representations.'
+  tags:
+  - Context Compression
+  - Multilingual
+  - First Author
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=A%20Picture%20is%20Worth%20a%20Thousand%20Tokens%3A%20Lossless%20Multilingual%20Context%20Compression%20via%20Pictorial%20Intermediate%20Representations
+- slug: specialists-hold-routing
+  title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
+    Auctions'
+  authors:
+  - Xinyu Hou
+  - Yang Lu
+  - Rabimba Karanjai
+  - Pei-Chi Pan
+  - Sen Lin
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-09-27T00:00:00Z'
+  doi: ''
+  publishDate: '2026-09-27T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: The Fortieth Annual Conference on Neural Information Processing Systems
+    (NeurIPS 2026)
+  publication_short: NeurIPS 2026
+  abstract: 'Routing systems for large language models, such as MasRouter, RouteLLM,
+    FrugalGPT, and others, match queries to suppliers based on cost-quality tradeoffs.
+    Most prior work optimizes this problem from the demand side, while the supplier-side
+    question of how LLM suppliers should price their services within a routing mechanism
+    has received little formal treatment. We provide the first systematic analysis
+    of this problem. In our setup, the LLM is the priced commodity: supplier organizations
+    set price functions for the services they offer, rather than acting as strategic
+    agents that generate bids per query. We model supplier-side pricing as a sealed-bid
+    first-price reverse auction over a router that allocates each query to one supplier
+    based on cost and quality. This framework applies to any cost-quality routing
+    system rather than to a specific implementation. Using calibrated profiles from
+    12 open-weight models and MasRouter as a case-study router, we characterize equilibrium
+    behavior. Our main finding is that the Bayesian Nash equilibrium is asymmetric:
+    capability-differentiated suppliers adopt flat, non-discounted strategies, while
+    marginal-quality suppliers compete primarily on price. A mechanism-baseline experiment,
+    where the case-study router is replaced by an analytical rational-decision rule,
+    confirms that this pattern is a property of the auction mechanism rather than
+    an artifact of router training. We further observe that price differentiation
+    can emerge in equilibrium even under capability symmetry, because private-cost
+    types alone produce nontrivial bid functions. The practical implication is that
+    auction-based pricing alone does not discipline specialist rents. Achieving that
+    goal requires additional mechanism elements, such as reserve prices or capability-blind
+    tie-breaking.'
+  tags:
+  - LLMs
+  - Game Theory
+  - Routing
+  - Distinguished
+  featured: true
+  links:
+  - name: OpenReview
+    url: https://openreview.net/forum?id=Dz9fIFWFd9
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Specialists%20Hold%2C%20Generalists%20Discount%3A%20Asymmetric%20Equilibrium%20in%20LLM%20Routing%20Auctions
+  bibtex: "@inproceedings{anonymous2026specialists,\n  title={Specialists Hold, Generalists\
+    \ Discount: Asymmetric Equilibrium in {LLM} Routing Auctions},\n  author={Anonymous},\n\
+    \  booktitle={The Fortieth Annual Conference on Neural Information Processing\
+    \ Systems},\n  year={2026},\n  url={https://openreview.net/forum?id=Dz9fIFWFd9}\n\
+    }"
 - slug: reachability-capability-confinement
   title: Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt
     Injection
@@ -61,7 +357,7 @@
   publishDate: '2026-08-18T00:00:00Z'
   publication_types:
   - '1'
-  publication: BRAINS 2026
+  publication: BRAINS 2026 (To appear)
   publication_short: BRAINS 2026
   abstract: 'AI agents increasingly act rather than merely read: across the Model
     Context Protocol (MCP) ecosystem, the share of deployed tools that modify external
@@ -108,7 +404,7 @@
   publishDate: '2026-08-18T00:00:00Z'
   publication_types:
   - '1'
-  publication: BRAINS 2026
+  publication: BRAINS 2026 (To appear)
   publication_short: BRAINS 2026
   abstract: Autonomous AI agents are emerging as interfaces for decentralized finance
     (DeFi) actions such as swaps, lending operations, and yield management. Because
@@ -176,6 +472,8 @@
   - Efficiency
   featured: false
   links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2608.01665
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
 - slug: context-contamination-logs
@@ -218,6 +516,8 @@
   - Distinguished
   featured: true
   links:
+  - name: Video
+    url: https://youtu.be/CAzYXdkKnBM
   - name: Project Page
     url: https://rabimba.github.io/context-contamination-usenix26/
   - name: USENIX
@@ -237,6 +537,41 @@
     \ Security 26)},\n  year = {2026},\n  isbn = {978-1-939133-58-8},\n  address =\
     \ {Baltimore, MD},\n  pages = {1507--1526},\n  url = {https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai},\n\
     \  publisher = {USENIX Association},\n  month = aug\n}"
+- slug: i-bridge-access-adjusted-benchmarking-of-synthetic-ai-assist
+  title: 'I-BRIDGE: Access-Adjusted Benchmarking of Synthetic AI-Assisted Immigration
+    Decision Systems for Inclusive E-Governance'
+  authors:
+  - Yang Lu
+  - Rabimba Karanjai
+  - Nour Diallo
+  - Dana Alsagheer
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-07-08T00:00:00Z'
+  doi: ''
+  publishDate: '2026-07-08T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: ICEDEG 2026
+  publication_short: ICEDEG 2026
+  abstract: Introduces I-BRIDGE, an access-adjusted benchmarking framework for evaluating
+    synthetic AI-assisted immigration decision systems to advance equity, transparency,
+    and inclusive e-governance.
+  tags:
+  - Benchmark
+  - eDemocracy
+  - AI Society
+  - LLMs
+  featured: false
+  draft: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/icedeg70169.2026.11695570
+  bibtex: "@inproceedings{lu2026ibridge,\n  title={I-BRIDGE: Access-Adjusted Benchmarking\
+    \ of Synthetic AI-Assisted Immigration Decision Systems for Inclusive E-Governance},\n\
+    \  author={Yang Lu and Rabimba Karanjai and Nour Diallo and Dana Alsagheer and\
+    \ Lei Xu and Weidong Shi},\n  booktitle={2026 Twelfth International Conference\
+    \ on eDemocracy & eGovernment (ICEDEG)},\n  year={2026}\n}"
 - slug: empowering-smart-contracts-ai
   title: Empowering Smart Contracts with Real-time On-Chain AI Inferences
   authors:
@@ -387,6 +722,8 @@
   - First Author
   featured: false
   links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2607.14416
   - name: Scholar
     url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
 - slug: zkransomware
@@ -532,66 +869,6 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=VerifyGen-X%3A%20Secure%20Cross-Chain%20Smart%20Contract%20Generation%20via%20Scalable%20Reinforcement%20Learning%20from%20Formal%20Verification%20Feedback
-- slug: specialists-hold-routing
-  title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
-    Auctions'
-  authors:
-  - Xinyu Hou
-  - Yang Lu
-  - Rabimba Karanjai
-  - Pei-Chi Pan
-  - Sen Lin
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: Game-theoretic modeling of agent routing auctions to optimize
-    multi-llm coordination structures.'
-  tags:
-  - LLMs
-  - Game Theory
-  - Routing
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Specialists%20Hold%2C%20Generalists%20Discount%3A%20Asymmetric%20Equilibrium%20in%20LLM%20Routing%20Auctions
-- slug: cm-dpo-planning
-  title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning'
-  authors:
-  - Rabimba Karanjai
-  - Qun Gu
-  - Hemanth Hegadehalli Madhavarao
-  - Wenhuan Sun
-  - Xiaojiao Yu
-  - Suryabhan Singh Hada
-  - Libin N. George
-  - Uma Kona
-  - Richard Williamson
-  - Linsey Pang
-  - Prakhar Mehrotra
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: A preference optimization framework that forces planning paths
-    to obey hard system limits.'
-  tags:
-  - LLMs
-  - Preference Optimization
-  - Planning
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
 - slug: profiler-persona
   title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
     and Fusion of Synthesized Profiles'
@@ -681,8 +958,17 @@
   - '1'
   publication: BRAINS 2025
   publication_short: BRAINS 2025
-  abstract: 'Short Paper: Introducing a framework to interface Large Language Models
-    with blockchain states safely.'
+  abstract: Generative AI and modern Machine Learning are rapidly transforming industries,
+    creating new tools and use cases. As these models grow, there is an increasing
+    need for reliable Machine Learning Operations (MLOps) to manage and deploy them.
+    At the same time, demand is rising for smarter smart contracts and more complex
+    on-chain computation. Our paper presents a new framework that brings GenAI inference
+    directly onto the blockchain. Using the Cosmos SDK, Ethermint, and the ONNX runtime,
+    we enable AI models to run on-chain across multiple blockchain nodes. We evaluate
+    the system’s feasibility, performance, and portability, showing that it can support
+    different AI engines and model types. By enabling GenAI inference on-chain, our
+    approach expands what smart contracts can do, especially for data-driven DeFi,
+    and opens the door to new applications in the future.
   tags:
   - Smart Contracts
   - Generative AI
@@ -782,6 +1068,8 @@
   - First Author
   featured: false
   links:
+  - name: DOI
+    url: https://doi.org/10.1109/aiware69974.2025.00031
   - name: arXiv
     url: https://arxiv.org/pdf/2511.10860
   bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent\
@@ -1013,6 +1301,8 @@
   - First Author
   featured: false
   links:
+  - name: DOI
+    url: https://doi.org/10.1109/icedeg65568.2025.11081685
   - name: arXiv
     url: https://arxiv.org/pdf/2504.00241
   bibtex: "@article{karanjai2025synthesi,\n  title={Synthesizing Public Opinions with\
@@ -1826,7 +2116,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2023-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC56567.2023.10175000
   publishDate: '2023-05-01T00:00:00Z'
   citations: 2
   publication_types:

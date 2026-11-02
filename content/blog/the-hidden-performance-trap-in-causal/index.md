@@ -4,8 +4,7 @@ date: '2026-05-07T00:00:00Z'
 publishDate: '2026-05-07T00:00:00Z'
 authors:
 - admin
-summary: 'button), not Compose view. Replace #REPO_URL with your GitHub URL and #COLAB_URL with the Colab notebook link before publishing.--> When I set out to implement Ring Attention for long-context
-  models , I hit a wall that none of the papers prepared me for. My performance was capping out at half of wha...'
+summary: 'This post is a walkthrough of ring-flash-jax , a small JAX project that explores this problem and implements the fix. We''ll add the four things you actually need before Ring Attention is usable for training a real-world causal language...'
 tags:
 - Blog
 links:

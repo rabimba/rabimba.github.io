@@ -4,7 +4,7 @@ date: '2026-06-25T00:00:00Z'
 publishDate: '2026-06-25T00:00:00Z'
 authors:
 - admin
-summary: → paste between BEGIN END markers.
+summary: 'How a "brake!" lands in 5 milliseconds while a cloud model thinks for five seconds — in the same app, on the same frame, without ever colliding.'
 tags:
 - AI
 - android

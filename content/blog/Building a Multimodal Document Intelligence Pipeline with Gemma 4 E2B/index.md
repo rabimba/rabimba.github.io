@@ -4,7 +4,7 @@ date: '2026-04-02T00:00:00Z'
 publishDate: '2026-04-02T00:00:00Z'
 authors:
 - admin
-summary: and it works automatically --> Scoped to to avoid fighting the theme background:#5b5c60 color:#fff padding:3re...
+summary: 'A production-grade walkthrough — PDF ingestion, OCR, audio transcription, structured reasoning, and agentic tool calling — all on a 2.3B parameter model that fits on a single consumer GPU.'
 tags:
 - Blog
 links:
