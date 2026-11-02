@@ -244,6 +244,158 @@ def fetch_semanticscholar():
     return out
 
 
+def fetch_arxiv():
+    out = []
+    try:
+        r = http_get(
+            "https://export.arxiv.org/api/query",
+            params={
+                "search_query": "au:Karanjai",
+                "sortBy": "submittedDate",
+                "sortOrder": "descending",
+                "max_results": 60,
+            },
+            timeout=30,
+        )
+        r.raise_for_status()
+        root = ET.fromstring(r.content)
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+        for entry in root.findall("atom:entry", ns):
+            authors = [
+                (a.find("atom:name", ns).text or "").strip()
+                for a in entry.findall("atom:author", ns)
+                if a.find("atom:name", ns) is not None
+            ]
+            if not any("rabimba" in a.lower() and "karanjai" in a.lower() for a in authors):
+                continue
+            title_el = entry.find("atom:title", ns)
+            summary_el = entry.find("atom:summary", ns)
+            pub_el = entry.find("atom:published", ns)
+            id_el = entry.find("atom:id", ns)
+            title = " ".join((title_el.text if title_el is not None else "").split()).rstrip(".")
+            if not title:
+                continue
+            abstract = " ".join((summary_el.text if summary_el is not None else "").split())
+            published = (pub_el.text if pub_el is not None else "2000-01-01")[:10]
+            raw_id = id_el.text if id_el is not None else ""
+            m = re.search(r"([0-9]{4}\.[0-9]{4,5})", raw_id)
+            arxiv_id = m.group(1) if m else ""
+            out.append({
+                "title": title,
+                "date": published,
+                "authors": authors,
+                "venue": f"arXiv preprint arXiv:{arxiv_id}" if arxiv_id else "arXiv preprint",
+                "wtype": "preprint",
+                "doi": f"10.48550/arXiv.{arxiv_id}" if arxiv_id else "",
+                "abstract": abstract,
+                "url": f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else raw_id,
+                "source": "arXiv",
+            })
+    except Exception as e:
+        print(f"arXiv fetch notice: {e}")
+    return out
+
+
+def enrich_existing(feed_works, dry_run=False):
+    """Enrich existing publication pages with newly available arXiv links, DOIs, and full abstracts."""
+    if not os.path.isdir(PUB_DIR):
+        return 0
+    enriched_count = 0
+    for d in sorted(os.listdir(PUB_DIR)):
+        f = os.path.join(PUB_DIR, d, "index.md")
+        if not os.path.isfile(f):
+            continue
+        text = open(f, encoding="utf-8").read()
+        m = re.search(r"^title:\s*'?(.+?)'?\s*$", text, re.M)
+        if not m:
+            continue
+        raw_title = m.group(1).strip()
+        nt = norm_title(raw_title)
+
+        # Find best matching feed work(s)
+        matches = [
+            w for w in feed_works
+            if is_known(w, {nt}, [raw_title], set(), set())
+        ]
+        if not matches:
+            continue
+
+        updated = text
+        changes = []
+
+        # 1. Enrich missing publisher DOI link (keep top-level doi: '' to avoid Hugo Blox deprecation warning)
+        if "name: doi" not in updated.lower() and "doi.org/" not in updated.lower():
+            best_doi = next(
+                (w["doi"] for w in matches if w.get("doi") and not w["doi"].lower().startswith("10.48550/arxiv")),
+                "",
+            )
+            if best_doi:
+                doi_url = f"https://doi.org/{best_doi}"
+                if re.search(r"^links:\s*\n", updated, re.M):
+                    updated = re.sub(
+                        r"^(links:\s*\n)",
+                        f"\\1- name: DOI\n  url: {doi_url}\n",
+                        updated,
+                        count=1,
+                        flags=re.M,
+                    )
+                else:
+                    updated = re.sub(
+                        r"\n---\s*$",
+                        f"\nlinks:\n- name: DOI\n  url: {doi_url}\n---\n",
+                        updated,
+                        count=1,
+                    )
+                changes.append(f"DOI={best_doi}")
+
+        # 2. Enrich missing arXiv link
+        if "arxiv.org" not in updated.lower():
+            ax_id = next((work_arxiv_id(w) for w in matches if work_arxiv_id(w)), None)
+            if ax_id:
+                arxiv_url = f"https://arxiv.org/pdf/{ax_id}"
+                if re.search(r"^links:\s*\n", updated, re.M):
+                    updated = re.sub(
+                        r"^(links:\s*\n)",
+                        f"\\1- name: arXiv\n  url: {arxiv_url}\n",
+                        updated,
+                        count=1,
+                        flags=re.M,
+                    )
+                else:
+                    updated = re.sub(
+                        r"\n---\s*$",
+                        f"\nlinks:\n- name: arXiv\n  url: {arxiv_url}\n---\n",
+                        updated,
+                        count=1,
+                    )
+                changes.append(f"arXiv={ax_id}")
+
+        # 3. Enrich placeholder abstract
+        abs_m = re.search(r"^abstract:\s*'([^']*)'\s*$", updated, re.M)
+        if abs_m:
+            cur_abs = abs_m.group(1).strip()
+            if cur_abs.startswith("Preprint:") or "Added automatically from publication feeds" in cur_abs or len(cur_abs) < 120:
+                best_abs = next((w["abstract"] for w in matches if len(w.get("abstract") or "") >= 180), "")
+                if best_abs:
+                    clean_abs = re.sub(r"\s+", " ", best_abs).strip()[:1200].replace("'", "''")
+                    updated = re.sub(
+                        r"^abstract:\s*'[^']*'\s*$",
+                        f"abstract: '{clean_abs}'",
+                        updated,
+                        count=1,
+                        flags=re.M,
+                    )
+                    changes.append("full-abstract")
+
+        if updated != text:
+            enriched_count += 1
+            print(f"  ENRICH [{d}] ({', '.join(changes)})")
+            if not dry_run:
+                with open(f, "w", encoding="utf-8") as out_f:
+                    out_f.write(updated)
+    return enriched_count
+
+
 def pick(works, key, default=""):
     for w in works:
         if w.get(key):
@@ -297,7 +449,7 @@ def gen_page(w, slug):
         f"title: '{w['title'].replace(chr(39), chr(39)*2)}'\n"
         "authors:\n" + "".join(f"- {a}\n" for a in authors) +
         f"date: '{ymd}T00:00:00Z'\n"
-        f"doi: '{w.get('doi') or ''}'\n"
+        "doi: ''\n"
         f"publishDate: '{ymd}T00:00:00Z'\n"
         "publication_types:\n"
         f"- '{ptype}'\n"
@@ -329,11 +481,11 @@ def main():
         print("WARNING: TLS verification disabled (--insecure). Never use in CI.")
 
     titles, titles_raw, dois, arxivs = existing_index()
-    feed = fetch_openalex() + fetch_semanticscholar() + fetch_dblp()
+    feed = fetch_openalex() + fetch_arxiv() + fetch_semanticscholar() + fetch_dblp()
 
     # dedupe within feed by normalized title; prefer published over preprint, more metadata over less
     def score(w):
-        return (w["wtype"] != "preprint", bool(w["abstract"]), bool(w["doi"]), w["source"] == "OpenAlex")
+        return (w["wtype"] != "preprint", len(w.get("abstract") or "") >= 180, bool(w["doi"]), bool(w.get("url")), w["source"] == "OpenAlex")
     by_title = {}
     for w in feed:
         k = norm_title(w["title"])
@@ -342,11 +494,15 @@ def main():
         if k not in by_title or score(w) > score(by_title[k]):
             by_title[k] = w
 
+    enriched = enrich_existing(feed, dry_run=args.dry_run)
+    # Refresh index after enrichments
+    titles, titles_raw, dois, arxivs = existing_index()
+
     new = [w for k, w in by_title.items() if k not in titles and not is_known(w, titles, titles_raw, dois, arxivs)
            and not w["title"].lower().startswith("artifacts for")]
     new.sort(key=lambda w: w["date"], reverse=True)
 
-    print(f"feed works: {len(feed)}, unique: {len(by_title)}, new: {len(new)}")
+    print(f"feed works: {len(feed)}, unique: {len(by_title)}, enriched: {enriched}, new: {len(new)}")
     used_slugs = set(os.listdir(PUB_DIR)) if os.path.isdir(PUB_DIR) else set()
     for w in new:
         slug = make_slug(w["title"]) or "publication"
@@ -361,8 +517,8 @@ def main():
             with open(os.path.join(d, "index.md"), "w", encoding="utf-8") as f:
                 f.write(gen_page(w, slug))
 
-    if not new:
-        print("No new publications.")
+    if not new and not enriched:
+        print("No new or enriched publications.")
     return 0
 
 
