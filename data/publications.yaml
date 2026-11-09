@@ -101,31 +101,6 @@
     url: https://arxiv.org/pdf/2610.09219
   - name: Scholar
     url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
-- slug: unanimous-but-wrong-conformity
-  title: 'Unanimous but Wrong: Conformity in Multi-Agent LLM Audit Deliberation'
-  authors:
-  - Dana R Alsagheer
-  - Yang Lu
-  - Rabimba Karanjai
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: How conformity pressure in multi-agent LLM audit deliberation
-    produces unanimous but incorrect verdicts.'
-  tags:
-  - Agents
-  - Multi-Agent Systems
-  - LLM Evaluation
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Unanimous%20but%20Wrong%3A%20Conformity%20in%20Multi-Agent%20LLM%20Audit%20Deliberation
 - slug: outside-option-routing-auctions
   title: 'Designing the Outside Option: Anchors, Mixed Equilibria, and Welfare in
     LLM Routing Auctions'
@@ -177,16 +152,13 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Motivated%20Chain-of-Thought%20and%20Reduced%20Scrutiny%20in%20LLM%20Judges
-- slug: cojo-rag
-  title: 'CoJo-RAG: Conformalized Joint Co-Optimization of Retrieval and Fine-Tuning'
+- slug: unanimous-but-wrong-conformity
+  title: 'Unanimous but Wrong: Conformity in Multi-Agent LLM Audit Deliberation'
   authors:
-  - Rabimba Karanjai
+  - Dana R Alsagheer
   - Yang Lu
+  - Rabimba Karanjai
   - Lei Xu
-  - Linsey Pang
-  - Richard Williamson
-  - Hemanth Hegadehalli Madhavarao
-  - Prakhar Mehrotra
   - Weidong Shi
   date: '2026-10-01T00:00:00Z'
   doi: ''
@@ -195,16 +167,16 @@
   - '3'
   publication: AAAI 2027 (Under Review)
   publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: Conformalized joint co-optimization of retrieval and fine-tuning
-    for retrieval-augmented generation.'
+  abstract: 'Preprint: How conformity pressure in multi-agent LLM audit deliberation
+    produces unanimous but incorrect verdicts.'
   tags:
-  - RAG
-  - First Author
-  - Conformal Prediction
+  - Agents
+  - Multi-Agent Systems
+  - LLM Evaluation
   featured: false
   links:
   - name: Scholar
-    url: https://scholar.google.com/scholar?q=CoJo-RAG%3A%20Conformalized%20Joint%20Co-Optimization%20of%20Retrieval%20and%20Fine-Tuning
+    url: https://scholar.google.com/scholar?q=Unanimous%20but%20Wrong%3A%20Conformity%20in%20Multi-Agent%20LLM%20Audit%20Deliberation
 - slug: picture-thousand-tokens
   title: 'A Picture is Worth a Thousand Tokens: Lossless Multilingual Context Compression
     via Pictorial Intermediate Representations'
@@ -236,6 +208,34 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=A%20Picture%20is%20Worth%20a%20Thousand%20Tokens%3A%20Lossless%20Multilingual%20Context%20Compression%20via%20Pictorial%20Intermediate%20Representations
+- slug: cojo-rag
+  title: 'CoJo-RAG: Conformalized Joint Co-Optimization of Retrieval and Fine-Tuning'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Linsey Pang
+  - Richard Williamson
+  - Hemanth Hegadehalli Madhavarao
+  - Prakhar Mehrotra
+  - Weidong Shi
+  date: '2026-10-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-10-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: AAAI 2027 (Under Review)
+  publication_short: AAAI 2027 (Under Review)
+  abstract: 'Preprint: Conformalized joint co-optimization of retrieval and fine-tuning
+    for retrieval-augmented generation.'
+  tags:
+  - RAG
+  - First Author
+  - Conformal Prediction
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CoJo-RAG%3A%20Conformalized%20Joint%20Co-Optimization%20of%20Retrieval%20and%20Fine-Tuning
 - slug: specialists-hold-routing
   title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
     Auctions'
@@ -586,8 +586,20 @@
   - '1'
   publication: IEEE ICBC 2026
   publication_short: IEEE ICBC 2026
-  abstract: 'Short Paper: We detail low-latency inference pipelines that check and
-    execute simple models on-chain.'
+  abstract: In this era, significant transformations in industries and tool utilization
+    are driven by Generative AI (GenAI) and advancements in Machine Learning. There
+    is a growing emphasis on Machine Learning Operations (MLOps) for managing and
+    deploying these AI models to constantly expand the list of GenAI use cases. Concurrently,
+    the imperative for richer smart contracts and onchain computations is escalating.
+    Our paper introduces an innovative framework that integrates blockchain technology,
+    particularly the Cosmos SDK, to facilitate on-chain GenAI inferences in smart
+    contracts. This system, built on Cosmos SDK, Ethermint, and ONNX runtime, enables
+    the deployment of AI models for executing AI inferences across multiple blockchain
+    nodes. We critically assess the feasibility and performance of the framework,
+    with a special focus on its portability and engine-model agnostic deployment.
+    The capability to support GenAI on-chain may enhance and expand the scope of smart
+    contracts, in particular, data-driven DeFi, and as a result, enable the development
+    of new use cases and applications in the coming years.
   tags:
   - Smart Contracts
   - AI Inference
@@ -638,6 +650,49 @@
     \ Framework for AI-Enabled Research},\n  author={Lu, Yang and Karanjai, Rabimba\
     \ and Xu, Lei and Shi, Weidong},\n  journal={arXiv preprint arXiv:2604.22026},\n\
     \  year={2026}\n}"
+- slug: causalgraphx
+  title: 'CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable
+    Systemic Risk Assessment'
+  authors:
+  - Rabimba Karanjai
+  - Hemanth Hegadehalli Madhavarao
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-02-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-02-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: AAAI 2026 (AI4Finance)
+  publication_short: AAAI 2026 (AI4Finance)
+  abstract: The interconnected nature of global financial systems makes them vulnerable
+    to systemic risks, where the failure of a few institutions can trigger catastrophic
+    cascading defaults. Traditional risk models often fail to capture the complex,
+    non-linear dynamics of these networks. While Graph Neural Networks (GNNs) have
+    shown promise in modeling relational data, they primarily learn correlative patterns
+    and function as black boxes, offering little insight into the causal mechanisms
+    of shock propagation. This limitation is critical for regulators who require explainable
+    models to perform stress tests and devise effective interventions. We introduce
+    CausalGraphX, a novel framework that integrates GNNs with counterfactual reasoning
+    to provide explainable assessments of systemic risk. CausalGraphX employs a Graph
+    Attention mechanism to learn representations of institutional vulnerability and
+    uses an adversarial regularization technique to ensure these representations capture
+    causal drivers rather than spurious correlations. Furthermore, we propose an optimization-based
+    approach to generate counterfactual explanations. We validate CausalGraphX on
+    large-scale synthetic financial networks, demonstrating that it significantly
+    outperforms traditional and deep learning baselines in predicting cascading defaults
+    while providing sparse, plausible, and actionable counterfactual explanations.
+  tags:
+  - AI
+  - Neural Networks
+  - Explainable AI
+  - First Author
+  featured: false
+  links:
+  - name: arXiv
+    url: https://arxiv.org/pdf/2607.14416
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
 - slug: qucowe
   title: 'QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for
     Near-Term Quantum Devices'
@@ -683,49 +738,6 @@
     \ Shi, Weidong},\n  booktitle={International Workshop on Quantum Computing and\
     \ Artificial Intelligence},\n  pages={83--100},\n  year={2026},\n  organization={Springer}\n\
     }"
-- slug: causalgraphx
-  title: 'CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable
-    Systemic Risk Assessment'
-  authors:
-  - Rabimba Karanjai
-  - Hemanth Hegadehalli Madhavarao
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-02-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-02-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: AAAI 2026 (AI4Finance)
-  publication_short: AAAI 2026 (AI4Finance)
-  abstract: The interconnected nature of global financial systems makes them vulnerable
-    to systemic risks, where the failure of a few institutions can trigger catastrophic
-    cascading defaults. Traditional risk models often fail to capture the complex,
-    non-linear dynamics of these networks. While Graph Neural Networks (GNNs) have
-    shown promise in modeling relational data, they primarily learn correlative patterns
-    and function as black boxes, offering little insight into the causal mechanisms
-    of shock propagation. This limitation is critical for regulators who require explainable
-    models to perform stress tests and devise effective interventions. We introduce
-    CausalGraphX, a novel framework that integrates GNNs with counterfactual reasoning
-    to provide explainable assessments of systemic risk. CausalGraphX employs a Graph
-    Attention mechanism to learn representations of institutional vulnerability and
-    uses an adversarial regularization technique to ensure these representations capture
-    causal drivers rather than spurious correlations. Furthermore, we propose an optimization-based
-    approach to generate counterfactual explanations. We validate CausalGraphX on
-    large-scale synthetic financial networks, demonstrating that it significantly
-    outperforms traditional and deep learning baselines in predicting cascading defaults
-    while providing sparse, plausible, and actionable counterfactual explanations.
-  tags:
-  - AI
-  - Neural Networks
-  - Explainable AI
-  - First Author
-  featured: false
-  links:
-  - name: arXiv
-    url: https://arxiv.org/pdf/2607.14416
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
 - slug: zkransomware
   title: 'zkRansomware: Proof-of-Data Recoverability and Multi-round Game Theoretic
     Modeling of Ransomware Decisions'
@@ -768,31 +780,6 @@
     \ and Multi-round Game Theoretic Modeling of Ransomware Decisions},\n  author={Hou,\
     \ Xinyu and Lu, Yang and Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv\
     \ preprint arXiv:2601.06667},\n  year={2026}\n}"
-- slug: closing-cost-gap-rl
-  title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: Reinforcement learning structures utilizing formal verification
-    constraints as runtime guides to secure code compilation.'
-  tags:
-  - LLMs
-  - Reinforcement Learning
-  - Formal Verification
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Closing%20the%20Cost%20Gap%20in%20Verifier-Guided%20RL%3A%20A%20Smart%20Contract%20Case%20Study
 - slug: rules-that-govern
   title: 'Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation'
   authors:
@@ -818,6 +805,56 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Rules%20That%20Govern%3A%20A%20Per-Property%20Analysis%20of%20Multi-Agent%20LLM%20Deliberation
+- slug: bridging-confidentiality-reliability
+  title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
+  authors:
+  - Dana Alsagheer
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  - Rabimba Karanjai
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: ACM Symposium on Computer Science and Law 2026 (Under Review)
+  publication_short: ACM Symposium on Computer Science and Law 2026 (Under Review)
+  abstract: 'Preprint: Deploying open-weight local model instances to perform legal
+    brief review without leakage.'
+  tags:
+  - AI Governance
+  - Security
+  - Law
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
+- slug: profiler-persona
+  title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
+    and Fusion of Synthesized Profiles'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: EMNLP 2026 (Under Review)
+  publication_short: EMNLP 2026 (Under Review)
+  abstract: 'Preprint: A retrieval-augmented persona generation architecture that
+    conditions frozen models dynamically.'
+  tags:
+  - LLMs
+  - Persona Tuning
+  - First Author
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Profiler%3A%20Per-Question%20Persona%20Conditioning%20of%20Frozen%20LLMs%20via%20Retrieval%20and%20Fusion%20of%20Synthesized%20Profiles
 - slug: vision-language-models-anchor
   title: Aligning Vision Language Models via anchor
   authors:
@@ -843,6 +880,55 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Aligning%20Vision%20Language%20Models%20via%20anchor
+- slug: training-llms-decentralized
+  title: Hype or Hope? Training LLMs on Decentralized GPU Clouds
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: Middleware 2026 (Under Review)
+  publication_short: Middleware 2026 (Under Review)
+  abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous
+    networks, auditing latency and security overhead.'
+  tags:
+  - Decentralized Systems
+  - GPU Clouds
+  - First Author
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
+- slug: closing-cost-gap-rl
+  title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
+  authors:
+  - Rabimba Karanjai
+  - Yang Lu
+  - Lei Xu
+  - Weidong Shi
+  date: '2026-01-01T00:00:00Z'
+  doi: ''
+  publishDate: '2026-01-01T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: NeurIPS 2026 (Under Review)
+  publication_short: NeurIPS 2026 (Under Review)
+  abstract: 'Preprint: Reinforcement learning structures utilizing formal verification
+    constraints as runtime guides to secure code compilation.'
+  tags:
+  - LLMs
+  - Reinforcement Learning
+  - Formal Verification
+  - First Author
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Closing%20the%20Cost%20Gap%20in%20Verifier-Guided%20RL%3A%20A%20Smart%20Contract%20Case%20Study
 - slug: verifygen-x
   title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement
     Learning from Formal Verification Feedback'
@@ -869,114 +955,51 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=VerifyGen-X%3A%20Secure%20Cross-Chain%20Smart%20Contract%20Generation%20via%20Scalable%20Reinforcement%20Learning%20from%20Formal%20Verification%20Feedback
-- slug: profiler-persona
-  title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
-    and Fusion of Synthesized Profiles'
+- slug: hpc-agent-tester
+  title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
   authors:
   - Rabimba Karanjai
-  - Yang Lu
   - Lei Xu
   - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: EMNLP 2026 (Under Review)
-  publication_short: EMNLP 2026 (Under Review)
-  abstract: 'Preprint: A retrieval-augmented persona generation architecture that
-    conditions frozen models dynamically.'
-  tags:
-  - LLMs
-  - Persona Tuning
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Profiler%3A%20Per-Question%20Persona%20Conditioning%20of%20Frozen%20LLMs%20via%20Retrieval%20and%20Fusion%20of%20Synthesized%20Profiles
-- slug: training-llms-decentralized
-  title: Hype or Hope? Training LLMs on Decentralized GPU Clouds
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: Middleware 2026 (Under Review)
-  publication_short: Middleware 2026 (Under Review)
-  abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous
-    networks, auditing latency and security overhead.'
-  tags:
-  - Decentralized Systems
-  - GPU Clouds
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
-- slug: bridging-confidentiality-reliability
-  title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
-  authors:
-  - Dana Alsagheer
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  - Rabimba Karanjai
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: ACM Symposium on Computer Science and Law 2026 (Under Review)
-  publication_short: ACM Symposium on Computer Science and Law 2026 (Under Review)
-  abstract: 'Preprint: Deploying open-weight local model instances to perform legal
-    brief review without leakage.'
-  tags:
-  - AI Governance
-  - Security
-  - Law
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
-- slug: unlocking-onchain-intelligence
-  title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
-    Smart Contracts'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong (Larry) Shi
   date: '2025-11-01T00:00:00Z'
   doi: ''
   publishDate: '2025-11-01T00:00:00Z'
+  citations: 2
   publication_types:
   - '1'
-  publication: BRAINS 2025
-  publication_short: BRAINS 2025
-  abstract: Generative AI and modern Machine Learning are rapidly transforming industries,
-    creating new tools and use cases. As these models grow, there is an increasing
-    need for reliable Machine Learning Operations (MLOps) to manage and deploy them.
-    At the same time, demand is rising for smarter smart contracts and more complex
-    on-chain computation. Our paper presents a new framework that brings GenAI inference
-    directly onto the blockchain. Using the Cosmos SDK, Ethermint, and the ONNX runtime,
-    we enable AI models to run on-chain across multiple blockchain nodes. We evaluate
-    the system’s feasibility, performance, and portability, showing that it can support
-    different AI engines and model types. By enabling GenAI inference on-chain, our
-    approach expands what smart contracts can do, especially for data-driven DeFi,
-    and opens the door to new applications in the future.
+  publication: ACM AIWare 2025
+  publication_short: ACM AIWare 2025
+  abstract: Unit testing in High-Performance Computing (HPC) is critical but challenged
+    by parallelism, complex algorithms, and diverse hardware. Traditional methods
+    often fail to address non-deterministic behavior and synchronization issues in
+    HPC applications. This paper introduces HPCAgentTester, a novel multi-agent Large
+    Language Model (LLM) framework designed to automate and enhance unit test generation
+    for HPC software utilizing OpenMP and MPI. HPCAgentTester employs a unique collaborative
+    workflow where specialized LLM agents (Recipe Agent and Test Agent) iteratively
+    generate and refine test cases through a critique loop. This architecture enables
+    the generation of context-aware unit tests that specifically target parallel execution
+    constructs, complex communication patterns, and hierarchical parallelism. We demonstrate
+    HPCAgentTester's ability to produce compilable and functionally correct tests
+    for OpenMP and MPI primitives, effectively identifying subtle bugs that are often
+    missed by conventional techniques. Our evaluation shows that HPCAgentTester significantly
+    improves test compilation rates and correctness compared to standalone LLMs, offering
+    a more robust and scalable solution for ensuring the reliability of parallel software
+    systems.
   tags:
-  - Smart Contracts
-  - Generative AI
+  - HPC
+  - Testing
+  - Agents
   - First Author
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1109/BRAINS67003.2025.11302909
+    url: https://doi.org/10.1109/aiware69974.2025.00031
+  - name: arXiv
+    url: https://arxiv.org/pdf/2511.10860
+  bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent\
+    \ LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai\
+    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2511.10860},\n\
+    \  year={2025}\n}"
 - slug: securing-multi-chain
   title: Securing Smart Contract Languages with a Unified Agentic Framework for Vulnerability
     Repair in Solidity and Move
@@ -1031,51 +1054,40 @@
     \ and Move},\n  author={Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  booktitle={2025\
     \ 2nd IEEE/ACM International Conference on AI-powered Software (AIware)},\n  year={2025},\n\
     \  organization={IEEE}\n}"
-- slug: hpc-agent-tester
-  title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
+- slug: unlocking-onchain-intelligence
+  title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
+    Smart Contracts'
   authors:
   - Rabimba Karanjai
+  - Yang Lu
   - Lei Xu
-  - Weidong Shi
+  - Weidong (Larry) Shi
   date: '2025-11-01T00:00:00Z'
   doi: ''
   publishDate: '2025-11-01T00:00:00Z'
-  citations: 2
   publication_types:
   - '1'
-  publication: ACM AIWare 2025
-  publication_short: ACM AIWare 2025
-  abstract: Unit testing in High-Performance Computing (HPC) is critical but challenged
-    by parallelism, complex algorithms, and diverse hardware. Traditional methods
-    often fail to address non-deterministic behavior and synchronization issues in
-    HPC applications. This paper introduces HPCAgentTester, a novel multi-agent Large
-    Language Model (LLM) framework designed to automate and enhance unit test generation
-    for HPC software utilizing OpenMP and MPI. HPCAgentTester employs a unique collaborative
-    workflow where specialized LLM agents (Recipe Agent and Test Agent) iteratively
-    generate and refine test cases through a critique loop. This architecture enables
-    the generation of context-aware unit tests that specifically target parallel execution
-    constructs, complex communication patterns, and hierarchical parallelism. We demonstrate
-    HPCAgentTester's ability to produce compilable and functionally correct tests
-    for OpenMP and MPI primitives, effectively identifying subtle bugs that are often
-    missed by conventional techniques. Our evaluation shows that HPCAgentTester significantly
-    improves test compilation rates and correctness compared to standalone LLMs, offering
-    a more robust and scalable solution for ensuring the reliability of parallel software
-    systems.
+  publication: BRAINS 2025
+  publication_short: BRAINS 2025
+  abstract: Generative AI and modern Machine Learning are rapidly transforming industries,
+    creating new tools and use cases. As these models grow, there is an increasing
+    need for reliable Machine Learning Operations (MLOps) to manage and deploy them.
+    At the same time, demand is rising for smarter smart contracts and more complex
+    on-chain computation. Our paper presents a new framework that brings GenAI inference
+    directly onto the blockchain. Using the Cosmos SDK, Ethermint, and the ONNX runtime,
+    we enable AI models to run on-chain across multiple blockchain nodes. We evaluate
+    the system’s feasibility, performance, and portability, showing that it can support
+    different AI engines and model types. By enabling GenAI inference on-chain, our
+    approach expands what smart contracts can do, especially for data-driven DeFi,
+    and opens the door to new applications in the future.
   tags:
-  - HPC
-  - Testing
-  - Agents
+  - Smart Contracts
+  - Generative AI
   - First Author
   featured: false
   links:
   - name: DOI
-    url: https://doi.org/10.1109/aiware69974.2025.00031
-  - name: arXiv
-    url: https://arxiv.org/pdf/2511.10860
-  bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent\
-    \ LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai\
-    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2511.10860},\n\
-    \  year={2025}\n}"
+    url: https://doi.org/10.1109/BRAINS67003.2025.11302909
 - slug: evaluating-quality-randomness
   title: Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large
     Language Models
@@ -1252,8 +1264,21 @@
   - '1'
   publication: IEEE ICBC 2025
   publication_short: IEEE ICBC 2025
-  abstract: 'Short Paper: We design smart contracts verifying decryption keys in escrow
-    to manage ransomware extortion threats.'
+  abstract: Ransomware attacks have become increasingly sophisticated and dangerous,
+    severely impacting individuals and businesses. Traditional ransomware payout models
+    lack trust and security, leaving victims vulnerable to extortion even after paying
+    the ransom. We proposes Ransomware 3.0, a novel blockchain-based ransomware framework
+    that leverages zero-knowledge proofs and smart contracts to overcome these challenges.
+    By integrating these cryptographic techniques, Ransomware 3.0 ensures secure and
+    verifiable data recovery for victims while reducing the risk of data exposure
+    or resale by ransomware attackers. This framework also introduces a contract-based
+    multi-round payment scheme that allows victims to optimize their payout strategy
+    based on the evolving value of their data over time. Counterintuitively, both
+    attackers and victims are motivated to adopt the new model, as the victim is motivated
+    to pay when uncertainty is reduced. We also explore the theoretical decision-making
+    foundations of Ransomware 3.0, analyze its potential benefits and limitations,
+    and discuss its implications for ransomware risk management and mitigation strategies.
+    Index Terms—ransomware, ZKPs, smart contract
   tags:
   - Blockchain
   - Security
@@ -1670,6 +1695,96 @@
     \ and Hussain, Aftab and Rabin, Md Rafiqul Islam and Xu, Lei and Shi, Weidong\
     \ and Alipour, Mohammad Amin},\n  howpublished={arXiv preprint arXiv:2407.05202},\n\
     \  year={2024}\n}"
+- slug: mitigating-hallucinations
+  title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
+  authors:
+  - Rabimba Karanjai
+  - Suravi Majumder
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  publication_types:
+  - '1'
+  publication: 3rd Annual AI in Health Conference, Rice University
+  publication_short: 3rd Annual AI in Health Conference, Rice University
+  abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational
+    diagnostic models through structured knowledge reinforcement.'
+  tags:
+  - AI
+  - Health
+  - LLM Hallucinations
+  - First Author
+  featured: false
+  links:
+  - name: Scholar
+    url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
+- slug: solmover-feasibility-icbc
+  title: 'SolMover: Feasibility of Using LLMs for Translating Smart Contracts'
+  authors:
+  - Rabimba Karanjai
+  - Lei Xu
+  - Weidong Shi
+  date: '2024-05-01T00:00:00Z'
+  doi: 10.1109/ICBC59979.2024.10634392
+  publishDate: '2024-05-01T00:00:00Z'
+  citations: 6
+  publication_types:
+  - '1'
+  publication: 2024 IEEE International Conference on Blockchain and Cryptocurrency
+    (ICBC)
+  publication_short: IEEE ICBC 2024
+  abstract: We investigate the feasibility of employing large language models (LLMs)
+    to translate smart contracts, focusing on their ability to emulate human translation
+    techniques. This inquiry centers on the potential of LLMs to comprehend a smart
+    contract written in Solidity and to produce an equivalent in Move, a low-resource
+    language. We introduce SolMover, a system designed to bridge the gap between Solidity
+    and Move through a multi-step knowledge distillation process. Our study aims to
+    elucidate whether LLMs can internalize coding concepts, generate specific sub-tasks
+    from a general prompt, produce compilable code in a language they were not extensively
+    trained on, and how compiler feedback can be used to debug and enhance the quality
+    of the generated code.
+  tags:
+  - Smart Contracts
+  - Blockchain
+  - Code Translation
+  - LLMs
+  - First Author
+  featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC59979.2024.10634392
+  bibtex: "@inproceedings{karanjai2024solmoverfeasibility,\n  title={SolMover: Feasibility\
+    \ of Using LLMs for Translating Smart Contracts},\n  author={Karanjai, Rabimba\
+    \ and Xu, Lei and Shi, Weidong},\n  booktitle={2024 IEEE International Conference\
+    \ on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2024}\n}"
+- slug: trusted-infer-edge
+  title: Trusted LLM Inference on the Edge with Smart Contracts
+  authors:
+  - Rabimba Karanjai
+  - Weidong Shi
+  date: '2024-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2024-05-01T00:00:00Z'
+  citations: 15
+  publication_types:
+  - '1'
+  publication: IEEE ICBC 2024
+  publication_short: IEEE ICBC 2024
+  abstract: We propose a trust framework using smart contracts to audit and verify
+    edge-computed LLM inference outputs.
+  tags:
+  - LLMs
+  - Smart Contracts
+  - Edge Computing
+  - First Author
+  featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1109/ICBC59979.2024.10634373
+  bibtex: "@inproceedings{karanjai2024trusted,\n  title={Trusted llm inference on\
+    \ the edge with smart contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n\
+    \  booktitle={2024 IEEE International Conference on Blockchain and Cryptocurrency\
+    \ (ICBC)},\n  pages={1--7},\n  year={2024},\n  organization={IEEE}\n}"
 - slug: evaluating-rationality
   title: Evaluating Irrationality in Large Language Models and Open Research Questions
   authors:
@@ -1737,96 +1852,6 @@
   links:
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Enhancing%20Vascular%20Disease%20Diagnosis%20through%20AI-Driven%20Analysis%20of%20Histopathology%20Images
-- slug: trusted-infer-edge
-  title: Trusted LLM Inference on the Edge with Smart Contracts
-  authors:
-  - Rabimba Karanjai
-  - Weidong Shi
-  date: '2024-05-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-05-01T00:00:00Z'
-  citations: 15
-  publication_types:
-  - '1'
-  publication: IEEE ICBC 2024
-  publication_short: IEEE ICBC 2024
-  abstract: We propose a trust framework using smart contracts to audit and verify
-    edge-computed LLM inference outputs.
-  tags:
-  - LLMs
-  - Smart Contracts
-  - Edge Computing
-  - First Author
-  featured: false
-  links:
-  - name: DOI
-    url: https://doi.org/10.1109/ICBC59979.2024.10634373
-  bibtex: "@inproceedings{karanjai2024trusted,\n  title={Trusted llm inference on\
-    \ the edge with smart contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n\
-    \  booktitle={2024 IEEE International Conference on Blockchain and Cryptocurrency\
-    \ (ICBC)},\n  pages={1--7},\n  year={2024},\n  organization={IEEE}\n}"
-- slug: mitigating-hallucinations
-  title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
-  authors:
-  - Rabimba Karanjai
-  - Suravi Majumder
-  date: '2024-05-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-05-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: 3rd Annual AI in Health Conference, Rice University
-  publication_short: 3rd Annual AI in Health Conference, Rice University
-  abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational
-    diagnostic models through structured knowledge reinforcement.'
-  tags:
-  - AI
-  - Health
-  - LLM Hallucinations
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
-- slug: solmover-feasibility-icbc
-  title: 'SolMover: Feasibility of Using LLMs for Translating Smart Contracts'
-  authors:
-  - Rabimba Karanjai
-  - Lei Xu
-  - Weidong Shi
-  date: '2024-05-01T00:00:00Z'
-  doi: 10.1109/ICBC59979.2024.10634392
-  publishDate: '2024-05-01T00:00:00Z'
-  citations: 6
-  publication_types:
-  - '1'
-  publication: 2024 IEEE International Conference on Blockchain and Cryptocurrency
-    (ICBC)
-  publication_short: IEEE ICBC 2024
-  abstract: We investigate the feasibility of employing large language models (LLMs)
-    to translate smart contracts, focusing on their ability to emulate human translation
-    techniques. This inquiry centers on the potential of LLMs to comprehend a smart
-    contract written in Solidity and to produce an equivalent in Move, a low-resource
-    language. We introduce SolMover, a system designed to bridge the gap between Solidity
-    and Move through a multi-step knowledge distillation process. Our study aims to
-    elucidate whether LLMs can internalize coding concepts, generate specific sub-tasks
-    from a general prompt, produce compilable code in a language they were not extensively
-    trained on, and how compiler feedback can be used to debug and enhance the quality
-    of the generated code.
-  tags:
-  - Smart Contracts
-  - Blockchain
-  - Code Translation
-  - LLMs
-  - First Author
-  featured: false
-  links:
-  - name: DOI
-    url: https://doi.org/10.1109/ICBC59979.2024.10634392
-  bibtex: "@inproceedings{karanjai2024solmoverfeasibility,\n  title={SolMover: Feasibility\
-    \ of Using LLMs for Translating Smart Contracts},\n  author={Karanjai, Rabimba\
-    \ and Xu, Lei and Shi, Weidong},\n  booktitle={2024 IEEE International Conference\
-    \ on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2024}\n}"
 - slug: voter-blockchain
   title: 'All We Need is Voter Feedback: A New Paradigm to Realize Politics without
     Politicians Using AI Models Aligned with Voter Inputs'
@@ -2057,12 +2082,70 @@
   - Smart Contracts
   featured: false
   links:
+  - name: DOI
+    url: https://doi.org/10.1007/978-3-030-24299-2_11
   - name: arXiv
     url: https://arxiv.org/pdf/2306.07984
   bibtex: "@misc{tran2023bribery,\n  title={Cross Chain Bribery Contracts: Majority\
     \ vs Mighty Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and\
     \ Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint\
     \ arXiv:2306.07984},\n  year={2023}\n}"
+- slug: supporting-heterogeneous-infra
+  title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
+  authors:
+  - Rabimba Karanjai
+  - Rowan Collier
+  - Zhimin Gao
+  - Lin Chen
+  - Xinxin Fan
+  - Taeweon Suh
+  - Weidong Shi
+  - Lei Xu
+  date: '2023-05-01T00:00:00Z'
+  doi: ''
+  publishDate: '2023-05-01T00:00:00Z'
+  citations: 12
+  publication_types:
+  - '1'
+  publication: ACM AsiaCCS 2023
+  publication_short: ACM AsiaCCS 2023
+  abstract: Trusted execution environment (TEE) technology has found many applications
+    in mitigating various security risks in an efficient manner, which is attractive
+    for critical infrastructure protection. First, the natural of critical infrastructure
+    requires it to be well protected from various cyber attacks. Second, performance
+    is usually important for critical infrastructure and it cannot afford an expensive
+    protection mechanism. While a large number of TEE-based critical infrastructure
+    protection systems have been proposed to address various security challenges (e.g.,
+    secure sensing and reliable control), most existing works ignore one important
+    feature, i.e., devices comprised the critical infrastructure may be equipped with
+    multiple incompatible TEE technologies and belongs to different owners. This feature
+    makes it hard for these devices to establish mutual trust and form a unified TEE
+    environment. To address these challenges and fully unleash the potential of TEE
+    technology for critical infrastructure protection, we propose DHTee, a decentralized
+    coordination mechanism. DHTee uses blockchain technology to support key TEE functions
+    in a heterogeneous TEE environment, especially the attestation service. A Device
+    equipped with one TEE can interact securely with the blockchain to verify whether
+    another potential collaborating device claiming to have a different TEE meets
+    the security requirements. DHTee is also flexible and can support new TEE schemes
+    without affecting devices using existing TEEs that have been supported by the
+    system.
+  tags:
+  - Security
+  - TEE
+  - Hardware Security
+  - First Author
+  featured: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.1145/3594556.3594626
+  - name: arXiv
+    url: https://arxiv.org/pdf/2308.01474
+  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
+    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
+    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
+    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
+    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
+    \  pages={85--94},\n  year={2023}\n}"
 - slug: decentralize-infra-heterogeneous
   title: 'DHTee: Decentralized Infrastructure for Heterogeneous TEE'
   authors:
@@ -2139,62 +2222,6 @@
   links:
   - name: DOI
     url: https://doi.org/10.1109/ICBC56567.2023.10175000
-- slug: supporting-heterogeneous-infra
-  title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
-  authors:
-  - Rabimba Karanjai
-  - Rowan Collier
-  - Zhimin Gao
-  - Lin Chen
-  - Xinxin Fan
-  - Taeweon Suh
-  - Weidong Shi
-  - Lei Xu
-  date: '2023-05-01T00:00:00Z'
-  doi: ''
-  publishDate: '2023-05-01T00:00:00Z'
-  citations: 12
-  publication_types:
-  - '1'
-  publication: ACM AsiaCCS 2023
-  publication_short: ACM AsiaCCS 2023
-  abstract: Trusted execution environment (TEE) technology has found many applications
-    in mitigating various security risks in an efficient manner, which is attractive
-    for critical infrastructure protection. First, the natural of critical infrastructure
-    requires it to be well protected from various cyber attacks. Second, performance
-    is usually important for critical infrastructure and it cannot afford an expensive
-    protection mechanism. While a large number of TEE-based critical infrastructure
-    protection systems have been proposed to address various security challenges (e.g.,
-    secure sensing and reliable control), most existing works ignore one important
-    feature, i.e., devices comprised the critical infrastructure may be equipped with
-    multiple incompatible TEE technologies and belongs to different owners. This feature
-    makes it hard for these devices to establish mutual trust and form a unified TEE
-    environment. To address these challenges and fully unleash the potential of TEE
-    technology for critical infrastructure protection, we propose DHTee, a decentralized
-    coordination mechanism. DHTee uses blockchain technology to support key TEE functions
-    in a heterogeneous TEE environment, especially the attestation service. A Device
-    equipped with one TEE can interact securely with the blockchain to verify whether
-    another potential collaborating device claiming to have a different TEE meets
-    the security requirements. DHTee is also flexible and can support new TEE schemes
-    without affecting devices using existing TEEs that have been supported by the
-    system.
-  tags:
-  - Security
-  - TEE
-  - Hardware Security
-  - First Author
-  featured: false
-  links:
-  - name: DOI
-    url: https://doi.org/10.1145/3594556.3594626
-  - name: arXiv
-    url: https://arxiv.org/pdf/2308.01474
-  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
-    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
-    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
-    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
-    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
-    \  pages={85--94},\n  year={2023}\n}"
 - slug: faas-decentralized
   title: 'DeFaaS: Decentralized Function-as-a-Service for Emerging dApps and Web'
   authors:

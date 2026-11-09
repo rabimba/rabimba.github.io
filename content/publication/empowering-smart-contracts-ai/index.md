@@ -12,7 +12,7 @@ publication_types:
 - '1'
 publication: IEEE ICBC 2026
 publication_short: IEEE ICBC 2026
-abstract: 'Short Paper: We detail low-latency inference pipelines that check and execute simple models on-chain.'
+abstract: 'In this era, significant transformations in industries and tool utilization are driven by Generative AI (GenAI) and advancements in Machine Learning. There is a growing emphasis on Machine Learning Operations (MLOps) for managing and deploying these AI models to constantly expand the list of GenAI use cases. Concurrently, the imperative for richer smart contracts and onchain computations is escalating. Our paper introduces an innovative framework that integrates blockchain technology, particularly the Cosmos SDK, to facilitate on-chain GenAI inferences in smart contracts. This system, built on Cosmos SDK, Ethermint, and ONNX runtime, enables the deployment of AI models for executing AI inferences across multiple blockchain nodes. We critically assess the feasibility and performance of the framework, with a special focus on its portability and engine-model agnostic deployment. The capability to support GenAI on-chain may enhance and expand the scope of smart contracts, in particular, data-driven DeFi, and as a result, enable the development of new use cases and applications in the coming years.'
 tags:
 - Smart Contracts
 - AI Inference
