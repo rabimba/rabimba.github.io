@@ -15,7 +15,7 @@ links:
 - icon: globe
   icon_pack: fas
   name: Live Demo
-  url: https://rabimba.github.io/drmriai/
+  url: https://drmri.rabimba.fyi/
 - icon: github
   icon_pack: fab
   name: GitHub

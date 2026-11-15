@@ -13,10 +13,10 @@ links:
 - icon: globe
   icon_pack: fas
   name: Live Site
-  url: https://rabimba.github.io/baypujo/
+  url: https://baypujo.rabimba.fyi/
 ---
 
-[Bay Area Pujo Parikrama](https://rabimba.github.io/baypujo/) is a comprehensive community guide and route planner for Durga Puja celebrations across the San Francisco Bay Area.
+[Bay Area Pujo Parikrama](https://baypujo.rabimba.fyi/) is a comprehensive community guide and route planner for Durga Puja celebrations across the San Francisco Bay Area.
 
 **Key Features:**
 - **31 Pujas Across 6 Regions** — complete listings covering South Bay, East Bay, Tri-Valley, Central Valley, Peninsula, and Sacramento

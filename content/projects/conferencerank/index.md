@@ -15,14 +15,14 @@ links:
 - icon: globe
   icon_pack: fas
   name: Live Site
-  url: https://rabimba.github.io/ConferenceRank/
+  url: https://conferencerank.rabimba.fyi/
 - icon: github
   icon_pack: fab
   name: GitHub
   url: https://github.com/rabimba/ConferenceRank
 ---
 
-[ConferenceRank](https://rabimba.github.io/ConferenceRank/) is a unified platform for discovering, evaluating, and tracking computer science conference and journal venues. It aggregates public ranking and bibliometric data into an accessible, interactive interface backed by programmatic APIs.
+[ConferenceRank](https://conferencerank.rabimba.fyi/) is a unified platform for discovering, evaluating, and tracking computer science conference and journal venues. It aggregates public ranking and bibliometric data into an accessible, interactive interface backed by programmatic APIs.
 
 ### Key Features
 
