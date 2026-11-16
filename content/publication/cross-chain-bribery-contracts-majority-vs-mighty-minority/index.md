@@ -32,6 +32,8 @@ tags:
 - Smart Contracts
 featured: false
 links:
+- name: DOI
+  url: https://doi.org/10.1007/978-3-030-24299-2_11
 - name: arXiv
   url: https://arxiv.org/pdf/2306.07984
 bibtex: "@misc{tran2023bribery,\n  title={Cross Chain Bribery Contracts: Majority vs Mighty Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2306.07984},\n  year={2023}\n}"
