@@ -51,7 +51,7 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=FR0aGbpCRcc
 - name: Event
-  url: https://media.libreplanet.org/u/libreplanet/m/turning-sensors-into-signals-free-your-iot-from-walled-gardens-with-javascript/
+  url: https://web.archive.org/web/20260422053253/https://media.libreplanet.org/u/libreplanet/m/turning-sensors-into-signals-free-your-iot-from-walled-gardens-with-javascript/
 ---
 
 

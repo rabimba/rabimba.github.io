@@ -46,7 +46,7 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://www.securi-tay.com/
+  url: https://web.archive.org/web/20260205220440/https://securi-tay.co.uk/
 ---
 
 

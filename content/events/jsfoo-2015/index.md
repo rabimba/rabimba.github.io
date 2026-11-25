@@ -51,7 +51,7 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=UDiLJjNLb10
 - name: Event
-  url: https://jsfoo.talkfunnel.com/2015/
+  url: https://web.archive.org/web/20170205150414/https://jsfoo.talkfunnel.com/2015/
 ---
 
 

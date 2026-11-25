@@ -30,9 +30,9 @@ tags:
 featured: true
 links:
   - name: Location Intel Slides
-    url: https://rabimba.github.io/GDE-ML-Artifacts/Location-Intelligence-ADK-MCP-Workshop/index.html
+    url: https://rabimba.fyi/GDE-ML-Artifacts/Location-Intelligence-ADK-MCP-Workshop/index.html
   - name: Command & Control Slides
-    url: https://rabimba.github.io/GDE-ML-Artifacts/Command-and-Control-Gemini-MCP-Workshop/index.html
+    url: https://rabimba.fyi/GDE-ML-Artifacts/Command-and-Control-Gemini-MCP-Workshop/index.html
   - name: Location Intel Codelab
     url: https://codelabs.developers.google.com/adk-mcp-bigquery-maps
   - name: Command & Control Codelab
@@ -51,7 +51,7 @@ At **LA Tech Week 2026**, Google for Startups and Google for Developers hosted h
 
 ### Workshop 1: Location Intelligence ADK Agent with MCP Servers
 
-- **Interactive Presentation & Teleprompter**: [Location Intelligence Deck](https://rabimba.github.io/GDE-ML-Artifacts/Location-Intelligence-ADK-MCP-Workshop/index.html)
+- **Interactive Presentation & Teleprompter**: [Location Intelligence Deck](https://rabimba.fyi/GDE-ML-Artifacts/Location-Intelligence-ADK-MCP-Workshop/index.html)
 - **Official Google Codelab**: [`adk-mcp-bigquery-maps`](https://codelabs.developers.google.com/adk-mcp-bigquery-maps)
 - **Core Technologies**: Google Agent Development Kit (ADK), BigQuery Geospatial Data, Google Maps Grounding Lite MCP, Gemini 2.5 Flash
 
@@ -65,7 +65,7 @@ At **LA Tech Week 2026**, Google for Startups and Google for Developers hosted h
 
 ### Workshop 2: Command & Control: Gemini, MCP & Agentic CLI
 
-- **Interactive Presentation & Teleprompter**: [Command & Control Deck](https://rabimba.github.io/GDE-ML-Artifacts/Command-and-Control-Gemini-MCP-Workshop/index.html)
+- **Interactive Presentation & Teleprompter**: [Command & Control Deck](https://rabimba.fyi/GDE-ML-Artifacts/Command-and-Control-Gemini-MCP-Workshop/index.html)
 - **Official Google Codelab**: [`gemini-mcp-agy`](https://codelabs.developers.google.com/gemini-mcp-agy)
 - **Core Technologies**: Antigravity CLI (`agy`), Developer Knowledge MCP, Agent Skills, Nano Banana 2 Image Gen, Google Cloud Run
 

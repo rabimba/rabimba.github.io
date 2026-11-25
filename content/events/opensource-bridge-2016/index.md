@@ -45,7 +45,7 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://www.osbridge.org/
+  url: https://web.archive.org/web/20200321013058/http://opensourcebridge.org/
 ---
 
 

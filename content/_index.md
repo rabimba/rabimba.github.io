@@ -184,7 +184,7 @@ sections:
         <div class="oss-card" role="listitem">
         <div class="oss-name"><a href="https://github.com/rabimba/webai-badge" target="_blank" rel="noopener">webai-badge</a></div>
         <div class="oss-desc">End-to-end browser studio and firmware modder for the Google WebAI Summit 2026 Espruino 4-Color ePaper Badge — bit-exact 2bpp BWYR codec and WebGPU LiteRT-LM/MediaPipe pipeline.</div>
-        <div class="oss-meta">JavaScript &middot; <a href="https://rabimba.github.io/webai-badge/" target="_blank" rel="noopener">Live studio</a></div>
+        <div class="oss-meta">JavaScript &middot; <a href="https://rabimba.fyi/webai-badge/" target="_blank" rel="noopener">Live studio</a></div>
         </div>
         <div class="oss-card" role="listitem">
         <div class="oss-name"><a href="https://github.com/rabimba/Prism" target="_blank" rel="noopener">Prism</a></div>
@@ -244,7 +244,7 @@ sections:
       title: 'Google Developer Expert & Community'
       subtitle: 'Giving back to the developer community'
       text: |-
-        - **Google Developer Expert** in AI/ML & Cloud (previously Chrome & Web, 2018&ndash;2024) &mdash; [directory profile](https://developers.google.com/community/experts/directory?specialization=ml%2Cgcp&text=rabimba)
+        - **Google Developer Expert** in AI/ML & Cloud (previously Chrome & Web, 2018&ndash;2024) &mdash; [directory profile](https://me.developers.google.com/communities/experts?specialization=ml%2Cgcp&text=rabimba)
         - **Co-author** of Google's official [Building Trustable AI at 100 MPH](https://codelabs.developers.google.com/codelabs/trustable-at-100-mph) codelab with a global GDE cohort
         - **Workshop Instructor** at **LA Tech Week 2026** (Google for Developers & Google for Startups) alongside Kiruthika Subramani, delivering hands-on codelabs on [Location Intelligence ADK Agents with MCP](https://codelabs.developers.google.com/adk-mcp-bigquery-maps) and [Command & Control with Gemini & Antigravity](https://codelabs.developers.google.com/gemini-mcp-agy)
         - **Invited speaker** at Google I/O Field Tests (Sonoma Raceway 2026), OpenXLA DevLab Summer 2026, and the GDE Summit at Google I/O 2025

@@ -45,7 +45,7 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://libreplanet.org/
+  url: https://web.archive.org/web/20261020215132/https://libreplanet.org/2017/
 ---
 
 

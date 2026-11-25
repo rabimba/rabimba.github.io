@@ -45,7 +45,7 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://meta.wikimedia.org/wiki/WikiConference_USA_2014
+  url: https://meta.wikimedia.org/wiki/WikiConference_USA/2014
 ---
 
 

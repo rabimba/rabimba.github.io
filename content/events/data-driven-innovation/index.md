@@ -45,7 +45,7 @@ tags:
 featured: false
 links:
 - name: Event
-  url: https://2018.datadriveninnovation.org/it/speakers-2018/?id=4
+  url: https://web.archive.org/web/20220706200958/https://2018.datadriveninnovation.org/it/speakers-2018/?id=4
 ---
 
 

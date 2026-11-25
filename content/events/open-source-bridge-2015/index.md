@@ -47,7 +47,7 @@ links:
 - name: Video
   url: https://www.youtube.com/watch?v=UDiLJjNLb10
 - name: Event
-  url: https://www.osbridge.org/
+  url: https://web.archive.org/web/20200321013058/http://opensourcebridge.org/
 ---
 
 

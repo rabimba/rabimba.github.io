@@ -44,8 +44,8 @@ tags:
 - '2017'
 featured: false
 links:
-- name: Event
-  url: https://developer.chrome.com/devsummit/
+- name: Event (Recordings)
+  url: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBju4hD9ed1pt6YO20LgLWg
 ---
 
 
