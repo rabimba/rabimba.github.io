@@ -9,10 +9,10 @@ tags:
 - Blog
 links:
   - type: site
-    url: 'https://rkrants.blogspot.com/2026/04/Building a Multimodal Document Intelligence Pipeline with Gemma 4 E2B.html'
+    url: 'https://rkrants.blogspot.com/2026/04/Building%20a%20Multimodal%20Document%20Intelligence%20Pipeline%20with%20Gemma%204%20E2B.html'
 type: blog
 ---
 
 
 
-[Read full post →](https://rkrants.blogspot.com/2026/04/Building a Multimodal Document Intelligence Pipeline with Gemma 4 E2B.html)
+[Read full post →](https://rkrants.blogspot.com/2026/04/Building%20a%20Multimodal%20Document%20Intelligence%20Pipeline%20with%20Gemma%204%20E2B.html)
