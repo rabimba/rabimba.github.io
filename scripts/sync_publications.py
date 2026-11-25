@@ -436,20 +436,35 @@ def gen_page(w, slug):
     links_yaml = ""
     if links:
         links_yaml = "links:\n" + "".join(f"- name: {n}\n  url: {u}\n" for n, u in links)
+    ax = work_arxiv_id(w)
     bibkey = re.sub(r"[^a-z]", "", (authors[0].split()[-1] if authors else "work")).lower() + w["date"][:4]
     bibtype = "article" if ptype == "2" else ("misc" if ptype == "3" else "inproceedings")
-    bib = (f"@{bibtype}{{{bibkey},\n  title={{ {w['title']} }},\n"
-           f"  author={{ { ' and '.join(authors) } }},\n"
-           + (f"  booktitle={{ {venue} }},\n" if bibtype == "inproceedings" else (f"  journal={{ {venue} }},\n" if ptype == '2' else f"  howpublished={{ {venue} }},\n"))
-           + f"  year={{ {w['date'][:4]} }}\n}}")
+    bib_fields = [
+        f"  title={{ {w['title']} }}",
+        f"  author={{ { ' and '.join(authors) } }}",
+    ]
+    if bibtype == "inproceedings":
+        bib_fields.append(f"  booktitle={{ {venue} }}")
+    elif ptype == "2":
+        bib_fields.append(f"  journal={{ {venue} }}")
+    else:
+        bib_fields.append(f"  howpublished={{ {venue} }}")
+    bib_fields.append(f"  year={{ {w['date'][:4]} }}")
+    if w.get("doi"):
+        bib_fields.append(f"  doi={{ {w['doi']} }}")
+    if ax:
+        bib_fields.append(f"  eprint={{ {ax} }}")
+        bib_fields.append("  archivePrefix={{arXiv}}")
+    bib = f"@{bibtype}{{{bibkey},\n" + ",\n".join(bib_fields) + "\n}"
     abstract = (w["abstract"] or "Added automatically from publication feeds — see links for details.").replace('"', "'")
     abstract = re.sub(r"\s+", " ", abstract).strip()
+    fm_doi = w.get("doi") or ""
     fm = (
         "---\n"
         f"title: '{w['title'].replace(chr(39), chr(39)*2)}'\n"
         "authors:\n" + "".join(f"- {a}\n" for a in authors) +
         f"date: '{ymd}T00:00:00Z'\n"
-        "doi: ''\n"
+        f"doi: '{fm_doi}'\n"
         f"publishDate: '{ymd}T00:00:00Z'\n"
         "publication_types:\n"
         f"- '{ptype}'\n"

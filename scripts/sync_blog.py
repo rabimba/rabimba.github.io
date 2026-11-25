@@ -19,7 +19,7 @@ import xml.etree.ElementTree as ET
 
 import requests
 
-BLOG_FEED_URL = "https://rkrants.blogspot.com/feeds/posts/default?max-results=50"
+BLOG_FEED_URL = "https://www.blogger.com/feeds/3488546968680955600/posts/default?max-results=50"
 BLOG_DIR = os.path.join(os.path.dirname(__file__), "..", "content", "blog")
 HEADERS = {"User-Agent": "rabimba-site-blog-sync/1.0 (mailto:contact@rabimba.me)"}
 INSECURE = False
@@ -113,7 +113,7 @@ def fetch_blogger_feed():
         title_el = entry.find("atom:title", ns)
         pub_el = entry.find("atom:published", ns)
         content_el = entry.find("atom:content", ns)
-        title = " ".join((title_el.text if title_el is not None and title_el.text else "").split())
+        title = html.unescape(" ".join((title_el.text if title_el is not None and title_el.text else "").split()))
         if not title:
             continue
         published = (pub_el.text if pub_el is not None and pub_el.text else "2026-01-01")[:10]
@@ -152,7 +152,7 @@ def existing_blog_index():
         tm = re.search(r"^title:\s*['\"]?(.+?)['\"]?\s*$", txt, re.M)
         if tm:
             by_norm_title[norm_title(tm.group(1))] = f
-        for um in re.findall(r"https?://(?:rkrants\.blogspot\.com|blog\.rabimba\.com)/[^\s'\"]+", txt):
+        for um in re.findall(r"https?://(?:rkrants\.blogspot\.com|blog\.rabimba\.com|blog\.rabimba\.fyi)/[^\s'\"]+", txt):
             path_part = re.sub(r"^https?://[^/]+", "", um.rstrip("/"))
             by_url[path_part] = f
     return by_url, by_norm_title
