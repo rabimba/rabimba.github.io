@@ -1,5 +1,6 @@
 ---
-title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval and Fusion of Synthesized Profiles'
+title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval and
+  Fusion of Synthesized Profiles'
 authors:
 - Rabimba Karanjai
 - Yang Lu
@@ -12,7 +13,8 @@ publication_types:
 - '3'
 publication: EMNLP 2026 (Under Review)
 publication_short: EMNLP 2026 (Under Review)
-abstract: 'Preprint: A retrieval-augmented persona generation architecture that conditions frozen models dynamically.'
+abstract: 'Preprint: A retrieval-augmented persona generation architecture that conditions
+  frozen models dynamically.'
 tags:
 - LLMs
 - Persona Tuning
@@ -21,6 +23,10 @@ featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Profiler%3A%20Per-Question%20Persona%20Conditioning%20of%20Frozen%20LLMs%20via%20Retrieval%20and%20Fusion%20of%20Synthesized%20Profiles
+bibtex: "@misc{karanjai2026,\n  title={Profiler: Per-Question Persona Conditioning\
+  \ of Frozen LLMs via Retrieval and Fusion of Synthesized Profiles},\n  author={Karanjai,\
+  \ Rabimba and Lu, Yang and Xu, Lei and Shi, Weidong},\n  howpublished={EMNLP 2026\
+  \ (Under Review)},\n  year={2026}\n}"
 ---
 
 

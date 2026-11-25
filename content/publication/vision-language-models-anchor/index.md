@@ -13,7 +13,8 @@ publication_types:
 - '3'
 publication: NeurIPS 2026 (Under Review)
 publication_short: NeurIPS 2026 (Under Review)
-abstract: 'Preprint: Aligning visual tokens with semantic text anchors to enhance multi-modal reasoning capabilities.'
+abstract: 'Preprint: Aligning visual tokens with semantic text anchors to enhance
+  multi-modal reasoning capabilities.'
 tags:
 - Computer Vision
 - Multi-Modal
@@ -22,6 +23,10 @@ featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Aligning%20Vision%20Language%20Models%20via%20anchor
+bibtex: "@misc{yang2026,\n  title={Aligning Vision Language Models via anchor},\n\
+  \  author={Yang, Yilin and Wang, Yuke and Karanjai, Rabimba and Shi, Weidong and\
+  \ Zhang, Chengming},\n  howpublished={NeurIPS 2026 (Under Review)},\n  year={2026}\n\
+  }"
 ---
 
 

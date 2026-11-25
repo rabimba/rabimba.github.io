@@ -34,5 +34,8 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/pdf/2306.07984
-bibtex: "@misc{tran2023bribery,\n  title={Cross Chain Bribery Contracts: Majority vs Mighty Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2306.07984},\n  year={2023}\n}"
+bibtex: "@misc{tran2023,\n  title={Cross Chain Bribery Contracts: Majority vs Mighty\
+  \ Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and Lu, Yang\
+  \ and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2306.07984},\n\
+  \  year={2023},\n  eprint={2306.07984},\n  archivePrefix={arXiv}\n}"
 ---

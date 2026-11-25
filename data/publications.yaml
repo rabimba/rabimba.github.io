@@ -1,3 +1,94 @@
+- slug: reasoning-in-fewer-tokens-concept-normalized-multilingual-sc
+  title: 'Reasoning in Fewer Tokens: Concept-Normalized Multilingual Scratchpads and
+    Reversible Model-Adaptive Reasoning Codes'
+  authors:
+  - Rabimba Karanjai
+  - Suryabhan Singh Hada
+  - Hemanth Hegadehalli Madhavarao
+  - Qun Gu
+  - Libin N. George
+  - Wenhuan Sun
+  - Neha Monga
+  - Richard Williamson
+  - Prakhar Mehrotra
+  date: '2026-11-20T00:00:00Z'
+  doi: 10.48550/arxiv.2611.27326
+  publishDate: '2026-11-20T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: arXiv
+  publication_short: arXiv
+  abstract: Chain-of-thought prompting significantly improves the reasoning capabilities
+    of large language models (LLMs) but incurs high inference costs due to lengthy
+    autoregressive decoding. While previous efficiency approaches reduce costs by
+    discarding tokens or utilizing continuous latent representations, these lossy
+    methods fundamentally sacrifice interpretability and auditability. In this work,
+    we introduce a novel compression framework for intermediate reasoning. We apply
+    Byte-Pair Encoding (BPE) to reasoning corpora to learn a compressed vocabulary
+    of Private Use Area (PUA) tokens, each representing frequent semantic spans. After
+    expanding the LLM's vocabulary, we fine-tune the model via strictly 1:1, our method
+    is lossless. We evaluate our approach on Llama-3.1-8B, Qwen2.5-14B, and Qwen2.5-32B
+    across four diverse benchmarks. Our method reduces total generated tokens by 14.7%
+    on average wit
+  tags:
+  - First Author
+  featured: false
+  draft: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.48550/arxiv.2611.27326
+  - name: arXiv
+    url: https://arxiv.org/pdf/2611.27326
+  bibtex: "@misc{karanjai2026,\n  title={Reasoning in Fewer Tokens: Concept-Normalized\
+    \ Multilingual Scratchpads and Reversible Model-Adaptive Reasoning Codes},\n \
+    \ author={Karanjai, Rabimba and Hada, Suryabhan Singh and Madhavarao, Hemanth\
+    \ Hegadehalli and Gu, Qun and George, Libin N. and Sun, Wenhuan and Monga, Neha\
+    \ and Williamson, Richard and Mehrotra, Prakhar},\n  howpublished={arXiv},\n \
+    \ year={2026},\n  eprint={2611.27326},\n  archivePrefix={arXiv}\n}"
+- slug: one-schedule-does-not-fit-all-adaptive-inference-schedules-f
+  title: 'One Schedule Does Not Fit All: Adaptive Inference Schedules for Diffusion
+    Language Models'
+  authors:
+  - Rabimba Karanjai
+  - Linsey Pang
+  - Hemanth Hegadehalli Madhavarao
+  - Richard Williamson
+  - Uma Kona
+  - Prakhar Mehrotra
+  date: '2026-11-19T00:00:00Z'
+  doi: 10.48550/arXiv.2611.25895
+  publishDate: '2026-11-19T00:00:00Z'
+  publication_types:
+  - '3'
+  publication: arXiv preprint arXiv:2611.25895
+  publication_short: arXiv preprint arXiv:2611.25895
+  abstract: Diffusion language models typically use a fixed denoising schedule across
+    workloads. We show that the cheapest schedule that preserves quality depends on
+    the task, model, and sampler. We propose Task-Calibrated Denoising Allocation
+    (TCDA), a deployment rule with an explicit error guarantee. Given candidate samplers,
+    paired calibration data, a utility tolerance, and guardrails against degeneration,
+    TCDA uses simultaneous one-sided bootstrap bounds to certify which candidates
+    meet both the utility and guardrail criteria. It deploys the cheapest certified
+    candidate or falls back to the full schedule. The probability of deploying an
+    infeasible schedule is asymptotically at most alpha. Candidates include early
+    prefix decoding, state-reusing continuation, reduced time grids, and confidence-threshold
+    decoding. Across seven datasets and two model families, TCDA certifies reductions
+    in denoiser e
+  tags:
+  - LLMs
+  - First Author
+  featured: false
+  draft: false
+  links:
+  - name: DOI
+    url: https://doi.org/10.48550/arXiv.2611.25895
+  - name: arXiv
+    url: https://arxiv.org/pdf/2611.25895
+  bibtex: "@misc{karanjai2026,\n  title={One Schedule Does Not Fit All: Adaptive Inference\
+    \ Schedules for Diffusion Language Models},\n  author={Karanjai, Rabimba and Pang,\
+    \ Linsey and Madhavarao, Hemanth Hegadehalli and Williamson, Richard and Kona,\
+    \ Uma and Mehrotra, Prakhar},\n  howpublished={arXiv preprint arXiv:2611.25895},\n\
+    \  year={2026},\n  eprint={2611.25895},\n  archivePrefix={arXiv}\n}"
 - slug: transactqa
   title: 'TxnQA: Benchmarking Analytical Reasoning and Evidence Grounding over Transaction
     Event Sequences'
@@ -49,12 +140,13 @@
     url: https://arxiv.org/pdf/2610.27256
   - name: Scholar
     url: https://scholar.google.com/scholar?q=TxnQA%3A%20Benchmarking%20Analytical%20Reasoning%20and%20Evidence%20Grounding%20over%20Transaction%20Event%20Sequences
-  bibtex: "@misc{karanjai2026txnqa,\n  title={TxnQA: Benchmarking Analytical Reasoning\
-    \ and Evidence Grounding over Transaction Event Sequences},\n  author={Rabimba\
-    \ Karanjai and Yiming Bian and Yun-Shiuan Chuang and Jenna L. Ballard and Zijie\
-    \ Pan and Shivani Shekhar and Yixi Li and Yirou Ge and Avinash Thangali and Richard\
-    \ Williamson and Linsey Pang and Prakhar Mehrotra},\n  howpublished={arXiv preprint\
-    \ arXiv:2610.27256},\n  year={2026}\n}"
+  bibtex: "@misc{karanjai2026,\n  title={TxnQA: Benchmarking Analytical Reasoning\
+    \ and Evidence Grounding over Transaction Event Sequences},\n  author={Karanjai,\
+    \ Rabimba and Bian, Yiming and Chuang, Yun-Shiuan and Ballard, Jenna L. and Pan,\
+    \ Zijie and Shekhar, Shivani and Li, Yixi and Ge, Yirou and Thangali, Avinash\
+    \ and Williamson, Richard and Pang, Linsey and Mehrotra, Prakhar},\n  howpublished={AAAI\
+    \ 2027 (Under Review)},\n  year={2026},\n  eprint={2610.27256},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: cm-dpo-planning
   title: 'CM-DPO: Constraint-Margin Direct Preference Optimization for LLM Planning'
   authors:
@@ -99,143 +191,12 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2610.09219
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=CM-DPO%3A%20Constraint-Margin%20Direct%20Preference%20Optimization%20for%20LLM%20Planning
-- slug: unanimous-but-wrong-conformity
-  title: 'Unanimous but Wrong: Conformity in Multi-Agent LLM Audit Deliberation'
-  authors:
-  - Dana R Alsagheer
-  - Yang Lu
-  - Rabimba Karanjai
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: How conformity pressure in multi-agent LLM audit deliberation
-    produces unanimous but incorrect verdicts.'
-  tags:
-  - Agents
-  - Multi-Agent Systems
-  - LLM Evaluation
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Unanimous%20but%20Wrong%3A%20Conformity%20in%20Multi-Agent%20LLM%20Audit%20Deliberation
-- slug: outside-option-routing-auctions
-  title: 'Designing the Outside Option: Anchors, Mixed Equilibria, and Welfare in
-    LLM Routing Auctions'
-  authors:
-  - Xinyu Hou
-  - Yang Lu
-  - Rabimba Karanjai
-  - Pei-Chi Pan
-  - Sen Lin
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: Mechanism design for LLM routing auctions — outside options,
-    anchors, mixed equilibria, and welfare.'
-  tags:
-  - LLM Routing
-  - Mechanism Design
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Designing%20the%20Outside%20Option%3A%20Anchors%2C%20Mixed%20Equilibria%2C%20and%20Welfare%20in%20LLM%20Routing%20Auctions
-- slug: motivated-cot-llm-judges
-  title: Motivated Chain-of-Thought and Reduced Scrutiny in LLM Judges
-  authors:
-  - Yang Lu
-  - Rabimba Karanjai
-  - Dana R Alsagheer
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: Motivated reasoning in LLM judges — how chain-of-thought can
-    reduce scrutiny and bias evaluations.'
-  tags:
-  - LLM Evaluation
-  - Reasoning
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Motivated%20Chain-of-Thought%20and%20Reduced%20Scrutiny%20in%20LLM%20Judges
-- slug: cojo-rag
-  title: 'CoJo-RAG: Conformalized Joint Co-Optimization of Retrieval and Fine-Tuning'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Linsey Pang
-  - Richard Williamson
-  - Hemanth Hegadehalli Madhavarao
-  - Prakhar Mehrotra
-  - Weidong Shi
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: Conformalized joint co-optimization of retrieval and fine-tuning
-    for retrieval-augmented generation.'
-  tags:
-  - RAG
-  - First Author
-  - Conformal Prediction
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=CoJo-RAG%3A%20Conformalized%20Joint%20Co-Optimization%20of%20Retrieval%20and%20Fine-Tuning
-- slug: picture-thousand-tokens
-  title: 'A Picture is Worth a Thousand Tokens: Lossless Multilingual Context Compression
-    via Pictorial Intermediate Representations'
-  authors:
-  - Rabimba Karanjai
-  - Suryabhan Singh Hada
-  - Hemanth Hegadehalli Madhavarao
-  - Libin N. George
-  - Qun Gu
-  - Wenhuan Sun
-  - Neha Monga
-  - Xiaojiao Yu
-  - Richard Williamson
-  - Prakhar Mehrotra
-  date: '2026-10-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-10-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: AAAI 2027 (Under Review)
-  publication_short: AAAI 2027 (Under Review)
-  abstract: 'Preprint: Lossless multilingual context compression through pictorial
-    intermediate representations.'
-  tags:
-  - Context Compression
-  - Multilingual
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=A%20Picture%20is%20Worth%20a%20Thousand%20Tokens%3A%20Lossless%20Multilingual%20Context%20Compression%20via%20Pictorial%20Intermediate%20Representations
+  bibtex: "@misc{karanjai2026,\n  title={CM-DPO: Constraint-Margin Direct Preference\
+    \ Optimization for LLM Planning},\n  author={Karanjai, Rabimba and Gu, Qun and\
+    \ Madhavarao, Hemanth Hegadehalli and Sun, Wenhuan and Yu, Xiaojiao and Hada,\
+    \ Suryabhan Singh and George, Libin N. and Kona, Uma and Williamson, Richard and\
+    \ Pang, Linsey and Mehrotra, Prakhar},\n  howpublished={NeurIPS 2026 (Under Review)},\n\
+    \  year={2026},\n  eprint={2610.09219},\n  archivePrefix={arXiv}\n}"
 - slug: specialists-hold-routing
   title: 'Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing
     Auctions'
@@ -289,11 +250,11 @@
     url: https://openreview.net/forum?id=Dz9fIFWFd9
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Specialists%20Hold%2C%20Generalists%20Discount%3A%20Asymmetric%20Equilibrium%20in%20LLM%20Routing%20Auctions
-  bibtex: "@inproceedings{anonymous2026specialists,\n  title={Specialists Hold, Generalists\
-    \ Discount: Asymmetric Equilibrium in {LLM} Routing Auctions},\n  author={Anonymous},\n\
-    \  booktitle={The Fortieth Annual Conference on Neural Information Processing\
-    \ Systems},\n  year={2026},\n  url={https://openreview.net/forum?id=Dz9fIFWFd9}\n\
-    }"
+  bibtex: "@inproceedings{hou2026,\n  title={Specialists Hold, Generalists Discount:\
+    \ Asymmetric Equilibrium in LLM Routing Auctions},\n  author={Hou, Xinyu and Lu,\
+    \ Yang and Karanjai, Rabimba and Pan, Pei-Chi and Lin, Sen and Xu, Lei and Shi,\
+    \ Weidong},\n  booktitle={The Fortieth Annual Conference on Neural Information\
+    \ Processing Systems (NeurIPS 2026)},\n  year={2026}\n}"
 - slug: reachability-capability-confinement
   title: Reachability-Based Capability Confinement for LLM Agents under Indirect Prompt
     Injection
@@ -338,10 +299,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2608.30041
-  bibtex: "@article{xiong2026reachability,\n  title={Reachability-Based Capability\
-    \ Confinement for LLM Agents under Indirect Prompt Injection},\n  author={Xiong,\
-    \ Wujie and Karanjai, Rabimba and Lu, Yang and Shi, Weidong and Xu, Lei},\n  journal={arXiv\
-    \ preprint arXiv:2608.30041},\n  year={2026}\n}"
+  bibtex: "@misc{xiong2026,\n  title={Reachability-Based Capability Confinement for\
+    \ LLM Agents under Indirect Prompt Injection},\n  author={Xiong, Wujie and Karanjai,\
+    \ Rabimba and Lu, Yang and Shi, Weidong and Xu, Lei},\n  howpublished={arXiv preprint\
+    \ arXiv:2608.30041},\n  year={2026},\n  eprint={2608.30041},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: agents-web3-attack-surface
   title: 'When Agents Act on Web3: An Attack-Surface Survey of MCP, Skills, and Tool
     Calling'
@@ -384,10 +346,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2608.17275
-  bibtex: "@misc{karanjai2026agents,\n  title={When Agents Act on Web3: An Attack-Surface\
+  bibtex: "@inproceedings{karanjai2026,\n  title={When Agents Act on Web3: An Attack-Surface\
     \ Survey of MCP, Skills, and Tool Calling},\n  author={Karanjai, Rabimba and Lu,\
-    \ Yang and Diallo, Nour and Xiong, Wujie and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv\
-    \ preprint arXiv:2608.17275},\n  year={2026}\n}"
+    \ Yang and Diallo, Nour and Xiong, Wujie and Xu, Lei and Shi, Weidong},\n  booktitle={BRAINS\
+    \ 2026 (To appear)},\n  year={2026},\n  eprint={2608.17275},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: pace-policy-attested-contract-execution
   title: 'PACE: Policy-Attested Contract Execution for Safe AI Agents in Decentralized
     Finance'
@@ -431,11 +394,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2608.17220
-  bibtex: "@misc{karanjai2026pace,\n  title={PACE: Policy-Attested Contract Execution\
+  bibtex: "@inproceedings{karanjai2026,\n  title={PACE: Policy-Attested Contract Execution\
     \ for Safe AI Agents in Decentralized Finance},\n  author={Karanjai, Rabimba and\
     \ Lu, Yang and Williamson, Richard and Hm, Hemanth and Mehrotra, Prakhar and Xu,\
-    \ Lei and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2608.17220},\n\
-    \  year={2026}\n}"
+    \ Lei and Shi, Weidong},\n  booktitle={BRAINS 2026 (To appear)},\n  year={2026},\n\
+    \  eprint={2608.17220},\n  archivePrefix={arXiv}\n}"
 - slug: allocation-before-ranking
   title: 'Allocation Before Ranking: Decoupled Token Compression for OmniLLMs'
   authors:
@@ -474,8 +437,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2608.01665
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Allocation%20Before%20Ranking%3A%20Decoupled%20Token%20Compression%20for%20OmniLLMs
+  bibtex: "@misc{guo2026,\n  title={Allocation Before Ranking: Decoupled Token Compression\
+    \ for OmniLLMs},\n  author={Guo, Zhenghui and Yang, Yilin and Man, Yuanbin and\
+    \ Yin, Miao and Shi, Weidong and Karanjai, Rabimba and Gnawali, Omprakash and\
+    \ Zhang, Chengming},\n  howpublished={NeurIPS 2026 (Under Review)},\n  year={2026},\n\
+    \  eprint={2608.01665},\n  archivePrefix={arXiv}\n}"
 - slug: context-contamination-logs
   title: 'Context Contamination in LLM Analysis of Network Security Logs: Poison with
     Passive Prompt Injection and Mitigation Evaluation'
@@ -486,7 +452,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2026-08-01T00:00:00Z'
-  doi: ''
+  doi: 10.5281/zenodo.20436934
   publishDate: '2026-08-01T00:00:00Z'
   citations: 1
   publication_types:
@@ -519,7 +485,7 @@
   - name: Video
     url: https://youtu.be/CAzYXdkKnBM
   - name: Project Page
-    url: https://rabimba.github.io/context-contamination-usenix26/
+    url: https://rabimba.fyi/context-contamination-usenix26/
   - name: USENIX
     url: https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai
   - name: PDF
@@ -527,16 +493,15 @@
   - name: arXiv
     url: https://arxiv.org/pdf/2607.14493
   - name: Artifacts
-    url: https://doi.org/10.5281/zenodo.20436935
+    url: https://doi.org/10.5281/zenodo.20436934
   - name: Scholar
     url: https://scholar.google.com/scholar?q=Context%20Contamination%20in%20LLM%20Analysis%20of%20Network%20Security%20Logs%3A%20Poison%20with%20Passive%20Prompt%20Injection%20and%20Mitigation%20Evaluation
-  bibtex: "@inproceedings{320609,\n  author = {Rabimba Karanjai and Yang Lu and Hemanth\
-    \ Hegadehalli Madhavarao and Lei Xu and Weidong Shi},\n  title = {Context Contamination\
-    \ in {LLM} Analysis of Network Security Logs: Poison with Passive Prompt Injection\
-    \ and Mitigation Evaluation},\n  booktitle = {35th USENIX Security Symposium (USENIX\
-    \ Security 26)},\n  year = {2026},\n  isbn = {978-1-939133-58-8},\n  address =\
-    \ {Baltimore, MD},\n  pages = {1507--1526},\n  url = {https://www.usenix.org/conference/usenixsecurity26/presentation/karanjai},\n\
-    \  publisher = {USENIX Association},\n  month = aug\n}"
+  bibtex: "@inproceedings{karanjai2026,\n  title={Context Contamination in LLM Analysis\
+    \ of Network Security Logs: Poison with Passive Prompt Injection and Mitigation\
+    \ Evaluation},\n  author={Karanjai, Rabimba and Lu, Yang and Madhavarao, Hemanth\
+    \ Hegadehalli and Xu, Lei and Shi, Weidong},\n  booktitle={35th USENIX Security\
+    \ Symposium (USENIX Security 2026)},\n  year={2026},\n  doi={10.5281/zenodo.20436934},\n\
+    \  eprint={2607.14493},\n  archivePrefix={arXiv}\n}"
 - slug: i-bridge-access-adjusted-benchmarking-of-synthetic-ai-assist
   title: 'I-BRIDGE: Access-Adjusted Benchmarking of Synthetic AI-Assisted Immigration
     Decision Systems for Inclusive E-Governance'
@@ -548,7 +513,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2026-07-08T00:00:00Z'
-  doi: ''
+  doi: 10.1109/icedeg70169.2026.11695570
   publishDate: '2026-07-08T00:00:00Z'
   publication_types:
   - '1'
@@ -567,11 +532,11 @@
   links:
   - name: DOI
     url: https://doi.org/10.1109/icedeg70169.2026.11695570
-  bibtex: "@inproceedings{lu2026ibridge,\n  title={I-BRIDGE: Access-Adjusted Benchmarking\
+  bibtex: "@inproceedings{lu2026,\n  title={I-BRIDGE: Access-Adjusted Benchmarking\
     \ of Synthetic AI-Assisted Immigration Decision Systems for Inclusive E-Governance},\n\
-    \  author={Yang Lu and Rabimba Karanjai and Nour Diallo and Dana Alsagheer and\
-    \ Lei Xu and Weidong Shi},\n  booktitle={2026 Twelfth International Conference\
-    \ on eDemocracy & eGovernment (ICEDEG)},\n  year={2026}\n}"
+    \  author={Lu, Yang and Karanjai, Rabimba and Diallo, Nour and Alsagheer, Dana\
+    \ and Xu, Lei and Shi, Weidong},\n  booktitle={ICEDEG 2026},\n  year={2026},\n\
+    \  doi={10.1109/icedeg70169.2026.11695570}\n}"
 - slug: empowering-smart-contracts-ai
   title: Empowering Smart Contracts with Real-time On-Chain AI Inferences
   authors:
@@ -580,14 +545,26 @@
   - Lei Xu
   - Weidong (Larry) Shi
   date: '2026-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/icbc67748.2026.11575548
   publishDate: '2026-05-01T00:00:00Z'
   publication_types:
   - '1'
   publication: IEEE ICBC 2026
   publication_short: IEEE ICBC 2026
-  abstract: 'Short Paper: We detail low-latency inference pipelines that check and
-    execute simple models on-chain.'
+  abstract: In this era, significant transformations in industries and tool utilization
+    are driven by Generative AI (GenAI) and advancements in Machine Learning. There
+    is a growing emphasis on Machine Learning Operations (MLOps) for managing and
+    deploying these AI models to constantly expand the list of GenAI use cases. Concurrently,
+    the imperative for richer smart contracts and onchain computations is escalating.
+    Our paper introduces an innovative framework that integrates blockchain technology,
+    particularly the Cosmos SDK, to facilitate on-chain GenAI inferences in smart
+    contracts. This system, built on Cosmos SDK, Ethermint, and ONNX runtime, enables
+    the deployment of AI models for executing AI inferences across multiple blockchain
+    nodes. We critically assess the feasibility and performance of the framework,
+    with a special focus on its portability and engine-model agnostic deployment.
+    The capability to support GenAI on-chain may enhance and expand the scope of smart
+    contracts, in particular, data-driven DeFi, and as a result, enable the development
+    of new use cases and applications in the coming years.
   tags:
   - Smart Contracts
   - AI Inference
@@ -596,11 +573,10 @@
   links:
   - name: DOI
     url: https://ieeexplore.ieee.org/document/11575548
-  bibtex: "@INPROCEEDINGS{11575548,\n  author={Karanjai, Rabimba and Lu, Yang and\
-    \ Xu, Lei and Shi, Weidong},\n  booktitle={2026 IEEE International Conference\
-    \ on Blockchain and Cryptocurrency (ICBC)},\n  title={Empowering Smart Contracts\
-    \ with Real-time On-Chain AI Inferences},\n  year={2026},\n  pages={1-3},\n  doi={10.1109/ICBC67748.2026.11575548}\n\
-    }"
+  bibtex: "@inproceedings{karanjai2026,\n  title={Empowering Smart Contracts with\
+    \ Real-time On-Chain AI Inferences},\n  author={Karanjai, Rabimba and Lu, Yang\
+    \ and Xu, Lei and Shi, Weidong (Larry)},\n  booktitle={IEEE ICBC 2026},\n  year={2026},\n\
+    \  doi={10.1109/icbc67748.2026.11575548}\n}"
 - slug: rethinking-publication
   title: 'Rethinking Publication: A Certification Framework for AI-Enabled Research'
   authors:
@@ -632,12 +608,14 @@
   - Publication
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/rethinking-publication.pdf
   - name: arXiv
     url: https://arxiv.org/pdf/2604.22026
-  bibtex: "@article{lu2026rethinking,\n  title={Rethinking Publication: A Certification\
-    \ Framework for AI-Enabled Research},\n  author={Lu, Yang and Karanjai, Rabimba\
-    \ and Xu, Lei and Shi, Weidong},\n  journal={arXiv preprint arXiv:2604.22026},\n\
-    \  year={2026}\n}"
+  bibtex: "@misc{lu2026,\n  title={Rethinking Publication: A Certification Framework\
+    \ for AI-Enabled Research},\n  author={Lu, Yang and Karanjai, Rabimba and Xu,\
+    \ Lei and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2604.22026},\n\
+    \  year={2026},\n  eprint={2604.22026},\n  archivePrefix={arXiv}\n}"
 - slug: qucowe
   title: 'QuCoWE: Quantum Contrastive Word Embeddings with Variational Circuits for
     Near-Term Quantum Devices'
@@ -647,7 +625,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2026-02-01T00:00:00Z'
-  doi: ''
+  doi: 10.1007/978-3-032-17625-7_6
   publishDate: '2026-02-01T00:00:00Z'
   citations: 1
   publication_types:
@@ -673,15 +651,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/qucowe.pdf
   - name: DOI
     url: https://link.springer.com/chapter/10.1007/978-3-032-17625-7_6
   - name: arXiv
     url: https://arxiv.org/pdf/2511.10179
-  bibtex: "@inproceedings{karanjai2026qucowe,\n  title={QuCoWE: Quantum Contrastive\
-    \ Word Embeddings with Variational Circuits for Near-Term Quantum Devices},\n\
-    \  author={Karanjai, Rabimba and Madhavarao, Hemanth Hegadehalli and Xu, Lei and\
-    \ Shi, Weidong},\n  booktitle={International Workshop on Quantum Computing and\
-    \ Artificial Intelligence},\n  pages={83--100},\n  year={2026},\n  organization={Springer}\n\
+  bibtex: "@inproceedings{karanjai2026,\n  title={QuCoWE: Quantum Contrastive Word\
+    \ Embeddings with Variational Circuits for Near-Term Quantum Devices},\n  author={Karanjai,\
+    \ Rabimba and Madhavarao, Hemanth and Xu, Lei and Shi, Weidong},\n  booktitle={International\
+    \ Workshop on Quantum Computing and Artificial Intelligence},\n  year={2026},\n\
+    \  doi={10.1007/978-3-032-17625-7_6},\n  eprint={2511.10179},\n  archivePrefix={arXiv}\n\
     }"
 - slug: causalgraphx
   title: 'CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable
@@ -724,8 +704,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2607.14416
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=CausalGraphX%3A%20A%20Counterfactual%20Graph%20Neural%20Network%20Framework%20for%20Explainable%20Systemic%20Risk%20Assessment
+  bibtex: "@inproceedings{karanjai2026,\n  title={CausalGraphX: A Counterfactual Graph\
+    \ Neural Network Framework for Explainable Systemic Risk Assessment},\n  author={Karanjai,\
+    \ Rabimba and Madhavarao, Hemanth Hegadehalli and Xu, Lei and Shi, Weidong},\n\
+    \  booktitle={AAAI 2026 (AI4Finance)},\n  year={2026},\n  eprint={2607.14416},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: zkransomware
   title: 'zkRansomware: Proof-of-Data Recoverability and Multi-round Game Theoretic
     Modeling of Ransomware Decisions'
@@ -764,185 +747,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2601.06667
-  bibtex: "@misc{hou2026zkransomware,\n  title={zkRansomware: Proof-of-Data Recoverability\
-    \ and Multi-round Game Theoretic Modeling of Ransomware Decisions},\n  author={Hou,\
+  bibtex: "@misc{hou2026,\n  title={zkRansomware: Proof-of-Data Recoverability and\
+    \ Multi-round Game Theoretic Modeling of Ransomware Decisions},\n  author={Hou,\
     \ Xinyu and Lu, Yang and Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv\
-    \ preprint arXiv:2601.06667},\n  year={2026}\n}"
-- slug: closing-cost-gap-rl
-  title: 'Closing the Cost Gap in Verifier-Guided RL: A Smart Contract Case Study'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: Reinforcement learning structures utilizing formal verification
-    constraints as runtime guides to secure code compilation.'
-  tags:
-  - LLMs
-  - Reinforcement Learning
-  - Formal Verification
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Closing%20the%20Cost%20Gap%20in%20Verifier-Guided%20RL%3A%20A%20Smart%20Contract%20Case%20Study
-- slug: rules-that-govern
-  title: 'Rules That Govern: A Per-Property Analysis of Multi-Agent LLM Deliberation'
-  authors:
-  - Yang Lu
-  - Rabimba Karanjai
-  - Dana Alsagheer
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: EMNLP 2026 (Under Review)
-  publication_short: EMNLP 2026 (Under Review)
-  abstract: 'Preprint: Detailed modeling of rules and policy properties that constrain
-    multi-agent discussion spaces.'
-  tags:
-  - Agents
-  - Multi-Agent Systems
-  - Policy
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Rules%20That%20Govern%3A%20A%20Per-Property%20Analysis%20of%20Multi-Agent%20LLM%20Deliberation
-- slug: vision-language-models-anchor
-  title: Aligning Vision Language Models via anchor
-  authors:
-  - Yilin Yang
-  - Yuke Wang
-  - Rabimba Karanjai
-  - Weidong Shi
-  - Chengming Zhang
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: Aligning visual tokens with semantic text anchors to enhance
-    multi-modal reasoning capabilities.'
-  tags:
-  - Computer Vision
-  - Multi-Modal
-  - AI Alignment
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Aligning%20Vision%20Language%20Models%20via%20anchor
-- slug: verifygen-x
-  title: 'VerifyGen-X: Secure Cross-Chain Smart Contract Generation via Scalable Reinforcement
-    Learning from Formal Verification Feedback'
-  authors:
-  - Rabimba Karanjai
-  - Lei Xu
-  - Yang Lu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: NeurIPS 2026 (Under Review)
-  publication_short: NeurIPS 2026 (Under Review)
-  abstract: 'Preprint: We use formal verification proofs in RL loops to ensure generated
-    cross-chain contracts are bug-free.'
-  tags:
-  - Blockchain
-  - Generative AI
-  - Formal Verification
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=VerifyGen-X%3A%20Secure%20Cross-Chain%20Smart%20Contract%20Generation%20via%20Scalable%20Reinforcement%20Learning%20from%20Formal%20Verification%20Feedback
-- slug: profiler-persona
-  title: 'Profiler: Per-Question Persona Conditioning of Frozen LLMs via Retrieval
-    and Fusion of Synthesized Profiles'
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: EMNLP 2026 (Under Review)
-  publication_short: EMNLP 2026 (Under Review)
-  abstract: 'Preprint: A retrieval-augmented persona generation architecture that
-    conditions frozen models dynamically.'
-  tags:
-  - LLMs
-  - Persona Tuning
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Profiler%3A%20Per-Question%20Persona%20Conditioning%20of%20Frozen%20LLMs%20via%20Retrieval%20and%20Fusion%20of%20Synthesized%20Profiles
-- slug: training-llms-decentralized
-  title: Hype or Hope? Training LLMs on Decentralized GPU Clouds
-  authors:
-  - Rabimba Karanjai
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: Middleware 2026 (Under Review)
-  publication_short: Middleware 2026 (Under Review)
-  abstract: 'Preprint: Benchmarking distributed deep learning pipelines across heterogeneous
-    networks, auditing latency and security overhead.'
-  tags:
-  - Decentralized Systems
-  - GPU Clouds
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Hype%20or%20Hope%3F%20Training%20LLMs%20on%20Decentralized%20GPU%20Clouds
-- slug: bridging-confidentiality-reliability
-  title: 'Bridging Confidentiality and Reliability: Open-Weight Agents for Legal Reasoning'
-  authors:
-  - Dana Alsagheer
-  - Yang Lu
-  - Lei Xu
-  - Weidong Shi
-  - Rabimba Karanjai
-  date: '2026-01-01T00:00:00Z'
-  doi: ''
-  publishDate: '2026-01-01T00:00:00Z'
-  publication_types:
-  - '3'
-  publication: ACM Symposium on Computer Science and Law 2026 (Under Review)
-  publication_short: ACM Symposium on Computer Science and Law 2026 (Under Review)
-  abstract: 'Preprint: Deploying open-weight local model instances to perform legal
-    brief review without leakage.'
-  tags:
-  - AI Governance
-  - Security
-  - Law
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Bridging%20Confidentiality%20and%20Reliability%3A%20Open-Weight%20Agents%20for%20Legal%20Reasoning
+    \ preprint arXiv:2601.06667},\n  year={2026},\n  eprint={2601.06667},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: unlocking-onchain-intelligence
   title: 'Unlocking On-Chain Intelligence: A Practical Framework for GenAI-Powered
     Smart Contracts'
@@ -952,7 +761,7 @@
   - Lei Xu
   - Weidong (Larry) Shi
   date: '2025-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/BRAINS67003.2025.11302909
   publishDate: '2025-11-01T00:00:00Z'
   publication_types:
   - '1'
@@ -977,6 +786,10 @@
   links:
   - name: DOI
     url: https://doi.org/10.1109/BRAINS67003.2025.11302909
+  bibtex: "@inproceedings{karanjai2025,\n  title={Unlocking On-Chain Intelligence:\
+    \ A Practical Framework for GenAI-Powered Smart Contracts},\n  author={Karanjai,\
+    \ Rabimba and Lu, Yang and Xu, Lei and Shi, Weidong (Larry)},\n  booktitle={BRAINS\
+    \ 2025},\n  year={2025},\n  doi={10.1109/BRAINS67003.2025.11302909}\n}"
 - slug: securing-multi-chain
   title: Securing Smart Contract Languages with a Unified Agentic Framework for Vulnerability
     Repair in Solidity and Move
@@ -985,7 +798,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2025-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/AIWARE69974.2025.00032
   publishDate: '2025-11-01T00:00:00Z'
   citations: 15
   publication_types:
@@ -1022,15 +835,17 @@
   featured: true
   distinguished: true
   links:
+  - name: PDF
+    url: /uploads/publications/securing-multi-chain.pdf
   - name: DOI
     url: https://doi.org/10.1109/AIWARE69974.2025.00032
   - name: arXiv
     url: https://arxiv.org/pdf/2502.18515
-  bibtex: "@inproceedings{karanjai2025securing,\n  title={Securing Smart Contract\
-    \ Languages with a Unified Agentic Framework for Vulnerability Repair in Solidity\
-    \ and Move},\n  author={Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  booktitle={2025\
-    \ 2nd IEEE/ACM International Conference on AI-powered Software (AIware)},\n  year={2025},\n\
-    \  organization={IEEE}\n}"
+  bibtex: "@inproceedings{karanjai2025,\n  title={Securing Smart Contract Languages\
+    \ with a Unified Agentic Framework for Vulnerability Repair in Solidity and Move},\n\
+    \  author={Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n  booktitle={ACM\
+    \ AIWare 2025},\n  year={2025},\n  doi={10.1109/AIWARE69974.2025.00032},\n  eprint={2502.18515},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: hpc-agent-tester
   title: 'HPCAgentTester: A Multi-Agent LLM Approach for Enhanced HPC Unit Test Generation'
   authors:
@@ -1038,7 +853,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2025-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/aiware69974.2025.00031
   publishDate: '2025-11-01T00:00:00Z'
   citations: 2
   publication_types:
@@ -1068,14 +883,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/hpc-agent-tester.pdf
   - name: DOI
     url: https://doi.org/10.1109/aiware69974.2025.00031
   - name: arXiv
     url: https://arxiv.org/pdf/2511.10860
-  bibtex: "@article{karanjai2025hpc-agen,\n  title={HPCAgentTester: A Multi-Agent\
-    \ LLM Approach for Enhanced HPC Unit Test Generation},\n  author={Rabimba Karanjai\
-    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2511.10860},\n\
-    \  year={2025}\n}"
+  bibtex: "@inproceedings{karanjai2025,\n  title={HPCAgentTester: A Multi-Agent LLM\
+    \ Approach for Enhanced HPC Unit Test Generation},\n  author={Karanjai, Rabimba\
+    \ and Xu, Lei and Shi, Weidong},\n  booktitle={ACM AIWare 2025},\n  year={2025},\n\
+    \  doi={10.1109/aiware69974.2025.00031},\n  eprint={2511.10860},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: evaluating-quality-randomness
   title: Evaluating the Quality of Randomness and Entropy in Tasks Supported by Large
     Language Models
@@ -1117,35 +935,15 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/evaluating-quality-randomness.pdf
   - name: arXiv
     url: https://arxiv.org/pdf/2510.12080
-  bibtex: "@article{karanjai2025evaluati,\n  title={Evaluating the Quality of Randomness\
-    \ and Entropy in Tasks Supported by Large Language Models},\n  author={Rabimba\
-    \ Karanjai and Yang Lu and Ranjith Chodavarapu and Lei Xu and Weidong Shi},\n\
-    \  journal={arXiv preprint arXiv:2510.12080},\n  year={2025}\n}"
-- slug: teaching-ais-reason-confidentially
-  title: Teaching AIs to Reason and Code, Confidentially
-  authors:
-  - Rabimba Karanjai
-  date: '2025-07-25T00:00:00Z'
-  doi: ''
-  publishDate: '2025-07-25T00:00:00Z'
-  publication_types:
-  - '7'
-  publication: PhD Thesis, University of Houston
-  publication_short: PhD Thesis, University of Houston
-  abstract: My doctoral dissertation addresses methods and frameworks for secure and
-    private code generation and reasoning in LLMs.
-  tags:
-  - PhD Thesis
-  - AI Reasoning
-  - First Author
-  - Security
-  - Confidentiality
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Teaching%20AIs%20to%20Reason%20and%20Code%2C%20Confidentially
+  bibtex: "@inproceedings{karanjai2025,\n  title={Evaluating the Quality of Randomness\
+    \ and Entropy in Tasks Supported by Large Language Models},\n  author={Karanjai,\
+    \ Rabimba and Lu, Yang and Chodavarapu, Ranjith and Xu, Lei and Shi, Weidong},\n\
+    \  booktitle={KDD - Agentic & GenAI Evaluation 2025},\n  year={2025},\n  eprint={2510.12080},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: general-reasoning-domain-expertise
   title: 'From General Reasoning to Domain Expertise: Uncovering the Limits of Generalization
     in Large Language Models'
@@ -1187,12 +985,12 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2506.21580
-  bibtex: "@misc{alsagheer2025general,\n  title={From General Reasoning to Domain\
-    \ Expertise: Uncovering the Limits of Generalization in Large Language Models},\n\
-    \  author={Alsagheer, Dana and Lu, Yang and Kamal, Abdulrahman and Kamal, Omar\
-    \ and Kamal, Mohammad and Mansour, Nada and Wu, Cosmo Yang and Karanjai, Rabimba\
-    \ and Li, Sen and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2506.21580},\n\
-    \  year={2025}\n}"
+  bibtex: "@misc{alsagheer2025,\n  title={From General Reasoning to Domain Expertise:\
+    \ Uncovering the Limits of Generalization in Large Language Models},\n  author={Alsagheer,\
+    \ Dana and Lu, Yang and Kamal, Abdulrahman and Kamal, Omar and Kamal, Mohammad\
+    \ and Mansour, Nada and Wu, Cosmo Yang and Karanjai, Rabimba and Li, Sen and Shi,\
+    \ Weidong},\n  howpublished={arXiv preprint arXiv:2506.21580},\n  year={2025},\n\
+    \  eprint={2506.21580},\n  archivePrefix={arXiv}\n}"
 - slug: collaboration-safe-code-translation
   title: 'Collaboration is all you need: LLM Assisted Safe Code Translation'
   authors:
@@ -1201,7 +999,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2025-06-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3696630.3728521
   publishDate: '2025-06-01T00:00:00Z'
   citations: 7
   publication_types:
@@ -1228,14 +1026,17 @@
   - Distinguished
   featured: true
   links:
+  - name: PDF
+    url: /uploads/publications/collaboration-safe-code-translation.pdf
   - name: DOI
     url: https://doi.org/10.1145/3696630.3728521
   - name: arXiv
     url: https://arxiv.org/pdf/2503.11237
-  bibtex: "@article{karanjai2025collabor,\n  title={Collaboration is all you need:\
-    \ LLM Assisted Safe Code Translation},\n  author={Rabimba Karanjai and Sam Blackshear\
-    \ and Lei Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2503.11237},\n\
-    \  year={2025}\n}"
+  bibtex: "@inproceedings{karanjai2025,\n  title={Collaboration is all you need: LLM\
+    \ Assisted Safe Code Translation},\n  author={Karanjai, Rabimba and Blackshear,\
+    \ Sam and Xu, Lei and Shi, Weidong},\n  booktitle={ACM Foundations of Software\
+    \ Engineering (FSE) 2025},\n  year={2025},\n  doi={10.1145/3696630.3728521},\n\
+    \  eprint={2503.11237},\n  archivePrefix={arXiv}\n}"
 - slug: ransomware-3-0
   title: 'Ransomware 3.0: Enhancing Risk Management and Mitigation Options with Proof-of-Decryptability
     and Smart Contracts'
@@ -1252,16 +1053,33 @@
   - '1'
   publication: IEEE ICBC 2025
   publication_short: IEEE ICBC 2025
-  abstract: 'Short Paper: We design smart contracts verifying decryption keys in escrow
-    to manage ransomware extortion threats.'
+  abstract: Ransomware attacks have become increasingly sophisticated and dangerous,
+    severely impacting individuals and businesses. Traditional ransomware payout models
+    lack trust and security, leaving victims vulnerable to extortion even after paying
+    the ransom. We proposes Ransomware 3.0, a novel blockchain-based ransomware framework
+    that leverages zero-knowledge proofs and smart contracts to overcome these challenges.
+    By integrating these cryptographic techniques, Ransomware 3.0 ensures secure and
+    verifiable data recovery for victims while reducing the risk of data exposure
+    or resale by ransomware attackers. This framework also introduces a contract-based
+    multi-round payment scheme that allows victims to optimize their payout strategy
+    based on the evolving value of their data over time. Counterintuitively, both
+    attackers and victims are motivated to adopt the new model, as the victim is motivated
+    to pay when uncertainty is reduced. We also explore the theoretical decision-making
+    foundations of Ransomware 3.0, analyze its potential benefits and limitations,
+    and discuss its implications for ransomware risk management and mitigation strategies.
+    Index Terms—ransomware, ZKPs, smart contract
   tags:
   - Blockchain
   - Security
   - Ransomware
   featured: false
   links:
-  - name: DOI
-    url: https://doi.org/10.1109/ICBC63407.2025.10945400
+  - name: PDF
+    url: /uploads/publications/ransomware-3-0.pdf
+  bibtex: "@inproceedings{hou2025,\n  title={Ransomware 3.0: Enhancing Risk Management\
+    \ and Mitigation Options with Proof-of-Decryptability and Smart Contracts},\n\
+    \  author={Hou, Xinyu and Lu, Yang and Karanjai, Rabimba and Xu, Lei and Shi,\
+    \ Weidong},\n  booktitle={IEEE ICBC 2025},\n  year={2025}\n}"
 - slug: synthesizing-public-opinions
   title: 'Synthesizing Public Opinions with LLMs: Role Creation, Impacts, and the
     Future to eDemocracy'
@@ -1274,7 +1092,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2025-04-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/icedeg65568.2025.11081685
   publishDate: '2025-04-01T00:00:00Z'
   citations: 11
   publication_types:
@@ -1301,15 +1119,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/synthesizing-public-opinions.pdf
   - name: DOI
     url: https://doi.org/10.1109/icedeg65568.2025.11081685
   - name: arXiv
     url: https://arxiv.org/pdf/2504.00241
-  bibtex: "@article{karanjai2025synthesi,\n  title={Synthesizing Public Opinions with\
-    \ LLMs: Role Creation, Impacts, and the Future to eDemocracy},\n  author={Rabimba\
-    \ Karanjai and Boris Shor and Amanda Austin and Ryan Kennedy and Yang Lu and Lei\
-    \ Xu and Weidong Shi},\n  journal={arXiv preprint arXiv:2504.00241},\n  year={2025}\n\
-    }"
+  bibtex: "@inproceedings{karanjai2025,\n  title={Synthesizing Public Opinions with\
+    \ LLMs: Role Creation, Impacts, and the Future to eDemocracy},\n  author={Karanjai,\
+    \ Rabimba and Shor, Boris and Austin, Amanda and Kennedy, Ryan and Lu, Yang and\
+    \ Xu, Lei and Shi, Weidong},\n  booktitle={ICEDEG 2025},\n  year={2025},\n  doi={10.1109/icedeg65568.2025.11081685},\n\
+    \  eprint={2504.00241},\n  archivePrefix={arXiv}\n}"
 - slug: log-babylon
   title: 'LogBabylon: A Unified Framework for Cross-Log File Integration and Analysis'
   authors:
@@ -1321,7 +1141,7 @@
   - Weidong Shi
   - Stephen Huang
   date: '2025-03-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3672608.3707883
   publishDate: '2025-03-01T00:00:00Z'
   citations: 10
   publication_types:
@@ -1351,15 +1171,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/log-babylon.pdf
   - name: DOI
     url: https://doi.org/10.1145/3672608.3707883
   - name: arXiv
     url: https://arxiv.org/pdf/2412.12364
-  bibtex: "@inproceedings{lu2025logbabylon,\n  title={Logbabylon: A unified framework\
-    \ for cross-log file integration and analysis},\n  author={Lu, Yang and Karanjai,\
-    \ Rabimba and Alsagheer, Dana and Kasichainula, Keshav and Xu, Lei and Shi, Weidong\
-    \ and Huang, Shou-Hsuan Stephen},\n  booktitle={Proceedings of the 40th ACM/SIGAPP\
-    \ Symposium on Applied Computing},\n  pages={1953--1960},\n  year={2025}\n}"
+  bibtex: "@inproceedings{karanjai2025,\n  title={LogBabylon: A Unified Framework\
+    \ for Cross-Log File Integration and Analysis},\n  author={Karanjai, Rabimba and\
+    \ Lu, Yang and Alsagheer, Dana and Kasichainula, Keshav and Xu, Lei and Shi, Weidong\
+    \ and Huang, Stephen},\n  booktitle={ACM SAC 2025},\n  year={2025},\n  doi={10.1145/3672608.3707883},\n\
+    \  eprint={2412.12364},\n  archivePrefix={arXiv}\n}"
 - slug: weaving-cosmos-wasm-interchain
   title: 'Weaving the Cosmos: WASM-Powered Interchain Communication for AI Enabled
     Smart Contracts'
@@ -1397,10 +1219,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2502.17604
-  bibtex: "@misc{karanjai2025weaving,\n  title={Weaving the Cosmos: WASM-Powered Interchain\
+  bibtex: "@misc{karanjai2025,\n  title={Weaving the Cosmos: WASM-Powered Interchain\
     \ Communication for AI Enabled Smart Contracts},\n  author={Karanjai, Rabimba\
     \ and Xu, Lei and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2502.17604},\n\
-    \  year={2025}\n}"
+    \  year={2025},\n  eprint={2502.17604},\n  archivePrefix={arXiv}\n}"
 - slug: ai-personalized-interventions
   title: Artificial Intelligence-Based Target for Personalized Interventions of Atherosclerosis
     from Gut Microbiota Signature
@@ -1409,7 +1231,7 @@
   - Koushik Sen
   - Rabimba Karanjai
   date: '2025-02-01T00:00:00Z'
-  doi: ''
+  doi: 10.3390/synbio3010002
   publishDate: '2025-02-01T00:00:00Z'
   citations: 7
   publication_types:
@@ -1424,10 +1246,14 @@
   - Microbiota
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/ai-personalized-interventions.pdf
   - name: DOI
     url: https://doi.org/10.3390/synbio3010002
-  - name: PDF
-    url: https://www.mdpi.com/2674-0583/3/1/2/pdf?version=1736757129
+  bibtex: "@inproceedings{majumder2025,\n  title={Artificial Intelligence-Based Target\
+    \ for Personalized Interventions of Atherosclerosis from Gut Microbiota Signature},\n\
+    \  author={Majumder, Suravi and Sen, Koushik and Karanjai, Rabimba},\n  booktitle={SynBio\
+    \ 2025, MDPI},\n  year={2025},\n  doi={10.3390/synbio3010002}\n}"
 - slug: conmover-move-concepts
   title: Generating Move Smart Contracts based on Concepts
   authors:
@@ -1464,10 +1290,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2412.12513
-  bibtex: "@misc{karanjai2024conmover,\n  title={Generating Move Smart Contracts based\
-    \ on Concepts},\n  author={Karanjai, Rabimba and Blackshear, Sam and Xu, Lei and\
-    \ Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2412.12513},\n  year={2024}\n\
-    }"
+  bibtex: "@misc{karanjai2024,\n  title={Generating Move Smart Contracts based on\
+    \ Concepts},\n  author={Karanjai, Rabimba and Blackshear, Sam and Xu, Lei and\
+    \ Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2412.12513},\n  year={2024},\n\
+    \  eprint={2412.12513},\n  archivePrefix={arXiv}\n}"
 - slug: smart-contract-translation
   title: Smart Contract Code Translation based on Concepts
   authors:
@@ -1475,7 +1301,7 @@
   - Lei Xu
   - Weidong Shi
   date: '2024-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3664646.3664771
   publishDate: '2024-11-01T00:00:00Z'
   citations: 13
   publication_types:
@@ -1512,14 +1338,17 @@
   - Distinguished
   featured: true
   links:
+  - name: PDF
+    url: /uploads/publications/smart-contract-translation.pdf
   - name: DOI
     url: https://doi.org/10.1145/3664646.3664771
   - name: arXiv
     url: https://arxiv.org/pdf/2403.09740
-  bibtex: "@inproceedings{karanjai2024solmover,\n  title={Solmover: Smart contract\
-    \ code translation based on concepts},\n  author={Karanjai, Rabimba and Xu, Lei\
-    \ and Shi, Weidong},\n  booktitle={Proceedings of the 1st ACM International Conference\
-    \ on AI-Powered Software},\n  pages={112--121},\n  year={2024}\n}"
+  bibtex: "@inproceedings{karanjai2024,\n  title={Smart Contract Code Translation\
+    \ based on Concepts},\n  author={Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n\
+    \  booktitle={ACM Foundations of Software Engineering (FSE) 2024},\n  year={2024},\n\
+    \  doi={10.1145/3664646.3664771},\n  eprint={2403.09740},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: cryptographic-accelerator
   title: TPU as Cryptographic Accelerator
   authors:
@@ -1535,7 +1364,7 @@
   - Francesco Sica
   - Lei Xu
   date: '2024-10-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3696843.3696844
   publishDate: '2024-10-01T00:00:00Z'
   citations: 7
   publication_types:
@@ -1563,16 +1392,18 @@
   - Distinguished
   featured: true
   links:
+  - name: PDF
+    url: /uploads/publications/cryptographic-accelerator.pdf
   - name: DOI
     url: https://doi.org/10.1145/3696843.3696844
   - name: arXiv
     url: https://arxiv.org/pdf/2307.06554
-  bibtex: "@inproceedings{karanjai2024tpu,\n  title={Tpu as cryptographic accelerator},\n\
+  bibtex: "@inproceedings{karanjai2024,\n  title={TPU as Cryptographic Accelerator},\n\
     \  author={Karanjai, Rabimba and Shin, Sangwon and Xiong, Wujie and Fan, Xinxin\
     \ and Chen, Lin and Zhang, Tianwei and Suh, Taeweon and Shi, Weidong and Kuchta,\
-    \ Veronika and Sica, Francesco and others},\n  booktitle={Proceedings of the International\
-    \ Workshop on Hardware and Architectural Support for Security and Privacy 2024},\n\
-    \  pages={37--44},\n  year={2024}\n}"
+    \ Veronika and Sica, Francesco and Xu, Lei},\n  booktitle={MICRO 2024},\n  year={2024},\n\
+    \  doi={10.1145/3696843.3696844},\n  eprint={2307.06554},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: adding-flavors-rng
   title: 'Adding All Flavors: A Hybrid Random Number Generator for dApps and Web3'
   authors:
@@ -1582,7 +1413,7 @@
   - Larry Shi
   - Lei Xu
   date: '2024-09-01T00:00:00Z'
-  doi: ''
+  doi: 10.1007/978-3-031-74498-3_21
   publishDate: '2024-09-01T00:00:00Z'
   publication_types:
   - '1'
@@ -1618,14 +1449,18 @@
   - Security
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/adding-flavors-rng.pdf
   - name: DOI
     url: https://link.springer.com/chapter/10.1007/978-3-031-74498-3_21
   - name: arXiv
     url: https://arxiv.org/pdf/2510.12062
-  bibtex: "@article{karanjai2024adding-f,\n  title={Adding All Flavors: A Hybrid Random\
-    \ Number Generator for dApps and Web3},\n  author={Ranjith Chodavarapu and Rabimba\
-    \ Karanjai and Xinxin Fan and Larry Shi and Lei Xu},\n  journal={arXiv preprint\
-    \ arXiv:2510.12062},\n  year={2024}\n}"
+  bibtex: "@inproceedings{chodavarapu2024,\n  title={Adding All Flavors: A Hybrid\
+    \ Random Number Generator for dApps and Web3},\n  author={Chodavarapu, Ranjith\
+    \ and Karanjai, Rabimba and Fan, Xinxin and Shi, Larry and Xu, Lei},\n  booktitle={International\
+    \ Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS)\
+    \ 2024},\n  year={2024},\n  doi={10.1007/978-3-031-74498-3_21},\n  eprint={2510.12062},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: harnessing-llms-hpc-unit-tests
   title: 'Harnessing the Power of LLMs: Automating Unit Test Generation for High-Performance
     Computing'
@@ -1665,11 +1500,11 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2407.05202
-  bibtex: "@misc{karanjai2024harnessing,\n  title={Harnessing the Power of LLMs: Automating\
+  bibtex: "@misc{karanjai2024,\n  title={Harnessing the Power of LLMs: Automating\
     \ Unit Test Generation for High-Performance Computing},\n  author={Karanjai, Rabimba\
     \ and Hussain, Aftab and Rabin, Md Rafiqul Islam and Xu, Lei and Shi, Weidong\
     \ and Alipour, Mohammad Amin},\n  howpublished={arXiv preprint arXiv:2407.05202},\n\
-    \  year={2024}\n}"
+    \  year={2024},\n  eprint={2407.05202},\n  archivePrefix={arXiv}\n}"
 - slug: evaluating-rationality
   title: Evaluating Irrationality in Large Language Models and Open Research Questions
   authors:
@@ -1706,44 +1541,22 @@
   - AI Safety
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/evaluating-rationality.pdf
   - name: arXiv
     url: https://arxiv.org/pdf/2403.09798
-  bibtex: "@article{alsagheer2024comparing,\n  title={Comparing rationality between\
-    \ large language models and humans: Insights and open questions},\n  author={Alsagheer,\
-    \ Dana and Karanjai, Rabimba and Diallo, Nour and Shi, Weidong and Lu, Yang and\
-    \ Beydoun, Suha and Zhang, Qiaoning},\n  journal={arXiv preprint arXiv:2403.09798},\n\
-    \  year={2024}\n}"
-- slug: enhancing-vascular-diagnosis
-  title: Enhancing Vascular Disease Diagnosis through AI-Driven Analysis of Histopathology
-    Images
-  authors:
-  - Rabimba Karanjai
-  - Suravi Majumder
-  date: '2024-05-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-05-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: 3rd Annual AI in Health Conference, Rice University
-  publication_short: 3rd Annual AI in Health Conference, Rice University
-  abstract: 'Workshop Paper: Deep learning classifier pipelines designed to analyze
-    histopathological tissue slides for diagnosing vascular disease.'
-  tags:
-  - AI
-  - Health
-  - Computer Vision
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Enhancing%20Vascular%20Disease%20Diagnosis%20through%20AI-Driven%20Analysis%20of%20Histopathology%20Images
+  bibtex: "@inproceedings{alsagheer2024,\n  title={Evaluating Irrationality in Large\
+    \ Language Models and Open Research Questions},\n  author={Alsagheer, Dana R and\
+    \ Karanjai, Rabimba and Shi, Weidong and Diallo, Nour and Lu, Yang and Beydoun,\
+    \ Suha and Zhang, Qiaoning},\n  booktitle={ACM CHI HEAL 2024},\n  year={2024},\n\
+    \  eprint={2403.09798},\n  archivePrefix={arXiv}\n}"
 - slug: trusted-infer-edge
   title: Trusted LLM Inference on the Edge with Smart Contracts
   authors:
   - Rabimba Karanjai
   - Weidong Shi
   date: '2024-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC59979.2024.10634373
   publishDate: '2024-05-01T00:00:00Z'
   citations: 15
   publication_types:
@@ -1759,35 +1572,13 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/trusted-infer-edge.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC59979.2024.10634373
-  bibtex: "@inproceedings{karanjai2024trusted,\n  title={Trusted llm inference on\
-    \ the edge with smart contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n\
-    \  booktitle={2024 IEEE International Conference on Blockchain and Cryptocurrency\
-    \ (ICBC)},\n  pages={1--7},\n  year={2024},\n  organization={IEEE}\n}"
-- slug: mitigating-hallucinations
-  title: Mitigating Hallucinations in AI-Driven Medical Diagnosis
-  authors:
-  - Rabimba Karanjai
-  - Suravi Majumder
-  date: '2024-05-01T00:00:00Z'
-  doi: ''
-  publishDate: '2024-05-01T00:00:00Z'
-  publication_types:
-  - '1'
-  publication: 3rd Annual AI in Health Conference, Rice University
-  publication_short: 3rd Annual AI in Health Conference, Rice University
-  abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational
-    diagnostic models through structured knowledge reinforcement.'
-  tags:
-  - AI
-  - Health
-  - LLM Hallucinations
-  - First Author
-  featured: false
-  links:
-  - name: Scholar
-    url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
+  bibtex: "@inproceedings{karanjai2024,\n  title={Trusted LLM Inference on the Edge\
+    \ with Smart Contracts},\n  author={Karanjai, Rabimba and Shi, Weidong},\n  booktitle={IEEE\
+    \ ICBC 2024},\n  year={2024},\n  doi={10.1109/ICBC59979.2024.10634373}\n}"
 - slug: solmover-feasibility-icbc
   title: 'SolMover: Feasibility of Using LLMs for Translating Smart Contracts'
   authors:
@@ -1823,10 +1614,11 @@
   links:
   - name: DOI
     url: https://doi.org/10.1109/ICBC59979.2024.10634392
-  bibtex: "@inproceedings{karanjai2024solmoverfeasibility,\n  title={SolMover: Feasibility\
-    \ of Using LLMs for Translating Smart Contracts},\n  author={Karanjai, Rabimba\
-    \ and Xu, Lei and Shi, Weidong},\n  booktitle={2024 IEEE International Conference\
-    \ on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2024}\n}"
+  bibtex: "@inproceedings{karanjai2024,\n  title={SolMover: Feasibility of Using LLMs\
+    \ for Translating Smart Contracts},\n  author={Karanjai, Rabimba and Xu, Lei and\
+    \ Shi, Weidong},\n  booktitle={2024 IEEE International Conference on Blockchain\
+    \ and Cryptocurrency (ICBC)},\n  year={2024},\n  doi={10.1109/ICBC59979.2024.10634392}\n\
+    }"
 - slug: voter-blockchain
   title: 'All We Need is Voter Feedback: A New Paradigm to Realize Politics without
     Politicians Using AI Models Aligned with Voter Inputs'
@@ -1865,14 +1657,16 @@
   - eDemocracy
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/voter-blockchain.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICEDEG61611.2024.10702065
-  bibtex: "@inproceedings{diallo2024voter,\n  title={All We Need is Voter Feedback:\
-    \ a New Paradigm to Realize Politics without Politicians Using AI Models Aligned\
-    \ with Voter Inputs},\n  author={Diallo, Nour and Alsagheer, Dana and Kamal, Mohammad\
+  bibtex: "@inproceedings{diallo2024,\n  title={All We Need is Voter Feedback: A New\
+    \ Paradigm to Realize Politics without Politicians Using AI Models Aligned with\
+    \ Voter Inputs},\n  author={Diallo, Nour and Alsagheer, Dana and Kamal, Mohammad\
     \ and Xu, Lei and Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  booktitle={2024\
-    \ Tenth International Conference on eDemocracy \\& eGovernment (ICEDEG)},\n  pages={1--9},\n\
-    \  year={2024},\n  organization={IEEE}\n}"
+    \ Tenth International Conference on eDemocracy & eGovernment (ICEDEG)},\n  year={2024},\n\
+    \  doi={10.1109/ICEDEG61611.2024.10702065}\n}"
 - slug: lookalike-human-mimicry
   title: 'LookALike: Human Mimicry based collaborative decision making'
   authors:
@@ -1904,9 +1698,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2403.10824
-  bibtex: "@misc{karanjai2024lookalike,\n  title={LookALike: Human Mimicry based collaborative\
+  bibtex: "@misc{karanjai2024,\n  title={LookALike: Human Mimicry based collaborative\
     \ decision making},\n  author={Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv\
-    \ preprint arXiv:2403.10824},\n  year={2024}\n}"
+    \ preprint arXiv:2403.10824},\n  year={2024},\n  eprint={2403.10824},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: decentralize-multi-clouds
   title: Decentralized FaaS over Multi-Clouds
   authors:
@@ -1916,7 +1711,7 @@
   - Nour Diallo
   - Weidong Shi
   date: '2024-03-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3605098.3636029
   publishDate: '2024-03-01T00:00:00Z'
   citations: 3
   publication_types:
@@ -1941,10 +1736,16 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/decentralize-multi-clouds.pdf
   - name: DOI
     url: https://doi.org/10.1145/3605098.3636029
   - name: arXiv
     url: https://arxiv.org/pdf/2404.08151
+  bibtex: "@inproceedings{karanjai2024,\n  title={Decentralized FaaS over Multi-Clouds},\n\
+    \  author={Karanjai, Rabimba and Xu, Lei and Chen, Lin and Diallo, Nour and Shi,\
+    \ Weidong},\n  booktitle={ACM SAC 2024},\n  year={2024},\n  doi={10.1145/3605098.3636029},\n\
+    \  eprint={2404.08151},\n  archivePrefix={arXiv}\n}"
 - slug: diac-infrastructure
   title: 'DIaC: Re-imagining Decentralized Infrastructure As Code using Blockchain'
   authors:
@@ -1955,7 +1756,7 @@
   - Lin Chen
   - Weidong Shi
   date: '2023-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/TNSM.2023.3325768
   publishDate: '2023-11-01T00:00:00Z'
   citations: 10
   publication_types:
@@ -1970,13 +1771,14 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/diac-infrastructure.pdf
   - name: DOI
     url: https://doi.org/10.1109/TNSM.2023.3325768
-  bibtex: "@article{karanjai2023diac,\n  title={DIaC: Re-imagining decentralized infrastructure\
-    \ as code using blockchain},\n  author={Karanjai, Rabimba and Kasichainula, Keshav\
+  bibtex: "@article{karanjai2023,\n  title={DIaC: Re-imagining Decentralized Infrastructure\
+    \ As Code using Blockchain},\n  author={Karanjai, Rabimba and Kasichainula, Keshav\
     \ and Xu, Lei and Diallo, Nour and Chen, Lin and Shi, Weidong},\n  journal={IEEE\
-    \ Transactions on Network and Service Management},\n  volume={21},\n  number={2},\n\
-    \  pages={1319--1332},\n  year={2023},\n  publisher={IEEE}\n}"
+    \ TNSM 2023},\n  year={2023},\n  doi={10.1109/TNSM.2023.3325768}\n}"
 - slug: smarter-smart-contract
   title: Who is Smarter? An Empirical Study of AI-based Smart Contract Creation
   authors:
@@ -1985,7 +1787,7 @@
   - L Xu
   - W Shi
   date: '2023-10-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/BRAINS59668.2023.10316829
   publishDate: '2023-10-01T00:00:00Z'
   citations: 20
   publication_types:
@@ -2015,14 +1817,16 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/smarter-smart-contract.pdf
   - name: DOI
     url: https://doi.org/10.1109/BRAINS59668.2023.10316829
   - name: arXiv
     url: https://arxiv.org/pdf/2308.02955
-  bibtex: "@inproceedings{karanjai2023smarter,\n  title={Who is Smarter? An Empirical\
-    \ Study of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and\
-    \ Li, Edward and Xu, Lei and Shi, Weidong},\n  booktitle={Blockchain, Robotics\
-    \ and AI for Networking Security Conference (BRAINS)},\n  year={2023}\n}"
+  bibtex: "@inproceedings{karanjai2023,\n  title={Who is Smarter? An Empirical Study\
+    \ of AI-based Smart Contract Creation},\n  author={Karanjai, Rabimba and Li, E\
+    \ and Xu, L and Shi, W},\n  booktitle={BRAINS 2023},\n  year={2023},\n  doi={10.1109/BRAINS59668.2023.10316829},\n\
+    \  eprint={2308.02955},\n  archivePrefix={arXiv}\n}"
 - slug: cross-chain-bribery-contracts-majority-vs-mighty-minority
   title: 'Cross Chain Bribery Contracts: Majority vs Mighty Minority'
   authors:
@@ -2033,7 +1837,7 @@
   - Rabimba Karanjai
   - Weidong Shi
   date: '2023-06-08T00:00:00Z'
-  doi: ''
+  doi: 10.1007/978-3-030-24299-2_11
   publishDate: '2023-06-08T00:00:00Z'
   publication_types:
   - '3'
@@ -2057,12 +1861,15 @@
   - Smart Contracts
   featured: false
   links:
+  - name: DOI
+    url: https://doi.org/10.1007/978-3-030-24299-2_11
   - name: arXiv
     url: https://arxiv.org/pdf/2306.07984
-  bibtex: "@misc{tran2023bribery,\n  title={Cross Chain Bribery Contracts: Majority\
-    \ vs Mighty Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and\
-    \ Lu, Yang and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint\
-    \ arXiv:2306.07984},\n  year={2023}\n}"
+  bibtex: "@misc{tran2023,\n  title={Cross Chain Bribery Contracts: Majority vs Mighty\
+    \ Minority},\n  author={Tran, Quang Nhat and Chen, Lin and Xu, Lei and Lu, Yang\
+    \ and Karanjai, Rabimba and Shi, Weidong},\n  howpublished={arXiv preprint arXiv:2306.07984},\n\
+    \  year={2023},\n  doi={10.1007/978-3-030-24299-2_11},\n  eprint={2306.07984},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: decentralize-infra-heterogeneous
   title: 'DHTee: Decentralized Infrastructure for Heterogeneous TEE'
   authors:
@@ -2074,7 +1881,7 @@
   - Weidong Shi
   - Lei Xu
   date: '2023-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC56567.2023.10174906
   publishDate: '2023-05-01T00:00:00Z'
   citations: 11
   publication_types:
@@ -2099,13 +1906,14 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/decentralize-infra-heterogeneous.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC56567.2023.10174906
-  bibtex: "@inproceedings{karanjai2023dhtee,\n  title={DHTee: Decentralized Infrastructure\
-    \ for Heterogeneous TEEs},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen,\
-    \ Lin and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={2023\
-    \ IEEE International Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--6},\n\
-    \  year={2023},\n  organization={IEEE}\n}"
+  bibtex: "@inproceedings{karanjai2023,\n  title={DHTee: Decentralized Infrastructure\
+    \ for Heterogeneous TEE},\n  author={Karanjai, Rabimba and Gao, Zhimin and Chen,\
+    \ Lin and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={IEEE\
+    \ ICBC 2023},\n  year={2023},\n  doi={10.1109/ICBC56567.2023.10174906}\n}"
 - slug: ai-governance
   title: 'Decentralized Machine Learning Governance: Overview, Opportunities, and
     Research Challenges'
@@ -2137,8 +1945,15 @@
   - Decentralized Systems
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/ai-governance.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC56567.2023.10175000
+  bibtex: "@inproceedings{alsagheer2023,\n  title={Decentralized Machine Learning\
+    \ Governance: Overview, Opportunities, and Research Challenges},\n  author={Alsagheer,\
+    \ Dana R and Diallo, Nour and Karanjai, Rabimba and Xu, Lei and Shi, Weidong},\n\
+    \  booktitle={IEEE ICBC 2023},\n  year={2023},\n  doi={10.1109/ICBC56567.2023.10175000}\n\
+    }"
 - slug: supporting-heterogeneous-infra
   title: Supporting Heterogeneous TEE for Critical Infrastructure Protection
   authors:
@@ -2151,7 +1966,7 @@
   - Weidong Shi
   - Lei Xu
   date: '2023-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3594556.3594626
   publishDate: '2023-05-01T00:00:00Z'
   citations: 12
   publication_types:
@@ -2185,16 +2000,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/supporting-heterogeneous-infra.pdf
   - name: DOI
     url: https://doi.org/10.1145/3594556.3594626
   - name: arXiv
     url: https://arxiv.org/pdf/2308.01474
-  bibtex: "@inproceedings{karanjai2023decentralized,\n  title={Decentralized translator\
-    \ of trust: Supporting heterogeneous tee for critical infrastructure protection},\n\
-    \  author={Karanjai, Rabimba and Collier, Rowan and Gao, Zhimin and Chen, Lin\
-    \ and Fan, Xinxin and Suh, Taeweon and Shi, Weidong and Xu, Lei},\n  booktitle={Proceedings\
-    \ of the 5th ACM International Symposium on Blockchain and Secure Critical Infrastructure},\n\
-    \  pages={85--94},\n  year={2023}\n}"
+  bibtex: "@inproceedings{karanjai2023,\n  title={Supporting Heterogeneous TEE for\
+    \ Critical Infrastructure Protection},\n  author={Karanjai, Rabimba and Collier,\
+    \ Rowan and Gao, Zhimin and Chen, Lin and Fan, Xinxin and Suh, Taeweon and Shi,\
+    \ Weidong and Xu, Lei},\n  booktitle={ACM AsiaCCS 2023},\n  year={2023},\n  doi={10.1145/3594556.3594626},\n\
+    \  eprint={2308.01474},\n  archivePrefix={arXiv}\n}"
 - slug: faas-decentralized
   title: 'DeFaaS: Decentralized Function-as-a-Service for Emerging dApps and Web'
   authors:
@@ -2204,7 +2020,7 @@
   - Lin Chen
   - Weidong Shi
   date: '2023-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC56567.2023.10174945
   publishDate: '2023-05-01T00:00:00Z'
   citations: 14
   publication_types:
@@ -2229,13 +2045,14 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/faas-decentralized.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC56567.2023.10174945
-  bibtex: "@inproceedings{karanjai2023defaas,\n  title={Defaas: Decentralized function-as-a-service\
-    \ for emerging dapps and web3},\n  author={Karanjai, Rabimba and Xu, Lei and Diallo,\
-    \ Nour and Chen, Lin and Shi, Weidong},\n  booktitle={2023 IEEE International\
-    \ Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2023},\n\
-    \  organization={IEEE}\n}"
+  bibtex: "@inproceedings{karanjai2023,\n  title={DeFaaS: Decentralized Function-as-a-Service\
+    \ for Emerging dApps and Web},\n  author={Karanjai, Rabimba and Xu, Lei and Diallo,\
+    \ Nour and Chen, Lin and Shi, Weidong},\n  booktitle={IEEE ICBC 2023},\n  year={2023},\n\
+    \  doi={10.1109/ICBC56567.2023.10174945}\n}"
 - slug: targeted-phishing-llms
   title: Targeted Phishing Campaigns using Large Scale Language Models
   authors:
@@ -2270,9 +2087,10 @@
   links:
   - name: arXiv
     url: https://arxiv.org/pdf/2301.00665
-  bibtex: "@misc{karanjai2022phishing,\n  title={Targeted Phishing Campaigns using\
-    \ Large Scale Language Models},\n  author={Karanjai, Rabimba},\n  howpublished={arXiv\
-    \ preprint arXiv:2301.00665},\n  year={2022}\n}"
+  bibtex: "@misc{karanjai2022,\n  title={Targeted Phishing Campaigns using Large Scale\
+    \ Language Models},\n  author={Karanjai, Rabimba},\n  howpublished={arXiv preprint\
+    \ arXiv:2301.00665},\n  year={2022},\n  eprint={2301.00665},\n  archivePrefix={arXiv}\n\
+    }"
 - slug: fpswap
   title: 'Fpswap: Fair and Privacy Friendly Swap of Digital Assets on Blockchain'
   authors:
@@ -2318,10 +2136,11 @@
   links:
   - name: DOI
     url: https://doi.org/10.2139/ssrn.4141949
-  bibtex: "@article{karanjai2022fpswap,\n  title={Fpswap: Fair and Privacy Friendly\
-    \ Swap of Digital Assets on Blockchain},\n  author={Karanjai, Rabimba and Xu,\
-    \ Lei and Gao, Zhimin and Chen, Lin and Kasichainula, Keshav and Carbunar, Bogdan\
-    \ and Shi, Weidong},\n  journal={Available at SSRN 4141949},\n  year={2022}\n}"
+  bibtex: "@misc{karanjai2022,\n  title={Fpswap: Fair and Privacy Friendly Swap of\
+    \ Digital Assets on Blockchain},\n  author={Karanjai, Rabimba and Xu, Lei and\
+    \ Gao, Zhimin and Chen, Lin and Kasichainula, Keshav and Carbunar, Bogdan and\
+    \ Shi, Weidong},\n  howpublished={Available at SSRN 4141949},\n  year={2022},\n\
+    \  doi={10.2139/ssrn.4141949}\n}"
 - slug: decentralized-apps
   title: Decentralized Application Infrastructures as Smart Contract Codes
   authors:
@@ -2333,7 +2152,7 @@
   - Lin Chen
   - Weidong Shi
   date: '2022-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC54727.2022.9805524
   publishDate: '2022-05-01T00:00:00Z'
   citations: 7
   publication_types:
@@ -2350,13 +2169,14 @@
   featured: true
   distinguished: true
   links:
+  - name: PDF
+    url: /uploads/publications/decentralized-apps.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC54727.2022.9805524
-  bibtex: "@inproceedings{karanjai2022decentralized,\n  title={Decentralized application\
-    \ infrastructures as smart contract codes},\n  author={Karanjai, Rabimba and Kasichainula,\
-    \ Keshav and Diallo, Nour and Kaleem, Mudabbir and Xu, Lei and Chen, Lin and Shi,\
-    \ Weidong},\n  booktitle={2022 IEEE International Conference on Blockchain and\
-    \ Cryptocurrency (ICBC)},\n  pages={1--9},\n  year={2022},\n  organization={IEEE}\n\
+  bibtex: "@inproceedings{karanjai2022,\n  title={Decentralized Application Infrastructures\
+    \ as Smart Contract Codes},\n  author={Karanjai, Rabimba and Kasichainula, Keshav\
+    \ and Diallo, Nour and Kaleem, Mudabbir and Xu, Lei and Chen, Lin and Shi, Weidong},\n\
+    \  booktitle={IEEE ICBC 2022},\n  year={2022},\n  doi={10.1109/ICBC54727.2022.9805524}\n\
     }"
 - slug: privacy-preserving-event
   title: Privacy preserving event based transaction system in a decentralized environment
@@ -2368,7 +2188,7 @@
   - Mudabbir Kaleem
   - Weidong Shi
   date: '2021-12-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3464298.3493401
   publishDate: '2021-12-01T00:00:00Z'
   citations: 7
   publication_types:
@@ -2383,13 +2203,15 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/privacy-preserving-event.pdf
   - name: DOI
     url: https://doi.org/10.1145/3464298.3493401
-  bibtex: "@inproceedings{karanjai2021privacy,\n  title={Privacy preserving event\
-    \ based transaction system in a decentralized environment},\n  author={Karanjai,\
-    \ Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Kaleem, Mudabbir and Shi,\
-    \ Weidong},\n  booktitle={Proceedings of the 22nd International Middleware Conference},\n\
-    \  pages={286--297},\n  year={2021}\n}"
+  bibtex: "@inproceedings{karanjai2021,\n  title={Privacy preserving event based transaction\
+    \ system in a decentralized environment},\n  author={Karanjai, Rabimba and Xu,\
+    \ Lei and Gao, Zhimin and Chen, Lin and Kaleem, Mudabbir and Shi, Weidong},\n\
+    \  booktitle={ACM Middleware 2021},\n  year={2021},\n  doi={10.1145/3464298.3493401}\n\
+    }"
 - slug: blockchain-tee
   title: Lessons Learned from Blockchain Applications of Trusted Execution Environments
     and Implications
@@ -2401,7 +2223,7 @@
   - Z Gao
   - W Shi
   date: '2021-11-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3505253.3505259
   publishDate: '2021-11-01T00:00:00Z'
   citations: 17
   publication_types:
@@ -2417,16 +2239,17 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/blockchain-tee.pdf
   - name: DOI
     url: https://doi.org/10.1145/3505253.3505259
   - name: arXiv
     url: https://arxiv.org/pdf/2203.12724
-  bibtex: "@inproceedings{rabimba2021lessons,\n  title={Lessons learned from blockchain\
-    \ applications of trusted execution environments and implications for future research},\n\
-    \  author={Rabimba, Karanjai and Xu, Lei and Chen, Lin and Zhang, Fengwei and\
-    \ Gao, Zhimin and Shi, Weidong},\n  booktitle={Proceedings of the 10th International\
-    \ Workshop on Hardware and Architectural Support for Security and Privacy},\n\
-    \  pages={1--8},\n  year={2021}\n}"
+  bibtex: "@inproceedings{karanjai2021,\n  title={Lessons Learned from Blockchain\
+    \ Applications of Trusted Execution Environments and Implications},\n  author={Karanjai,\
+    \ Rabimba and Xu, L and Chen, L and Zhang, F and Gao, Z and Shi, W},\n  booktitle={ACM\
+    \ HASP 2021},\n  year={2021},\n  doi={10.1145/3505253.3505259},\n  eprint={2203.12724},\n\
+    \  archivePrefix={arXiv}\n}"
 - slug: event-driven-framework
   title: An event driven framework for smart contract execution
   authors:
@@ -2438,7 +2261,7 @@
   - Lin Chen
   - Weidong Shi
   date: '2021-06-01T00:00:00Z'
-  doi: ''
+  doi: 10.1145/3465480.3466924
   publishDate: '2021-06-01T00:00:00Z'
   citations: 21
   publication_types:
@@ -2453,15 +2276,17 @@
   - Smart Contracts
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/event-driven-framework.pdf
   - name: DOI
     url: https://doi.org/10.1145/3465480.3466924
   - name: arXiv
     url: https://arxiv.org/pdf/2101.05475
-  bibtex: "@inproceedings{kaleem2021event,\n  title={An event driven framework for\
-    \ smart contract execution},\n  author={Kaleem, Mudabbir and Kasichainula, Keshav\
-    \ and Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Shi, Weidong},\n\
-    \  booktitle={Proceedings of the 15th ACM International Conference on Distributed\
-    \ and Event-based Systems},\n  pages={78--89},\n  year={2021}\n}"
+  bibtex: "@inproceedings{kaleem2021,\n  title={An event driven framework for smart\
+    \ contract execution},\n  author={Kaleem, Mudabbir and Kasichainula, Keshav and\
+    \ Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen, Lin and Shi, Weidong},\n\
+    \  booktitle={ACM DEBS 2021},\n  year={2021},\n  doi={10.1145/3465480.3466924},\n\
+    \  eprint={2101.05475},\n  archivePrefix={arXiv}\n}"
 - slug: us11025643b2
   title: Mobile multi-party digitally signed documents and techniques for using these
     allowing detection of tamper
@@ -2495,6 +2320,10 @@
     url: https://patents.google.com/patent/US11025643B2/en
   publishDate: '2021-06-01T00:00:00Z'
   doi: ''
+  bibtex: "@misc{jadav2021,\n  title={Mobile multi-party digitally signed documents\
+    \ and techniques for using these allowing detection of tamper},\n  author={Jadav,\
+    \ Divyesh and Karanjai, Rabimba and Koved, Lawrence and Alatorre, Gabriel},\n\
+    \  howpublished={US Patent US11025643B2},\n  year={2021}\n}"
 - slug: conditional-cryptocurrency
   title: On Conditional Cryptocurrency With Privacy
   authors:
@@ -2505,7 +2334,7 @@
   - Mudabbir Kaleem
   - Weidong Shi
   date: '2021-05-01T00:00:00Z'
-  doi: ''
+  doi: 10.1109/ICBC51069.2021.9461103
   publishDate: '2021-05-01T00:00:00Z'
   citations: 9
   publication_types:
@@ -2521,13 +2350,14 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/conditional-cryptocurrency.pdf
   - name: DOI
     url: https://doi.org/10.1109/ICBC51069.2021.9461103
-  bibtex: "@inproceedings{karanjai2021conditional,\n  title={On conditional cryptocurrency\
-    \ with privacy},\n  author={Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and\
-    \ Chen, Lin and Kaleem, Mudabbir and Shi, Weidong},\n  booktitle={2021 IEEE International\
-    \ Conference on Blockchain and Cryptocurrency (ICBC)},\n  pages={1--3},\n  year={2021},\n\
-    \  organization={IEEE}\n}"
+  bibtex: "@inproceedings{karanjai2021,\n  title={On Conditional Cryptocurrency With\
+    \ Privacy},\n  author={Karanjai, Rabimba and Xu, Lei and Gao, Zhimin and Chen,\
+    \ Lin and Kaleem, Mudabbir and Shi, Weidong},\n  booktitle={IEEE ICBC 2021},\n\
+    \  year={2021},\n  doi={10.1109/ICBC51069.2021.9461103}\n}"
 - slug: optimizing-vr-thesis
   title: Optimizing Web Virtual Reality
   authors:
@@ -2547,10 +2377,10 @@
   - First Author
   featured: false
   links:
+  - name: PDF
+    url: /uploads/publications/optimizing-vr-thesis.pdf
   - name: Repository
     url: https://repository.rice.edu/items/4ad62a01-e884-40bf-81e1-d75883c841b3
-  - name: PDF
-    url: https://search.proquest.com/openview/abe806045d52766736507daa09a3fe72/1?pq-origsite=gscholar&cbl=18750&diss=y
-  bibtex: "@mastersthesis{karanjai2018optimizing,\n  title={Optimizing Web Virtual\
-    \ Reality},\n  author={Karanjai, Rabimba},\n  year={2018},\n  school={Rice University}\n\
-    }"
+  bibtex: "@phdthesis{karanjai2018,\n  title={Optimizing Web Virtual Reality},\n \
+    \ author={Karanjai, Rabimba},\n  school={Masters Thesis, Rice University},\n \
+    \ year={2018}\n}"

@@ -1,5 +1,6 @@
 ---
-title: 'A Picture is Worth a Thousand Tokens: Lossless Multilingual Context Compression via Pictorial Intermediate Representations'
+title: 'A Picture is Worth a Thousand Tokens: Lossless Multilingual Context Compression
+  via Pictorial Intermediate Representations'
 authors:
 - Rabimba Karanjai
 - Suryabhan Singh Hada
@@ -18,7 +19,8 @@ publication_types:
 - '3'
 publication: AAAI 2027 (Under Review)
 publication_short: AAAI 2027 (Under Review)
-abstract: 'Preprint: Lossless multilingual context compression through pictorial intermediate representations.'
+abstract: 'Preprint: Lossless multilingual context compression through pictorial intermediate
+  representations.'
 tags:
 - Context Compression
 - Multilingual
@@ -27,4 +29,10 @@ featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=A%20Picture%20is%20Worth%20a%20Thousand%20Tokens%3A%20Lossless%20Multilingual%20Context%20Compression%20via%20Pictorial%20Intermediate%20Representations
+bibtex: "@misc{karanjai2026,\n  title={A Picture is Worth a Thousand Tokens: Lossless\
+  \ Multilingual Context Compression via Pictorial Intermediate Representations},\n\
+  \  author={Karanjai, Rabimba and Hada, Suryabhan Singh and Madhavarao, Hemanth Hegadehalli\
+  \ and George, Libin N. and Gu, Qun and Sun, Wenhuan and Monga, Neha and Yu, Xiaojiao\
+  \ and Williamson, Richard and Mehrotra, Prakhar},\n  howpublished={AAAI 2027 (Under\
+  \ Review)},\n  year={2026}\n}"
 ---

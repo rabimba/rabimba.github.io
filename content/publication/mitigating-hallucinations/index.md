@@ -10,7 +10,8 @@ publication_types:
 - '1'
 publication: 3rd Annual AI in Health Conference, Rice University
 publication_short: 3rd Annual AI in Health Conference, Rice University
-abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational diagnostic models through structured knowledge reinforcement.'
+abstract: 'Workshop Paper: We address medical hallucination mitigation in conversational
+  diagnostic models through structured knowledge reinforcement.'
 tags:
 - AI
 - Health
@@ -20,6 +21,9 @@ featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Mitigating%20Hallucinations%20in%20AI-Driven%20Medical%20Diagnosis
+bibtex: "@inproceedings{karanjai2024,\n  title={Mitigating Hallucinations in AI-Driven\
+  \ Medical Diagnosis},\n  author={Karanjai, Rabimba and Majumder, Suravi},\n  booktitle={3rd\
+  \ Annual AI in Health Conference, Rice University},\n  year={2024}\n}"
 ---
 
 

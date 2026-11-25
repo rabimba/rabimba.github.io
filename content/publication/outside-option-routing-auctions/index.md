@@ -1,5 +1,6 @@
 ---
-title: 'Designing the Outside Option: Anchors, Mixed Equilibria, and Welfare in LLM Routing Auctions'
+title: 'Designing the Outside Option: Anchors, Mixed Equilibria, and Welfare in LLM
+  Routing Auctions'
 authors:
 - Xinyu Hou
 - Yang Lu
@@ -15,7 +16,8 @@ publication_types:
 - '3'
 publication: AAAI 2027 (Under Review)
 publication_short: AAAI 2027 (Under Review)
-abstract: 'Preprint: Mechanism design for LLM routing auctions — outside options, anchors, mixed equilibria, and welfare.'
+abstract: 'Preprint: Mechanism design for LLM routing auctions — outside options,
+  anchors, mixed equilibria, and welfare.'
 tags:
 - LLM Routing
 - Mechanism Design
@@ -23,4 +25,8 @@ featured: false
 links:
 - name: Scholar
   url: https://scholar.google.com/scholar?q=Designing%20the%20Outside%20Option%3A%20Anchors%2C%20Mixed%20Equilibria%2C%20and%20Welfare%20in%20LLM%20Routing%20Auctions
+bibtex: "@misc{hou2026,\n  title={Designing the Outside Option: Anchors, Mixed Equilibria,\
+  \ and Welfare in LLM Routing Auctions},\n  author={Hou, Xinyu and Lu, Yang and Karanjai,\
+  \ Rabimba and Pan, Pei-Chi and Lin, Sen and Xu, Lei and Shi, Weidong},\n  howpublished={AAAI\
+  \ 2027 (Under Review)},\n  year={2026}\n}"
 ---
